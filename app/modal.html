@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <!--build:css ./css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+    <!--link(rel="stylesheet", href="bower/jquery-nice-select/css/nice-select.css")-->
+    <link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.css" />
+    <!--endbuild-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-edit.css" />
+</head>
+
+<body>
+    <style type="text/css">
+        .btn-wrap {
+        		display: flex;
+        		flex-wrap: wrap;
+        		flex-flow: column;
+        		align-items: baseline;
+        	}
+        	.btn-wrap .btn--md {
+        		display: inline-block;
+        		margin-bottom: 20px;
+        	}
+        	
+        	@media only screen and (max-width: 640px) {
+        		.btn-wrap .btn--md{
+        			width: 100%;
+        		}
+        	}
+    </style>
+    <div class="page">
+        <!--block header-->
+        <div class="header">
+            <!--header-top-->
+            <div class="header-top-wrap">
+                <div class="main-cont">
+                    <div class="header-top">
+                        <div class="head-toggle">
+                            <svg class="icon icon-open">
+                                <use xlink:href="#menu"></use>
+                            </svg>
+                            <svg class="icon icon-close">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <a class="logo" href="/">
+                            <img src="img/logo.svg" alt="" />
+                        </a>
+                        <div class="header-location">
+                            <div class="header-info">
+                                <div class="header-info__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#location"></use>
+                                    </svg>
+                                </div>
+                                <div class="header-info__cont">
+                                    <div class="header-info__val">Барнаул</div>
+                                    <div class="header-info__text">проспект Независимости, 90</div>
+                                </div>
+                                <div class="bubble-loc hidden">
+                                    <!-- NOTE!!! REMOVE Class .hidden-->
+                                    <div class="bubble-loc__title">Ваш город
+                                        <span class="type--mark type--bold">Москва ?</span>
+                                    </div>
+                                    <div class="bubble-loc__footer">
+                                        <div class="bubble-loc__footer--true">Да</div>
+                                        <div class="bubble-loc__footer--false">Нет, выбрать другой</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-contact">
+                            <div class="header-info">
+                                <div class="header-info__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#phone"></use>
+                                    </svg>
+                                </div>
+                                <div class="header-info__cont">
+                                    <div class="header-info__val">
+                                        <a href="tel:+7 (917) 58-55-05">
+                                            <span>+7 (917)</span>&nbsp;58-55-05</a>
+                                    </div>
+                                    <div class="header-info__text">Сегодня 00:00 - 23:59</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-top-nav">
+                            <a class="header-top-nav__el" href="#">О нас</a>
+                            <a class="header-top-nav__el" href="#">Доставка и оплата</a>
+                            <a class="header-top-nav__el" href="#">Отзывы</a>
+                            <a class="header-top-nav__el" href="#">Акции</a>
+                            <a class="header-top-nav__el" href="#">Франчайзинг</a>
+                        </div>
+                        <div class="soc-row soc-row--sm">
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-instagram"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-vk"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-fl"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="header-auth">
+                            <svg class="icon">
+                                <use xlink:href="#user"></use>
+                            </svg>
+                            <div class="header-auth-state">Александр</div>
+                        </div>
+                        <div class="cart-wrap cart-wrap--mobile">
+                            <div class="cart">
+                                <svg class="icon">
+                                    <use xlink:href="#cart--color"></use>
+                                </svg>
+                                <div class="cart-val">33</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-wrap">
+                <div class="main-cont">
+                    <div class="header-menu">
+                        <a class="logo" href="/">
+                            <img src="img/logo.svg" alt="" />
+                        </a>
+                        <div class="header-nav">
+                            <a class="header-nav__el" href="#">Пицца</a>
+                            <a class="header-nav__el" href="#">WOK</a>
+                            <a class="header-nav__el" href="#">Шурма</a>
+                            <a class="header-nav__el" href="#">Кесадия</a>
+                            <a class="header-nav__el" href="#">Пироги</a>
+                            <a class="header-nav__el" href="#">Супы</a>
+                            <!-- Это список категорий, который хранится под еще-->
+                            <!-- Появлятся в моб версии меню-->
+                            <div class="header-nav__el header-nav__el--more">Десерты</div>
+                            <div class="header-nav__el header-nav__el--more">Напитки</div>
+                            <div class="header-nav__el header-nav__el--more">Дополнительно</div>
+                            <div class="header-nav__el header-nav__el--more">Замороженная продукция</div>
+                            <!-- Это список категорий, который хранится под еще === end-->
+                            <div class="header-nav__more">
+                                <div class="dropdown">
+                                    <input type="hidden" name="name" value="0" />
+                                    <div class="dropdown-current">
+                                        <div class="dropdown-current__val">Еще</div>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down-fat"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu__el" data-value="#">Пицца</div>
+                                        <div class="dropdown-menu__el" data-value="#">WOK</div>
+                                        <div class="dropdown-menu__el" data-value="#">Шурма</div>
+                                        <div class="dropdown-menu__el" data-value="#">Кесадия</div>
+                                        <div class="dropdown-menu__el" data-value="#">Пироги</div>
+                                        <div class="dropdown-menu__el" data-value="#">Супы</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="header-nav__el" href="#">Напитки</a>
+                        </div>
+                        <div class="cart-wrap js-cart-wrap cart-wrap--desktop">
+                            <div class="cart-cost">2 850 ₽</div>
+                            <div class="cart js-cart">
+                                <svg class="icon">
+                                    <use xlink:href="#cart--color"></use>
+                                </svg>
+                                <div class="cart-val">33</div>
+                            </div>
+                            <div class="basket-wrap">
+                                <div class="basket">
+                                    <div class="basket-wrap-coner"></div>
+                                    <!-- !!! remove .hidden on state empty-->
+                                    <div class="basket-empty hidden">
+                                        <img class="basket-empty-img" src="img/empty-cart.svg" alt="" />
+                                        <div class="basket-empty__title">Корзина пуста :(</div>
+                                        <div class="basket-empty__text">Бесплатная доставка от 500 ₽, доставляем за 60 минут</div>
+                                    </div>
+                                    <div class="basket-list">
+                                        <div class="basket-container scroll-template">
+                                            <div class="basket__el">
+                                                <div class="basket__el-info">
+                                                    <div class="basket__img" style="background-image:url('img/item-2.jpg')"></div>
+                                                    <div class="basket__cont">
+                                                        <div class="basket__name">
+                                                            <span>Креветка в соусе Терияки 1</span>
+                                                            <div class="basket__delete">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#delete"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="basket__descr">Классический, грибы, горчичный соус, помидоры</div>
+                                                        <div class="basket__el-change">
+                                                            <div class="basket__inc incr--small">
+                                                                <div class="incr incr--small incr--one">
+                                                                    <div class="incr__minus incr__nav">
+                                                                        <svg class="icon">
+                                                                            <use xlink:href="#minus"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="incr__val">
+                                                                        <span>1</span>
+                                                                        <div class="incr__val-coner"></div>
+                                                                    </div>
+                                                                    <div class="incr__plus incr__nav">
+                                                                        <svg class="icon">
+                                                                            <use xlink:href="#plus"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="basket__price">270 р</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="basket__el">
+                                                <div class="basket__el-info">
+                                                    <div class="basket__img" style="background-image:url('img/item-2.jpg')"></div>
+                                                    <div class="basket__cont">
+                                                        <div class="basket__name">
+                                                            <span>Креветка в соусе Терияки 2</span>
+                                                            <div class="basket__delete">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#delete"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="basket__descr">Классический, грибы, горчичный соус, помидоры</div>
+                                                        <div class="basket__el-change">
+                                                            <div class="basket__inc incr--small">
+                                                                <div class="incr incr--small incr--one">
+                                                                    <div class="incr__minus incr__nav">
+                                                                        <svg class="icon">
+                                                                            <use xlink:href="#minus"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="incr__val">
+                                                                        <span>1</span>
+                                                                        <div class="incr__val-coner"></div>
+                                                                    </div>
+                                                                    <div class="incr__plus incr__nav">
+                                                                        <svg class="icon">
+                                                                            <use xlink:href="#plus"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="basket__price">270 р</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--basket-footer-->
+                                    <div class="basket-footer-wrap">
+                                        <div class="basket-msg-cont">
+                                            <div class="basket-msg">
+                                                <img src="img/person/person-glass.svg" alt="" />
+                                                <div class="basket-msg-info">До бесплатной доставки осталось 256 р.</div>
+                                            </div>
+                                        </div>
+                                        <div class="basket-footer">
+                                            <div class="basket-footer-total">
+                                                <div class="basket-footer-total__text">сумма</div>
+                                                <div class="basket-footer-total__val">1570.-</div>
+                                            </div>
+                                            <a class="basket-footer-get" href="#">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--slide menu-->
+            <div class="slide-menu">
+                <div class="slide-row">
+                    <div class="slide-header-auth">
+                        <svg class="icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <div class="slide-header-auth-state">Александр</div>
+                    </div>
+                </div>
+                <div class="slide-row">
+                    <div class="slide-menu__list">
+                        <a class="slide-menu__list-el" href="#">Акции</a>
+                        <a class="slide-menu__list-el" href="#">Доставка и оплата</a>
+                        <a class="slide-menu__list-el" href="#">Вакансии</a>
+                        <a class="slide-menu__list-el" href="#">О нас</a>
+                    </div>
+                </div>
+                <div class="slide-row">
+                    <div class="header-location">
+                        <div class="header-info">
+                            <div class="header-info__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#location--color"></use>
+                                </svg>
+                            </div>
+                            <div class="header-info__val">Озов</div>
+                        </div>
+                        <div class="header-info__text">Доставка за 45-90 минут</div>
+                    </div>
+                </div>
+                <div class="slide-row">
+                    <div class="slide-header-contact">
+                        <div class="slide-header-info">
+                            <div class="slide-header-info__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#phone"></use>
+                                </svg>
+                            </div>
+                            <div class="slide-header-info__val">
+                                <a href="tel:+7 (7172) 767 767">+7 (7172) 767 767</a>
+                                <a href="tel:+7 (707) 988 78 87">+7 (707) 988 78 87</a>
+                            </div>
+                        </div>
+                        <div class="slide-header-info__text">Сегодня 10 - 24</div>
+                    </div>
+                </div>
+                <div class="slide-row">
+                    <div class="soc-row">
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-instagram"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-vk"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block header end-->
+        <div class="content">
+            <div class="main-cont">
+                <p>Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"</p>
+                <p>Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send</p>
+                <div class="btn-wrap">
+                    <div class="btn--md btn--mark modal-get" data-modal="phoneEnter">Вход по телефону | data-modal="phoneEnter"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="enter">Вход | data-modal="enter"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="sms">Вход-смс | data-modal="sms"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="registration">Регистрация | data-modal="registration"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="registrationTrue">Регистрация успешна | data-modal="registrationTrue"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="forget">Восстановление пароля | data-modal="forget"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="location">Выбор города | data-modal="location"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="bad-action">Ресторан закрыт | data-modal="bad-action"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="true-action">Успешное действие | data-modal="true-action"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="review">Отзывы | data-modal="review"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="review-true">Отзывы сообщение | data-modal="review-true"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="profile">Личные данные | data-modal="profile"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="bonus">Бонусные баллы | data-modal="bonus"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="address">Адрес доставки | data-modal="address"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="staff">Карьера | data-modal="staff"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="staff-true">Карьера сообщение | data-modal="staff-true"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="bonus-descr">Бонусные баллы | data-modal="staff-descr"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="city">Список городов | data-modal="city"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="area">Выбор доставки по карте | data-modal="area"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="address-bad">Нет доставки | data-modal="address-bad"</div>
+                    <!--.btn--md.btn--mark.modal-get(data-modal="order") Заявка | data-modal="code "-->
+                </div>
+            </div>
+        </div>
+        <!--block footer-->
+        <div class="footer-info-wrap">
+            <div class="main-cont">
+                <div class="footer-info">
+                    <div class="footer-info__coll">
+                        <div class="footer-info__title">Бесплатная доставка</div>
+                        <div class="footer-info__text">При заказе от 500 руб. по г. Николаев</div>
+                    </div>
+                    <div class="footer-info__coll">
+                        <div class="footer-info__title">43 минуты</div>
+                        <div class="footer-info__text">Среднее время доставки.</div>
+                    </div>
+                    <div class="footer-info__coll">
+                        <div class="footer-info__title">1000 руб</div>
+                        <div class="footer-info__text">Минимальная сумма заказа</div>
+                    </div>
+                    <a class="footer-info__coll footer-info__map" href="/">
+                        <div class="footer-info__map-icon">
+                            <svg class="icon">
+                                <use xlink:href="#compass"></use>
+                            </svg>
+                        </div>
+                        <div class="footer-info__map-text">Зона доставки</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrap">
+            <div class="main-cont">
+                <div class="footer">
+                    <div class="footer-comp">
+                        <div class="footer-company">Суши Dimash © 2020</div>
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Публичная оферта</a>
+                        <div class="get-pay">
+                            <img src="img/payment--light.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="footer-nav">
+                        <div class="footer-nav__list">
+                            <a class="footer-nav__el" href="#">Пицца</a>
+                            <a class="footer-nav__el" href="#">Роллы</a>
+                            <a class="footer-nav__el" href="#">Суши</a>
+                            <a class="footer-nav__el" href="#">Сеты</a>
+                            <a class="footer-nav__el" href="#">WOK</a>
+                            <a class="footer-nav__el" href="#">Десерты</a>
+                            <a class="footer-nav__el" href="#">Напитки</a>
+                            <a class="footer-nav__el" href="#">Соусы</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <a class="footer-phone" href="tel:+7 (3852) 58-55-05">+7 (3852) 58-55-05</a>
+                        <a class="footer-phone" href="tel:+7 (3852) 58-85-05">+7 (3852) 58-85-05</a>
+                        <a class="footer-mail" href="mailto:info@whale.com">info@dimash.com</a>
+                        <a class="create" href="/">
+                            <span>Разработка сайта:</span>
+                            <img src="img/jq.svg" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cookie">
+            <!-- to show add class .cookie + .cookie--active-->
+            <div class="main-cont">
+                <div class="cookie-wrap">
+                    <div class="cookie-text">Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете
+                        <a class="link--mark" href="#">условия обработки</a>&nbsp;персональных данных</div>
+                    <svg class="icon icon-close">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!--block footer end-->
+        <div class="modal-layer">
+            <div class="modal-filter"></div>
+            <div class="modal-wrap">
+                <!-- phone enter-->
+                <div class="modal" data-modal="phoneEnter">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Вход на сайт</div>
+                        <div class="modal-text">Введите свой номер и код подтверждения будет отправлен по СМС в течение
+                            <span class="type--red">60 секунд</span>
+                        </div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="+7 (XXX) XXX-XX-XX" />
+                        </div>
+                        <div class="login-remember">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="style-input" type="checkbox" />
+                                    <div class="style-input-element">
+                                        <svg class="icon">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="style-input-text">Cогласен с
+                                        <a href="#">условиями обработки</a>&nbsp;персональных данных</div>
+                                </label>
+                            </div>
+                        </div>
+                        <input class="modal-send" type="submit" value="Получить код" />
+                    </div>
+                </div>
+                <!-- phone enter === end-->
+                <!-- phone enter-->
+                <div class="modal" data-modal="enter">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Вход на сайт</div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="Телефон" />
+                        </div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="Пароль" />
+                        </div>
+                        <input class="modal-send" type="submit" value="Войти" />
+                        <a class="modal-link" href="#">Забыли пароль</a>
+                        <a class="modal-link" href="#">Регистрация</a>
+                    </div>
+                </div>
+                <!-- phone enter === end-->
+                <!-- phone sms-->
+                <div class="modal" data-modal="sms">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Вход на сайт</div>
+                        <div class="modal-text">Введите код подтверждения, чтобы войти в личный кабинет</div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="Код из СМС" />
+                        </div>
+                        <input class="modal-send" type="submit" value="Войти" />
+                        <a class="modal-link" href="#">Отправить код еще раз</a>
+                    </div>
+                </div>
+                <!-- phone sms === end-->
+                <!-- registration-->
+                <div class="modal" data-modal="registration">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Регистрация</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Имя" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Телефон" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Пароль" />
+                            </div>
+                        </div>
+                        <div class="login-remember">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="style-input" type="checkbox" />
+                                    <div class="style-input-element">
+                                        <svg class="icon">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="style-input-text">Cогласен с
+                                        <a href="#">условиями обработки</a>&nbsp;персональных данных</div>
+                                </label>
+                            </div>
+                        </div>
+                        <input class="modal-send" type="submit" value="Зарегистрироваться" />
+                        <a class="modal-link" href="#">У меня есть аккаунт</a>
+                    </div>
+                </div>
+                <!-- registration === end-->
+                <!-- forget-->
+                <div class="modal" data-modal="forget">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Восстановление пароля</div>
+                        <div class="modal-text">Введите номер телефона и мы отправим на него код для восстановления пароля</div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="Телефон" />
+                        </div>
+                        <input class="modal-send" type="submit" value="Отправить" />
+                        <a class="modal-link" href="#">Я вспомнил пароль</a>
+                    </div>
+                </div>
+                <!-- forget === end-->
+                <!-- registrationTrue-->
+                <div class="modal" data-modal="registrationTrue">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Регистрация
+                            <br>успешна</div>
+                        <div class="modal-text">Теперь вы можете войти в личный кабинет, сохранить свои адреса, накапливать бонусные баллы и следить за историей заказов</div>
+                        <a class="btn--md btn--mark btn--extend btn--full" href="#">Личный кабинет</a>
+                        <a class="btn--md btn--light btn--full" href="#">На главную</a>
+                    </div>
+                </div>
+                <!-- registrationTrue === end-->
+                <!-- location-->
+                <div class="modal" data-modal="location">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Ваш город</div>
+                        <div class="modal-text">Выберите свой город для отображения актуальных товаров и цен</div>
+                        <div class="location-list-wrap">
+                            <div class="location-list scroll">
+                                <div class="location-list__el location-list__el--active">Кемерово</div>
+                                <div class="location-list__el">Москва</div>
+                                <div class="location-list__el">Санкт-Петербург</div>
+                                <div class="location-list__el">Волгоград</div>
+                                <div class="location-list__el">Москва</div>
+                                <div class="location-list__el">Санкт-Петербург</div>
+                                <div class="location-list__el">Волгоград</div>
+                                <div class="location-list__el">Москва</div>
+                                <div class="location-list__el">Санкт-Петербург</div>
+                                <div class="location-list__el">Волгоград</div>
+                                <div class="location-list__el">Москва</div>
+                                <div class="location-list__el">Санкт-Петербург</div>
+                                <div class="location-list__el">Волгоград</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- location === end-->
+                <!-- bad-action-->
+                <div class="modal" data-modal="bad-action">
+                    <div class="modal-content modal-content--dark">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-img">
+                            <img src="img/moon.svg" alt="" />
+                        </div>
+                        <div class="modal-title">Сейчас доставка не работает</div>
+                        <div class="modal-text">Мы откроемся завтра в 9 утра. Вы можете оформить заказ на завтра.</div>
+                        <a class="btn--md btn--light btn--full" href="#">Смотреть меню</a>
+                    </div>
+                </div>
+                <!-- bad-action === end-->
+                <!-- true action-->
+                <div class="modal" data-modal="true-action">
+                    <div class="modal-content">
+                        <div class="modal-img">
+                            <img src="img/chef-hat.svg" alt="" />
+                        </div>
+                        <div class="modal-title">Благодарим вас за заказ!</div>
+                        <div class="modal-text">Ваш заказ
+                            <span class="type--bold">№9854</span>&nbsp;будет приготовлен и доставлен к вам в течение
+                            <span class="type--bold">40 минут</span>
+                        </div>
+                        <input class="btn--md btn--mark btn--full modal-hide" type="submit" value="С нетерпением жду!" />
+                    </div>
+                </div>
+                <!-- true action === end-->
+                <!-- review-->
+                <div class="modal modal--xl" data-modal="review">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-head">
+                            <div class="modal-title">Оставить отзыв</div>
+                        </div>
+                        <div class="get-rating">
+                            <div class="get-rating-text">Ваша оценка</div>
+                            <div class="star star--edit">
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="#">
+                            <div class="input-cont input-cont--two">
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Ваше имя" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Ваш телефон или e-mail" />
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <textarea class="input" name="info" cols="30" rows="6" placeholder="Сообщение"></textarea>
+                            </div>
+                            <div class="login-remember">
+                                <div class="check-el">
+                                    <label class="style-label style-label--checkbox">
+                                        <input class="style-input" type="checkbox" />
+                                        <div class="style-input-element">
+                                            <svg class="icon">
+                                                <use xlink:href="#checked"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="style-input-text">Cогласен с
+                                            <a href="#">условиями обработки</a>&nbsp;персональных данных</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="btn-row-mid btn-row-mid--clear">
+                                <input class="btn--md btn--mark" type="submit" value="Отправить" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- review === end-->
+                <!-- review-true action-->
+                <div class="modal" data-modal="review-true">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-img">
+                            <img src="img/mail.svg" alt="" />
+                        </div>
+                        <div class="title title--lg type--center title--clear">Ваш отзыв отправлен</div>
+                        <div class="modal-text modal-text--clear">и появится на сайте сразу после прохождения нашей модерации</div>
+                    </div>
+                </div>
+                <!-- review-true action === end-->
+                <!-- profile-->
+                <div class="modal" data-modal="profile">
+                    <div class="modal-content modal-content--md">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Личные данные</div>
+                        <div class="modal-text">Личные данные позволяют быстрее совершать оформление заказа, а также получать новости о наших спецпредложениях</div>
+                        <div class="input-row">
+                            <input class="input input--disable" type="text" name="name" placeholder="Телефон" value="+7(926)182-38-34" />
+                        </div>
+                        <div class="modal-link modal-link--auth">войти под другим номером</div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="Имя" />
+                        </div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="E-mail" />
+                        </div>
+                        <div class="login-remember">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="style-input" type="checkbox" />
+                                    <div class="style-input-element">
+                                        <svg class="icon">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="style-input-text">информировать о скидках и акциях</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--two">
+                            <div class="input-row">
+                                <div class="dropdown dropdown--lg">
+                                    <input type="hidden" name="name" value="0" />
+                                    <div class="dropdown-current">
+                                        <div class="dropdown-current__val">Дата</div>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down-fat"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="dropdown dropdown--lg">
+                                    <input type="hidden" name="name" value="0" />
+                                    <div class="dropdown-current">
+                                        <div class="dropdown-current__val">Месяц</div>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down-fat"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--two">
+                            <div class="input-row">
+                                <div class="dropdown dropdown--lg">
+                                    <input type="hidden" name="name" value="0" />
+                                    <div class="dropdown-current">
+                                        <div class="dropdown-current__val">Год</div>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down-fat"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-row input-row--middle">
+                                <div class="type--xs type--red">будьте внимательны, день рождения нельзя изменить</div>
+                            </div>
+                        </div>
+                        <input class="modal-send" type="submit" value="Сохранить" />
+                        <div class="modal-link">Отмена</div>
+                    </div>
+                </div>
+                <!-- profile === end-->
+                <!-- bonus-->
+                <div class="modal modal--xl" data-modal="bonus">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Бонусные баллы</div>
+                        <div class="modal-text type--mark type--bold">1 бонусный балл = 1 рубль</div>
+                        <div class="modal-bonus text scroll">
+                            <p>Бонусными баллами можно оплатить до 50% от стоимости вашего заказа. Для этого нужно при оформлении заказа выбрать количество баллов, которые вы готовы потратить.</p>
+                            <p>Бонусные баллы не начисляются на акционные товары.</p>
+                            <h3>Что это значит?</h3>
+                            <p>Еда, приготовленная с душой, всегда только свежие продукты, увлечённые своим делом повара, интересное и разнообразное меню для гурманов и ценителей классики — мы предлагаем попробовать блюда разных кухонь мира и оценить преимущества.</p>
+                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
+                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
+                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
+                            <h3>На что можно потратить баллы?</h3>
+                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
+                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
+                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- bonus === end-->
+                <!-- address-->
+                <div class="modal" data-modal="address">
+                    <div class="modal-content modal-content--md">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Адрес доставки</div>
+                        <div class="modal-text">Добавленный адрес помогает заполнять форму оформления заказа быстрее</div>
+                        <div class="city-current icon-row">
+                            <span class="type--lg type--bold">Москва</span>
+                            <svg class="icon icon--sm icon--left">
+                                <use xlink:href="#delete"></use>
+                            </svg>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <div class="size size--lg size--mark">
+                                    <div class="size__el size__el--active js-switch" data-item="deliver" data-group="deliverType">Доставка</div>
+                                    <div class="size__el js-switch" data-item="self" data-group="deliverType">Самовывоз</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="Название адреса (дом, работа)" />
+                        </div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="Имя" />
+                        </div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="E-mail" />
+                        </div>
+                        <div class="input-cont input-cont--two">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Дом" />
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="№ кв, офис" />
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--two">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Подъезд" />
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Этаж" />
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--two">
+                            <div class="input-row input-row--middle">
+                                <div class="check-el">
+                                    <label class="style-label style-label--checkbox">
+                                        <input class="style-input" type="checkbox" />
+                                        <div class="style-input-element style-label--checkbox js-switch" data-item="intercomMob" data-group="admissionMob">
+                                            <svg class="icon">
+                                                <use xlink:href="#checked"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="style-input-text type--xs">Есть домофон</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-row js-switch-cont hidden" data-item="intercomMob" data-group="admissionMob">
+                                <input class="input" type="text" placeholder="Домофон" />
+                            </div>
+                        </div>
+                        <input class="modal-send" type="submit" value="Сохранить адрес" />
+                        <div class="modal-link">Отмена</div>
+                    </div>
+                </div>
+                <!-- address === end-->
+                <!-- staff-->
+                <div class="modal" data-modal="staff">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-head">
+                            <div class="modal-title">Оставить отзыв</div>
+                        </div>
+                        <form action="#">
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Ваше имя" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Ваш телефон или e-mail" />
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <textarea class="input" name="info" cols="30" rows="6" placeholder="Расскажите о себе."></textarea>
+                            </div>
+                            <div class="upload-wrap">
+                                <div class="upload-img upload-img--doc"></div>
+                                <label class="upload">
+                                    <div class="upload__icon">
+                                        <svg class="icon">
+                                            <use xlink:href="#upload"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="upload__text">Прикрепить резюме</div>
+                                    <input class="upload-btn" type="file" />
+                                </label>
+                            </div>
+                            <div class="login-remember">
+                                <div class="check-el">
+                                    <label class="style-label style-label--checkbox">
+                                        <input class="style-input" type="checkbox" />
+                                        <div class="style-input-element">
+                                            <svg class="icon">
+                                                <use xlink:href="#checked"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="style-input-text">Cогласен с
+                                            <a href="#">условиями обработки</a>&nbsp;персональных данных</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="btn-row-mid btn-row-mid--clear">
+                                <input class="btn--md btn--mark" type="submit" value="Отправить" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- staff === end-->
+                <!-- staff-true action-->
+                <div class="modal" data-modal="staff-true">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-img">
+                            <img src="img/hat.svg" alt="" />
+                        </div>
+                        <div class="modal-title modal-title--clear">Ваше резюме отправлено</div>
+                        <div class="modal-text">Наш HR-отдел рассмотрит вашу заявку и когда мы будем готовы - пригласит вас на собеседование</div>
+                    </div>
+                </div>
+                <!-- staff-true action === end-->
+                <!-- staff-descr-->
+                <div class="modal modal--xl" data-modal="bonus-descr">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title modal-title--clear">Пиццайолло</div>
+                        <div class="modal-text type--mark type--bold">Зарплата от 10 000 грн на руки</div>
+                        <div class="modal-bonus text scroll">
+                            <p>Бонусными баллами можно оплатить до 50% от стоимости вашего заказа. Для этого нужно при оформлении заказа выбрать количество баллов, которые вы готовы потратить.</p>
+                            <p>Бонусные баллы не начисляются на акционные товары.</p>
+                            <h3>Что это значит?</h3>
+                            <p>Еда, приготовленная с душой, всегда только свежие продукты, увлечённые своим делом повара, интересное и разнообразное меню для гурманов и ценителей классики — мы предлагаем попробовать блюда разных кухонь мира и оценить преимущества.</p>
+                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
+                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
+                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
+                            <h3>На что можно потратить баллы?</h3>
+                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
+                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
+                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- staff-descr === end-->
+                <!-- city-->
+                <div class="modal modal--xl" data-modal="city">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-head">
+                            <div class="modal-title modal-title--left">125 заведений в 50 городах</div>
+                        </div>
+                        <div class="city">
+                            <div class="city-search">
+                                <input class="input input--empty" type="text" placeholder="Введите название  города" />
+                                <div class="search__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--extend input-cont--two">
+                            <div class="input-row">
+                                <div class="size size--lg size--mark">
+                                    <div class="size__el size__el--active js-switch" data-item="deliver" data-group="deliverType">Доставка</div>
+                                    <div class="size__el js-switch" data-item="self" data-group="deliverType">Самовывоз</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="city-wrap scroll">
+                            <div class="city-list">
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">A</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Абакан</a>
+                                            <a class="city-list-el" href="#">Артём</a>
+                                            <a class="city-list-el" href="#">Ачинск</a>
+                                            <a class="city-list-el" href="#">Астрахань</a>
+                                            <a class="city-list-el" href="#">Альметьевск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">Б</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Бабкино</a>
+                                            <a class="city-list-el" href="#">Бабушкина</a>
+                                            <a class="city-list-el" href="#">Багаевская</a>
+                                            <a class="city-list-el" href="#">Базеево</a>
+                                            <a class="city-list-el" href="#">Байдаево</a>
+                                            <a class="city-list-el" href="#">Байкал</a>
+                                            <a class="city-list-el" href="#">Байкальск</a>
+                                            <a class="city-list-el" href="#">Бакарица</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">В</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Воронеж</a>
+                                            <a class="city-list-el" href="#">Владимир</a>
+                                            <a class="city-list-el" href="#">Волгоград</a>
+                                            <a class="city-list-el" href="#">Владивосток</a>
+                                            <a class="city-list-el" href="#">Вологда</a>
+                                            <a class="city-list-el" href="#">Волгодонск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">A</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Абакан</a>
+                                            <a class="city-list-el" href="#">Артём</a>
+                                            <a class="city-list-el" href="#">Ачинск</a>
+                                            <a class="city-list-el" href="#">Астрахань</a>
+                                            <a class="city-list-el" href="#">Альметьевск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">Б</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Бабкино</a>
+                                            <a class="city-list-el" href="#">Бабушкина</a>
+                                            <a class="city-list-el" href="#">Багаевская</a>
+                                            <a class="city-list-el" href="#">Базеево</a>
+                                            <a class="city-list-el" href="#">Байдаево</a>
+                                            <a class="city-list-el" href="#">Байкал</a>
+                                            <a class="city-list-el" href="#">Байкальск</a>
+                                            <a class="city-list-el" href="#">Бакарица</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">В</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Воронеж</a>
+                                            <a class="city-list-el" href="#">Владимир</a>
+                                            <a class="city-list-el" href="#">Волгоград</a>
+                                            <a class="city-list-el" href="#">Владивосток</a>
+                                            <a class="city-list-el" href="#">Вологда</a>
+                                            <a class="city-list-el" href="#">Волгодонск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">A</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Абакан</a>
+                                            <a class="city-list-el" href="#">Артём</a>
+                                            <a class="city-list-el" href="#">Ачинск</a>
+                                            <a class="city-list-el" href="#">Астрахань</a>
+                                            <a class="city-list-el" href="#">Альметьевск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">Б</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Бабкино</a>
+                                            <a class="city-list-el" href="#">Бабушкина</a>
+                                            <a class="city-list-el" href="#">Багаевская</a>
+                                            <a class="city-list-el" href="#">Базеево</a>
+                                            <a class="city-list-el" href="#">Байдаево</a>
+                                            <a class="city-list-el" href="#">Байкал</a>
+                                            <a class="city-list-el" href="#">Байкальск</a>
+                                            <a class="city-list-el" href="#">Бакарица</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">В</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Воронеж</a>
+                                            <a class="city-list-el" href="#">Владимир</a>
+                                            <a class="city-list-el" href="#">Волгоград</a>
+                                            <a class="city-list-el" href="#">Владивосток</a>
+                                            <a class="city-list-el" href="#">Вологда</a>
+                                            <a class="city-list-el" href="#">Волгодонск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">A</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Абакан</a>
+                                            <a class="city-list-el" href="#">Артём</a>
+                                            <a class="city-list-el" href="#">Ачинск</a>
+                                            <a class="city-list-el" href="#">Астрахань</a>
+                                            <a class="city-list-el" href="#">Альметьевск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">Б</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Бабкино</a>
+                                            <a class="city-list-el" href="#">Бабушкина</a>
+                                            <a class="city-list-el" href="#">Багаевская</a>
+                                            <a class="city-list-el" href="#">Базеево</a>
+                                            <a class="city-list-el" href="#">Байдаево</a>
+                                            <a class="city-list-el" href="#">Байкал</a>
+                                            <a class="city-list-el" href="#">Байкальск</a>
+                                            <a class="city-list-el" href="#">Бакарица</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">В</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Воронеж</a>
+                                            <a class="city-list-el" href="#">Владимир</a>
+                                            <a class="city-list-el" href="#">Волгоград</a>
+                                            <a class="city-list-el" href="#">Владивосток</a>
+                                            <a class="city-list-el" href="#">Вологда</a>
+                                            <a class="city-list-el" href="#">Волгодонск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">A</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Абакан</a>
+                                            <a class="city-list-el" href="#">Артём</a>
+                                            <a class="city-list-el" href="#">Ачинск</a>
+                                            <a class="city-list-el" href="#">Астрахань</a>
+                                            <a class="city-list-el" href="#">Альметьевск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">Б</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Бабкино</a>
+                                            <a class="city-list-el" href="#">Бабушкина</a>
+                                            <a class="city-list-el" href="#">Багаевская</a>
+                                            <a class="city-list-el" href="#">Базеево</a>
+                                            <a class="city-list-el" href="#">Байдаево</a>
+                                            <a class="city-list-el" href="#">Байкал</a>
+                                            <a class="city-list-el" href="#">Байкальск</a>
+                                            <a class="city-list-el" href="#">Бакарица</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">В</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Воронеж</a>
+                                            <a class="city-list-el" href="#">Владимир</a>
+                                            <a class="city-list-el" href="#">Волгоград</a>
+                                            <a class="city-list-el" href="#">Владивосток</a>
+                                            <a class="city-list-el" href="#">Вологда</a>
+                                            <a class="city-list-el" href="#">Волгодонск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">A</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Абакан</a>
+                                            <a class="city-list-el" href="#">Артём</a>
+                                            <a class="city-list-el" href="#">Ачинск</a>
+                                            <a class="city-list-el" href="#">Астрахань</a>
+                                            <a class="city-list-el" href="#">Альметьевск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">Б</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Бабкино</a>
+                                            <a class="city-list-el" href="#">Бабушкина</a>
+                                            <a class="city-list-el" href="#">Багаевская</a>
+                                            <a class="city-list-el" href="#">Базеево</a>
+                                            <a class="city-list-el" href="#">Байдаево</a>
+                                            <a class="city-list-el" href="#">Байкал</a>
+                                            <a class="city-list-el" href="#">Байкальск</a>
+                                            <a class="city-list-el" href="#">Бакарица</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">В</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Воронеж</a>
+                                            <a class="city-list-el" href="#">Владимир</a>
+                                            <a class="city-list-el" href="#">Волгоград</a>
+                                            <a class="city-list-el" href="#">Владивосток</a>
+                                            <a class="city-list-el" href="#">Вологда</a>
+                                            <a class="city-list-el" href="#">Волгодонск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">A</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Абакан</a>
+                                            <a class="city-list-el" href="#">Артём</a>
+                                            <a class="city-list-el" href="#">Ачинск</a>
+                                            <a class="city-list-el" href="#">Астрахань</a>
+                                            <a class="city-list-el" href="#">Альметьевск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">Б</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Бабкино</a>
+                                            <a class="city-list-el" href="#">Бабушкина</a>
+                                            <a class="city-list-el" href="#">Багаевская</a>
+                                            <a class="city-list-el" href="#">Базеево</a>
+                                            <a class="city-list-el" href="#">Байдаево</a>
+                                            <a class="city-list-el" href="#">Байкал</a>
+                                            <a class="city-list-el" href="#">Байкальск</a>
+                                            <a class="city-list-el" href="#">Бакарица</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">В</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Воронеж</a>
+                                            <a class="city-list-el" href="#">Владимир</a>
+                                            <a class="city-list-el" href="#">Волгоград</a>
+                                            <a class="city-list-el" href="#">Владивосток</a>
+                                            <a class="city-list-el" href="#">Вологда</a>
+                                            <a class="city-list-el" href="#">Волгодонск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">A</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Абакан</a>
+                                            <a class="city-list-el" href="#">Артём</a>
+                                            <a class="city-list-el" href="#">Ачинск</a>
+                                            <a class="city-list-el" href="#">Астрахань</a>
+                                            <a class="city-list-el" href="#">Альметьевск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">Б</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Бабкино</a>
+                                            <a class="city-list-el" href="#">Бабушкина</a>
+                                            <a class="city-list-el" href="#">Багаевская</a>
+                                            <a class="city-list-el" href="#">Базеево</a>
+                                            <a class="city-list-el" href="#">Байдаево</a>
+                                            <a class="city-list-el" href="#">Байкал</a>
+                                            <a class="city-list-el" href="#">Байкальск</a>
+                                            <a class="city-list-el" href="#">Бакарица</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">В</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Воронеж</a>
+                                            <a class="city-list-el" href="#">Владимир</a>
+                                            <a class="city-list-el" href="#">Волгоград</a>
+                                            <a class="city-list-el" href="#">Владивосток</a>
+                                            <a class="city-list-el" href="#">Вологда</a>
+                                            <a class="city-list-el" href="#">Волгодонск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">A</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Абакан</a>
+                                            <a class="city-list-el" href="#">Артём</a>
+                                            <a class="city-list-el" href="#">Ачинск</a>
+                                            <a class="city-list-el" href="#">Астрахань</a>
+                                            <a class="city-list-el" href="#">Альметьевск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">Б</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Бабкино</a>
+                                            <a class="city-list-el" href="#">Бабушкина</a>
+                                            <a class="city-list-el" href="#">Багаевская</a>
+                                            <a class="city-list-el" href="#">Базеево</a>
+                                            <a class="city-list-el" href="#">Байдаево</a>
+                                            <a class="city-list-el" href="#">Байкал</a>
+                                            <a class="city-list-el" href="#">Байкальск</a>
+                                            <a class="city-list-el" href="#">Бакарица</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">В</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Воронеж</a>
+                                            <a class="city-list-el" href="#">Владимир</a>
+                                            <a class="city-list-el" href="#">Волгоград</a>
+                                            <a class="city-list-el" href="#">Владивосток</a>
+                                            <a class="city-list-el" href="#">Вологда</a>
+                                            <a class="city-list-el" href="#">Волгодонск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">A</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Абакан</a>
+                                            <a class="city-list-el" href="#">Артём</a>
+                                            <a class="city-list-el" href="#">Ачинск</a>
+                                            <a class="city-list-el" href="#">Астрахань</a>
+                                            <a class="city-list-el" href="#">Альметьевск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">Б</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Бабкино</a>
+                                            <a class="city-list-el" href="#">Бабушкина</a>
+                                            <a class="city-list-el" href="#">Багаевская</a>
+                                            <a class="city-list-el" href="#">Базеево</a>
+                                            <a class="city-list-el" href="#">Байдаево</a>
+                                            <a class="city-list-el" href="#">Байкал</a>
+                                            <a class="city-list-el" href="#">Байкальск</a>
+                                            <a class="city-list-el" href="#">Бакарица</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">В</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Воронеж</a>
+                                            <a class="city-list-el" href="#">Владимир</a>
+                                            <a class="city-list-el" href="#">Волгоград</a>
+                                            <a class="city-list-el" href="#">Владивосток</a>
+                                            <a class="city-list-el" href="#">Вологда</a>
+                                            <a class="city-list-el" href="#">Волгодонск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">A</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Абакан</a>
+                                            <a class="city-list-el" href="#">Артём</a>
+                                            <a class="city-list-el" href="#">Ачинск</a>
+                                            <a class="city-list-el" href="#">Астрахань</a>
+                                            <a class="city-list-el" href="#">Альметьевск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">Б</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Бабкино</a>
+                                            <a class="city-list-el" href="#">Бабушкина</a>
+                                            <a class="city-list-el" href="#">Багаевская</a>
+                                            <a class="city-list-el" href="#">Базеево</a>
+                                            <a class="city-list-el" href="#">Байдаево</a>
+                                            <a class="city-list-el" href="#">Байкал</a>
+                                            <a class="city-list-el" href="#">Байкальск</a>
+                                            <a class="city-list-el" href="#">Бакарица</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="city-list-col">
+                                    <div class="city-list-letter">В</div>
+                                    <div class="city-list-list">
+                                        <div class="city-list-el">
+                                            <a class="city-list-el" href="#">Воронеж</a>
+                                            <a class="city-list-el" href="#">Владимир</a>
+                                            <a class="city-list-el" href="#">Волгоград</a>
+                                            <a class="city-list-el" href="#">Владивосток</a>
+                                            <a class="city-list-el" href="#">Вологда</a>
+                                            <a class="city-list-el" href="#">Волгодонск</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- city === end-->
+                <!-- area-->
+                <div class="modal modal--xl" data-modal="area">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-head">
+                            <div class="modal-title modal-title--left">125 заведений в 50 городах</div>
+                        </div>
+                        <div class="city-current icon-row">
+                            <span class="type--lg type--bold">Москва</span>
+                            <svg class="icon icon--sm icon--left">
+                                <use xlink:href="#delete"></use>
+                            </svg>
+                        </div>
+                        <div class="city">
+                            <div class="city-search">
+                                <input class="input input--empty" type="text" placeholder="Введите название  города" />
+                                <div class="search__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--extend input-cont--two">
+                            <div class="input-row">
+                                <div class="size size--lg size--mark">
+                                    <div class="size__el size__el--active js-switch" data-item="deliver" data-group="deliverType">Доставка</div>
+                                    <div class="size__el js-switch" data-item="self" data-group="deliverType">Самовывоз</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="area-map">
+                            <div class="area-map__el">
+                                <!--put map code her-->
+                            </div>
+                            <div class="area-msg-layer">
+                                <!--remove class hidden for area-msg-layer + item msg-->
+                                <div class="area-msg">
+                                    <div class="area-msg__text">Вы подтверждаете самовывоз с пиццерии
+                                        <span>Речной вокзал</span>
+                                    </div>
+                                    <div class="area-msg-nav">
+                                        <div class="btn--sm btn--mark">Да, всё верно</div>
+                                        <div class="btn--sm btn--light">Отмена</div>
+                                    </div>
+                                </div>
+                                <div class="area-msg hidden">
+                                    <div class="area-msg__text text">
+                                        <p>Адрес: ул. Московская, дом 24</p>
+                                        <p>К сожалению, ваш адрес не входит ни в одну зону доставки, воспользуйтесь самовывозом</p>
+                                    </div>
+                                    <div class="area-msg-nav">
+                                        <div class="btn--sm btn--mark">Да, всё верно</div>
+                                        <div class="btn--sm btn--light">Отмена</div>
+                                    </div>
+                                </div>
+                                <div class="area-msg hidden">
+                                    <div class="area-msg__text">
+                                        <p>Адрес:
+                                            <strong>ул. Живописная, дом 49</strong>
+                                        </p>
+                                        <p>Телефон:
+                                            <strong>+7 (499) 553-00-40 доб. 107</strong>
+                                        </p>
+                                        <p>Время приёма заказов:
+                                            <strong>10 - 23</strong>
+                                        </p>
+                                        <p>Время доставки:
+                                            <strong>35 мин</strong>
+                                        </p>
+                                        <p>Минимальная сумма заказа:
+                                            <strong>500 руб</strong>
+                                        </p>
+                                    </div>
+                                    <div class="area-msg-nav">
+                                        <div class="btn--sm btn--mark btn--mobile">Подтверждаю</div>
+                                        <div class="btn--sm btn--light btn--mobile">Продолжить выбор</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- area === end-->
+                <!-- bad address-->
+                <div class="modal" data-modal="address-bad">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Ваш адрес доставки:</div>
+                        <p class="type--md type--bold type--center">г. Москва, ул. Тимирязева, д. 30</p>
+                        <div class="modal-text">к сожалению мы не доставляем по данному адресу, вы можете выбрать один из вариантов доставки</div>
+                        <div class="deliver-other">
+                            <a href="#">
+                                <img src="img/deliver-yandex.png" alt="" />
+                            </a>
+                            <a href="#">
+                                <img src="img/deliver-club.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- bad address === end-->
+            </div>
+        </div>
+    </div>
+    <!--build:js ./js/combined.js-->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/slick-carousel/slick/slick.js"></script>
+    <script src="bower/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="bower/sticky-kit/jquery.sticky-kit.js"></script>
+    <!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
+    <script src="bower/ion.rangeSlider/js/ion.rangeSlider.js"></script>
+    <!-- endbuild-->
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
+
+</html>

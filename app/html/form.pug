@@ -1,0 +1,191 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.order
+				.order-form
+
+					.title-row
+						.arrow(onclick="window.history.go(-1); return false;")
+							+icon("arrow-conner-left","icon")
+						.title.title--lg Оформление заказа
+					.form-block
+						.title.title--md Личные данные
+						.input-cont.input-cont--two
+							.input-row.input-row--error
+								input(type="text" placeholder="Ваше имя" class="input")
+								.error-msg Ошибка в данных
+							.input-row
+								input(type="text" placeholder="Номер телефона" class="input")
+					.form-block
+						//choose type deliver
+						.title.title--md Доставка
+						.input-cont.input-cont--extend.input-cont--two
+							.input-row
+								.size.size--lg.size--mark
+									.size__el.size__el--active.js-switch(data-item="deliver" data-group="deliverType") Привезите
+									.size__el.js-switch(data-item="self" data-group="deliverType") Заберу сам
+							.input-row.input-row--middle
+								+icon("clock","icon icon--sm icon--right icon--gray")
+								span.type--sm <span class="type--gray">Доставим за</span> 40 мин
+					//type deliver
+					.js-switch-cont(data-item="deliver" data-group="deliverType")
+						// если нет адреса в лк
+						.title Адрес доставки
+						.input-cont.input-cont--two
+							.input-row
+								input(type="text" placeholder="Название адреса (дом, работа)" class="input")
+							.input-row
+								input(type="text" placeholder="Улица" class="input")
+						.input-cont.input-cont--four
+							.input-row
+								input(type="text" placeholder="Дом" class="input")
+							.input-row
+								input(type="text" placeholder="№ кв, офис" class="input")
+							.input-row
+								input(type="text" placeholder="Подъезд" class="input")
+							.input-row
+								input(type="text" placeholder="Этаж" class="input")
+						.input-cont.input-cont--four
+							.input-row.input-row--middle
+								.check-el
+									label.style-label.style-label--checkbox
+										input(type="checkbox").style-input
+										.style-input-element.js-switch(data-item="intercom" data-group="admission")
+											+icon("checked","icon")
+										.style-input-text.type--sm Есть домофон
+							.input-row.js-switch-cont.hidden(data-item="intercom" data-group="admission")
+								input(type="text" placeholder="Домофон" class="input")
+						// если нет адреса в лк === end
+
+						// Выбор адреса из лк
+						.form-block
+							.direction
+								.direction-el.js-switch.active(data-item="direction")
+									.direction-el__title Дом
+									.direction-el__text г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56
+								.direction-el.js-switch(data-item="direction" )
+									.direction-el__title Работа
+									.direction-el__text ул. Московская, д. 35, офис 469
+								.direction-el-add
+									.icon-block.icon-block--empty
+										+icon("plus","icon")
+									span добавить адрес
+
+
+
+					.js-switch-cont.hidden(data-item="self" data-group="deliverType")
+						// Выбор адреса из лк
+						.form-block
+							.direction.direction--sm
+								.direction-el.js-switch.active(data-item="directionDeliver")
+									.direction-el__title ул. Ленина, д. 64
+									.direction-el__text ежедневно с 10 до 22
+								.direction-el.js-switch(data-item="directionDeliver" )
+									.direction-el__title ул. Тимирязева, д. 81
+									.direction-el__text ежедневно с 10 до 22
+								.direction-el.js-switch(data-item="directionDeliver" )
+									.direction-el__title ул. Новочерскасская, корп. 2
+									.direction-el__text ежедневно с 9 до 21
+						// Выбор адреса из лк === end
+
+					// Выбор адреса из лк === end
+					.form-block
+						.title.title--md Время
+						.input-cont.input-cont--two
+							.input-row
+								.size.size--fluid.size--column.size--mark
+									.size__el.size__el--active.js-switch(data-group="deliverTime") Как можно раньше
+									.size__el.js-switch(data-item="toTime" data-group="deliverTime") Ко времени
+							.input-row.js-switch-cont.hidden(data-item="toTime" data-group="deliverTime")
+								.col-2
+									.dropdown.dropdown--lg
+										input(type="hidden" name="name" value="0")
+										.dropdown-current
+											.dropdown-current__val Cегодня
+											+icon("arrow-down-fat","icon")
+										.dropdown-menu
+											.dropdown-menu__el(data-value="#") Завтра
+											- for (var i=0;i<20;i++)
+												.dropdown-menu__el(data-value="#") 10.11
+									.dropdown.dropdown--lg
+										input(type="hidden" name="name" value="0")
+										.dropdown-current
+											.dropdown-current__val 12:00
+											+icon("arrow-down-fat","icon")
+										.dropdown-menu
+											.dropdown-menu__el(data-value="#") 13:00
+											.dropdown-menu__el(data-value="#") 14:00
+											- for (var i=0;i<6;i++)
+												.dropdown-menu__el(data-value="#") 15.00
+
+					// choose payment type
+					.form-block
+						.title.title--md Оплата
+						.input-cont
+							.input-row
+								.size.size--fluid.size--column.size--mark
+									.size__el.size__el--active.js-switch(data-group="typePay") Картой онлайн
+									.size__el.js-switch(data-item="cash" data-group="typePay") Наличными при получении
+									.size__el.js-switch(data-group="typePay") Картой при получеии
+						.js-switch-cont.hidden(data-item="cash" data-group="typePay")
+							.title Нужна сдача?
+							.input-cont.input-cont--four
+								.input-row
+									input(type="text" placeholder="Сдача с" class="input")
+
+					// bonus
+					.range__wrap
+						.range-head
+							.range-title Сколько бонусных баллов спишем?
+							.range-head__info
+								.range-head__text баланс
+								.range-head__val 2500
+								+icon("info","icon")
+						input(type="range" class="range" value="100" data-min="0" data-max="200" )
+
+					// choose payment type === end
+					.form-block
+						.title.title--md Комментарий к заказу
+						.input-cont
+							textarea(name="text", cols="30", rows="10" class="input" placeholder="Если у вас есть какие-то пожелания к заказу, опишите их здесь")
+				.order-condition
+					.order-condition-wrap.stick
+						.title.title--md Мой заказ
+						.input-row
+							.input-get
+								input(type="text" placeholder="Ввести промокод" class="input")
+								.input-get__btn Принять
+
+						.goods-list
+							- for (var i=0;i<4;i++)
+							.goods-list__el
+								.goods-list__el-name San Benedetto Aquavitamin an Benedetto
+								.goods-list__el-val x 2
+								.goods-list__el-cost 1003 р.
+							.goods-list__el
+								.goods-list__el-name.goods-list__el-name--gray Приборы
+								.goods-list__el-val x 2
+								.goods-list__el-cost 1003 р.
+							.goods-list__el
+								.goods-list__el-name.goods-list__el-name--gray Доставка
+								.goods-list__el-val
+								.goods-list__el-cost 200 р.
+						.order-total
+							.order-total__text Итого:
+							.order-total__val 1 184р
+						.login-remember
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox").style-input
+									.style-input-element
+										+icon("checked","icon")
+									.style-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности], #[a(href="#") публичной офертой] и даю согласие на обработку моих персональных данных
+						.btn--md.btn--full.btn--mark.btn--disable Оформить заказ
+							//remove .btn--disable
+
+	+footer()
+include ./block_html/_script.pug

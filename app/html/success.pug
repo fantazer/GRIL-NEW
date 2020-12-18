@@ -1,0 +1,15 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.success
+				.success-img
+					img(src="img/chef-hat.svg", alt="")
+				.success-title Спасибо! <br> Заказ принят :)
+				.success-text Статус заказа вы можете отследить в личном кабинете
+				a(href="#").btn--md.btn--mark Личный кабинет
+	+footer()
+include ./block_html/_script.pug

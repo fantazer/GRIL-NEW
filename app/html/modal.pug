@@ -1,0 +1,51 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+style(type='text/css').
+	.btn-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		flex-flow: column;
+		align-items: baseline;
+	}
+	.btn-wrap .btn--md {
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+
+	@media only screen and (max-width: 640px) {
+		.btn-wrap .btn--md{
+			width: 100%;
+		}
+	}
+.page
+	+header()
+	.content
+		.main-cont
+			p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
+			p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
+			.btn-wrap
+				.btn--md.btn--mark.modal-get(data-modal="phoneEnter") Вход по телефону | data-modal="phoneEnter"
+				.btn--md.btn--mark.modal-get(data-modal="enter") Вход | data-modal="enter"
+				.btn--md.btn--mark.modal-get(data-modal="sms") Вход-смс | data-modal="sms"
+				.btn--md.btn--mark.modal-get(data-modal="registration") Регистрация | data-modal="registration"
+				.btn--md.btn--mark.modal-get(data-modal="registrationTrue") Регистрация успешна | data-modal="registrationTrue"
+				.btn--md.btn--mark.modal-get(data-modal="forget") Восстановление пароля | data-modal="forget"
+				.btn--md.btn--mark.modal-get(data-modal="location") Выбор города | data-modal="location"
+				.btn--md.btn--mark.modal-get(data-modal="bad-action") Ресторан закрыт | data-modal="bad-action"
+				.btn--md.btn--mark.modal-get(data-modal="true-action") Успешное действие | data-modal="true-action"
+				.btn--md.btn--mark.modal-get(data-modal="review") Отзывы | data-modal="review"
+				.btn--md.btn--mark.modal-get(data-modal="review-true") Отзывы сообщение | data-modal="review-true"
+				.btn--md.btn--mark.modal-get(data-modal="profile") Личные данные | data-modal="profile"
+				.btn--md.btn--mark.modal-get(data-modal="bonus") Бонусные баллы | data-modal="bonus"
+				.btn--md.btn--mark.modal-get(data-modal="address") Адрес доставки | data-modal="address"
+				.btn--md.btn--mark.modal-get(data-modal="staff") Карьера | data-modal="staff"
+				.btn--md.btn--mark.modal-get(data-modal="staff-true") Карьера сообщение | data-modal="staff-true"
+				.btn--md.btn--mark.modal-get(data-modal="bonus-descr") Бонусные баллы | data-modal="staff-descr"
+				.btn--md.btn--mark.modal-get(data-modal="city") Список городов | data-modal="city"
+				.btn--md.btn--mark.modal-get(data-modal="area") Выбор доставки по карте | data-modal="area"
+				.btn--md.btn--mark.modal-get(data-modal="address-bad") Нет доставки | data-modal="address-bad"
+				//.btn--md.btn--mark.modal-get(data-modal="order") Заявка | data-modal="code "
+	+footer()
+	+modal()
+include ./block_html/_script.pug

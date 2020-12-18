@@ -1,0 +1,26 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.title-row
+				.arrow(onclick="window.history.go(-1); return false;")
+					+icon("arrow-conner-left","icon")
+				.title.title--xl Последние новости
+			.news-list
+				- for (var i=0;i<4;i++)
+					.news-list__el
+						.news-list__el-img(style="background-image:url('img/sale-list-" + (i + 1) + ".jpg')")
+						.news-list__el-descr
+							.news-list__el-info
+								.news-list__el-date
+									+icon("clock","icon")
+									span 21 августа 2020 г
+								a(href="#").news-list__el-title Как приготовить пасту
+								.news-list__el-text.text
+									p Повседневная практика показывает, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Товарищи! консультация с широким активом требуют определения и уточнения форм развития.
+								a(href="#").btn--sm.btn--light.btn--mobile Подробнее
+	+footer()
+include ./block_html/_script.pug

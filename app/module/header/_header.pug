@@ -1,0 +1,169 @@
+mixin header()
+	//block header
+	.header
+		//header-top
+		.header-top-wrap
+			.main-cont
+				.header-top
+					.head-toggle
+						+icon("menu","icon icon-open")
+						+icon("close","icon icon-close")
+					a(href="/").logo
+						img(src="img/logo.svg", alt="")
+					.header-location
+						.header-info
+							.header-info__icon
+								+icon("location","icon")
+							.header-info__cont
+								.header-info__val Барнаул
+								.header-info__text проспект Независимости, 90
+							.bubble-loc.hidden
+								// NOTE!!! REMOVE Class .hidden
+								.bubble-loc__title Ваш город  <span class="type--mark type--bold">Москва ?</span>
+								.bubble-loc__footer
+									.bubble-loc__footer--true Да
+									.bubble-loc__footer--false Нет, выбрать другой
+					.header-contact
+						.header-info
+							.header-info__icon
+								+icon("phone","icon")
+							.header-info__cont
+								.header-info__val
+									a(href="tel:+7 (917) 58-55-05")  <span>+7 (917)</span>&nbsp;58-55-05
+								.header-info__text Сегодня 00:00 - 23:59
+
+					.header-top-nav
+						-
+							var items = [
+								'О нас','Доставка и оплата','Отзывы','Акции','Франчайзинг'
+								];
+						each item in items
+							a(href="#").header-top-nav__el #{item}
+
+					.soc-row.soc-row--sm
+						a(href="#").soc-row__el
+							+icon("soc-instagram","icon")
+						a(href="#").soc-row__el
+							+icon("soc-vk","icon")
+						a(href="#").soc-row__el
+							+icon("soc-fl","icon")
+					.header-auth
+						+icon("user","icon")
+						.header-auth-state Александр
+					.cart-wrap.cart-wrap--mobile
+						.cart
+							+icon("cart--color","icon")
+							.cart-val 33
+
+		.header-menu-wrap
+			.main-cont
+				.header-menu
+					a(href="/").logo
+						img(src="img/logo.svg", alt="")
+
+					.header-nav
+						-
+							var items = [
+								'Пицца','WOK','Шурма','Кесадия','Пироги','Супы'
+								];
+						each item in items
+							a(href="#").header-nav__el #{item}
+						// Это список категорий, который хранится под еще
+						// Появлятся в моб версии меню
+						.header-nav__el.header-nav__el--more Десерты
+						.header-nav__el.header-nav__el--more Напитки
+						.header-nav__el.header-nav__el--more Дополнительно
+						.header-nav__el.header-nav__el--more Замороженная продукция
+						// Это список категорий, который хранится под еще === end
+						.header-nav__more
+							.dropdown
+								input(type="hidden" name="name" value="0")
+								.dropdown-current
+									.dropdown-current__val Еще
+									+icon("arrow-down-fat","icon")
+								.dropdown-menu
+									-
+										var items = [
+											'Пицца', 'WOK', 'Шурма', 'Кесадия', 'Пироги', 'Супы'
+										];
+									each item in items
+										.dropdown-menu__el(data-value="#") #{item}
+						a(href="#").header-nav__el Напитки
+
+					.cart-wrap.js-cart-wrap.cart-wrap--desktop
+						.cart-cost 2 850 ₽
+						.cart.js-cart
+							+icon("cart--color","icon")
+							.cart-val 33
+						.basket-wrap
+							.basket
+								.basket-wrap-coner
+								// !!! remove .hidden on state empty
+								.basket-empty.hidden
+									img(src="img/empty-cart.svg", alt="").basket-empty-img
+									.basket-empty__title Корзина пуста :(
+									.basket-empty__text Бесплатная доставка от 500 ₽, доставляем за 60 минут
+								.basket-list
+									.basket-container.scroll-template
+										- for (var i=0;i<2;i++)
+											.basket__el
+												.basket__el-info
+													.basket__img(style="background-image:url('img/item-2.jpg')")
+													.basket__cont
+														.basket__name
+															span Креветка в соусе Терияки #{i + 1}
+															.basket__delete
+																+icon("delete","icon")
+														.basket__descr Классический, грибы, горчичный соус, помидоры
+														.basket__el-change
+															.basket__inc.incr--small
+																+incr(1,"incr--small")
+															.basket__price 270 р
+								//basket-footer
+								.basket-footer-wrap
+									.basket-msg-cont
+										.basket-msg
+											img(src="img/person/person-glass.svg", alt="")
+											.basket-msg-info До бесплатной доставки осталось 256 р.
+									.basket-footer
+										.basket-footer-total
+											.basket-footer-total__text сумма
+											.basket-footer-total__val 1570.-
+										a(href="#").basket-footer-get В корзину
+
+		//slide menu
+		.slide-menu
+			.slide-row
+				.slide-header-auth
+					+icon("user","icon")
+					.slide-header-auth-state Александр
+
+			.slide-row
+				.slide-menu__list
+					a(href="#").slide-menu__list-el Акции
+					a(href="#").slide-menu__list-el Доставка и оплата
+					a(href="#").slide-menu__list-el Вакансии
+					a(href="#").slide-menu__list-el О нас
+			.slide-row
+				.header-location
+					.header-info
+						.header-info__icon
+							+icon("location--color","icon")
+						.header-info__val Озов
+					.header-info__text Доставка за 45-90 минут
+			.slide-row
+				.slide-header-contact
+					.slide-header-info
+						.slide-header-info__icon
+							+icon("phone","icon")
+						.slide-header-info__val
+							a(href="tel:+7 (7172) 767 767")  +7 (7172) 767 767
+							a(href="tel:+7 (707) 988 78 87")  +7 (707) 988 78 87
+					.slide-header-info__text Сегодня 10 - 24
+			.slide-row
+				.soc-row
+					a(href="#").soc-row__el
+						+icon("soc-instagram","icon")
+					a(href="#").soc-row__el
+						+icon("soc-vk","icon")
+	//block header end

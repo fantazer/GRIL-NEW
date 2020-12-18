@@ -1,0 +1,48 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.title-row
+				.arrow(onclick="window.history.go(-1); return false;")
+					+icon("arrow-conner-left","icon")
+				.title.title--lg Ваша корзина
+			.order
+				.order-cont
+					.order-item
+						.order__el-wrap
+							- for (var i=0;i<5;i++)
+								.order__el
+									.order__el-info
+										a(href="#" style="background-image:url('img/item-2.jpg')" ).order__img
+										.order__name
+											a(href="#").order__name-text Макси маки
+											.order__adds 3 см, 450 г
+											.order__adds + + оливки, 30 г + фрикадельки, 50 г
+									.order__el-change
+										.order__inc
+											+incr(1,"incr--mark-light incr--mdx")
+										.order__price 500 р
+										.order__delete
+											+icon("delete","icon")
+						.title Не забудьте добавить к заказу:
+						.order-add.order-add--sm
+							- for (var i=0;i<4;i++)
+								+product-sm()
+					.total
+						.total-wrap.stick
+							.total-title Сумма заказа
+							.total-val 2 650 р
+							.btn--md.btn--mark Оформить заказ
+
+
+			// recommend
+			.title.title--lg Рекомендуем также
+			.product-cont
+				- for (var i=0;i< 4;i++)
+					+product()
+			// recommend === end
+	+footer()
+include ./block_html/_script.pug

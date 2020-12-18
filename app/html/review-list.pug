@@ -1,0 +1,34 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.title-row
+				.title.title--xl Отзывы
+				.btn--sm.btn--mark Оставить отзыв
+			.review
+				- for (var i=0;i<6;i++)
+					.review__el.review__el--border
+						.review__el-name Екатерина
+						.review__rating
+							.star
+								.star-el.star-el--active
+									+icon("star","icon")
+								.star-el.star-el--active
+									+icon("star","icon")
+								.star-el.star-el--active
+									+icon("star","icon")
+								.star-el.star-el--active
+									+icon("star","icon")
+								.star-el
+									+icon("star","icon")
+						.review__el-date 14 марта 2019 21:49
+						.review__el-text Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка
+			.loader
+				img(src="img/loader.svg", alt="")
+
+
++footer()
+include ./block_html/_script.pug

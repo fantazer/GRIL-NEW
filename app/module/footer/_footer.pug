@@ -1,0 +1,51 @@
+mixin footer()
+	//block footer
+	.footer-info-wrap
+		.main-cont
+			.footer-info
+				.footer-info__coll
+					.footer-info__title Бесплатная доставка
+					.footer-info__text При заказе от 500 руб. по г. Николаев
+				.footer-info__coll
+					.footer-info__title 43 минуты
+					.footer-info__text Среднее время доставки.
+				.footer-info__coll
+					.footer-info__title 1000 руб
+					.footer-info__text Минимальная сумма заказа
+				a(href="/").footer-info__coll.footer-info__map
+					.footer-info__map-icon
+						+icon("compass","icon")
+					.footer-info__map-text Зона доставки
+	.footer-wrap
+		.main-cont
+			.footer
+				.footer-comp
+					.footer-company Суши Dimash © 2020
+					a(href="#") Политика конфиденциальности
+					a(href="#") Публичная оферта
+					.get-pay
+						img(src="img/payment--light.svg", alt="")
+				.footer-nav
+					.footer-nav__list
+						-
+							var items = [
+							'Пицца','Роллы','Суши','Сеты','WOK','Десерты','Напитки','Соусы'
+							];
+						each item in items
+							a(href="#").footer-nav__el #{item}
+
+				.footer-contact
+					a(href="tel:+7 (3852) 58-55-05").footer-phone +7 (3852) 58-55-05
+					a(href="tel:+7 (3852) 58-85-05").footer-phone +7 (3852) 58-85-05
+					a(href="mailto:info@whale.com").footer-mail info@dimash.com
+
+					a(href="/").create
+						span Разработка сайта:
+						img(src="img/jq.svg", alt="")
+	.cookie
+		// to show add class .cookie + .cookie--active
+		.main-cont
+			.cookie-wrap
+				.cookie-text Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете #[a(href="#").link--mark условия обработки]&nbsp;персональных данных
+				+icon("close","icon icon-close")
+	//block footer end

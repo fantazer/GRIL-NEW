@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <!--build:css ./css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+    <!--link(rel="stylesheet", href="bower/jquery-nice-select/css/nice-select.css")-->
+    <link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.css" />
+    <!--endbuild-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-edit.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!--block header-->
+        <div class="header">
+            <!--header-top-->
+            <div class="header-top-wrap">
+                <div class="main-cont">
+                    <div class="header-top">
+                        <div class="head-toggle">
+                            <svg class="icon icon-open">
+                                <use xlink:href="#menu"></use>
+                            </svg>
+                            <svg class="icon icon-close">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <a class="logo" href="/">
+                            <img src="img/logo.svg" alt="" />
+                        </a>
+                        <div class="header-location">
+                            <div class="header-info">
+                                <div class="header-info__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#location"></use>
+                                    </svg>
+                                </div>
+                                <div class="header-info__cont">
+                                    <div class="header-info__val">Барнаул</div>
+                                    <div class="header-info__text">проспект Независимости, 90</div>
+                                </div>
+                                <div class="bubble-loc hidden">
+                                    <!-- NOTE!!! REMOVE Class .hidden-->
+                                    <div class="bubble-loc__title">Ваш город
+                                        <span class="type--mark type--bold">Москва ?</span>
+                                    </div>
+                                    <div class="bubble-loc__footer">
+                                        <div class="bubble-loc__footer--true">Да</div>
+                                        <div class="bubble-loc__footer--false">Нет, выбрать другой</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-contact">
+                            <div class="header-info">
+                                <div class="header-info__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#phone"></use>
+                                    </svg>
+                                </div>
+                                <div class="header-info__cont">
+                                    <div class="header-info__val">
+                                        <a href="tel:+7 (917) 58-55-05">
+                                            <span>+7 (917)</span>&nbsp;58-55-05</a>
+                                    </div>
+                                    <div class="header-info__text">Сегодня 00:00 - 23:59</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-top-nav">
+                            <a class="header-top-nav__el" href="#">О нас</a>
+                            <a class="header-top-nav__el" href="#">Доставка и оплата</a>
+                            <a class="header-top-nav__el" href="#">Отзывы</a>
+                            <a class="header-top-nav__el" href="#">Акции</a>
+                            <a class="header-top-nav__el" href="#">Франчайзинг</a>
+                        </div>
+                        <div class="soc-row soc-row--sm">
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-instagram"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-vk"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-fl"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="header-auth">
+                            <svg class="icon">
+                                <use xlink:href="#user"></use>
+                            </svg>
+                            <div class="header-auth-state">Александр</div>
+                        </div>
+                        <div class="cart-wrap cart-wrap--mobile">
+                            <div class="cart">
+                                <svg class="icon">
+                                    <use xlink:href="#cart--color"></use>
+                                </svg>
+                                <div class="cart-val">33</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-wrap">
+                <div class="main-cont">
+                    <div class="header-menu">
+                        <a class="logo" href="/">
+                            <img src="img/logo.svg" alt="" />
+                        </a>
+                        <div class="header-nav">
+                            <a class="header-nav__el" href="#">Пицца</a>
+                            <a class="header-nav__el" href="#">WOK</a>
+                            <a class="header-nav__el" href="#">Шурма</a>
+                            <a class="header-nav__el" href="#">Кесадия</a>
+                            <a class="header-nav__el" href="#">Пироги</a>
+                            <a class="header-nav__el" href="#">Супы</a>
+                            <!-- Это список категорий, который хранится под еще-->
+                            <!-- Появлятся в моб версии меню-->
+                            <div class="header-nav__el header-nav__el--more">Десерты</div>
+                            <div class="header-nav__el header-nav__el--more">Напитки</div>
+                            <div class="header-nav__el header-nav__el--more">Дополнительно</div>
+                            <div class="header-nav__el header-nav__el--more">Замороженная продукция</div>
+                            <!-- Это список категорий, который хранится под еще === end-->
+                            <div class="header-nav__more">
+                                <div class="dropdown">
+                                    <input type="hidden" name="name" value="0" />
+                                    <div class="dropdown-current">
+                                        <div class="dropdown-current__val">Еще</div>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down-fat"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu__el" data-value="#">Пицца</div>
+                                        <div class="dropdown-menu__el" data-value="#">WOK</div>
+                                        <div class="dropdown-menu__el" data-value="#">Шурма</div>
+                                        <div class="dropdown-menu__el" data-value="#">Кесадия</div>
+                                        <div class="dropdown-menu__el" data-value="#">Пироги</div>
+                                        <div class="dropdown-menu__el" data-value="#">Супы</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="header-nav__el" href="#">Напитки</a>
+                        </div>
+                        <div class="cart-wrap js-cart-wrap cart-wrap--desktop">
+                            <div class="cart-cost">2 850 ₽</div>
+                            <div class="cart js-cart">
+                                <svg class="icon">
+                                    <use xlink:href="#cart--color"></use>
+                                </svg>
+                                <div class="cart-val">33</div>
+                            </div>
+                            <div class="basket-wrap">
+                                <div class="basket">
+                                    <div class="basket-wrap-coner"></div>
+                                    <!-- !!! remove .hidden on state empty-->
+                                    <div class="basket-empty hidden">
+                                        <img class="basket-empty-img" src="img/empty-cart.svg" alt="" />
+                                        <div class="basket-empty__title">Корзина пуста :(</div>
+                                        <div class="basket-empty__text">Бесплатная доставка от 500 ₽, доставляем за 60 минут</div>
+                                    </div>
+                                    <div class="basket-list">
+                                        <div class="basket-container scroll-template">
+                                            <div class="basket__el">
+                                                <div class="basket__el-info">
+                                                    <div class="basket__img" style="background-image:url('img/item-2.jpg')"></div>
+                                                    <div class="basket__cont">
+                                                        <div class="basket__name">
+                                                            <span>Креветка в соусе Терияки 1</span>
+                                                            <div class="basket__delete">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#delete"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="basket__descr">Классический, грибы, горчичный соус, помидоры</div>
+                                                        <div class="basket__el-change">
+                                                            <div class="basket__inc incr--small">
+                                                                <div class="incr incr--small incr--one">
+                                                                    <div class="incr__minus incr__nav">
+                                                                        <svg class="icon">
+                                                                            <use xlink:href="#minus"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="incr__val">
+                                                                        <span>1</span>
+                                                                        <div class="incr__val-coner"></div>
+                                                                    </div>
+                                                                    <div class="incr__plus incr__nav">
+                                                                        <svg class="icon">
+                                                                            <use xlink:href="#plus"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="basket__price">270 р</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="basket__el">
+                                                <div class="basket__el-info">
+                                                    <div class="basket__img" style="background-image:url('img/item-2.jpg')"></div>
+                                                    <div class="basket__cont">
+                                                        <div class="basket__name">
+                                                            <span>Креветка в соусе Терияки 2</span>
+                                                            <div class="basket__delete">
+                                                                <svg class="icon">
+                                                                    <use xlink:href="#delete"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="basket__descr">Классический, грибы, горчичный соус, помидоры</div>
+                                                        <div class="basket__el-change">
+                                                            <div class="basket__inc incr--small">
+                                                                <div class="incr incr--small incr--one">
+                                                                    <div class="incr__minus incr__nav">
+                                                                        <svg class="icon">
+                                                                            <use xlink:href="#minus"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="incr__val">
+                                                                        <span>1</span>
+                                                                        <div class="incr__val-coner"></div>
+                                                                    </div>
+                                                                    <div class="incr__plus incr__nav">
+                                                                        <svg class="icon">
+                                                                            <use xlink:href="#plus"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="basket__price">270 р</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--basket-footer-->
+                                    <div class="basket-footer-wrap">
+                                        <div class="basket-msg-cont">
+                                            <div class="basket-msg">
+                                                <img src="img/person/person-glass.svg" alt="" />
+                                                <div class="basket-msg-info">До бесплатной доставки осталось 256 р.</div>
+                                            </div>
+                                        </div>
+                                        <div class="basket-footer">
+                                            <div class="basket-footer-total">
+                                                <div class="basket-footer-total__text">сумма</div>
+                                                <div class="basket-footer-total__val">1570.-</div>
+                                            </div>
+                                            <a class="basket-footer-get" href="#">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--slide menu-->
+            <div class="slide-menu">
+                <div class="slide-row">
+                    <div class="slide-header-auth">
+                        <svg class="icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <div class="slide-header-auth-state">Александр</div>
+                    </div>
+                </div>
+                <div class="slide-row">
+                    <div class="slide-menu__list">
+                        <a class="slide-menu__list-el" href="#">Акции</a>
+                        <a class="slide-menu__list-el" href="#">Доставка и оплата</a>
+                        <a class="slide-menu__list-el" href="#">Вакансии</a>
+                        <a class="slide-menu__list-el" href="#">О нас</a>
+                    </div>
+                </div>
+                <div class="slide-row">
+                    <div class="header-location">
+                        <div class="header-info">
+                            <div class="header-info__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#location--color"></use>
+                                </svg>
+                            </div>
+                            <div class="header-info__val">Озов</div>
+                        </div>
+                        <div class="header-info__text">Доставка за 45-90 минут</div>
+                    </div>
+                </div>
+                <div class="slide-row">
+                    <div class="slide-header-contact">
+                        <div class="slide-header-info">
+                            <div class="slide-header-info__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#phone"></use>
+                                </svg>
+                            </div>
+                            <div class="slide-header-info__val">
+                                <a href="tel:+7 (7172) 767 767">+7 (7172) 767 767</a>
+                                <a href="tel:+7 (707) 988 78 87">+7 (707) 988 78 87</a>
+                            </div>
+                        </div>
+                        <div class="slide-header-info__text">Сегодня 10 - 24</div>
+                    </div>
+                </div>
+                <div class="slide-row">
+                    <div class="soc-row">
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-instagram"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-vk"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block header end-->
+        <div class="content">
+            <div class="main-cont">
+                <div class="title-row">
+                    <div class="title title--xl">Отзывы</div>
+                    <div class="btn--sm btn--mark">Оставить отзыв</div>
+                </div>
+                <div class="review">
+                    <div class="review__el review__el--border">
+                        <div class="review__el-name">Екатерина</div>
+                        <div class="review__rating">
+                            <div class="star">
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__el-date">14 марта 2019 21:49</div>
+                        <div class="review__el-text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                    </div>
+                    <div class="review__el review__el--border">
+                        <div class="review__el-name">Екатерина</div>
+                        <div class="review__rating">
+                            <div class="star">
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__el-date">14 марта 2019 21:49</div>
+                        <div class="review__el-text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                    </div>
+                    <div class="review__el review__el--border">
+                        <div class="review__el-name">Екатерина</div>
+                        <div class="review__rating">
+                            <div class="star">
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__el-date">14 марта 2019 21:49</div>
+                        <div class="review__el-text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                    </div>
+                    <div class="review__el review__el--border">
+                        <div class="review__el-name">Екатерина</div>
+                        <div class="review__rating">
+                            <div class="star">
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__el-date">14 марта 2019 21:49</div>
+                        <div class="review__el-text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                    </div>
+                    <div class="review__el review__el--border">
+                        <div class="review__el-name">Екатерина</div>
+                        <div class="review__rating">
+                            <div class="star">
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__el-date">14 марта 2019 21:49</div>
+                        <div class="review__el-text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                    </div>
+                    <div class="review__el review__el--border">
+                        <div class="review__el-name">Екатерина</div>
+                        <div class="review__rating">
+                            <div class="star">
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el star-el--active">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                                <div class="star-el">
+                                    <svg class="icon">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__el-date">14 марта 2019 21:49</div>
+                        <div class="review__el-text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                    </div>
+                </div>
+                <div class="loader">
+                    <img src="img/loader.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--block footer-->
+    <div class="footer-info-wrap">
+        <div class="main-cont">
+            <div class="footer-info">
+                <div class="footer-info__coll">
+                    <div class="footer-info__title">Бесплатная доставка</div>
+                    <div class="footer-info__text">При заказе от 500 руб. по г. Николаев</div>
+                </div>
+                <div class="footer-info__coll">
+                    <div class="footer-info__title">43 минуты</div>
+                    <div class="footer-info__text">Среднее время доставки.</div>
+                </div>
+                <div class="footer-info__coll">
+                    <div class="footer-info__title">1000 руб</div>
+                    <div class="footer-info__text">Минимальная сумма заказа</div>
+                </div>
+                <a class="footer-info__coll footer-info__map" href="/">
+                    <div class="footer-info__map-icon">
+                        <svg class="icon">
+                            <use xlink:href="#compass"></use>
+                        </svg>
+                    </div>
+                    <div class="footer-info__map-text">Зона доставки</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrap">
+        <div class="main-cont">
+            <div class="footer">
+                <div class="footer-comp">
+                    <div class="footer-company">Суши Dimash © 2020</div>
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Публичная оферта</a>
+                    <div class="get-pay">
+                        <img src="img/payment--light.svg" alt="" />
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-nav__list">
+                        <a class="footer-nav__el" href="#">Пицца</a>
+                        <a class="footer-nav__el" href="#">Роллы</a>
+                        <a class="footer-nav__el" href="#">Суши</a>
+                        <a class="footer-nav__el" href="#">Сеты</a>
+                        <a class="footer-nav__el" href="#">WOK</a>
+                        <a class="footer-nav__el" href="#">Десерты</a>
+                        <a class="footer-nav__el" href="#">Напитки</a>
+                        <a class="footer-nav__el" href="#">Соусы</a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <a class="footer-phone" href="tel:+7 (3852) 58-55-05">+7 (3852) 58-55-05</a>
+                    <a class="footer-phone" href="tel:+7 (3852) 58-85-05">+7 (3852) 58-85-05</a>
+                    <a class="footer-mail" href="mailto:info@whale.com">info@dimash.com</a>
+                    <a class="create" href="/">
+                        <span>Разработка сайта:</span>
+                        <img src="img/jq.svg" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cookie">
+        <!-- to show add class .cookie + .cookie--active-->
+        <div class="main-cont">
+            <div class="cookie-wrap">
+                <div class="cookie-text">Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете
+                    <a class="link--mark" href="#">условия обработки</a>&nbsp;персональных данных</div>
+                <svg class="icon icon-close">
+                    <use xlink:href="#close"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!--block footer end-->
+    <!--build:js ./js/combined.js-->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/slick-carousel/slick/slick.js"></script>
+    <script src="bower/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="bower/sticky-kit/jquery.sticky-kit.js"></script>
+    <!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
+    <script src="bower/ion.rangeSlider/js/ion.rangeSlider.js"></script>
+    <!-- endbuild-->
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
+
+</html>

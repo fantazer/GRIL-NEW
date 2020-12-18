@@ -1,0 +1,52 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.info-banner(style="background-image:url('img/banner-1.jpg')")
+			.about-cont
+				.title-row
+					.arrow(onclick="window.history.go(-1); return false;")
+						+icon("arrow-conner-left","icon")
+					.title.title--lg О нашей компании
+				.info-descr.text
+					p Здравствуйте, Вы находитесь на официальном сайте компании "Гигант-суши".
+					p В Барнауле сушествует большое количество различных служб доставки японской кухни, но мы решили выделиться на их фоне, делая самые большие суши и роллы в городе.
+					p Попробуйте, Вам понравится ;-)
+
+					.title.title--lg Контакты
+
+					.contact-info
+						.contact-info__map
+							.map
+								.map__el(style="background-image:url('img/map.jpg')")
+						.contact-info__text
+							p.type--bold г.Барнаул, ул. Шумакова 59 / Власихинская 164 (2 этаж)
+							p.type--bold тел. 585-505
+							p прием заказов 10 - 23
+					p Идейные соображения высшего порядка, а также рамки и место обучения кадров требуют определения и уточнения форм развития. С другой стороны дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации систем массового участия. Товарищи! реализация намеченных плановых заданий представляет собой интересный эксперимент проверки направлений прогрессивного развития.
+
+					p Товарищи! реализация намеченных плановых заданий требуют от нас анализа дальнейших направлений развития. Разнообразный и богатый опыт новая модель организационной деятельности позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
+		.subscr-wrap
+			.main-cont
+				.about-cont
+					.title.title--lg Оформите подписку
+					p Подпишитесь на рассылку и получайте секретные предложения от гигант-суши
+					.input-cont.input-cont--two
+						.input-row
+							input(type="text" placeholder="Ваше имя" class="input input--white")
+						.input-row
+							input(type="text" placeholder="Телефон" class="input input--white")
+					.subscr-conf
+						.login-remember
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox").style-input
+									.style-input-element
+										+icon("checked","icon")
+									.style-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности], #[a(href="#") публичной офертой] и даю согласие на обработку моих персональных данных
+						.btn--mark.btn--sm.btn--mobile Отправить
+	+footer()
+include ./block_html/_script.pug

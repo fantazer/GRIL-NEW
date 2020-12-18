@@ -1,0 +1,29 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.title-row
+				.arrow(onclick="window.history.go(-1); return false;")
+					+icon("arrow-conner-left","icon")
+				.title.title--xl Карьера
+			.vacancy-list
+				- for (var i=0;i<8;i++)
+					.vacancy-list__el
+						.vacancy-list__img(style="background-image:url('img/vacancy-2.jpg')")
+							.vacancy-list__el-cont
+						.vacancy-list__info
+							.vacancy-list__title Менеджер Кухни
+							.vacancy-list__decr
+								.vacancy-list__decr-type Опыт работы:
+								.vacancy-list__decr-val не менее года
+							.vacancy-list__decr
+								.vacancy-list__decr-type Зарплата:
+								.vacancy-list__decr-val от 27 000 р.
+							.vacancy-footer
+								.vacancy-footer__el.vacancy-set Откликнуться
+								.vacancy-footer__el.vacancy-more Подробнее
+	+footer()
+include ./block_html/_script.pug

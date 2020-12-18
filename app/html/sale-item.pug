@@ -1,0 +1,38 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.info-banner(style="background-image:url('img/banner-1.jpg')")
+			.title-row
+				.arrow(onclick="window.history.go(-1); return false;")
+					+icon("arrow-conner-left","icon")
+				.title.title--xl Скидка в день рождения!
+			.info-descr.text
+				.sale-date
+					+icon("clock","icon")
+					span Действует до 21 августа 2020 г
+				p Возможность получить скидку действует в течение 7-ми дней (в День рождения и 6 дней после Дня рождения)*
+				p Скидка распространяется на все меню представленное на этом сайте **
+				p * При себе необходимо иметь документ, в котором указана дата вашего Дня рождения.
+				p ** Скидка НЕ суммируется с другими скидками («Счастливые часы», «Красная цена») и НЕ действует на блюда из разделов: Бизнес-Ланчи, Завтраки, Детское меню, Саке Шок, Коктейль Шок.
+
+			.title.title--lg  Другие акции
+			.sale-list
+				- for (var i=0;i<2;i++)
+					a(href="#").sale-list__el
+						.sale-list__el-img(style="background-image:url('img/sale-list-1.jpg')")
+						.sale-list__el-descr
+							.sale-list__el-info
+								.title.sale-list__el-title Скидка в день рождения!
+								.sale-list__el-date
+									+icon("clock","icon")
+									span Действует до 21 августа 2020 г
+							.sale-list__el-more
+								.arrow
+									+icon("arrow-conner-right","icon")
+
+	+footer()
+include ./block_html/_script.pug

@@ -1,0 +1,23 @@
+{
+	"name": "gulpBower",
+	"version": "0.0.0",
+	"authors": [
+		"fantazer <fantazer@text.ru>"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"jquery": "~2.1.4",
+		"normalize.css": "~3.0.3",
+		"slick-carousel": "^1.8.1",
+		"jquery.nicescroll": "^3.7.6",
+    "jquery-nice-select": "^1.1.0",
+    "ion-rangeslider": "ionrangeslider#^2.3.1"
+	}
+}

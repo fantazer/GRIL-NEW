@@ -1,0 +1,78 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+
+			.title-row
+				.arrow(onclick="window.history.go(-1); return false;")
+					+icon("arrow-conner-left","icon")
+				.title.title--xl Магазины
+				.location-toggle
+					.location-toggle__el.location-toggle__el--active Списком
+					.location-toggle__el На карте
+			.location
+				.location-wrap
+					.main-cont
+						- for (var i=0;i<6;i++)
+							.location-el
+								.location-el__head
+									.location-el__info
+										.location-el__position ул. Сказочная, 3
+										.location-el__metro
+											.location-el__metro-icon
+												+icon("metro","icon")
+											.location-el__metro-val Киевская
+									.location-el__time
+										.location-el__time-el
+											.location-el__time-el-day Пн-Чт
+											.location-el__time-el-val 10-22
+										.location-el__time-el
+											.location-el__time-el-day Пт-Вс
+											.location-el__time-el-val 10-24
+									.location-el__contact
+										a(href="tel:8 942 234 23 41").location-el__contact-el 8 942 234 23 41
+										a(href="tel:8 942 234 23 41").location-el__contact-el 8 942 234 23 41
+									.location-el__toggle
+										.location-el__toggle-text.location-toggle--hidden Смотреть фото
+										.location-el__toggle-text.location-toggle--show Скрыть фото
+										.location-el__toggle-icon
+											+icon("arrow-down-fat","icon")
+								.location-el__cont
+									.gallery-img
+										.gallery-main-slider
+											- for (var j=0;j<2;j++)
+												.gallery-main-slider__el-wrap
+													.gallery-main-slider__el(style="background-image:url('img/rest.jpg')")
+												.gallery-main-slider__el-wrap
+													.gallery-main-slider__el(style="background-image:url('img/rest.jpg')")
+												.gallery-main-slider__el-wrap
+													.gallery-main-slider__el(style="background-image:url('img/rest.jpg')")
+												.gallery-main-slider__el-wrap
+													.gallery-main-slider__el(style="background-image:url('img/rest.jpg')")
+										.slider-wrap.slider-wrap--simple.slider-wrap--extend.slider-wrap--sm
+											.slider-control.slider-control--left
+												+icon("arrow-left-fat","icon")
+											.slider-control.slider-control--right
+												+icon("arrow-right-fat","icon")
+											.slider-nav.gallery-nav-slider.slider-item
+												- for (var k=0;k<2;k++)
+													.gallery-nav-slider__el-wrap
+														.gallery-nav-slider__el(style="background-image:url('img/rest.jpg')")
+													.gallery-nav-slider__el-wrap
+														.gallery-nav-slider__el(style="background-image:url('img/rest.jpg')")
+													.gallery-nav-slider__el-wrap
+														.gallery-nav-slider__el(style="background-image:url('img/rest.jpg')")
+													.gallery-nav-slider__el-wrap
+														.gallery-nav-slider__el(style="background-image:url('img/rest.jpg')")
+													.gallery-nav-slider__el-wrap
+														.gallery-nav-slider__el(style="background-image:url('img/rest.jpg')")
+				.location-wrap.location-wrap--hidden
+					.main-cont
+						.location-map
+							//put map her
+							.location-map__el
++footer()
+include ./block_html/_script.pug

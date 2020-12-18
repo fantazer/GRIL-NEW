@@ -1,0 +1,296 @@
+//  ============================ Typography ============================
+
+//webfont('RUB', 'rouble-webfont', 'normal')
+//Add fotn rub write .rub a - (a,b,c,d - change type font)
+
+//font(name,file,size)
+font('Montserrat','Montserrat-Regular',400)
+font('Montserrat','Montserrat-Medium',500)
+font('Montserrat','Montserrat-SemiBold',600)
+$v-font =  'Montserrat', sans-serif
+
+typeSize(fontSm,font)
+	+below(768px)
+		font-size font px
+	font-size fontSm px
+
+/*
+font-size 14px
+@extend .type--sm
+
+font-size 16px
+@extend .type--main
+
+font-size 18px
+@extend .type--md
+
+font-size 26px
+@extend .type--lg
+
+font-size 36px
+@extend .type--xl
+
+font-size 50px
+@extend .type--xxl
+*/
+
+.type--xs
+	typeSize(12,10)
+
+.type--sm
+	typeSize(14,12)
+
+.type--main
+	typeSize(14,14)
+
+.type--md
+	typeSize(18,14)
+
+.type--lg
+	typeSize(24,22)
+
+.type--xl
+	typeSize(34,24)
+
+.type--xxl
+	typeSize(50,36)
+
+.type--mark
+	color $mark
+
+.type--gray
+	color $gray
+
+.type--red
+	color red
+
+.type--bold
+	font-weight bold
+
+.type--center
+	text-align center
+
+.title
+	margin-bottom: 30px
+	font-weight: 700
+	line-height: 1.4
+
+.title--sm
+	@extend .type--sm
+
+.title--main
+	@extend .type--main
+
+.title--md
+	@extend .type--md
+
+.title--lg
+	@extend .type--lg
+
+.title--xl
+	@extend .type--xl
+
+.title--clear
+	margin-bottom: 10px
+
+// title templates
+.title-row
+	+below(640px)
+		margin-bottom: 20px
+		flex-wrap nowrap
+		//align-items: flex-start
+	fw()
+	position: relative
+	font-weight: 700
+	margin-bottom: 10px
+	f()
+	align-items center
+	.icon
+		+below(768px)
+			size 25px
+		tr(all)
+		size 50px
+		fill $mark
+		&:hover
+			fill black
+	.title
+		+below(640px)
+			width: 100%
+			margin-right: 0
+			margin-bottom: 0
+		margin-right: 20px
+		//margin-top: -5px
+		position relative
+		margin-bottom: 20px
+	.arrow
+		+below(640px)
+			display none
+		fill $yellow
+		margin-right: 25px
+		margin-bottom: 20px
+	.btn--sm
+		+below(640px)
+			width: 100%
+			margin-bottom: 0
+		margin-bottom: 20px
+	.location-toggle
+		+below(640px)
+			margin-bottom: 0
+		margin-bottom: 20px
+.arrow
+	flex(mid)
+	round()
+	flex(mid)
+	tr()
+	cp()
+	size 50px
+	border 2px solid $mark
+	&:hover
+		background: $mark
+		.icon
+			fill white
+	&:active
+		.icon
+			fill $red!important
+	.icon
+		tr()
+		size 14px
+		fill $mark
+
+.arrow--sm
+	size 30px
+	border 1px solid $mark
+	.icon
+		size 10px
+
+
+.title-tag
+	+below(480px)
+		display inline-block
+	background: $mark
+	padding: 5px
+	br(10px)
+
+.title-val
+	+below(640px)
+		display none
+	position absolute
+	font-size: 14px
+	color $gray
+	top -5px
+	right: -15px
+
+.title__more
+	+below(767px)
+		margin-left: 0
+	+below(640px)
+		display none
+	font-weight: 400
+	margin-left: 20px
+	display: inline
+	color $gray
+	margin-bottom: 20px
+.title__more-mobile
+	+above(641px)
+		display none
+	border 2px solid $mark
+	br(15px)
+	flex(mid)
+	padding: 8px 12px
+	span
+		display inline-block
+		color $mark
+		margin-right: 5px
+		line-height: 1
+		font-size: 12px
+	.icon
+		size 12px
+		display: block !important
+// title templates === end
+
+
+h5
+	@extend .type--sm
+h4
+	@extend .type--main
+h3
+	@extend .type--md
+h2
+	@extend .type--lg
+h1
+	@extend .type--xl
+
+a
+	color $link-color
+	text-decoration: none
+	tr()
+	&:hover
+		color darken($link-color,20)
+	&:visiter
+		color darken($link-color,30)
+
+p
+	@extend .type--main
+
+.link--mark
+	color $mark
+	&:hover
+		color darken($mark,20)
+	&:visiter
+		color darken($mark,30)
+
+.link--main
+	color $link-color
+	hover-underline($link-color)
+	&:hover
+		color darken($link-color,20)
+	&:visiter
+		color darken($link-color,30)
+
+.link--text
+	color $link-color
+	text-decoration underline
+	&:hover
+		text-decoration none
+
+
+
+.text
+	p
+		line-height: 1.6
+		margin-bottom: 20px
+	ul
+		margin-bottom: 30px
+		li
+			line-height: 1.6
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+
+// icons
+.icon-row
+	f()
+	fw()
+	align-items center
+
+.icon--sm
+	size 16px
+
+.icon--md
+	size 24px
+
+.icon--lg
+	size 30px
+
+.icon--left
+	margin-left: 10px
+
+.icon--right
+	margin-right: 10px
+
+.icon--mark
+	fill $mark
+
+.icon--gray
+	fill $gray
+// icons === end

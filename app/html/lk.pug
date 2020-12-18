@@ -1,0 +1,119 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--gray
+		//product-cont
+		.main-cont
+			.lk
+				.lk-toolbar
+					.profile
+
+						.profile-wrap
+							.profile__name Константин
+							.profile-row
+								.profile-row__name телефон
+								.profile-row__val +7 (865) 543 45 45
+							.profile-row
+								.profile-row__name e-mail
+								.profile-row__val prosto_vlad@gmail.com
+							.profile-row
+								.profile-row__name день рождения
+								.profile-row__val 06.09.1991
+							a(href="#").profile-change
+								+icon("edit","icon")
+								span изменить информацию
+							.profile-footer
+								.profile-footer-info
+									.profile-footer__text.hidden у вас нет бонусов
+										// for bonus = 0
+									.profile-footer__text мои бонусы:
+									.profile-footer__val 2500
+								.profile-footer__icon
+									+icon("info","icon")
+					a(href="#").exit
+						.icon-block.icon-block--mark
+							+icon("exit","icon")
+						span Выйти
+				.lk-info
+					.lk-info__el.box
+						.title.title--lg Мои адреса
+						.address-wrap
+							.address__el
+								.address__type Дом
+								.address__val Москва, ул. Петропавловская, д. 101, корп. 1, кв. 25, подъезд 8
+								.address-footer
+									.address-footer__el.address-edit
+										+icon("edit","icon")
+										span Редактировать
+									.address-footer__el.address-remove
+										+icon("trash","icon")
+										span Удалить
+							.address__el
+								.address__type Работа
+								.address__val Москва, ул. Петропавловская, д. 101, корп. 1, кв. 25, подъезд 8
+								.address-footer
+									.address-footer__el.address-edit
+										+icon("edit","icon")
+										span Редактировать
+									.address-footer__el.address-remove
+										+icon("trash","icon")
+										span Удалить
+							.address__add
+								.icon-block.icon-block--empty
+									+icon("plus","icon")
+								span добавить адрес
+					.lk-info__el.box
+						.title.title--lg История заказов
+						.history
+							- for (var j=0;j<5;j++)
+								.history-card
+									.history-card__wrap
+										.history-card__info
+											.history-card__numb № 43576
+											.history-card__date 28 Сентября, 2017
+										.history-card__state.history-card__state--true В обработке
+											// add class .history-card__state--true for delivered
+										.history-card__condition
+											.history-card__size 3 товара
+											.history-card__price_val 5430 р
+									.history-info
+										.history-info-wrap
+											.history-info-col
+												.history-info__el
+													.history-info__el-title Доставка курьером
+													.history-info__el-val г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56
+												.history-info__el
+													.history-info__el-title Время доставки
+													.history-info__el-val Как можно быстрее
+												.history-info__el
+													.history-info__el-title Способ оплаты
+													.history-info__el-val Наличными курьеру
+											.history-info-col
+												.history-info__el
+													.history-info__el-title Состав заказа
+													.goods-list
+														- for (var i=0;i<4;i++)
+															.goods-list__el
+																.goods-list__el-name San Benedetto Aquavitamin an Benedetto
+																.goods-list__el-val x 2
+																.goods-list__el-cost 1003 р.
+
+												.history-info-total
+													.history-info-total__text Сумма:
+													.history-info-total__val 1 184р
+												.goods-get-row
+													.goods-get Повторить заказ
+							.history-more
+								+icon("refresh","icon")
+								span показать еще
+							.order-empty.hidden
+								.order-empty-icon
+									img(src="img/box.svg", alt="")
+								.order-empty-title Ваша история пуста =(
+								.order-empty-text Сделайте заказ
+								.btn--md.btn--mark Посмотреть меню
+
+	+footer()
+include ./block_html/_script.pug

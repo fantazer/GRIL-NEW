@@ -1,0 +1,136 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			//pizza
+			.item-wrap
+				.item-col
+					.item-img(style="background-image:url('img/item-card-1.jpg')")
+				// item-info
+				.item-info
+					.title-row
+						.arrow(onclick="window.history.go(-1); return false;")
+							+icon("arrow-conner-left","icon")
+						.title.title--xl Четыре сыра
+					.item-descr Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
+
+					// size
+					.item-size
+						.size.size--mark.size--sm
+							.size__el.size__el--active 15 см
+							.size__el 30 см
+							.size__el 45 см
+					// size === end
+
+					// item-config
+					.item-config-row.js-ingr-wrap(data-min="1" data-max="3")
+						.title Дополнительные ингредиенты
+						- for (var i=0;i<4;i++)
+							.ingr-row
+								.ingr-name Корнишоны <span class="type--gray">/ 75г</span>
+								.ingr-cost 16 р
+								.ingr-incr
+									+incr(false,"incr--single incr--mark-light incr--sm")
+								.ingr-total 32 р
+						.msg.msg--info
+							// .msg--info || .msg--alert
+							.msg-text Вы можете добавить до 6-ти доп. ингрединтов
+					.item-config-row.js-ingr-wrap(data-min="0" data-max="4")
+						.title Дополнительные ингредиенты
+						- for (var i=0;i<6;i++)
+							.ingr-row
+								.ingr-name Сыр <span class="type--gray">/ 75г</span>
+								.ingr-cost 16 р
+								.ingr-incr
+									+incr(false,"incr--single incr--mark-light incr--sm")
+								.ingr-total 32 р
+						.msg.msg--info
+							// .msg--info || .msg--alert
+							.msg-text Вы можете добавить до 6-ти доп. ингрединтов
+					.item-config-row.js-ingr-wrap(data-min="0" data-max="3")
+						.title Дополнительные ингредиенты
+						- for (var i=0;i<6;i++)
+							.ingr-row
+								.ingr-name Сыр <span class="type--gray">/ 75г</span>
+								.ingr-cost 16 р
+								.ingr-incr
+									+incr(false,"incr--single incr--mark-light incr--sm")
+								.ingr-total 32 р
+						.msg.msg--info
+							// .msg--info || .msg--alert
+							.msg-text Вы можете добавить до 6-ти доп. ингрединтов
+					//  === end
+
+					// item-config
+					//.item-config-row
+						.title Не забудьте добавить к заказу:
+						.item-prop
+							.item-prop__img(style="background-image:url('img/prop-3.jpg')")
+							.item-prop__title Томатний соус <span class="type--gray">/ 50г</span>
+							.item-prop__incr
+								+incr(false,"incr--single incr--mark-light incr--mdx")
+							.item-prop__cost 29 р
+						.item-prop
+							.item-prop__img(style="background-image:url('img/prop-4.jpg')")
+							.item-prop__title Сметана <span class="type--gray">/ 50г</span>
+							.item-prop__incr
+								+incr(false,"incr--single incr--mark-light incr--mdx")
+							.item-prop__cost 34 р
+						.item-prop
+							.item-prop__img(style="background-image:url('img/prop-5.jpg')")
+							.item-prop__title Чесночный соус <span class="type--gray">/ 50г</span>
+							.item-prop__incr
+								+incr(false,"incr--single incr--mark-light incr--mdx")
+							.item-prop__cost 16 р
+					//  === end
+
+					.item-condition-wrap
+						// item total
+						.item-total.item-total--disable
+							.item-total-wrap
+								.item-total__info старая цена 299 р
+								.item-total__cond
+									.item-total__cost 250 р
+									.item-total__weight 350 г
+							.item-get
+								.incr-btn.incr-btn--fix
+									.incr-btn__el.btn--md.btn--mark Заказать
+									.incr-btn-wrap
+										+incr(1,"incr--mark")
+							a(href="#").icon-row
+								.arrow.arrow--sm.icon--right
+									+icon("arrow-conner-left","icon ")
+								span.type--xs назад в раздел
+						// item total === end
+
+						// structure
+						.structure-wrap
+							.structure
+								.structure__el
+									.structure__el-name калории
+									.structure__el-val 2841
+								.structure__el
+									.structure__el-name белки
+									.structure__el-val 75,4
+								.structure__el
+									.structure__el-name жиры
+									.structure__el-val 111,5
+								.structure__el
+									.structure__el-name углеводы
+									.structure__el-val 198,2
+							.structure-text энергетическая ценность указана за 100 г
+						// structure === end
+
+				// item-info === end
+			// recommend
+			.title.title--lg Рекомендуем также
+			.product-cont
+				- for (var i=0;i< 4;i++)
+					+product()
+			// recommend === end
+
+	+footer()
+include ./block_html/_script.pug

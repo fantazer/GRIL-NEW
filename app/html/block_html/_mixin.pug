@@ -1,0 +1,73 @@
+mixin icon(name,cls)
+  svg(class=cls)
+    use(xlink:href="#" + name)
+
+mixin checkbox(text,disable)
+  .check-el
+    if disable
+      label.style-label.style-label--checkbox.style-label--disable
+        input(type="checkbox").style-input
+        .style-input-element
+          +icon("checked","icon")
+        .style-input-text=text
+    else
+      label.style-label.style-label--checkbox
+        input(type="checkbox").style-input
+        .style-input-element
+          +icon("checked","icon")
+        .style-input-text=text
+mixin radio(text,group,checked)
+  .check-el
+    label.style-label.style-label--radio
+      input(type="radio" name=group checked=checked).style-input
+      .style-input-element
+        .icon-radio
+      .style-input-text=text
+
+mixin incr(state,className='')
+  .incr(class= state ? className  +' incr--one' : className )
+    .incr__minus.incr__nav
+      +icon("minus","icon")
+    .incr__val
+      span=state ? 1 : 0
+      .incr__val-coner
+    .incr__plus.incr__nav
+      +icon("plus","icon")
+
+mixin product(img="item-2.jpg",type)
+  .product-el(data-condition=type)
+    a(href="#").product__img
+      .product__img-el(style="background-image:url('img/"+img+"')")
+      .product-el-tag-wrap
+        .product-el-tag-el new
+        .product-el-tag-el hit
+        .product-el-tag-el
+          img(src="img/cat-candy.svg", alt="")
+        .product-el-tag-el
+          img(src="img/cat-hot.svg", alt="")
+      .product-el--add
+        +icon("cart-empty","icon")
+    .product__cont
+      a(href="#").product__title Пицца Чоризо
+      a(href="#").product__descr Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра филадельфия
+
+      .product-footer
+        .product-footer__info
+          .product-price от 280 р
+        .product-get.incr-btn
+          .incr-btn__el.btn--sm.btn--mark Заказать
+          .incr-btn-wrap
+            +incr(1,"incr--mark-light")
+
+mixin product-sm(img="item-2.jpg",size)
+  .product-el.product-el--sm.product-el--border
+    .product-el--add
+      +icon("cart-empty","icon")
+    a(href="#" class = size? "product__img--lg":'').product__img
+      .product__img-el(style="background-image:url('img/"+img+"')")
+    .product__cont
+      a(href="#").product__title Имбирь
+      .product-footer
+        .product-price 250 р
+        .item-add
+          +incr(false,"incr--single incr--mdx incr--mark-empty ")
