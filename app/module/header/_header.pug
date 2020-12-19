@@ -64,10 +64,16 @@ mixin header()
 					.header-nav
 						-
 							var items = [
-								'Пицца','WOK','Шурма','Кесадия','Пироги','Супы'
-								];
+								//{name: "главная", id: "#main"},
+								{name: "Пицца", id: "#pizza"},
+								{name: "WOK", id: "#wok"},
+								{name: "Шурма", id: "#roll"},
+								{name: "Кесадия", id: "#kesadia"},
+								{name: "Пироги", id: "#cake"},
+								{name: "Супы", id: "#soup"},
+							];
 						each item in items
-							a(href="#").header-nav__el #{item}
+							a(href=item.id rel='m_PageScroll2id').header-nav__el #{item.name}
 						// Это список категорий, который хранится под еще
 						// Появлятся в моб версии меню
 						.header-nav__el.header-nav__el--more Десерты
@@ -84,11 +90,16 @@ mixin header()
 								.dropdown-menu
 									-
 										var items = [
-											'Пицца', 'WOK', 'Шурма', 'Кесадия', 'Пироги', 'Супы'
+											{name: "Пицца", id: "#pizza"},
+											{name: "WOK", id: "#wok"},
+											{name: "Шурма", id: "#roll"},
+											{name: "Кесадия", id: "#kesadia"},
+											{name: "Пироги", id: "#cake"},
+											{name: "Супы", id: "#soup"},
 										];
 									each item in items
-										.dropdown-menu__el(data-value="#") #{item}
-						a(href="#").header-nav__el Напитки
+										a(data-value="#" href=item.id rel='m_PageScroll2id').dropdown-menu__el #{item.name}
+						a(href="#drink" rel='m_PageScroll2id').header-nav__el Напитки
 
 					.cart-wrap.js-cart-wrap.cart-wrap--desktop
 						.cart-cost 2 850 ₽
@@ -105,7 +116,7 @@ mixin header()
 									.basket-empty__text Бесплатная доставка от 500 ₽, доставляем за 60 минут
 								.basket-list
 									.basket-container.scroll-template
-										- for (var i=0;i<2;i++)
+										- for (var i=0;i<5;i++)
 											.basket__el
 												.basket__el-info
 													.basket__img(style="background-image:url('img/item-2.jpg')")

@@ -11,17 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="deploy version">
-      <change afterPath="$PROJECT_DIR$/app/img/person/person-angry.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/person/person-chicken.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/person/person-dance.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/person/person-glass.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/person/person-happy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/person/person-hot.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/person/person-love.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/person/person-moto.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/person/person-pizzf.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/person/person-roll.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/person/person-walk.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/logo-light.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/logo-light.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/basket.html" afterDir="false" />
@@ -29,49 +20,16 @@
       <change beforePath="$PROJECT_DIR$/app/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/_helper.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/_helper.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/variable/config/_color.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_color.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/deliver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/elements.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-500.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/block_html/_mixin.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_mixin.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/block_html/_svg.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_svg.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/block_html/_script.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_script.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/main.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/main.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/404.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/404.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/404.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/500.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/500.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/banner-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/chef-hat.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/company-sleep.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/company.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/css/sprite.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/css/sprite.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/goodJob.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/hat.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/item-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/item-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/item-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/item-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/item-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/item-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/item-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/item-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/item-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/item-5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/item-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/item-6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/item-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/item-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/item-card-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/loader.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/loader.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/message.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/pack.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/pack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sale-banner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprite.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprite.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/cart--color.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/cart--color.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/location.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/location.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/phone.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/phone.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/symbol.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/add-on.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/add-on.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/lk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.html" afterDir="false" />
@@ -87,10 +45,6 @@
       <change beforePath="$PROJECT_DIR$/app/sale-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/sale-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/vacancy.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/vacancy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/css/sprite.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/css/sprite.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/pack.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/pack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/sprite.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/sprite.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/svg/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/svg/sprite.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,18 +71,18 @@
     <property name="SearchEverywhereHistoryKey" value="clone&#9;ACTION&#9;Git.Clone" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/ftp.json&#10;true&#10;E:/PROJECT/WORK/GIGANT/app/bower/slick-carousel/slick/slick-theme.css&#10;E:/PROJECT/WORK/DIMASH-NEW/app/bower/jquery/src/css/var/rmargin.js" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\PROJECT\WORK\GRIL-NEW\app" />
       <recent name="E:\PROJECT\WORK\GRIL-NEW\app\img" />
+      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\bower" />
+      <recent name="E:\PROJECT\WORK\GRIL-NEW\app" />
       <recent name="E:\PROJECT\WORK\DIMASH-NEW\app\html" />
       <recent name="E:\PROJECT\WORK\DIMASH-NEW\app\img" />
-      <recent name="E:\PROJECT\WORK\DIMASH-NEW\app\img\svg" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -300,7 +254,8 @@
       <workItem from="1607963753104" duration="1242000" />
       <workItem from="1608198885806" duration="4273000" />
       <workItem from="1608279941059" duration="16655000" />
-      <workItem from="1608310887852" duration="5220000" />
+      <workItem from="1608310887852" duration="5646000" />
+      <workItem from="1608386344255" duration="13592000" />
     </task>
     <task id="LOCAL-00020" summary="add modal + bsh-hover()">
       <created>1557691407230</created>

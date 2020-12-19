@@ -7,11 +7,8 @@ mixin footer()
 					.footer-info__title Бесплатная доставка
 					.footer-info__text При заказе от 500 руб. по г. Николаев
 				.footer-info__coll
-					.footer-info__title 43 минуты
-					.footer-info__text Среднее время доставки.
-				.footer-info__coll
-					.footer-info__title 1000 руб
-					.footer-info__text Минимальная сумма заказа
+					.footer-info__title Доставка за 59 минут
+					.footer-info__text или пицца в подарок
 				a(href="/").footer-info__coll.footer-info__map
 					.footer-info__map-icon
 						+icon("compass","icon")
@@ -20,28 +17,76 @@ mixin footer()
 		.main-cont
 			.footer
 				.footer-comp
-					.footer-company Суши Dimash © 2020
-					a(href="#") Политика конфиденциальности
-					a(href="#") Публичная оферта
-					.get-pay
-						img(src="img/payment--light.svg", alt="")
+					a(href="tel:+7 (917) 58-55-05").footer-phone 8(917)58-55-05
+					a(href="#").footer-mail feedback@grill1.org
+					.soc-row
+						a(href="#").soc-row__el
+							+icon("soc-youtube","icon")
+						a(href="#").soc-row__el
+							+icon("soc-instagram","icon")
+						a(href="#").soc-row__el
+							+icon("soc-vk","icon")
+
 				.footer-nav
-					.footer-nav__list
-						-
-							var items = [
-							'Пицца','Роллы','Суши','Сеты','WOK','Десерты','Напитки','Соусы'
-							];
-						each item in items
-							a(href="#").footer-nav__el #{item}
+					.footer-col
+						.type--lg.type--bold.mb-24 Меню
+						.footer-nav-list.footer-nav-list--extend
+							-
+								var items = [
+									{name: "Пицца", id: "#pizza"},
+									{name: "WOK", id: "#wok"},
+									{name: "Шурма", id: "#roll"},
+									{name: "Кесадия", id: "#kesadia"},
+									{name: "Пироги", id: "#cake"},
+									{name: "Супы", id: "#soup"},
+									{name: "Напитки", id: "#drink"},
+									{name: "Закуски", id: "#drink"},
+									{name: "Бургеры", id: "#drink"},
+									{name: "Соусы", id: "#drink"},
+									{name: "Соки", id: "#drink"},
+									{name: "Мясо", id: "#drink"},
+								];
+							each item in items
+								a(href = item.id rel = 'm_PageScroll2id') #{item.name}
+					.footer-col
+						.type--lg.type--bold.mb-24 Компания
+						.footer-nav-list
+							-
+								var items = [
+									'Акции и новости ',
+									'О нас',
+									'Как сделать заказ',
+									'Способы оплаты',
+									'Вакансии',
+									'Отзывы',
+									'Контакты',
+								];
+							each item in items
+								a(href='#') #{item.name} #{item}
 
-				.footer-contact
-					a(href="tel:+7 (3852) 58-55-05").footer-phone +7 (3852) 58-55-05
-					a(href="tel:+7 (3852) 58-85-05").footer-phone +7 (3852) 58-85-05
-					a(href="mailto:info@whale.com").footer-mail info@dimash.com
-
-					a(href="/").create
-						span Разработка сайта:
-						img(src="img/jq.svg", alt="")
+					.footer-col
+						.type--lg.type--bold.mb-24 Клиентам
+						.footer-nav-list
+							-
+								var items = [
+									'Ищем поставщиков  ',
+									'Предложить помещение',
+									'Франшиза',
+									'Школа шаурмы',
+									'Пользовательское соглашение',
+									'Политика конфиденциальности',
+									'',
+								];
+							each item in items
+								a(href='#') #{item.name} #{item}
+	.footer-add-wrap
+		.main-cont
+			.footer-add
+				.get-pay
+					img(src="img/payment--light.svg", alt="")
+				a(href="/").create
+					span Разработка сайта:
+					img(src="img/jq.svg", alt="")
 	.cookie
 		// to show add class .cookie + .cookie--active
 		.main-cont

@@ -9,88 +9,80 @@ include block_html/_include.pug
 				a(href="#").main-slider__el-wrap
 					.main-slider__el(style="background-image:url('img/board-1.jpg')")
 	.content
-		.main-cont
-			.title-row
-				.title.title--xl Пицца
-					.title-val 15
-				a(href="#").title__more Смотреть все товары
-				a(href="#").title__more-mobile
-					span 23
-					+icon("arrow-conner-right","icon")
-			.product-wrap
-				.tag-wrap
-					.tag.js-tag-cont
-						.tag-el.js-tag.tooltip(data-condition="1")
-							span new
-							.tooltip-cont.tooltip-cont--bottom
-								.tooltip-conner
-								span Новые рецепты пиццы из тонкого и толстого теста
-						.tag-el.js-tag.tooltip(data-condition="2")
-							span hit
-							.tooltip-cont.tooltip-cont--bottom
-								.tooltip-conner
-								span Этот товар выбирают все покупатели
-						.tag-el.js-tag.tooltip(data-condition="3")
-							+icon("cat-candy","icon")
-							.tooltip-cont.tooltip-cont--bottom
-								.tooltip-conner
-								span Сладкие рецепты для вашего вкуса
-						.tag-el.js-tag.tooltip(data-condition="4")
-							+icon("cat-hot","icon")
-							.tooltip-cont.tooltip-cont--bottom
-								.tooltip-conner
-								span Острые варианты наших любимых блюд
-						.tag-el.js-tag.tooltip(data-condition="5")
-							+icon("cat-vegan","icon")
-							.tooltip-cont.tooltip-cont--bottom
-								.tooltip-conner
-								span Продукты без  мяса
-				.product-cont
-					- for (var i=0;i<2;i++)
-						+product('item-1.jpg','1 2')
-						+product('item-1.jpg','4 3')
-						+product('item-1.jpg','2 3')
-					a(href="#" style="background-image:url('img/sale-board-1--lg.jpg')").product-sale
+		-
+			var items = [
+				{name: "Пицца", id: "pizza"},
+				{name: "WOK", id: "wok"},
+				{name: "Шурма", id: "roll"},
+				{name: "Кесадия", id: "kesadia"},
+				{name: "Пироги", id: "cake"},
+				{name: "Супы", id: "soup"},
+			];
+		each item,j in items
+			.product-wrap(id=item.id)
+				.main-cont
+					.title-row
+						.title.title--xl #{item.name}
+							.title-val 15
+						a(href="#").title__more Смотреть все товары
+						a(href="#").title__more-mobile
+							span 23
+							+icon("arrow-conner-right","icon")
+					.tag-wrap
+						.tag.js-tag-cont
+							.tag-el.js-tag.tooltip(data-condition="1")
+								span new
+								.tooltip-cont.tooltip-cont--bottom
+									.tooltip-conner
+									span Новые рецепты пиццы из тонкого и толстого теста
+							.tag-el.js-tag.tooltip(data-condition="2")
+								span hit
+								.tooltip-cont.tooltip-cont--bottom
+									.tooltip-conner
+									span Этот товар выбирают все покупатели
+							.tag-el.js-tag.tooltip(data-condition="3")
+								+icon("cat-candy","icon")
+								.tooltip-cont.tooltip-cont--bottom
+									.tooltip-conner
+									span Сладкие рецепты для вашего вкуса
+							.tag-el.js-tag.tooltip(data-condition="4")
+								+icon("cat-hot","icon")
+								.tooltip-cont.tooltip-cont--bottom
+									.tooltip-conner
+									span Острые варианты наших любимых блюд
+							.tag-el.js-tag.tooltip(data-condition="5")
+								+icon("cat-vegan","icon")
+								.tooltip-cont.tooltip-cont--bottom
+									.tooltip-conner
+									span Продукты без  мяса
+						.product-cont
+							- for (var i=0;i<2;i++)
+								+product('item-'+(j+1)+'.jpg','1 2')
+								+product('item-'+(j+1)+'.jpg','4 3')
+								+product('item-'+(j+1)+'.jpg','2 3')
+							a(href="#" style="background-image:url('img/sale-board-1--lg.jpg')").product-sale
 
-	.sale-wrap
-		.main-cont
-			.sale
-				.sale-slider-wrap
-					.sale-slider
-						- for (var i=0;i<3;i++)
-							.sale-slider__el(style="background-image:url('img/banner-1.jpg')")
-				.sale-info
-					.sale-title Признание в любви
-					.sale-text.text
-						p озможность получить скидку действует в течение 7-ми дней (в День рождения и 6 дней после Дня рождения)*
+		// seo text
+		.section
+			.main-cont
+				h1.title.title--lg Доставка самой большой шаурмы в Барнауле
 
-						p Скидка распространяется на все меню представленное на этом сайте **
+				.seo-text.text
+					p Рады, что Вы зашли на сайт Гигант-Суши Барнаул! Здесь Вы можете заказать доставку самых больших и вкусных суши и роллов в Барнауле, а также воки, пиццу и десерты.
+				.seo-text.text.js-commutator-cont.drop(data-item="seo")
+					p Мы готовим все суши и роллы только после получения заказа и вообще не держим заранее приготовленных блюд, чтобы сохранить максимальную свежесть и качество продукции, поэтому доставка по Барнаулу занимает в среднем 1 - 1,5 часа (30-40 мин. приготовление + 30-40 мин. доставка). Также вы можете оформить самовывоз и забрать свой заказ самостоятельно уже через 30-40 минут по адресу: ул. Власихинская 164 / ул. Шумакова 59 (2 этаж).
 
-						p * При себе необходимо иметь документ, в котором указана дата вашего Дня рождения.
+					p Оформить заказ с доставкой или самовывоз вы можете через меню на нашем сайте, либо позвонив операторам по телефонам: 58-55-05 и 58-85-05 Принимаем заказы ежедневно с 10.00 до 23.00 и осуществляем доставку в любое удобное для вас место: на дом, в офис, отель, сауну, … и др.
 
-						p ** Скидка НЕ суммируется с другими скидками («Счастливые часы», «Красная цена») и НЕ действует на блюда из разделов: Бизнес-Ланчи, Завтраки, Детское..
+					p Заказать доставку суши и пиццы удобно по любому поводу: корпоратив в офисе, вечеринка с друзьями, день рождения, романтический ужин или просто вкусно поесть в кругу семьи. Наши блюда – большие, вкусные и по приятной цене. Помимо блюд японской кухни мы с радостью приготовим для вас гигантские воки с разными начинками, большую и сочную пиццу, сладкие десерты.
 
-	// seo text
-	.section
-		.main-cont
-			h1.title.title--lg Доставка самых больших суши и роллов в Барнауле от Гигант-Суши!
+					p Чтобы заказать еду на сайте, зайдите в раздел «Меню». Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните «Добавить в корзину» возле понравившихся блюд. Скорректируйте количество порций и введите свои контактные данные.
 
-			.seo-text.text
-				p Рады, что Вы зашли на сайт Гигант-Суши Барнаул! Здесь Вы можете заказать доставку самых больших и вкусных суши и роллов в Барнауле, а также воки, пиццу и десерты.
-			.seo-text.text.js-commutator-cont.drop(data-item="seo")
-				p Мы готовим все суши и роллы только после получения заказа и вообще не держим заранее приготовленных блюд, чтобы сохранить максимальную свежесть и качество продукции, поэтому доставка по Барнаулу занимает в среднем 1 - 1,5 часа (30-40 мин. приготовление + 30-40 мин. доставка). Также вы можете оформить самовывоз и забрать свой заказ самостоятельно уже через 30-40 минут по адресу: ул. Власихинская 164 / ул. Шумакова 59 (2 этаж).
-
-				p Оформить заказ с доставкой или самовывоз вы можете через меню на нашем сайте, либо позвонив операторам по телефонам: 58-55-05 и 58-85-05 Принимаем заказы ежедневно с 10.00 до 23.00 и осуществляем доставку в любое удобное для вас место: на дом, в офис, отель, сауну, … и др.
-
-				p Заказать доставку суши и пиццы удобно по любому поводу: корпоратив в офисе, вечеринка с друзьями, день рождения, романтический ужин или просто вкусно поесть в кругу семьи. Наши блюда – большие, вкусные и по приятной цене. Помимо блюд японской кухни мы с радостью приготовим для вас гигантские воки с разными начинками, большую и сочную пиццу, сладкие десерты.
-
-				p Чтобы заказать еду на сайте, зайдите в раздел «Меню». Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните «Добавить в корзину» возле понравившихся блюд. Скорректируйте количество порций и введите свои контактные данные.
-
-				p Спасибо, что выбираете Гигант-Суши! Приятного аппетита!
-			.icon-row.toggle-seo.js-commutator-el(data-item="seo")
-				span.type--sm.type--false Показать еще
-				span.type--sm.type--true Скрыть
-				+icon("arrow-down","icon icon--sm icon--gray icon--left")
+					p Спасибо, что выбираете Гигант-Суши! Приятного аппетита!
+				.icon-row.toggle-seo.js-commutator-el(data-item="seo")
+					span.type--sm.type--false Показать еще
+					span.type--sm.type--true Скрыть
+					+icon("arrow-down","icon icon--sm icon--gray icon--left")
 
 
 	// seo text === end

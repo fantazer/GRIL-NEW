@@ -27,7 +27,7 @@ body
 .content
 	+below(768px)
 		padding: 30px 0
-	padding: 50px 0
+	padding: 80px 0 100px 0
 	flex-grow 1
 .content--clear
 	padding-top: 0
@@ -67,38 +67,24 @@ body
 	animation:  slideInDown  1s 1 ease-in-out;
 	.header-info__phone
 		color white
-	.header-info__callback
-		color white
 	.header-main__logo
 		+below(768px)
 			width: 40px
 		width: 70px
 	.header-menu-wrap
-		+below(1024px)
-			display: none
 		background: white
-		.logo
-			display: block
-	.header-top-wrap
-		+below(1024px)
-			display: block
-			bsh()
-		display: none
 	.header-nav--add
 		display: none
-	.cart-wrap--desktop
-		display flex
-		margin-left auto
-
-	.logo--lg
-		display none!important
-	.logo--sm
-		display block!important
-		width: 60px
-		margin-right: 10px
 	.slide-menu
 		height calc(100% - 50px)
 		top 50px
+	.header-menu
+		+below(768px)
+			height: 40px
+	.header-top-wrap
+		+above(1281px)
+			display none
+
 // error
 .page-error
 	flex(mid)
@@ -416,36 +402,44 @@ body
 	tr()
 	border-bottom 1px solid $border-color
 	@extend .type--sm
+	display block
 	&:last-child
 		border 0
 	&:hover
 		background: white
-		color black
+		color $mark
 // drop === end
 
 // header
 .header
 	position: relative
+	box-shadow: 0px 3px 8px #00000014;
+
 .header-top-wrap
+	+below(1280px)
+		background: white
+		border-bottom 1px solid $border-color
 	background: $snow
-	+above(769px)
+	+above(1281px)
 		.logo
+			display none
+	+below(1280px)
+		.soc-row
 			display none
 //.main-cont
 .header-top
+	+below(768px)
+		height: 50px
 	height: 60px
 	flex(between)
 .logo
 	+below(1280px)
 		width: 200px
-	+below(1024px)
-		margin-right auto
 	+below(768px)
 		max-width 140px
 	margin-right: 3%
 	max-width 190px
-.logo--sm
-	display none!important
+
 
 .header-location
 	+below(1024px)
@@ -487,6 +481,8 @@ body
 	+below(840px)
 		display: none
 .header-auth
+	+below(1280px)
+		margin-left auto
 	+below(640px)
 		display: none
 	f()
@@ -498,6 +494,8 @@ body
 		fill $mark
 
 .header-top-nav
+	+below(1280px)
+		display none
 	flex(between)
 .header-top-nav__el
 	margin: 0 7px
@@ -567,14 +565,17 @@ body
 .header-menu-wrap
 	+below(768px)
 		overflow-x scroll
-	border-bottom 1px solid $border-color
 	position: relative
 .header-menu
+	+below(1280px)
+		.logo
+			display none
+		height: 60px
 	height: 80px
 	flex(between)
 .header-nav
 	+below(1280px)
-		justify-content space-around
+		justify-content space-between
 		width: 100%
 	+below(768px)
 		justify-content initial
@@ -591,7 +592,11 @@ body
 	tr(all)
 	@extend .type--md
 	font-weight: 700
+	white-space nowrap
+	margin-right: 15px
 	&:hover
+		color $mark
+	&.active
 		color $mark
 .header-nav__el--more
 	+above(769px)
@@ -611,9 +616,12 @@ body
 		position relative
 		cp()
 		white-space nowrap
+	+below(768px)
+		display none
 	.dropdown
+		+above(1281px)
+			bsh()
 		br(8px)
-		bsh()
 		@extend .type--md
 		border 1px solid transparent
 		&.active
@@ -673,7 +681,7 @@ body
 		size 28px
 	&:hover
 		//background: lighten($mark,15)
-		background: $orange
+		background: $mark
 .cart-val
 	position: absolute
 	top 0
@@ -690,7 +698,7 @@ body
 	cp()
 
 	margin-right: 10px
-	+above(1025px)
+	+above(1281px)
 		display: none
 	.icon
 		size 22px
@@ -799,12 +807,12 @@ body
 	flex(mid)
 	tr(all)
 	margin-right: 10px
-	size 32px
-	background: $gray
+	size 40px
+	background: $mark
 	&:hover
-		background: $mark
+		background: lighten($mark,10)
 	.icon
-		size 15px
+		size 18px
 		fill white
 		&:last-child
 			margin-right: 0
@@ -818,11 +826,8 @@ body
 // soc-row === end
 
 // main slider
-
-
-
 .main-slider
-	margin-bottom: 80px
+	margin-bottom: 0!important
 
 .main-slider__el
 	+below(1024px)
@@ -862,6 +867,10 @@ body
 // main slider === end
 
 // product el
+.product-wrap
+	margin: 20px 0 120px 0
+	&:last-child
+			margin-bottom: 0
 .product-cont
 	+below(1024px)
 		grid-template-columns: repeat(3, 1fr)
@@ -875,7 +884,8 @@ body
 	+below(480px)
 		grid-template-columns: 1fr
 	//flex(between)
-	margin: 20px 0 120px 0
+
+
 	display: grid
 	grid-gap 40px
 	grid-template-columns: repeat(auto-fill, minmax(14rem,1fr))
@@ -893,18 +903,27 @@ body
 	+below(640px)
 		border 1px solid $border-color
 	background-color #ffffff
-	tr(all)
+	transition  transform .4s, opacity .4s
 	position: relative
 	f()
 	fl()
+	opacity: 1
+	left initial
+	transform scale(1)
+	visibility: visible
+	width: 100%
 	+below(640px)
 		br(10px)
 		overflow hidden
 		.product-descr
 			bottom 100%
 			top initial
-
-
+	&.product-hidden
+		transition  transform .4s, opacity .6s
+		position absolute
+		transform scale(0)
+		opacity: 0
+		max-width 250px
 .product-el--sm
 	+below(640px)
 		flex-flow row
@@ -995,7 +1014,7 @@ body
 		cp()
 		tr()
 		size 20px
-		fill $orange
+		fill $mark
 		&:hover
 			fill $mark
 
@@ -1174,58 +1193,15 @@ body
 	color black
 // size === end
 
-// sale banner
-.sale-wrap
-	+below(768px)
-		padding: 30px 0
-	background: #f5f5f5
-	padding: 100px 0
-//.main-cont
-.sale
-	+below(760px)
-		fw()
-	f()
-	justify-content space-between
-.sale-slider-wrap
-	+below(760px)
-		width: 100%
-		order 2
-	width: 55%
-//.sale-slider
-.sale-slider__el
-	bg-full()
-	padding: 25% 10%
-	br(10px)
-.sale-info
-	+below(760px)
-		width: 100%
-		margin-bottom: 30px
-		order 1
-	width: 40%
-.sale-title
-	+below(760px)
-		margin-top: 0
-	@extend .type--xl
-	font-weight 600
-	margin-bottom: 10px
-.sale-text
-	opacity 0.7
-	line-height: 1.6
-// sale banner === end
 
 
 // ===== FOOTER ====
 .footer-info-wrap
-	background: #ececec
+	background: $snow
 .footer-info
-	+below(1200px)
-		grid-template-columns: 1fr
-		padding: 0
-		margin-left: -10px
-		width calc(100% + 20px)
-	display: grid
-	grid-gap 0
-	grid-template-columns: repeat(4, 1fr)
+	flex(between)
+
+
 .footer-info__coll
 	+below(1200px)
 		display: none
@@ -1278,34 +1254,13 @@ body
 	width: 100%
 	height: 100%
 
-.filter--yellow
-	tr(all)
-	background: #ffb600a8
-
-.soc-row
-	f()
-.soc-row__el
-	round()
-	flex(mid)
-	tr(all)
-	margin-right: 10px
-	size 32px
-	background: #757674
-	&:hover
-		background: darken(#c2c2c2,10)
-	.icon
-		size 15px
-		fill white
-		&:last-child
-			margin-right: 0
-
 .create
 	+below(768px)
 		width: auto
-		margin-top: 10px
 	f()
 	align-items: center
-	margin-top: 40px
+	img
+		width: 28px
 	span
 		opacity: .7
 		color white
@@ -1315,8 +1270,9 @@ body
 .footer-wrap
 	+below(640px)
 		padding: 30px 20px
-	background: $dark
 	padding: 50px 40px
+	background: #37394a
+	color white
 .footer
 	+below(1280px)
 		fw()
@@ -1325,7 +1281,7 @@ body
 	align-items: stretch
 	a
 		&:hover
-			color $orange!important
+			color $mark!important
 .footer-clear
 	margin-top: 20px
 .footer-comp
@@ -1334,13 +1290,7 @@ body
 	+below(640px)
 		width: 1005px
 	width: 25%
-	a
-		color #888987
-		display: block
-		margin-bottom: 20px
-		tr(all)
-		&:hover
-			color $orange
+
 .get-pay
 	+below(720px)
 		display: none
@@ -1368,68 +1318,57 @@ body
 .footer-nav
 	+below(768px)
 		display: none
-	width: 35%
-.footer-nav__list
-	+below(720px)
-		display: none
-	column-count 2
-.footer-nav__el
-	margin-bottom: 20px
-	color #888987
-	display: block
-	tr(all)
+	width: 70%
+	f()
+	justify-content space-between
+.footer-col
+	width: 30%
 
-.footer-call
-	+below(1280px)
-		width: 50%
-	+below(720px)
-		display: none
-	width: 25%
-.footer-call__title
-	@extend .type--md
-	font-weight 600
-	margin-bottom: 10px
-.footer-call__text
-	line-height: 1.8
-	margin-bottom: 20px
-	color #888987
-.footer-call__get
-	@extend .btn--md
-	//@extend .btn--black
-.footer-contact
-	+below(768px)
-		width: 50%
-	+below(720px)
-		width: 100%
-	width: 25%
+.footer-nav-list
+	a
+		margin-bottom: 20px
+		color white
+		display: block
+		tr(all)
+		opacity: .4
+		&:hover
+			opacity: 1
+.footer-nav-list--extend
+	column-count 2
+
+
 .footer-phone
 	+below(720px)
 		font-size: 18px
 		margin-bottom: 20px
 	display: block
 	margin-bottom: 15px
-	color white
-	@extend .type--md
-	font-weight 600
+	@extend .type--xl
+	font-weight 700
 	tr(all)
+	color white
 	&:hover
-		color $orange
+		color $mark
 .footer-mail
 	+below(768px)
 		margin-bottom: 10px
 	display: block
 	margin-bottom: 30px
-	color white
 	tr(all)
+	color white
+	opacity: .6
 	&:hover
-		color $orange
-.footer-company
-	color #ffffff
-	@extend .type--lg
-	font-weight 600
-	margin-bottom: 20px
+		opacity: 1
+		color $mark
+
 .slick-slider
 	position: relative
+
+.footer-add-wrap
+	padding: 20px 0
+	background #2a2c3a
+.footer-add
+	flex(between)
 // ===== FOOTER ====  === end
 
 
