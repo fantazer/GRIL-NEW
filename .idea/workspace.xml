@@ -10,32 +10,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="deploy version">
-      <change afterPath="$PROJECT_DIR$/app/img/logo-light.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/logo-light.svg" afterDir="false" />
+    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add main page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/basket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/catalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/variable/_default.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/_default.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/_helper.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/_helper.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/deliver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/elements.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-500.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/block_html/_const.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_const.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/block_html/_mixin.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_mixin.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/block_html/_script.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_script.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/main.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/main.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/jquery.smoothscroll.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/lk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/market.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/module/footer/_footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/footer/_footer.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/module/header/_header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/header/_header.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/news-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-full.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/news-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-list.html" afterDir="false" />
@@ -57,6 +57,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/js/script.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/gulpfile.js" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1OgzLs5tRzA7rKn4Yudy7oRwBFY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -71,18 +75,19 @@
     <property name="SearchEverywhereHistoryKey" value="clone&#9;ACTION&#9;Git.Clone" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/ftp.json&#10;true&#10;E:/PROJECT/WORK/GIGANT/app/bower/slick-carousel/slick/slick-theme.css&#10;E:/PROJECT/WORK/DIMASH-NEW/app/bower/jquery/src/css/var/rmargin.js" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\img" />
+      <recent name="E:\PROJECT\WORK\GRIL-NEW" />
       <recent name="E:\PROJECT\WORK\GRIL-NEW\app\bower" />
+      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\img" />
       <recent name="E:\PROJECT\WORK\GRIL-NEW\app" />
       <recent name="E:\PROJECT\WORK\DIMASH-NEW\app\html" />
-      <recent name="E:\PROJECT\WORK\DIMASH-NEW\app\img" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -255,14 +260,11 @@
       <workItem from="1608198885806" duration="4273000" />
       <workItem from="1608279941059" duration="16655000" />
       <workItem from="1608310887852" duration="5646000" />
-      <workItem from="1608386344255" duration="13592000" />
-    </task>
-    <task id="LOCAL-00020" summary="add modal + bsh-hover()">
-      <created>1557691407230</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1557691407230</updated>
+      <workItem from="1608386344255" duration="14386000" />
+      <workItem from="1608458659269" duration="6982000" />
+      <workItem from="1608545367351" duration="1860000" />
+      <workItem from="1608550755175" duration="46000" />
+      <workItem from="1608552118619" duration="7196000" />
     </task>
     <task id="LOCAL-00021" summary="add mixin font()">
       <created>1559217228735</created>
@@ -600,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607353099276</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="add main page">
+      <created>1608400469126</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1608400469127</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -641,7 +650,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="fix bower script scroll template" />
     <MESSAGE value="fix elements page" />
     <MESSAGE value="up version v 1.7.1" />
     <MESSAGE value="fix windows config" />
@@ -666,6 +674,7 @@
     <MESSAGE value="add fixes" />
     <MESSAGE value="fix title row extend" />
     <MESSAGE value="deploy version" />
-    <option name="LAST_COMMIT_MESSAGE" value="deploy version" />
+    <MESSAGE value="add main page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add main page" />
   </component>
 </project>

@@ -258,18 +258,29 @@ $(document).ready(function () {
 		speed: 500,
 		dots:true,
 		arrows:false,
-		rows:0,
 		centerMode: true,
-    centerPadding: '16vw',
+    centerPadding: '18.5%',
 		//autoplay: true,
 		//fade: true
 		//autoplaySpeed: 8000, time between
 		responsive: [
 			{
-				breakpoint: 1124,
+				breakpoint: 1560,
 				settings: {
-					slidesToShow:1,
+					centerPadding: '5%',
+				}
+			},
+			{
+				breakpoint: 1025,
+				settings: {
+					centerPadding: '4%',
+				}
+			},
+			{
+				breakpoint: 640,
+				settings: {
 					centerMode: false,
+					slidesToShow: 1.05,
 				}
 			}
 		],
@@ -643,7 +654,7 @@ $(document).ready(function () {
 	//toggle menu end
 
 	// scroll to id
-	var offsetId = $(document).width() < 769 ? 120 : 120
+	var offsetId = $(document).width() < 769 ? 105 : 110
 	$("a[rel='m_PageScroll2id']").mPageScroll2id({
 		offset: offsetId,
 		highlightClass: "active",
@@ -654,5 +665,12 @@ $(document).ready(function () {
 		}
 	});
 
+	// clip text
+/*	$(".product__descr").dotdotdot({
+			ellipsis: "...",
+			wrap: "word",
+			height: 70,
+	});*/
+	// clip text === end
 
 });

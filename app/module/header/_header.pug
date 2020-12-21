@@ -50,7 +50,7 @@ mixin header()
 					.header-auth
 						+icon("user","icon")
 						.header-auth-state Александр
-					.cart-wrap.cart-wrap--mobile
+					a(href="#").cart-wrap.cart-wrap--mobile
 						.cart
 							+icon("cart--color","icon")
 							.cart-val 33
@@ -139,7 +139,7 @@ mixin header()
 									.basket-footer
 										.basket-footer-total
 											.basket-footer-total__text сумма
-											.basket-footer-total__val 1570.-
+											.basket-footer-total__val 1570 р
 										a(href="#").basket-footer-get В корзину
 
 		//slide menu
@@ -148,7 +148,6 @@ mixin header()
 				.slide-header-auth
 					+icon("user","icon")
 					.slide-header-auth-state Александр
-
 			.slide-row
 				.slide-menu__list
 					a(href="#").slide-menu__list-el Акции
@@ -156,23 +155,26 @@ mixin header()
 					a(href="#").slide-menu__list-el Вакансии
 					a(href="#").slide-menu__list-el О нас
 			.slide-row
-				.header-location
-					.header-info
-						.header-info__icon
-							+icon("location--color","icon")
-						.header-info__val Озов
-					.header-info__text Доставка за 45-90 минут
+				.slide-header-contact
+					.slide-header-info
+						.slide-header-info__icon
+							+icon("location","icon")
+						.slide-header-info__cont
+							.slide-header-info__val Москва
+							.slide-header-info__text проспект Независимости, 90
 			.slide-row
 				.slide-header-contact
 					.slide-header-info
 						.slide-header-info__icon
 							+icon("phone","icon")
-						.slide-header-info__val
-							a(href="tel:+7 (7172) 767 767")  +7 (7172) 767 767
-							a(href="tel:+7 (707) 988 78 87")  +7 (707) 988 78 87
-					.slide-header-info__text Сегодня 10 - 24
+						.slide-header-info__cont
+							.slide-header-info__val
+								a(href="tel:+7 (707) 988 78 87")  +7 (707) 988 78 87
+							.slide-header-info__text Сегодня 10 - 24
 			.slide-row
 				.soc-row
+					a(href="#").soc-row__el
+						+icon("soc-youtube","icon")
 					a(href="#").soc-row__el
 						+icon("soc-instagram","icon")
 					a(href="#").soc-row__el

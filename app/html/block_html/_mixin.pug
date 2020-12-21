@@ -45,12 +45,28 @@ mixin product(img="item-2.jpg",type)
           img(src="img/cat-candy.svg", alt="")
         .product-el-tag-el
           img(src="img/cat-hot.svg", alt="")
-      .product-el--add
-        +icon("cart-empty","icon")
+    .product-el--add
+      +icon("cart-empty","icon")
     .product__cont
       a(href="#").product__title Пицца Чоризо
-      a(href="#").product__descr Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра филадельфия
-
+      a(href="#").product__descr Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
+        .tooltip.tooltip--icon ?
+          .tooltip-cont.tooltip-cont--bottom-center
+            .tooltip-conner
+            .consist
+              .type--sm.type--bold.mb-12 Пищевая ценность:
+              .consist__el
+                .consist__el-name Жиры, г
+                .consist__el-val 9.90
+              .consist__el
+                .consist__el-name Белки, г
+                .consist__el-val 10.50
+              .consist__el
+                .consist__el-name Углеводы, г
+                .consist__el-val 24.90
+              .consist__el
+                .consist__el-name Пищевая ценность, Ккал
+                .consist__el-val 230.70
       .product-footer
         .product-footer__info
           .product-price от 280 р

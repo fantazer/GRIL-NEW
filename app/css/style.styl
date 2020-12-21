@@ -75,9 +75,6 @@ body
 		background: white
 	.header-nav--add
 		display: none
-	.slide-menu
-		height calc(100% - 50px)
-		top 50px
 	.header-menu
 		+below(768px)
 			height: 40px
@@ -544,13 +541,13 @@ body
 	margin-right: 10px
 	flex(mid)
 	.icon
-		size 20px
+		size 28px
 		fill $mark
 .slide-header-info__val
 	white-space nowrap
 	color white
-	@extend .type--md
-	font-weight 600
+	@extend .type--lg
+	font-weight 700
 	a
 		color white
 		display: block
@@ -559,7 +556,6 @@ body
 	color $gray
 	@extend .type--sm
 	font-weight 500
-	margin-left: 30px
 .slide-header-contact
 	margin-top: 30px
 .header-menu-wrap
@@ -577,6 +573,7 @@ body
 	+below(1280px)
 		justify-content space-between
 		width: 100%
+		margin-right: 0
 	+below(768px)
 		justify-content initial
 	f()
@@ -713,15 +710,18 @@ body
 		display: none
 
 .slide-menu
-	+above(1025px)
+	+above(1281px)
 		display: none !important
+	+below(768px)
+		height: calc(100% - 50px)
+		top 50px
 	+below(480px)
 		width: 100%
 	background: $dark
 	position: fixed
-	height: calc(100% - 85px) //Отступ хедер
+	height: calc(100% - 60px)
 	z-index 1250
-	top 85px
+	top 60px
 	left 0
 	width: 320px
 	transform translateX(-110%)
@@ -828,15 +828,26 @@ body
 // main slider
 .main-slider
 	margin-bottom: 0!important
+	.slick-slide
+		margin: 0 10px
+	.slick-active
+		.main-slider__el-wrap
+			opacity:1
+
+.main-slider .main-slider__el-wrap:not(:first-child)
+	visibility: hidden
+
+.main-slider.slick-initialized .main-slider__el-wrap:not(:first-child)
+	visibility: visible
 
 .main-slider__el
 	+below(1024px)
-		min-height 300px
+		min-height 220px
 	+below(640px)
 		min-height 150px
 	bg-full()
-	padding: 14% 5%
-
+	padding: 16% 5%
+	tr()
 .main-slider__el-wrap
 	+above(1025px)
 		opacity: .2
@@ -845,29 +856,35 @@ body
 	bg-full()
 	position relative
 	width: 100%
-	margin: 0 10px
-
-.main-slider__el-wrap.slick-active
-	opacity:1
 
 .slick-dots
+	+below(640px)
+		bottom -25px
 	width: 100%
-	bottom 10px
+	bottom 20px
+	li
+		size 10px
 	.dot
-			background: white
-			size 10px
-			display: block
-			round()
-			border 1px solid #e7e7e7
+		+below(640px)
+			size 8px
+			background: $mark
+		background: white
+		size 10px
+		display: block
+		round()
+		opacity: .4
 	.slick-active
-			.dot
-				border 1px solid transparent
-				background: $mark
+		.dot
+			opacity: 1
 
 // main slider === end
 
 // product el
 .product-wrap
+	+below(768px)
+		margin: 20px 0 60px 0
+	+below(640px)
+		margin: 20px 0
 	margin: 20px 0 120px 0
 	&:last-child
 			margin-bottom: 0
@@ -875,17 +892,19 @@ body
 	+below(1024px)
 		grid-template-columns: repeat(3, 1fr)
 		margin: 30px 0
-		grid-gap 20px
 	+below(768px)
+		grid-gap 20px
 		grid-template-columns: repeat(3, 1fr)
 	+below(640px)
 		grid-template-columns: repeat(2, 1fr)
-		margin: 0 0 30px 0!important
+		width: 100%
+		grid-gap 10px
 	+below(480px)
+		f()
+		margin: 0!important
 		grid-template-columns: 1fr
 	//flex(between)
-
-
+	transform: translateZ(0);
 	display: grid
 	grid-gap 40px
 	grid-template-columns: repeat(auto-fill, minmax(14rem,1fr))
@@ -898,10 +917,20 @@ body
 		.slick-active
 			.dot
 				background: black
-
+.product-cont-row
+	+below(640px)
+		overflow: auto
 .product-el
 	+below(640px)
+		.product-descr
+			bottom 100%
+			top initial
+	+below(480px)
+		br(10px)
 		border 1px solid $border-color
+		flex-flow row
+		min-width 300px
+		padding: 10px
 	background-color #ffffff
 	transition  transform .4s, opacity .4s
 	position: relative
@@ -909,15 +938,10 @@ body
 	fl()
 	opacity: 1
 	left initial
-	transform scale(1)
 	visibility: visible
 	width: 100%
-	+below(640px)
-		br(10px)
-		overflow hidden
-		.product-descr
-			bottom 100%
-			top initial
+	&:hover
+		transform initial
 	&.product-hidden
 		transition  transform .4s, opacity .6s
 		position absolute
@@ -955,7 +979,10 @@ body
 
 
 .product__img
+	+below(480px)
+		size 100px
 	flex(mid)
+	position relative
 	img
 		margin: 0 auto
 		tr(all)
@@ -963,7 +990,7 @@ body
 
 .product__img-el
 	+below(640px)
-		padding: 50% 10%
+		padding: 45% 10%
 		margin-bottom: 0
 	tr(all)
 	width: 100%
@@ -975,10 +1002,13 @@ body
 .product__cont
 	+below(640px)
 		padding: 20px 15px
+	+below(480px)
+		padding: 0
+		margin-left: 10px
+		width calc(100% - 110px)
 	f()
 	fl()
 	flex-grow 1
-	position relative
 	border-radius 0 0 10px 10px
 	.size
 		margin: 10px 0
@@ -988,8 +1018,9 @@ body
 		margin: 5px 0
 .product__title
 	+below(640px)
-		font-size: 24px
+		font-size: 16px
 		margin-bottom: 10px
+		padding-right: 20px
 	margin-bottom: 10px
 	tr(all)
 	display: block
@@ -1001,7 +1032,6 @@ body
 	f()
 	align-items center
 	min-height 50px
-	fw()
 	margin-top: auto
 .item-add
 	margin-left auto
@@ -1028,6 +1058,8 @@ body
 
 
 .product-get
+	+below(640px)
+		margin 0  auto 0 0
 	margin-left auto
 	.incr-btn__el
 		padding: 12px 25px
@@ -1039,6 +1071,14 @@ body
 .product-price
 	+below(640px)
 		font-size: 24px
+	+below(480px)
+		width: 110px
+		text-align center
+		font-size: 16px
+		position absolute
+		left 0
+		top  120px
+		margin-right: 0
 	@extend .type--lg
 	font-weight 600
 	margin-right: 10px
@@ -1061,20 +1101,28 @@ body
 	margin-left auto
 
 .product__descr
+	+below(480px)
+		font-size: 12px
 	color $gray
 	line-height: 1.4
 	font-size: 15px
 	margin-bottom: 10px
 
 .product-el-tag-wrap
+	+below(480px)
+		left 5px
+		top 0
 	position absolute
 	top 10px
 	left 0
-	width: 100%
 	f()
 	fl()
 	align-items: flex-start
 .product-el-tag-el
+	+below(480px)
+		height: 18px
+		min-width 32px
+		font-size: 8px
 	color $dark
 	background: white
 	height: 30px
@@ -1086,14 +1134,19 @@ body
 	justify-content center
 	border-radius 10px
 	margin-bottom: 5px
-	font-weight: 600
+	font-weight: 700
 	border 1px solid $border-color
 	img
+		+below(480px)
+			width: 12px
 		width: 15px
 		fill $dark
 	&:last-child
 		margin-bottom: 0
 .product-el--add
+	+below(480px)
+		size 24px
+		top 8px
 	round()
 	flex(mid)
 	position absolute
@@ -1103,6 +1156,8 @@ body
 	color white
 	size 32px
 	.icon
+		+below(480px)
+			size 12px
 		size 16px
 		fill white
 
@@ -1199,12 +1254,17 @@ body
 .footer-info-wrap
 	background: $snow
 .footer-info
+	+below(768px)
+		fw()
 	flex(between)
-
+	margin: 0 -10px
 
 .footer-info__coll
-	+below(1200px)
-		display: none
+	+below(768px)
+		width: 50%
+	+below(480px)
+		width: 100%
+	padding: 20px
 	f()
 	justify-content: center
 	fl()
@@ -1222,7 +1282,7 @@ body
 	font-size: 12px
 	font-weight 400
 .footer-info__map
-	+below(1024px)
+	+below(768px)
 		width: 100%
 	flex(mid)
 	bg-full()
@@ -1269,8 +1329,8 @@ body
 
 .footer-wrap
 	+below(640px)
-		padding: 30px 20px
-	padding: 50px 40px
+		padding: 30px 0
+	padding: 50px 0
 	background: #37394a
 	color white
 .footer
@@ -1285,43 +1345,27 @@ body
 .footer-clear
 	margin-top: 20px
 .footer-comp
+	+below(1100px)
+		width: 100%
+		margin-bottom: 30px
 	+below(768px)
 		width: 50%
 	+below(640px)
 		width: 1005px
 	width: 25%
 
-.get-pay
-	+below(720px)
-		display: none
-.get-pay__title
-	margin-bottom: 10px
-	margin-top: 30px
-.pay-row
-	+below(640px)
-		margin-bottom: 0
-	f()
-	fw()
-	align-items: center
-	margin-bottom: 50px
-.pay-row__el
-	margin-right: 20px
-	.icon
-		+below(640px)
-			size 30px
-		size 50px
-		max-height 40px
-		fill #8b8b8b
-.copyright
-	+below(1280px)
-		margin-bottom: 30px
+//.get-pay
+
 .footer-nav
-	+below(768px)
-		display: none
+	+below(1100px)
+		width: 100%
+		fw()
 	width: 70%
 	f()
 	justify-content space-between
 .footer-col
+	+below(640px)
+		width: 100%
 	width: 30%
 
 .footer-nav-list
@@ -1331,6 +1375,7 @@ body
 		display: block
 		tr(all)
 		opacity: .4
+		line-height: 1.4
 		&:hover
 			opacity: 1
 .footer-nav-list--extend
@@ -1338,8 +1383,8 @@ body
 
 
 .footer-phone
-	+below(720px)
-		font-size: 18px
+	+below(1100px)
+		font-size: 32px
 		margin-bottom: 20px
 	display: block
 	margin-bottom: 15px
@@ -1347,6 +1392,7 @@ body
 	font-weight 700
 	tr(all)
 	color white
+	white-space nowrap
 	&:hover
 		color $mark
 .footer-mail
@@ -1368,6 +1414,9 @@ body
 	padding: 20px 0
 	background #2a2c3a
 .footer-add
+	+below(640px)
+		fl()
+		grid-gap 20px
 	flex(between)
 // ===== FOOTER ====  === end
 
@@ -2801,15 +2850,24 @@ l
 	line-height: 1.4
 	margin-bottom: 30px
 
-.product-sale
-	+below(1024px)
-		display none
+//.product-sale
+.product-sale__el
+	+below(640px)
+		width: 300px
+		padding: 32% 10%
+	width: 100%
 	bg-full()
 	padding: 80% 10%
 	br(10px)
 	overflow hidden
 	background-size: contain;
-	
+.product-sale__el--lg
+	+below(640px)
+		display none
+
+.product-sale__el--sm
+	+above(640px)
+		display none
 // review
 .review
 	+below(1024px)
@@ -3091,11 +3149,11 @@ l
 	img
 		margin-bottom: 10px
 
-/ tags filter
-.tag-wrap
-	margin-bottom: 30px
-
+// tags filter
+//.tag-wrap
 .tag
+	+below(768px)
+		margin-bottom: 20px
 	f()
 	fw()
 	cp()
@@ -3115,12 +3173,16 @@ l
 	border-radius 10px
 	font-weight: 700
 	border 1px solid $border-color
-	img,.icon
+	tr()
+	&:hover
+		border-color $mark
+	img
 		width: 15px
+	.icon
+		size 15px
 		fill $dark
 	&:last-child
 		margin-bottom: 0
-
 	&.active
 		border-color $mark
 		color $mark
@@ -3462,26 +3524,55 @@ l
 		.tooltip-cont
 			visibility:visible
 			opacity:1
+			transform:translate(0%, 100%)
+.tooltip--icon
+	+below(1440px)
+		display none
+	size 19px
+	round()
+	background: $gray
+	font-weight: 700
+	display: inline-flex
+	align-items center
+	justify-content center
+	color white
+	tr()
+	font-size: 14px
+	&:hover
+		background: $mark
 .tooltip-cont
+	+below(1440px)
+		display none
 	background-color white
 	width:240px
 	padding:10px 20px
 	position:absolute
-	z-index:99999999
+	z-index:9999
 	visibility:hidden
 	opacity:0
-	transition:opacity 0.4s
+	left -9999px
+	transition:opacity 0.4s, transform .4s
 	line-height: 1.6
 	font-size: 12px
 	border 1px solid $border-color
 	br(10px)
 	color $mark
 .tooltip-cont--bottom
-	transform:translate(0%, 100%)
+	transform:translate(0,130%)
 	bottom:-10px
 	left:0
 	.tooltip-conner
 		left:28px
+		top:-8px
+		margin-left:-12px
+		&:after
+			left:50%
+.tooltip-cont--bottom-center
+	transform:translate(0,150%)
+	bottom:-10px
+	left:-110px
+	.tooltip-conner
+		left:124px
 		top:-8px
 		margin-left:-12px
 		&:after
@@ -3693,3 +3784,13 @@ l
 		background-color: rgba(0, 0, 0, .2)
 		-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5)
 // drop cart === end
+
+.consist__el
+	margin-bottom: 4px
+	flex(between)
+	white-space nowrap
+	font-size: 10px
+	&:last-child
+		margin-bottom: 0
+.consist__el-name
+	width 70%

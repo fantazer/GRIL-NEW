@@ -114,14 +114,14 @@
                             </svg>
                             <div class="header-auth-state">Александр</div>
                         </div>
-                        <div class="cart-wrap cart-wrap--mobile">
+                        <a class="cart-wrap cart-wrap--mobile" href="#">
                             <div class="cart">
                                 <svg class="icon">
                                     <use xlink:href="#cart--color"></use>
                                 </svg>
                                 <div class="cart-val">33</div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -383,7 +383,7 @@
                                         <div class="basket-footer">
                                             <div class="basket-footer-total">
                                                 <div class="basket-footer-total__text">сумма</div>
-                                                <div class="basket-footer-total__val">1570.-</div>
+                                                <div class="basket-footer-total__val">1570 р</div>
                                             </div>
                                             <a class="basket-footer-get" href="#">В корзину</a>
                                         </div>
@@ -413,16 +413,18 @@
                     </div>
                 </div>
                 <div class="slide-row">
-                    <div class="header-location">
-                        <div class="header-info">
-                            <div class="header-info__icon">
+                    <div class="slide-header-contact">
+                        <div class="slide-header-info">
+                            <div class="slide-header-info__icon">
                                 <svg class="icon">
-                                    <use xlink:href="#location--color"></use>
+                                    <use xlink:href="#location"></use>
                                 </svg>
                             </div>
-                            <div class="header-info__val">Озов</div>
+                            <div class="slide-header-info__cont">
+                                <div class="slide-header-info__val">Москва</div>
+                                <div class="slide-header-info__text">проспект Независимости, 90</div>
+                            </div>
                         </div>
-                        <div class="header-info__text">Доставка за 45-90 минут</div>
                     </div>
                 </div>
                 <div class="slide-row">
@@ -433,16 +435,22 @@
                                     <use xlink:href="#phone"></use>
                                 </svg>
                             </div>
-                            <div class="slide-header-info__val">
-                                <a href="tel:+7 (7172) 767 767">+7 (7172) 767 767</a>
-                                <a href="tel:+7 (707) 988 78 87">+7 (707) 988 78 87</a>
+                            <div class="slide-header-info__cont">
+                                <div class="slide-header-info__val">
+                                    <a href="tel:+7 (707) 988 78 87">+7 (707) 988 78 87</a>
+                                </div>
+                                <div class="slide-header-info__text">Сегодня 10 - 24</div>
                             </div>
                         </div>
-                        <div class="slide-header-info__text">Сегодня 10 - 24</div>
                     </div>
                 </div>
                 <div class="slide-row">
                     <div class="soc-row">
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-youtube"></use>
+                            </svg>
+                        </a>
                         <a class="soc-row__el" href="#">
                             <svg class="icon">
                                 <use xlink:href="#soc-instagram"></use>
@@ -1044,6 +1052,7 @@
     <script src="bower/sticky-kit/jquery.sticky-kit.js"></script>
     <script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
     <script src="bower/ion.rangeSlider/js/ion.rangeSlider.js"></script>
+    <script src="bower/jQuery.dotdotdot/dist/dotdotdot.js"></script>
     <!-- endbuild-->
     <script src="./js/add-on.js"></script>
     <script src="./js/script.js"></script>

@@ -55,12 +55,15 @@ include block_html/_include.pug
 								.tooltip-cont.tooltip-cont--bottom
 									.tooltip-conner
 									span Продукты без  мяса
-						.product-cont
-							- for (var i=0;i<2;i++)
-								+product('item-'+(j+1)+'.jpg','1 2')
-								+product('item-'+(j+1)+'.jpg','4 3')
-								+product('item-'+(j+1)+'.jpg','2 3')
-							a(href="#" style="background-image:url('img/sale-board-1--lg.jpg')").product-sale
+						.product-cont-row
+							.product-cont
+								- for (var i=0;i<2;i++)
+									+product('item-'+(j+1)+'.jpg','1 2')
+									+product('item-'+(j+1)+'.jpg','4 3')
+									+product('item-'+(j+1)+'.jpg','2 3 5')
+								a(href="#").product-sale
+									div(style="background-image:url('img/sale-board-1--lg.jpg')").product-sale__el.product-sale__el--lg
+									div(style="background-image:url('img/sale-board-1--sm.jpg')").product-sale__el.product-sale__el--sm
 
 		// seo text
 		.section
