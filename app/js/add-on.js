@@ -62,7 +62,7 @@ $(document).ready(function () {
 	'use strict';
 
 	var file = 'img/pack.html',
-		revision = 30112020;
+		revision = 23122020;
 
 	if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect)
 		return true;

@@ -10,32 +10,55 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add main page">
+    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add mobile main page">
+      <change afterPath="$PROJECT_DIR$/app/img/map-bg.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/basket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/catalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/variable/_default.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/_default.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/_helper.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/_helper.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/variable/config/_input.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_input.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/deliver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/elements.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-500.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/block_html/_const.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_const.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/block_html/_mixin.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_mixin.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/block_html/_script.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_script.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/main.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/main.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/about.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/about.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/basket.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/basket.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/catalog.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/catalog.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/deliver.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/deliver.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/elements.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/elements.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/error-404.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/error-404.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/error-500.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/error-500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/form.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/form.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/index.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/index.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/item.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/item.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/lk.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/lk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/main.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/main.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/market.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/market.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/modal.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/modal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/news-full.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/news-full.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/news-list.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/news-list.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/offer.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/offer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/review-list.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/review-list.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/sale-item.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/sale-item.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/sale-list.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/sale-list.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/success.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/success.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/vacancy.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/vacancy.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/jquery.smoothscroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/add-on.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/add-on.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/lk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/market.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/module/footer/_footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/footer/_footer.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/module/header/_header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/header/_header.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/news-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-full.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/news-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-list.html" afterDir="false" />
@@ -45,6 +68,7 @@
       <change beforePath="$PROJECT_DIR$/app/sale-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/sale-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/vacancy.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/vacancy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +99,7 @@
     <property name="SearchEverywhereHistoryKey" value="clone&#9;ACTION&#9;Git.Clone" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/ftp.json&#10;true&#10;E:/PROJECT/WORK/GIGANT/app/bower/slick-carousel/slick/slick-theme.css&#10;E:/PROJECT/WORK/DIMASH-NEW/app/bower/jquery/src/css/var/rmargin.js" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -83,9 +107,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\PROJECT\WORK\GRIL-NEW" />
-      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\bower" />
       <recent name="E:\PROJECT\WORK\GRIL-NEW\app\img" />
+      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\bower" />
+      <recent name="E:\PROJECT\WORK\GRIL-NEW" />
       <recent name="E:\PROJECT\WORK\GRIL-NEW\app" />
       <recent name="E:\PROJECT\WORK\DIMASH-NEW\app\html" />
     </key>
@@ -264,14 +288,12 @@
       <workItem from="1608458659269" duration="6982000" />
       <workItem from="1608545367351" duration="1860000" />
       <workItem from="1608550755175" duration="46000" />
-      <workItem from="1608552118619" duration="7196000" />
-    </task>
-    <task id="LOCAL-00021" summary="add mixin font()">
-      <created>1559217228735</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1559217228735</updated>
+      <workItem from="1608552118619" duration="8922000" />
+      <workItem from="1608630353534" duration="1282000" />
+      <workItem from="1608722529041" duration="8209000" />
+      <workItem from="1608797333826" duration="9188000" />
+      <workItem from="1608809142834" duration="89000" />
+      <workItem from="1608809276872" duration="1576000" />
     </task>
     <task id="LOCAL-00022" summary="add templates style + js">
       <created>1559220561843</created>
@@ -609,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608400469127</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="add mobile main page">
+      <created>1608559987453</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1608559987453</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -650,7 +679,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="fix elements page" />
     <MESSAGE value="up version v 1.7.1" />
     <MESSAGE value="fix windows config" />
     <MESSAGE value="fix styles" />
@@ -675,6 +703,7 @@
     <MESSAGE value="fix title row extend" />
     <MESSAGE value="deploy version" />
     <MESSAGE value="add main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add main page" />
+    <MESSAGE value="add mobile main page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add mobile main page" />
   </component>
 </project>

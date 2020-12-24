@@ -24,7 +24,6 @@ include block_html/_include.pug
 					.title-row
 						.title.title--xl #{item.name}
 							.title-val 15
-						a(href="#").title__more Смотреть все товары
 						a(href="#").title__more-mobile
 							span 23
 							+icon("arrow-conner-right","icon")
@@ -58,10 +57,10 @@ include block_html/_include.pug
 						.product-cont-row
 							.product-cont
 								- for (var i=0;i<2;i++)
-									+product('item-'+(j+1)+'.jpg','1 2')
-									+product('item-'+(j+1)+'.jpg','4 3')
-									+product('item-'+(j+1)+'.jpg','2 3 5')
-								a(href="#").product-sale
+									+product('item-'+(j+1)+'.jpg','1 2 3 4')
+									+product('item-'+(j+1)+'.jpg','1 4 3')
+									+product('item-'+(j+1)+'.jpg','1 2 3 5')
+								//a(href="#").product-sale
 									div(style="background-image:url('img/sale-board-1--lg.jpg')").product-sale__el.product-sale__el--lg
 									div(style="background-image:url('img/sale-board-1--sm.jpg')").product-sale__el.product-sale__el--sm
 
