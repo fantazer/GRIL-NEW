@@ -30,7 +30,10 @@ include block_html/_include.pug
 									.size__el.js-switch(data-item="self" data-group="deliverType") Заберу сам
 							.input-row.input-row--middle
 								+icon("clock","icon icon--sm icon--right icon--gray")
-								span.type--sm <span class="type--gray">Доставим за</span> 40 мин
+								span.js-switch-cont.type--sm(data-item="deliver" data-group="deliverType") <span class="type--gray">Доставим за</span> <span class="type--mark">40 мин</span>
+								span.type--sm.js-switch-cont.hidden(data-item="self" data-group="deliverType") <span class="type--gray">Приготовим за</span> <span class="type--mark">20 мин</span>
+
+
 					//type deliver
 					.js-switch-cont(data-item="deliver" data-group="deliverType")
 						// если нет адреса в лк
@@ -153,13 +156,20 @@ include block_html/_include.pug
 						.input-cont
 							textarea(name="text", cols="30", rows="10" class="input" placeholder="Если у вас есть какие-то пожелания к заказу, опишите их здесь")
 				.order-condition
+					.steps
+						a(href="#").step__el.step__el--active
+							.step__el-val 1
+							.step__el-name Корзина
+						.step-line
+						a(href="#").step__el.step__el--active
+							.step__el-val 2
+							.step__el-name Оформление заказа
+						.step-line
+						a(href="#").step__el
+							.step__el-val 3
+							.step__el-name Заказ принят
 					.order-condition-wrap.stick
 						.title.title--md Мой заказ
-						.input-row
-							.input-get
-								input(type="text" placeholder="Ввести промокод" class="input")
-								.input-get__btn Принять
-
 						.goods-list
 							- for (var i=0;i<4;i++)
 							.goods-list__el

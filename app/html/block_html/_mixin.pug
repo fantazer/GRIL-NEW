@@ -87,3 +87,9 @@ mixin product-sm(img="item-2.jpg",size)
         .product-price 250 р
         .item-add
           +incr(false,"incr--single incr--mdx incr--mark-empty ")
+
+mixin bread()
+  .bread
+    a(href="#").bread__el Главная
+    a(href="#").bread__el Каталог
+    .bread__el Название пункта

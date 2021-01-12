@@ -77,7 +77,9 @@
                                 </div>
                                 <div class="header-info__cont">
                                     <div class="header-info__val">
-                                        <a href="tel:+7 (917) 58-55-05">+7(917)58-55-05</a>
+                                        <a href="tel:+7 (917) 58-55-05">+7(917)
+                                            <b>58-55-05</b>
+                                        </a>
                                     </div>
                                     <div class="header-info__text">Сегодня 00:00 - 23:59</div>
                                 </div>
@@ -474,470 +476,434 @@
                     </div>
                     <!-- item-info-->
                     <div class="item-info">
+                        <div class="bread mb-24">
+                            <a class="bread__el" href="#">Главная</a>
+                            <a class="bread__el" href="#">Каталог</a>
+                            <div class="bread__el">Название пункта</div>
+                        </div>
                         <div class="title-row">
                             <div class="arrow" onclick="window.history.go(-1); return false;">
                                 <svg class="icon">
                                     <use xlink:href="#arrow-conner-left"></use>
                                 </svg>
                             </div>
-                            <div class="title title--xl">Четыре сыра</div>
-                        </div>
-                        <div class="item-descr">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
-                        <!-- size-->
-                        <div class="item-size">
-                            <div class="size size--mark size--sm">
-                                <div class="size__el size__el--active">15 см</div>
-                                <div class="size__el">30 см</div>
-                                <div class="size__el">45 см</div>
+                            <div class="title title--xl">Четыре сыра
+                                <div class="tooltip tooltip--icon">?
+                                    <div class="tooltip-cont tooltip-cont--bottom-center">
+                                        <div class="tooltip-conner"></div>
+                                        <div class="consist">
+                                            <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
+                                            <div class="consist__el">
+                                                <div class="consist__el-name">Жиры, г</div>
+                                                <div class="consist__el-val">9.90</div>
+                                            </div>
+                                            <div class="consist__el">
+                                                <div class="consist__el-name">Белки, г</div>
+                                                <div class="consist__el-val">10.50</div>
+                                            </div>
+                                            <div class="consist__el">
+                                                <div class="consist__el-name">Углеводы, г</div>
+                                                <div class="consist__el-val">24.90</div>
+                                            </div>
+                                            <div class="consist__el">
+                                                <div class="consist__el-name">Пищевая ценность, Ккал</div>
+                                                <div class="consist__el-val">230.70</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- size === end-->
-                        <!-- item-config-->
-                        <div class="item-config-row js-ingr-wrap" data-min="1" data-max="3">
+                        <div class="item-descr">
+                            <div class="mix js-toggle">
+                                <div class="mix__name">Сыр</div>
+                                <div class="mix__icon">
+                                    <svg class="icon icon--true">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                    <svg class="icon icon--false">
+                                        <use xlink:href="#repeat"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mix js-toggle">
+                                <div class="mix__name">Пицца-соус</div>
+                                <div class="mix__icon">
+                                    <svg class="icon icon--true">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                    <svg class="icon icon--false">
+                                        <use xlink:href="#repeat"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mix js-toggle">
+                                <div class="mix__name">Перец болгарский</div>
+                                <div class="mix__icon">
+                                    <svg class="icon icon--true">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                    <svg class="icon icon--false">
+                                        <use xlink:href="#repeat"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mix js-toggle">
+                                <div class="mix__name">Куриное филе</div>
+                                <div class="mix__icon">
+                                    <svg class="icon icon--true">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                    <svg class="icon icon--false">
+                                        <use xlink:href="#repeat"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mix js-toggle">
+                                <div class="mix__name">Моцарела</div>
+                                <div class="mix__icon">
+                                    <svg class="icon icon--true">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                    <svg class="icon icon--false">
+                                        <use xlink:href="#repeat"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span>Сыр,</span>
+                            <span>Пицца-соус,</span>
+                            <span>Перец болгарский,</span>
+                            <span>Куриное филе,</span>
+                            <span>Моцарела,</span>
+                        </div>
+                        <div class="item-config-wrap">
+                            <!-- size-->
+                            <div class="item-size">
+                                <div class="size size--mark size--sm size--fluid">
+                                    <div class="size__el size__el--active">15 см</div>
+                                    <div class="size__el">30 см</div>
+                                    <div class="size__el">45 см</div>
+                                </div>
+                            </div>
+                            <!-- size === end-->
+                            <!-- size-->
+                            <div class="item-size">
+                                <div class="size size--mark size--sm size--fluid">
+                                    <div class="size__el size__el--active">Супертесто</div>
+                                    <div class="size__el">Тонкое</div>
+                                </div>
+                            </div>
+                            <!-- size === end-->
+                            <!--item-config-->
                             <div class="title">Дополнительные ингредиенты</div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Корнишоны
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
+                            <div class="item-config-row js-ingr-wrap scroll-template" data-min="0" data-max="3">
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-3.jpg')"></div>
+                                    <div class="item-prop__title">Томатний соус
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="item-prop__cost">29 р</div>
                                 </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Корнишоны
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-4.jpg')"></div>
+                                    <div class="item-prop__title">Сметана
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="item-prop__cost">34 р</div>
                                 </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Корнишоны
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-5.jpg')"></div>
+                                    <div class="item-prop__title">Чесночный соус
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="item-prop__cost">16 р</div>
                                 </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Корнишоны
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-3.jpg')"></div>
+                                    <div class="item-prop__title">Томатний соус
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="item-prop__cost">29 р</div>
                                 </div>
-                                <div class="ingr-total">32 р</div>
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-4.jpg')"></div>
+                                    <div class="item-prop__title">Сметана
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-prop__cost">34 р</div>
+                                </div>
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-5.jpg')"></div>
+                                    <div class="item-prop__title">Чесночный соус
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-prop__cost">16 р</div>
+                                </div>
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-3.jpg')"></div>
+                                    <div class="item-prop__title">Томатний соус
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-prop__cost">29 р</div>
+                                </div>
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-4.jpg')"></div>
+                                    <div class="item-prop__title">Сметана
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-prop__cost">34 р</div>
+                                </div>
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-5.jpg')"></div>
+                                    <div class="item-prop__title">Чесночный соус
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-prop__cost">16 р</div>
+                                </div>
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-3.jpg')"></div>
+                                    <div class="item-prop__title">Томатний соус
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-prop__cost">29 р</div>
+                                </div>
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-4.jpg')"></div>
+                                    <div class="item-prop__title">Сметана
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-prop__cost">34 р</div>
+                                </div>
+                                <div class="item-prop js-ingr-row">
+                                    <div class="item-prop__img" style="background-image:url('img/prop-5.jpg')"></div>
+                                    <div class="item-prop__title">Чесночный соус
+                                        <span class="type--gray">/ 50г</span>
+                                    </div>
+                                    <div class="item-prop__incr">
+                                        <div class="incr incr--single incr--mark-light incr--mdx">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>0</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-prop__cost">16 р</div>
+                                </div>
+                                <div class="msg msg--info hidden">
+                                    <!-- .msg--info || .msg--alert-->
+                                    <div class="msg-text">Вы можете добавить до 6-ти доп. ингрединтов</div>
+                                </div>
                             </div>
-                            <div class="msg msg--info">
-                                <!-- .msg--info || .msg--alert-->
-                                <div class="msg-text">Вы можете добавить до 6-ти доп. ингрединтов</div>
-                            </div>
+                            <!--  item-config === end-->
                         </div>
-                        <div class="item-config-row js-ingr-wrap" data-min="0" data-max="4">
-                            <div class="title">Дополнительные ингредиенты</div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="msg msg--info">
-                                <!-- .msg--info || .msg--alert-->
-                                <div class="msg-text">Вы можете добавить до 6-ти доп. ингрединтов</div>
-                            </div>
-                        </div>
-                        <div class="item-config-row js-ingr-wrap" data-min="0" data-max="3">
-                            <div class="title">Дополнительные ингредиенты</div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="ingr-row">
-                                <div class="ingr-name">Сыр
-                                    <span class="type--gray">/ 75г</span>
-                                </div>
-                                <div class="ingr-cost">16 р</div>
-                                <div class="ingr-incr">
-                                    <div class="incr incr--single incr--mark-light incr--sm">
-                                        <div class="incr__minus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#minus"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="incr__val">
-                                            <span>0</span>
-                                            <div class="incr__val-coner"></div>
-                                        </div>
-                                        <div class="incr__plus incr__nav">
-                                            <svg class="icon">
-                                                <use xlink:href="#plus"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ingr-total">32 р</div>
-                            </div>
-                            <div class="msg msg--info">
-                                <!-- .msg--info || .msg--alert-->
-                                <div class="msg-text">Вы можете добавить до 6-ти доп. ингрединтов</div>
-                            </div>
-                        </div>
-                        <!--  === end-->
-                        <!-- item-config-->
-                        <!--.item-config-row
-					.title Не забудьте добавить к заказу:
-					.item-prop
-						.item-prop__img(style="background-image:url('img/prop-3.jpg')")
-						.item-prop__title Томатний соус <span class="type--gray">/ 50г</span>
-						.item-prop__incr
-							+incr(false,"incr--single incr--mark-light incr--mdx")
-						.item-prop__cost 29 р
-					.item-prop
-						.item-prop__img(style="background-image:url('img/prop-4.jpg')")
-						.item-prop__title Сметана <span class="type--gray">/ 50г</span>
-						.item-prop__incr
-							+incr(false,"incr--single incr--mark-light incr--mdx")
-						.item-prop__cost 34 р
-					.item-prop
-						.item-prop__img(style="background-image:url('img/prop-5.jpg')")
-						.item-prop__title Чесночный соус <span class="type--gray">/ 50г</span>
-						.item-prop__incr
-							+incr(false,"incr--single incr--mark-light incr--mdx")
-						.item-prop__cost 16 р
-					-->
-                        <!--  === end-->
                         <div class="item-condition-wrap">
                             <!-- item total-->
                             <div class="item-total item-total--disable">
@@ -971,38 +937,25 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a class="icon-row" href="#">
-                                    <div class="arrow arrow--sm icon--right">
-                                        <svg class="icon ">
-                                            <use xlink:href="#arrow-conner-left"></use>
-                                        </svg>
-                                    </div>
-                                    <span class="type--xs">назад в раздел</span>
-                                </a>
                             </div>
                             <!-- item total === end-->
                             <!-- structure-->
-                            <div class="structure-wrap">
-                                <div class="structure">
-                                    <div class="structure__el">
-                                        <div class="structure__el-name">калории</div>
-                                        <div class="structure__el-val">2841</div>
-                                    </div>
-                                    <div class="structure__el">
-                                        <div class="structure__el-name">белки</div>
-                                        <div class="structure__el-val">75,4</div>
-                                    </div>
-                                    <div class="structure__el">
-                                        <div class="structure__el-name">жиры</div>
-                                        <div class="structure__el-val">111,5</div>
-                                    </div>
-                                    <div class="structure__el">
-                                        <div class="structure__el-name">углеводы</div>
-                                        <div class="structure__el-val">198,2</div>
-                                    </div>
-                                </div>
-                                <div class="structure-text">энергетическая ценность указана за 100 г</div>
-                            </div>
+                            <!--.structure-wrap
+						.structure
+							.structure__el
+								.structure__el-name калории
+								.structure__el-val 2841
+							.structure__el
+								.structure__el-name белки
+								.structure__el-val 75,4
+							.structure__el
+								.structure__el-name жиры
+								.structure__el-val 111,5
+							.structure__el
+								.structure__el-name углеводы
+								.structure__el-val 198,2
+						.structure-text энергетическая ценность указана за 100 г
+						-->
                             <!-- structure === end-->
                         </div>
                     </div>
@@ -1010,300 +963,302 @@
                 </div>
                 <!-- recommend-->
                 <div class="title title--lg">Рекомендуем также</div>
-                <div class="product-cont">
-                    <div class="product-el">
-                        <a class="product__img" href="#">
-                            <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
-                            <div class="product-el-tag-wrap">
-                                <div class="product-el-tag-el">new</div>
-                                <div class="product-el-tag-el">hit</div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-candy.svg" alt="" />
+                <div class="product-cont-row">
+                    <div class="product-cont">
+                        <div class="product-el">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el">new</div>
+                                    <div class="product-el-tag-el">hit</div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-candy.svg" alt="" />
+                                    </div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-hot.svg" alt="" />
+                                    </div>
                                 </div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-hot.svg" alt="" />
-                                </div>
+                            </a>
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-el--add">
-                            <svg class="icon">
-                                <use xlink:href="#cart-empty"></use>
-                            </svg>
-                        </div>
-                        <div class="product__cont">
-                            <a class="product__title" href="#">Пицца Чоризо</a>
-                            <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
-                                <div class="tooltip tooltip--icon">?
-                                    <div class="tooltip-cont tooltip-cont--bottom-center">
-                                        <div class="tooltip-conner"></div>
-                                        <div class="consist">
-                                            <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Жиры, г</div>
-                                                <div class="consist__el-val">9.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Белки, г</div>
-                                                <div class="consist__el-val">10.50</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Углеводы, г</div>
-                                                <div class="consist__el-val">24.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Пищевая ценность, Ккал</div>
-                                                <div class="consist__el-val">230.70</div>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Пицца Чоризо</a>
+                                <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
+                                    <div class="tooltip tooltip--icon">?
+                                        <div class="tooltip-cont tooltip-cont--bottom-center">
+                                            <div class="tooltip-conner"></div>
+                                            <div class="consist">
+                                                <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Жиры, г</div>
+                                                    <div class="consist__el-val">9.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Белки, г</div>
+                                                    <div class="consist__el-val">10.50</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Углеводы, г</div>
+                                                    <div class="consist__el-val">24.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Пищевая ценность, Ккал</div>
+                                                    <div class="consist__el-val">230.70</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="product-footer">
-                                <div class="product-footer__info">
-                                    <div class="product-price">от 280 р</div>
-                                </div>
-                                <div class="product-get incr-btn">
-                                    <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
-                                    <div class="incr-btn-wrap">
-                                        <div class="incr incr--mark-light incr--one">
-                                            <div class="incr__minus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#minus"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="incr__val">
-                                                <span>1</span>
-                                                <div class="incr__val-coner"></div>
-                                            </div>
-                                            <div class="incr__plus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#plus"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
+                                <div class="product-footer">
+                                    <div class="product-footer__info">
+                                        <div class="product-price">от 280 р</div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-el">
-                        <a class="product__img" href="#">
-                            <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
-                            <div class="product-el-tag-wrap">
-                                <div class="product-el-tag-el">new</div>
-                                <div class="product-el-tag-el">hit</div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-candy.svg" alt="" />
-                                </div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-hot.svg" alt="" />
-                                </div>
-                            </div>
-                        </a>
-                        <div class="product-el--add">
-                            <svg class="icon">
-                                <use xlink:href="#cart-empty"></use>
-                            </svg>
-                        </div>
-                        <div class="product__cont">
-                            <a class="product__title" href="#">Пицца Чоризо</a>
-                            <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
-                                <div class="tooltip tooltip--icon">?
-                                    <div class="tooltip-cont tooltip-cont--bottom-center">
-                                        <div class="tooltip-conner"></div>
-                                        <div class="consist">
-                                            <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Жиры, г</div>
-                                                <div class="consist__el-val">9.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Белки, г</div>
-                                                <div class="consist__el-val">10.50</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Углеводы, г</div>
-                                                <div class="consist__el-val">24.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Пищевая ценность, Ккал</div>
-                                                <div class="consist__el-val">230.70</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-footer">
-                                <div class="product-footer__info">
-                                    <div class="product-price">от 280 р</div>
-                                </div>
-                                <div class="product-get incr-btn">
-                                    <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
-                                    <div class="incr-btn-wrap">
-                                        <div class="incr incr--mark-light incr--one">
-                                            <div class="incr__minus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#minus"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="incr__val">
-                                                <span>1</span>
-                                                <div class="incr__val-coner"></div>
-                                            </div>
-                                            <div class="incr__plus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#plus"></use>
-                                                </svg>
+                                    <div class="product-get incr-btn">
+                                        <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
+                                        <div class="incr-btn-wrap">
+                                            <div class="incr incr--mark-light incr--one">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-el">
-                        <a class="product__img" href="#">
-                            <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
-                            <div class="product-el-tag-wrap">
-                                <div class="product-el-tag-el">new</div>
-                                <div class="product-el-tag-el">hit</div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-candy.svg" alt="" />
+                        <div class="product-el">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el">new</div>
+                                    <div class="product-el-tag-el">hit</div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-candy.svg" alt="" />
+                                    </div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-hot.svg" alt="" />
+                                    </div>
                                 </div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-hot.svg" alt="" />
-                                </div>
+                            </a>
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-el--add">
-                            <svg class="icon">
-                                <use xlink:href="#cart-empty"></use>
-                            </svg>
-                        </div>
-                        <div class="product__cont">
-                            <a class="product__title" href="#">Пицца Чоризо</a>
-                            <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
-                                <div class="tooltip tooltip--icon">?
-                                    <div class="tooltip-cont tooltip-cont--bottom-center">
-                                        <div class="tooltip-conner"></div>
-                                        <div class="consist">
-                                            <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Жиры, г</div>
-                                                <div class="consist__el-val">9.90</div>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Пицца Чоризо</a>
+                                <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
+                                    <div class="tooltip tooltip--icon">?
+                                        <div class="tooltip-cont tooltip-cont--bottom-center">
+                                            <div class="tooltip-conner"></div>
+                                            <div class="consist">
+                                                <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Жиры, г</div>
+                                                    <div class="consist__el-val">9.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Белки, г</div>
+                                                    <div class="consist__el-val">10.50</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Углеводы, г</div>
+                                                    <div class="consist__el-val">24.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Пищевая ценность, Ккал</div>
+                                                    <div class="consist__el-val">230.70</div>
+                                                </div>
                                             </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Белки, г</div>
-                                                <div class="consist__el-val">10.50</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Углеводы, г</div>
-                                                <div class="consist__el-val">24.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Пищевая ценность, Ккал</div>
-                                                <div class="consist__el-val">230.70</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-footer__info">
+                                        <div class="product-price">от 280 р</div>
+                                    </div>
+                                    <div class="product-get incr-btn">
+                                        <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
+                                        <div class="incr-btn-wrap">
+                                            <div class="incr incr--mark-light incr--one">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-footer">
-                                <div class="product-footer__info">
-                                    <div class="product-price">от 280 р</div>
+                        </div>
+                        <div class="product-el">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el">new</div>
+                                    <div class="product-el-tag-el">hit</div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-candy.svg" alt="" />
+                                    </div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-hot.svg" alt="" />
+                                    </div>
                                 </div>
-                                <div class="product-get incr-btn">
-                                    <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
-                                    <div class="incr-btn-wrap">
-                                        <div class="incr incr--mark-light incr--one">
-                                            <div class="incr__minus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#minus"></use>
-                                                </svg>
+                            </a>
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
+                            </div>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Пицца Чоризо</a>
+                                <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
+                                    <div class="tooltip tooltip--icon">?
+                                        <div class="tooltip-cont tooltip-cont--bottom-center">
+                                            <div class="tooltip-conner"></div>
+                                            <div class="consist">
+                                                <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Жиры, г</div>
+                                                    <div class="consist__el-val">9.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Белки, г</div>
+                                                    <div class="consist__el-val">10.50</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Углеводы, г</div>
+                                                    <div class="consist__el-val">24.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Пищевая ценность, Ккал</div>
+                                                    <div class="consist__el-val">230.70</div>
+                                                </div>
                                             </div>
-                                            <div class="incr__val">
-                                                <span>1</span>
-                                                <div class="incr__val-coner"></div>
-                                            </div>
-                                            <div class="incr__plus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#plus"></use>
-                                                </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-footer__info">
+                                        <div class="product-price">от 280 р</div>
+                                    </div>
+                                    <div class="product-get incr-btn">
+                                        <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
+                                        <div class="incr-btn-wrap">
+                                            <div class="incr incr--mark-light incr--one">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-el">
-                        <a class="product__img" href="#">
-                            <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
-                            <div class="product-el-tag-wrap">
-                                <div class="product-el-tag-el">new</div>
-                                <div class="product-el-tag-el">hit</div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-candy.svg" alt="" />
+                        <div class="product-el">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el">new</div>
+                                    <div class="product-el-tag-el">hit</div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-candy.svg" alt="" />
+                                    </div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-hot.svg" alt="" />
+                                    </div>
                                 </div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-hot.svg" alt="" />
-                                </div>
+                            </a>
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-el--add">
-                            <svg class="icon">
-                                <use xlink:href="#cart-empty"></use>
-                            </svg>
-                        </div>
-                        <div class="product__cont">
-                            <a class="product__title" href="#">Пицца Чоризо</a>
-                            <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
-                                <div class="tooltip tooltip--icon">?
-                                    <div class="tooltip-cont tooltip-cont--bottom-center">
-                                        <div class="tooltip-conner"></div>
-                                        <div class="consist">
-                                            <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Жиры, г</div>
-                                                <div class="consist__el-val">9.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Белки, г</div>
-                                                <div class="consist__el-val">10.50</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Углеводы, г</div>
-                                                <div class="consist__el-val">24.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Пищевая ценность, Ккал</div>
-                                                <div class="consist__el-val">230.70</div>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Пицца Чоризо</a>
+                                <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
+                                    <div class="tooltip tooltip--icon">?
+                                        <div class="tooltip-cont tooltip-cont--bottom-center">
+                                            <div class="tooltip-conner"></div>
+                                            <div class="consist">
+                                                <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Жиры, г</div>
+                                                    <div class="consist__el-val">9.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Белки, г</div>
+                                                    <div class="consist__el-val">10.50</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Углеводы, г</div>
+                                                    <div class="consist__el-val">24.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Пищевая ценность, Ккал</div>
+                                                    <div class="consist__el-val">230.70</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="product-footer">
-                                <div class="product-footer__info">
-                                    <div class="product-price">от 280 р</div>
-                                </div>
-                                <div class="product-get incr-btn">
-                                    <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
-                                    <div class="incr-btn-wrap">
-                                        <div class="incr incr--mark-light incr--one">
-                                            <div class="incr__minus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#minus"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="incr__val">
-                                                <span>1</span>
-                                                <div class="incr__val-coner"></div>
-                                            </div>
-                                            <div class="incr__plus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#plus"></use>
-                                                </svg>
+                                <div class="product-footer">
+                                    <div class="product-footer__info">
+                                        <div class="product-price">от 280 р</div>
+                                    </div>
+                                    <div class="product-get incr-btn">
+                                        <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
+                                        <div class="incr-btn-wrap">
+                                            <div class="incr incr--mark-light incr--one">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

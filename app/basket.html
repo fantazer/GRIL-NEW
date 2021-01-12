@@ -77,7 +77,9 @@
                                 </div>
                                 <div class="header-info__cont">
                                     <div class="header-info__val">
-                                        <a href="tel:+7 (917) 58-55-05">+7(917)58-55-05</a>
+                                        <a href="tel:+7 (917) 58-55-05">+7(917)
+                                            <b>58-55-05</b>
+                                        </a>
                                     </div>
                                     <div class="header-info__text">Сегодня 00:00 - 23:59</div>
                                 </div>
@@ -467,17 +469,17 @@
         <!--block header end-->
         <div class="content">
             <div class="main-cont">
-                <div class="title-row">
-                    <div class="arrow" onclick="window.history.go(-1); return false;">
-                        <svg class="icon">
-                            <use xlink:href="#arrow-conner-left"></use>
-                        </svg>
-                    </div>
-                    <div class="title title--lg">Ваша корзина</div>
-                </div>
                 <div class="order">
                     <div class="order-cont">
                         <div class="order-item">
+                            <div class="title-row">
+                                <div class="arrow" onclick="window.history.go(-1); return false;">
+                                    <svg class="icon">
+                                        <use xlink:href="#arrow-conner-left"></use>
+                                    </svg>
+                                </div>
+                                <div class="title title--xl">Корзина</div>
+                            </div>
                             <div class="order__el-wrap">
                                 <div class="order__el">
                                     <div class="order__el-info">
@@ -660,7 +662,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="title">Не забудьте добавить к заказу:</div>
+                            <div class="title title--lg">Не забудьте добавить к заказу:</div>
                             <div class="order-add order-add--sm">
                                 <div class="product-el product-el--sm product-el--border">
                                     <div class="product-el--add">
@@ -800,311 +802,366 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="total">
-                            <div class="total-wrap stick">
-                                <div class="total-title">Сумма заказа</div>
-                                <div class="total-val">2 650 р</div>
-                                <div class="btn--md btn--mark">Оформить заказ</div>
+                        <div class="order-condition">
+                            <div class="steps">
+                                <a class="step__el step__el--active" href="#">
+                                    <div class="step__el-val">1</div>
+                                    <div class="step__el-name">Корзина</div>
+                                </a>
+                                <div class="step-line"></div>
+                                <a class="step__el" href="#">
+                                    <div class="step__el-val">2</div>
+                                    <div class="step__el-name">Оформление заказа</div>
+                                </a>
+                                <div class="step-line"></div>
+                                <a class="step__el" href="#">
+                                    <div class="step__el-val">3</div>
+                                    <div class="step__el-name">Заказ принят</div>
+                                </a>
+                            </div>
+                            <div class="order-condition-wrap stick">
+                                <div class="title title--lg">Мой заказ</div>
+                                <div class="input-row">
+                                    <div class="input-get">
+                                        <input class="input" type="text" placeholder="Промокод" />
+                                        <div class="input-get__btn">Применить</div>
+                                    </div>
+                                </div>
+                                <div class="goods-list">
+                                    <div class="goods-list__el">
+                                        <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                        <div class="goods-list__el-val">x 2</div>
+                                        <div class="goods-list__el-cost">1003 р.</div>
+                                    </div>
+                                    <div class="goods-list__el">
+                                        <div class="goods-list__el-name goods-list__el-name--gray">Приборы</div>
+                                        <div class="goods-list__el-val">x 2</div>
+                                        <div class="goods-list__el-cost">1003 р.</div>
+                                    </div>
+                                    <div class="goods-list__el">
+                                        <div class="goods-list__el-name goods-list__el-name--gray">Доставка</div>
+                                        <div class="goods-list__el-val"></div>
+                                        <div class="goods-list__el-cost">200 р.</div>
+                                    </div>
+                                </div>
+                                <div class="order-sale">
+                                    <div class="type--mark type--bold">Получить кэшбэк 3%</div>
+                                    <div class="tooltip tooltip--mark tooltip--icon">?
+                                        <div class="tooltip-cont tooltip-cont--bottom-center">
+                                            <div class="tooltip-conner"></div>
+                                            <div class="type--mark">Авторизуйся на сайте и получи 3% от суммы заказа на свой бонусный счет. Оплачивай бонусами до 30% от суммы следующей покупки</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-total">
+                                    <div class="order-total__text">Итого:</div>
+                                    <div class="order-total__val">1 184р</div>
+                                </div>
+                                <div class="btn--md btn--full btn--mark">Оформить заказ
+                                    <!--remove .btn--disable-->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- recommend-->
-                <div class="title title--lg">Рекомендуем также</div>
-                <div class="product-cont">
-                    <div class="product-el">
-                        <a class="product__img" href="#">
-                            <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
-                            <div class="product-el-tag-wrap">
-                                <div class="product-el-tag-el">new</div>
-                                <div class="product-el-tag-el">hit</div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-candy.svg" alt="" />
+                <div class="title title--lg">Вам также могут понравиться</div>
+                <div class="product-cont-row">
+                    <div class="product-cont">
+                        <div class="product-el">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el">new</div>
+                                    <div class="product-el-tag-el">hit</div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-candy.svg" alt="" />
+                                    </div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-hot.svg" alt="" />
+                                    </div>
                                 </div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-hot.svg" alt="" />
-                                </div>
+                            </a>
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-el--add">
-                            <svg class="icon">
-                                <use xlink:href="#cart-empty"></use>
-                            </svg>
-                        </div>
-                        <div class="product__cont">
-                            <a class="product__title" href="#">Пицца Чоризо</a>
-                            <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
-                                <div class="tooltip tooltip--icon">?
-                                    <div class="tooltip-cont tooltip-cont--bottom-center">
-                                        <div class="tooltip-conner"></div>
-                                        <div class="consist">
-                                            <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Жиры, г</div>
-                                                <div class="consist__el-val">9.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Белки, г</div>
-                                                <div class="consist__el-val">10.50</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Углеводы, г</div>
-                                                <div class="consist__el-val">24.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Пищевая ценность, Ккал</div>
-                                                <div class="consist__el-val">230.70</div>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Пицца Чоризо</a>
+                                <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
+                                    <div class="tooltip tooltip--icon">?
+                                        <div class="tooltip-cont tooltip-cont--bottom-center">
+                                            <div class="tooltip-conner"></div>
+                                            <div class="consist">
+                                                <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Жиры, г</div>
+                                                    <div class="consist__el-val">9.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Белки, г</div>
+                                                    <div class="consist__el-val">10.50</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Углеводы, г</div>
+                                                    <div class="consist__el-val">24.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Пищевая ценность, Ккал</div>
+                                                    <div class="consist__el-val">230.70</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="product-footer">
-                                <div class="product-footer__info">
-                                    <div class="product-price">от 280 р</div>
-                                </div>
-                                <div class="product-get incr-btn">
-                                    <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
-                                    <div class="incr-btn-wrap">
-                                        <div class="incr incr--mark-light incr--one">
-                                            <div class="incr__minus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#minus"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="incr__val">
-                                                <span>1</span>
-                                                <div class="incr__val-coner"></div>
-                                            </div>
-                                            <div class="incr__plus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#plus"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
+                                <div class="product-footer">
+                                    <div class="product-footer__info">
+                                        <div class="product-price">от 280 р</div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-el">
-                        <a class="product__img" href="#">
-                            <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
-                            <div class="product-el-tag-wrap">
-                                <div class="product-el-tag-el">new</div>
-                                <div class="product-el-tag-el">hit</div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-candy.svg" alt="" />
-                                </div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-hot.svg" alt="" />
-                                </div>
-                            </div>
-                        </a>
-                        <div class="product-el--add">
-                            <svg class="icon">
-                                <use xlink:href="#cart-empty"></use>
-                            </svg>
-                        </div>
-                        <div class="product__cont">
-                            <a class="product__title" href="#">Пицца Чоризо</a>
-                            <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
-                                <div class="tooltip tooltip--icon">?
-                                    <div class="tooltip-cont tooltip-cont--bottom-center">
-                                        <div class="tooltip-conner"></div>
-                                        <div class="consist">
-                                            <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Жиры, г</div>
-                                                <div class="consist__el-val">9.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Белки, г</div>
-                                                <div class="consist__el-val">10.50</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Углеводы, г</div>
-                                                <div class="consist__el-val">24.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Пищевая ценность, Ккал</div>
-                                                <div class="consist__el-val">230.70</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-footer">
-                                <div class="product-footer__info">
-                                    <div class="product-price">от 280 р</div>
-                                </div>
-                                <div class="product-get incr-btn">
-                                    <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
-                                    <div class="incr-btn-wrap">
-                                        <div class="incr incr--mark-light incr--one">
-                                            <div class="incr__minus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#minus"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="incr__val">
-                                                <span>1</span>
-                                                <div class="incr__val-coner"></div>
-                                            </div>
-                                            <div class="incr__plus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#plus"></use>
-                                                </svg>
+                                    <div class="product-get incr-btn">
+                                        <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
+                                        <div class="incr-btn-wrap">
+                                            <div class="incr incr--mark-light incr--one">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-el">
-                        <a class="product__img" href="#">
-                            <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
-                            <div class="product-el-tag-wrap">
-                                <div class="product-el-tag-el">new</div>
-                                <div class="product-el-tag-el">hit</div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-candy.svg" alt="" />
+                        <div class="product-el">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el">new</div>
+                                    <div class="product-el-tag-el">hit</div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-candy.svg" alt="" />
+                                    </div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-hot.svg" alt="" />
+                                    </div>
                                 </div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-hot.svg" alt="" />
-                                </div>
+                            </a>
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-el--add">
-                            <svg class="icon">
-                                <use xlink:href="#cart-empty"></use>
-                            </svg>
-                        </div>
-                        <div class="product__cont">
-                            <a class="product__title" href="#">Пицца Чоризо</a>
-                            <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
-                                <div class="tooltip tooltip--icon">?
-                                    <div class="tooltip-cont tooltip-cont--bottom-center">
-                                        <div class="tooltip-conner"></div>
-                                        <div class="consist">
-                                            <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Жиры, г</div>
-                                                <div class="consist__el-val">9.90</div>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Пицца Чоризо</a>
+                                <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
+                                    <div class="tooltip tooltip--icon">?
+                                        <div class="tooltip-cont tooltip-cont--bottom-center">
+                                            <div class="tooltip-conner"></div>
+                                            <div class="consist">
+                                                <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Жиры, г</div>
+                                                    <div class="consist__el-val">9.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Белки, г</div>
+                                                    <div class="consist__el-val">10.50</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Углеводы, г</div>
+                                                    <div class="consist__el-val">24.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Пищевая ценность, Ккал</div>
+                                                    <div class="consist__el-val">230.70</div>
+                                                </div>
                                             </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Белки, г</div>
-                                                <div class="consist__el-val">10.50</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Углеводы, г</div>
-                                                <div class="consist__el-val">24.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Пищевая ценность, Ккал</div>
-                                                <div class="consist__el-val">230.70</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-footer__info">
+                                        <div class="product-price">от 280 р</div>
+                                    </div>
+                                    <div class="product-get incr-btn">
+                                        <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
+                                        <div class="incr-btn-wrap">
+                                            <div class="incr incr--mark-light incr--one">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="product-footer">
-                                <div class="product-footer__info">
-                                    <div class="product-price">от 280 р</div>
+                        </div>
+                        <div class="product-el">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el">new</div>
+                                    <div class="product-el-tag-el">hit</div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-candy.svg" alt="" />
+                                    </div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-hot.svg" alt="" />
+                                    </div>
                                 </div>
-                                <div class="product-get incr-btn">
-                                    <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
-                                    <div class="incr-btn-wrap">
-                                        <div class="incr incr--mark-light incr--one">
-                                            <div class="incr__minus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#minus"></use>
-                                                </svg>
+                            </a>
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
+                            </div>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Пицца Чоризо</a>
+                                <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
+                                    <div class="tooltip tooltip--icon">?
+                                        <div class="tooltip-cont tooltip-cont--bottom-center">
+                                            <div class="tooltip-conner"></div>
+                                            <div class="consist">
+                                                <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Жиры, г</div>
+                                                    <div class="consist__el-val">9.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Белки, г</div>
+                                                    <div class="consist__el-val">10.50</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Углеводы, г</div>
+                                                    <div class="consist__el-val">24.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Пищевая ценность, Ккал</div>
+                                                    <div class="consist__el-val">230.70</div>
+                                                </div>
                                             </div>
-                                            <div class="incr__val">
-                                                <span>1</span>
-                                                <div class="incr__val-coner"></div>
-                                            </div>
-                                            <div class="incr__plus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#plus"></use>
-                                                </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-footer__info">
+                                        <div class="product-price">от 280 р</div>
+                                    </div>
+                                    <div class="product-get incr-btn">
+                                        <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
+                                        <div class="incr-btn-wrap">
+                                            <div class="incr incr--mark-light incr--one">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-el">
-                        <a class="product__img" href="#">
-                            <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
-                            <div class="product-el-tag-wrap">
-                                <div class="product-el-tag-el">new</div>
-                                <div class="product-el-tag-el">hit</div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-candy.svg" alt="" />
+                        <div class="product-el">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-2.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el">new</div>
+                                    <div class="product-el-tag-el">hit</div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-candy.svg" alt="" />
+                                    </div>
+                                    <div class="product-el-tag-el">
+                                        <img src="img/cat-hot.svg" alt="" />
+                                    </div>
                                 </div>
-                                <div class="product-el-tag-el">
-                                    <img src="img/cat-hot.svg" alt="" />
-                                </div>
+                            </a>
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-el--add">
-                            <svg class="icon">
-                                <use xlink:href="#cart-empty"></use>
-                            </svg>
-                        </div>
-                        <div class="product__cont">
-                            <a class="product__title" href="#">Пицца Чоризо</a>
-                            <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
-                                <div class="tooltip tooltip--icon">?
-                                    <div class="tooltip-cont tooltip-cont--bottom-center">
-                                        <div class="tooltip-conner"></div>
-                                        <div class="consist">
-                                            <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Жиры, г</div>
-                                                <div class="consist__el-val">9.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Белки, г</div>
-                                                <div class="consist__el-val">10.50</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Углеводы, г</div>
-                                                <div class="consist__el-val">24.90</div>
-                                            </div>
-                                            <div class="consist__el">
-                                                <div class="consist__el-name">Пищевая ценность, Ккал</div>
-                                                <div class="consist__el-val">230.70</div>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Пицца Чоризо</a>
+                                <div class="product__descr">Классические роллы с начикой на ваш выбор, с нежной сливочной шапочкой из сыра
+                                    <div class="tooltip tooltip--icon">?
+                                        <div class="tooltip-cont tooltip-cont--bottom-center">
+                                            <div class="tooltip-conner"></div>
+                                            <div class="consist">
+                                                <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Жиры, г</div>
+                                                    <div class="consist__el-val">9.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Белки, г</div>
+                                                    <div class="consist__el-val">10.50</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Углеводы, г</div>
+                                                    <div class="consist__el-val">24.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Пищевая ценность, Ккал</div>
+                                                    <div class="consist__el-val">230.70</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="product-footer">
-                                <div class="product-footer__info">
-                                    <div class="product-price">от 280 р</div>
-                                </div>
-                                <div class="product-get incr-btn">
-                                    <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
-                                    <div class="incr-btn-wrap">
-                                        <div class="incr incr--mark-light incr--one">
-                                            <div class="incr__minus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#minus"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="incr__val">
-                                                <span>1</span>
-                                                <div class="incr__val-coner"></div>
-                                            </div>
-                                            <div class="incr__plus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#plus"></use>
-                                                </svg>
+                                <div class="product-footer">
+                                    <div class="product-footer__info">
+                                        <div class="product-price">от 280 р</div>
+                                    </div>
+                                    <div class="product-get incr-btn">
+                                        <div class="incr-btn__el btn--sm btn--mark">Заказать</div>
+                                        <div class="incr-btn-wrap">
+                                            <div class="incr incr--mark-light incr--one">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>1</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -3,11 +3,20 @@ include block_html/_include.pug
 
 .page
 	+header()
-	.main-slider-wrap
-		.main-slider
+	.main-slider-wrap.slider-wrap.slider-wrap--inarrow
+		.slider-control-wrap
+			.main-cont
+				.slider-control-cont
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+		.slider-item.main-slider
 			- for (var i=0;i<4;i++)
 				a(href="#").main-slider__el-wrap
 					.main-slider__el(style="background-image:url('img/board-1.jpg')")
+
+
 	.content
 		-
 			var items = [

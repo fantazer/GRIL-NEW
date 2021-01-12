@@ -11,81 +11,91 @@ include block_html/_include.pug
 					.item-img(style="background-image:url('img/item-card-1.jpg')")
 				// item-info
 				.item-info
+					.bread.mb-24
+						a(href="#").bread__el Главная
+						a(href="#").bread__el Каталог
+						.bread__el Название пункта
 					.title-row
 						.arrow(onclick="window.history.go(-1); return false;")
 							+icon("arrow-conner-left","icon")
 						.title.title--xl Четыре сыра
-					.item-descr Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
+							.tooltip.tooltip--icon ?
+								.tooltip-cont.tooltip-cont--bottom-center
+									.tooltip-conner
+									.consist
+										.type--sm.type--bold.mb-12 Пищевая ценность:
+										.consist__el
+											.consist__el-name Жиры, г
+											.consist__el-val 9.90
+										.consist__el
+											.consist__el-name Белки, г
+											.consist__el-val 10.50
+										.consist__el
+											.consist__el-name Углеводы, г
+											.consist__el-val 24.90
+										.consist__el
+											.consist__el-name Пищевая ценность, Ккал
+											.consist__el-val 230.70
+					.item-descr
+						-
+							var items = [
+								'Сыр',
+								'Пицца-соус',
+								'Перец болгарский',
+								'Куриное филе',
+								'Моцарела',
+								];
+						each item in items
+							.mix.js-toggle
+								.mix__name #{item}
+								.mix__icon
+									+icon("close","icon icon--true")
+									+icon("repeat","icon icon--false")
+						each itemEl in items
+							<span> #{itemEl}, </span>
 
-					// size
-					.item-size
-						.size.size--mark.size--sm
-							.size__el.size__el--active 15 см
-							.size__el 30 см
-							.size__el 45 см
-					// size === end
+					.item-config-wrap
+						// size
+						.item-size
+							.size.size--mark.size--sm.size--fluid
+								.size__el.size__el--active 15 см
+								.size__el 30 см
+								.size__el 45 см
+						// size === end
 
-					// item-config
-					.item-config-row.js-ingr-wrap(data-min="1" data-max="3")
-						.title Дополнительные ингредиенты
-						- for (var i=0;i<4;i++)
-							.ingr-row
-								.ingr-name Корнишоны <span class="type--gray">/ 75г</span>
-								.ingr-cost 16 р
-								.ingr-incr
-									+incr(false,"incr--single incr--mark-light incr--sm")
-								.ingr-total 32 р
-						.msg.msg--info
-							// .msg--info || .msg--alert
-							.msg-text Вы можете добавить до 6-ти доп. ингрединтов
-					.item-config-row.js-ingr-wrap(data-min="0" data-max="4")
-						.title Дополнительные ингредиенты
-						- for (var i=0;i<6;i++)
-							.ingr-row
-								.ingr-name Сыр <span class="type--gray">/ 75г</span>
-								.ingr-cost 16 р
-								.ingr-incr
-									+incr(false,"incr--single incr--mark-light incr--sm")
-								.ingr-total 32 р
-						.msg.msg--info
-							// .msg--info || .msg--alert
-							.msg-text Вы можете добавить до 6-ти доп. ингрединтов
-					.item-config-row.js-ingr-wrap(data-min="0" data-max="3")
-						.title Дополнительные ингредиенты
-						- for (var i=0;i<6;i++)
-							.ingr-row
-								.ingr-name Сыр <span class="type--gray">/ 75г</span>
-								.ingr-cost 16 р
-								.ingr-incr
-									+incr(false,"incr--single incr--mark-light incr--sm")
-								.ingr-total 32 р
-						.msg.msg--info
-							// .msg--info || .msg--alert
-							.msg-text Вы можете добавить до 6-ти доп. ингрединтов
-					//  === end
+						// size
+						.item-size
+							.size.size--mark.size--sm.size--fluid
+								.size__el.size__el--active Супертесто
+								.size__el Тонкое
+						// size === end
 
-					// item-config
-					//.item-config-row
-						.title Не забудьте добавить к заказу:
-						.item-prop
-							.item-prop__img(style="background-image:url('img/prop-3.jpg')")
-							.item-prop__title Томатний соус <span class="type--gray">/ 50г</span>
-							.item-prop__incr
-								+incr(false,"incr--single incr--mark-light incr--mdx")
-							.item-prop__cost 29 р
-						.item-prop
-							.item-prop__img(style="background-image:url('img/prop-4.jpg')")
-							.item-prop__title Сметана <span class="type--gray">/ 50г</span>
-							.item-prop__incr
-								+incr(false,"incr--single incr--mark-light incr--mdx")
-							.item-prop__cost 34 р
-						.item-prop
-							.item-prop__img(style="background-image:url('img/prop-5.jpg')")
-							.item-prop__title Чесночный соус <span class="type--gray">/ 50г</span>
-							.item-prop__incr
-								+incr(false,"incr--single incr--mark-light incr--mdx")
-							.item-prop__cost 16 р
-					//  === end
+						//item-config
+						.title Дополнительные ингредиенты
+						.item-config-row.js-ingr-wrap.scroll-template(data-min="0" data-max="3")
+							- for (var i=0;i<4;i++)
+								.item-prop.js-ingr-row
+									.item-prop__img(style="background-image:url('img/prop-3.jpg')")
+									.item-prop__title Томатний соус <span class="type--gray">/ 50г</span>
+									.item-prop__incr
+										+incr(false,"incr--single incr--mark-light incr--mdx")
+									.item-prop__cost 29 р
+								.item-prop.js-ingr-row
+									.item-prop__img(style="background-image:url('img/prop-4.jpg')")
+									.item-prop__title Сметана <span class="type--gray">/ 50г</span>
+									.item-prop__incr
+										+incr(false,"incr--single incr--mark-light incr--mdx")
+									.item-prop__cost 34 р
+								.item-prop.js-ingr-row
+									.item-prop__img(style="background-image:url('img/prop-5.jpg')")
+									.item-prop__title Чесночный соус <span class="type--gray">/ 50г</span>
+									.item-prop__incr
+										+incr(false,"incr--single incr--mark-light incr--mdx")
+									.item-prop__cost 16 р
+							.msg.msg--info.hidden
+								// .msg--info || .msg--alert
+								.msg-text Вы можете добавить до 6-ти доп. ингрединтов
+						//  item-config === end
 
 					.item-condition-wrap
 						// item total
@@ -100,14 +110,10 @@ include block_html/_include.pug
 									.incr-btn__el.btn--md.btn--mark Заказать
 									.incr-btn-wrap
 										+incr(1,"incr--mark")
-							a(href="#").icon-row
-								.arrow.arrow--sm.icon--right
-									+icon("arrow-conner-left","icon ")
-								span.type--xs назад в раздел
 						// item total === end
 
 						// structure
-						.structure-wrap
+						//.structure-wrap
 							.structure
 								.structure__el
 									.structure__el-name калории
@@ -127,9 +133,10 @@ include block_html/_include.pug
 				// item-info === end
 			// recommend
 			.title.title--lg Рекомендуем также
-			.product-cont
-				- for (var i=0;i< 4;i++)
-					+product()
+			.product-cont-row
+				.product-cont
+					- for (var i=0;i< 4;i++)
+						+product()
 			// recommend === end
 
 	+footer()

@@ -294,14 +294,18 @@ $(document).ready(function () {
 			{
 				breakpoint: 1025,
 				settings: {
-					centerPadding: '4%',
+					centerPadding: '8%',
+					centerMode: true,
+					variableWidth: false,
+					slidesToShow: 1,
 				}
 			},
 			{
 				breakpoint: 640,
 				settings: {
 					centerMode: false,
-					slidesToShow: 1.05,
+					slidesToShow: 1,
+					variableWidth: false,
 				}
 			}
 		],
@@ -394,7 +398,7 @@ $(document).ready(function () {
 
 	// STICK
 	var isMobile = function () {
-		if ($(window).width() > 1025) {
+		if ($(window).width() > 1023) {
 			$(".stick").stick_in_parent({
 				'offset_top': 100
 			});
@@ -475,7 +479,7 @@ $(document).ready(function () {
 		$(this).prevAll('.star-el').addClass('star-el--active')
 	});
 	// rating === end
-	
+
 	// slide menu
 	$('.head-toggle').click(function(event){
 		event.stopPropagation();
@@ -564,7 +568,7 @@ $(document).ready(function () {
 				currentSizeAdds = currentSizeAdds + $(this).text()*1;
 			})
 			if(currentSizeAdds>=maxAdds && currentSizeAdds != 0){
-				$(this).find('.ingr-row').each(function(){
+				$(this).find('.js-ingr-row').each(function(){
 					if($(this).find(".incr__val").text()*1===0){
 						$(this).addClass("ingr-row--disable");
 					}else{
@@ -572,8 +576,8 @@ $(document).ready(function () {
 					}
 				})
 			}else{
-				$(this).find('.ingr-row').removeClass("ingr-row--disable")
-				$(this).find('.ingr-row').removeClass("ingr-row--unPlus")
+				$(this).find('.js-ingr-row').removeClass("ingr-row--disable")
+				$(this).find('.js-ingr-row').removeClass("ingr-row--unPlus")
 			}
 			//console.log(maxAdds);
 			if(currentSizeAdds <= maxAdds && currentSizeAdds >= minAdds){
@@ -612,7 +616,7 @@ $(document).ready(function () {
 	// toggle items type
 	$('.tag-el').click(function(){
 		var filterType = [];
-		let parent = $(this).closest(".product-wrap");
+		var parent = $(this).closest(".product-wrap");
 		var emptyItem = parent.find(".filter-false");
 		parent.find('.tag-el.active').each(function(){
 			filterType.push($(this).data("condition").toString());
@@ -688,9 +692,6 @@ $(document).ready(function () {
 		$(this).closest('.js-cart-wrap').toggleClass('active');
 	});
 	//toggle menu end
-
-
-
 
 	// scroll to id
 	var offsetId = $(document).width() < 769 ? 105 : 110

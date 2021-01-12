@@ -5,13 +5,13 @@ include block_html/_include.pug
 	+header()
 	.content
 		.main-cont
-			.title-row
-				.arrow(onclick="window.history.go(-1); return false;")
-					+icon("arrow-conner-left","icon")
-				.title.title--lg Ваша корзина
 			.order
 				.order-cont
 					.order-item
+						.title-row
+							.arrow(onclick="window.history.go(-1); return false;")
+								+icon("arrow-conner-left","icon")
+							.title.title--xl Корзина
 						.order__el-wrap
 							- for (var i=0;i<5;i++)
 								.order__el
@@ -27,22 +27,62 @@ include block_html/_include.pug
 										.order__price 500 р
 										.order__delete
 											+icon("delete","icon")
-						.title Не забудьте добавить к заказу:
+						.title.title--lg Не забудьте добавить к заказу:
 						.order-add.order-add--sm
 							- for (var i=0;i<4;i++)
 								+product-sm()
-					.total
-						.total-wrap.stick
-							.total-title Сумма заказа
-							.total-val 2 650 р
-							.btn--md.btn--mark Оформить заказ
+					.order-condition
+						.steps
+							a(href="#").step__el.step__el--active
+								.step__el-val 1
+								.step__el-name Корзина
+							.step-line
+							a(href="#").step__el
+								.step__el-val 2
+								.step__el-name Оформление заказа
+							.step-line
+							a(href="#").step__el
+								.step__el-val 3
+								.step__el-name Заказ принят
+						.order-condition-wrap.stick
+							.title.title--lg Мой заказ
+							.input-row
+								.input-get
+									input(type="text" placeholder="Промокод" class="input")
+									.input-get__btn Применить
 
+							.goods-list
+								- for (var i=0;i<4;i++)
+								.goods-list__el
+									.goods-list__el-name San Benedetto Aquavitamin an Benedetto
+									.goods-list__el-val x 2
+									.goods-list__el-cost 1003 р.
+								.goods-list__el
+									.goods-list__el-name.goods-list__el-name--gray Приборы
+									.goods-list__el-val x 2
+									.goods-list__el-cost 1003 р.
+								.goods-list__el
+									.goods-list__el-name.goods-list__el-name--gray Доставка
+									.goods-list__el-val
+									.goods-list__el-cost 200 р.
+							.order-sale
+								.type--mark.type--bold Получить кэшбэк 3%
+								.tooltip.tooltip--mark.tooltip--icon ?
+									.tooltip-cont.tooltip-cont--bottom-center
+										.tooltip-conner
+										.type--mark Авторизуйся на сайте и получи 3% от суммы заказа на свой бонусный счет. Оплачивай бонусами до 30% от суммы следующей покупки
 
+							.order-total
+								.order-total__text Итого:
+								.order-total__val 1 184р
+							.btn--md.btn--full.btn--mark Оформить заказ
+								//remove .btn--disable
 			// recommend
-			.title.title--lg Рекомендуем также
-			.product-cont
-				- for (var i=0;i< 4;i++)
-					+product()
+			.title.title--lg Вам также могут понравиться
+			.product-cont-row
+				.product-cont
+					- for (var i=0;i< 4;i++)
+						+product()
 			// recommend === end
 	+footer()
 include ./block_html/_script.pug

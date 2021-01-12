@@ -77,7 +77,9 @@
                                 </div>
                                 <div class="header-info__cont">
                                     <div class="header-info__val">
-                                        <a href="tel:+7 (917) 58-55-05">+7(917)58-55-05</a>
+                                        <a href="tel:+7 (917) 58-55-05">+7(917)
+                                            <b>58-55-05</b>
+                                        </a>
                                     </div>
                                     <div class="header-info__text">Сегодня 00:00 - 23:59</div>
                                 </div>
@@ -503,8 +505,14 @@
                                     <svg class="icon icon--sm icon--right icon--gray">
                                         <use xlink:href="#clock"></use>
                                     </svg>
-                                    <span class="type--sm">
-                                        <span class="type--gray">Доставим за</span>40 мин</span>
+                                    <span class="js-switch-cont type--sm" data-item="deliver" data-group="deliverType">
+                                        <span class="type--gray">Доставим за</span>
+                                        <span class="type--mark">40 мин</span>
+                                    </span>
+                                    <span class="type--sm js-switch-cont hidden" data-item="self" data-group="deliverType">
+                                        <span class="type--gray">Приготовим за</span>
+                                        <span class="type--mark">20 мин</span>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -706,14 +714,24 @@
                         </div>
                     </div>
                     <div class="order-condition">
+                        <div class="steps">
+                            <a class="step__el step__el--active" href="#">
+                                <div class="step__el-val">1</div>
+                                <div class="step__el-name">Корзина</div>
+                            </a>
+                            <div class="step-line"></div>
+                            <a class="step__el step__el--active" href="#">
+                                <div class="step__el-val">2</div>
+                                <div class="step__el-name">Оформление заказа</div>
+                            </a>
+                            <div class="step-line"></div>
+                            <a class="step__el" href="#">
+                                <div class="step__el-val">3</div>
+                                <div class="step__el-name">Заказ принят</div>
+                            </a>
+                        </div>
                         <div class="order-condition-wrap stick">
                             <div class="title title--md">Мой заказ</div>
-                            <div class="input-row">
-                                <div class="input-get">
-                                    <input class="input" type="text" placeholder="Ввести промокод" />
-                                    <div class="input-get__btn">Принять</div>
-                                </div>
-                            </div>
                             <div class="goods-list">
                                 <div class="goods-list__el">
                                     <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
