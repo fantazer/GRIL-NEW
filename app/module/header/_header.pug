@@ -46,10 +46,13 @@ mixin header()
 							+icon("soc-vk","icon")
 						a(href="#").soc-row__el
 							+icon("soc-fl","icon")
+					a(href="tel:+7 (917) 58-55-05").header-callback
+						+icon("phone","icon")
 					.header-auth
 						+icon("user","icon")
 						.header-auth-state Александр
 					a(href="#").cart-wrap.cart-wrap--mobile
+						.cart-cost 2 850 ₽
 						.cart
 							+icon("cart--color","icon")
 							.cart-val 33
@@ -59,7 +62,8 @@ mixin header()
 				.header-menu
 					a(href="/").logo
 						img(src="img/logo.svg", alt="")
-
+					a(href="tel:8(495)938-19-05").header-menu__call
+						+icon("phone","icon")
 					.header-nav
 						-
 							var items = [

@@ -19,12 +19,13 @@ include block_html/_include.pug
 										a(href="#" style="background-image:url('img/item-2.jpg')" ).order__img
 										.order__name
 											a(href="#").order__name-text Макси маки
-											.order__adds 3 см, 450 г
-											.order__adds + + оливки, 30 г + фрикадельки, 50 г
+											.order__adds + оливки, 30 г + фрикадельки + оливки, 30 г + фрикадельки
 									.order__el-change
 										.order__inc
 											+incr(1,"incr--mark-light incr--mdx")
-										.order__price 500 р
+										.order__price
+											.order__price__false 1200 р
+											.order__price__true 800 р
 										.order__delete
 											+icon("delete","icon")
 						.title.title--lg Не забудьте добавить к заказу:
@@ -48,8 +49,8 @@ include block_html/_include.pug
 							.title.title--lg Мой заказ
 							.input-row
 								.input-get
-									input(type="text" placeholder="Промокод" class="input")
-									.input-get__btn Применить
+									input(type="text" size="10" placeholder="Промокод" class="input")
+									.input-get__btn.disable Применить
 
 							.goods-list
 								- for (var i=0;i<4;i++)
@@ -65,7 +66,7 @@ include block_html/_include.pug
 									.goods-list__el-name.goods-list__el-name--gray Доставка
 									.goods-list__el-val
 									.goods-list__el-cost 200 р.
-							.order-sale
+							.order-sale.modal-get(data-modal="enter")
 								.type--mark.type--bold Получить кэшбэк 3%
 								.tooltip.tooltip--mark.tooltip--icon ?
 									.tooltip-cont.tooltip-cont--bottom-center
@@ -75,8 +76,14 @@ include block_html/_include.pug
 							.order-total
 								.order-total__text Итого:
 								.order-total__val 1 184р
-							.btn--md.btn--full.btn--mark Оформить заказ
+							.btn--md.btn--full.btn--mark.order-total-get Оформить заказ
 								//remove .btn--disable
+			.mobile-total.js-mobile-total
+				.mobile-total__sale.modal-get(data-modal="enter") Получить кэшбэк 3%
+				.mobile-total-cont.js-mobile-total-cont
+					.mobile-total__title Итого
+					.mobile-total__val 2 650 р
+					a(href="#").mobile-total__get.btn--md.btn--mark Оформить <span>заказ</span>
 			// recommend
 			.title.title--lg Вам также могут понравиться
 			.product-cont-row
@@ -84,5 +91,5 @@ include block_html/_include.pug
 					- for (var i=0;i< 4;i++)
 						+product()
 			// recommend === end
-	+footer()
+	+footer(true)
 include ./block_html/_script.pug

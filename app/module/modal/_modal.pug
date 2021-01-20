@@ -28,13 +28,14 @@ mixin modal()
 						+icon("close","icon")
 					.modal-title Вход на сайт
 					.input-row
-						input(type="text" name="name" placeholder="Телефон").input
+						input(type="text" name="name" placeholder="Телефон" data-mask="8(000)000-00-00").input
 					.input-row
-						input(type="text" name="name" placeholder="Пароль").input
+						input(type="password" name="name" placeholder="Пароль").input
 
 					input(type="submit" value="Войти").modal-send
-					a(href="#").modal-link Забыли пароль
-					a(href="#").modal-link Регистрация
+					.modal-link-wrap
+						a(href="#").modal-link Забыли пароль
+						a(href="#").modal-link Регистрация
 			// phone enter === end
 
 			// phone sms

@@ -46,6 +46,9 @@ font-size 50px
 .type--md
 	typeSize(18,14)
 
+.type--mdx
+	typeSize(21,18)
+
 .type--lg
 	typeSize(24,22)
 
@@ -102,9 +105,10 @@ font-size 50px
 	fw()
 	position: relative
 	font-weight: 700
-	margin-bottom: 10px
 	f()
 	align-items center
+	grid-gap 20px
+	margin-bottom: 20px
 	.icon
 		+below(768px)
 			size 25px
@@ -119,15 +123,10 @@ font-size 50px
 			margin-right: 0
 			margin-bottom: 0
 		margin-right: 20px
-		//margin-top: -5px
+		margin-bottom: 0
 		position relative
-		margin-bottom: 20px
 	.arrow
-		+below(640px)
-			display none
 		fill $yellow
-		margin-right: 25px
-		margin-bottom: 20px
 	.btn--sm
 		+below(640px)
 			width: 100%
@@ -143,19 +142,19 @@ font-size 50px
 	flex(mid)
 	tr()
 	cp()
+	min-width 50px
 	size 50px
-	border 2px solid $mark
+	border 2px solid $gray
 	&:hover
-		background: $mark
+		border 2px solid $mark
 		.icon
-			fill white
+			fill $mark
 	&:active
-		.icon
-			fill $red!important
+		border 2px solid $mark
 	.icon
 		tr()
 		size 14px
-		fill $mark
+		fill $gray
 
 .arrow--sm
 	size 30px

@@ -1,14 +1,18 @@
-mixin footer()
+mixin footer(isCart)
 	//block footer
 	.footer-info-wrap
 		.main-cont
 			.footer-info
 				.footer-info__coll
-					.footer-info__title Бесплатная доставка
-					.footer-info__text При заказе от 500 руб. по г. Николаев
+					.footer-info__img
+						img(src="img/person/person-moto.svg", alt="")
+					.footer-info__coll-info
+						.footer-info__title Бесплатная доставка
+						.footer-info__text При заказе от 500 руб. по г. Николаев
 				.footer-info__coll
-					.footer-info__title Доставка за 59 минут
-					.footer-info__text или пицца в подарок
+					.footer-info__coll-info
+						.footer-info__title Доставка за 59 минут
+						.footer-info__text или пицца в подарок
 				a(href="/" style="background-image:url('img/map-bg.jpg')").footer-info__coll.footer-info__map
 					.footer-info__map-text Зона доставки
 	.footer-wrap
@@ -91,4 +95,9 @@ mixin footer()
 			.cookie-wrap
 				.cookie-text Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете #[a(href="#").link--mark условия обработки]&nbsp;персональных данных
 				+icon("close","icon icon-close")
+	if(!isCart)
+		a(href="#").cart-mobile
+			+icon("cart--color","icon")
+			.cart-mobile-cost 2 850 ₽
+	+modal()
 	//block footer end
