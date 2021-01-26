@@ -488,18 +488,24 @@
                                     <use xlink:href="#arrow-conner-left"></use>
                                 </svg>
                             </div>
-                            <div class="title title--lg">Оформление заказа</div>
+                            <div class="title title--xl">Оформление заказа</div>
                         </div>
                         <div class="form-block">
                             <div class="title title--md">Личные данные</div>
                             <div class="input-cont input-cont--two">
-                                <div class="input-row input-row--error">
+                                <div class="input-row">
                                     <input class="input" type="text" placeholder="Ваше имя" />
                                     <div class="error-msg">Ошибка в данных</div>
                                 </div>
                                 <div class="input-row">
-                                    <input class="input" type="text" placeholder="Номер телефона" />
+                                    <input class="input" type="text" placeholder="Номер телефона" data-mask="8(000)000-00-00" />
                                 </div>
+                            </div>
+                            <div class="form-auth">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <span>Заполнить автоматически</span>
                             </div>
                         </div>
                         <div class="form-block">
@@ -530,21 +536,20 @@
                         <!--type deliver-->
                         <div class="js-switch-cont" data-item="deliver" data-group="deliverType">
                             <!-- если нет адреса в лк-->
-                            <div class="title">Адрес доставки</div>
-                            <div class="input-cont input-cont--two">
+                            <div class="title title--md">Ваш город доставки
+                                <span class="type--mark">Москва</span>
+                            </div>
+                            <div class="input-cont">
                                 <div class="input-row">
-                                    <input class="input" type="text" placeholder="Название адреса (дом, работа)" />
-                                </div>
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Улица" />
+                                    <input class="input" type="text" placeholder="Улица*" />
                                 </div>
                             </div>
-                            <div class="input-cont input-cont--four">
+                            <div class="input-cont input-cont--three-sm">
                                 <div class="input-row">
-                                    <input class="input" type="text" placeholder="Дом" />
+                                    <input class="input" type="text" placeholder="Дом*" />
                                 </div>
                                 <div class="input-row">
-                                    <input class="input" type="text" placeholder="№ кв, офис" />
+                                    <input class="input" type="text" placeholder="Корпус" />
                                 </div>
                                 <div class="input-row">
                                     <input class="input" type="text" placeholder="Подъезд" />
@@ -552,25 +557,32 @@
                                 <div class="input-row">
                                     <input class="input" type="text" placeholder="Этаж" />
                                 </div>
-                            </div>
-                            <div class="input-cont input-cont--four">
-                                <div class="input-row input-row--middle">
-                                    <div class="check-el">
-                                        <label class="style-label style-label--checkbox">
-                                            <input class="style-input" type="checkbox" />
-                                            <div class="style-input-element js-switch" data-item="intercom" data-group="admission">
-                                                <svg class="icon">
-                                                    <use xlink:href="#checked"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="style-input-text type--sm">Есть домофон</div>
-                                        </label>
-                                    </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Квартира" />
                                 </div>
-                                <div class="input-row js-switch-cont hidden" data-item="intercom" data-group="admission">
+                                <div class="input-row">
                                     <input class="input" type="text" placeholder="Домофон" />
                                 </div>
                             </div>
+                            <div class="direction-el-add">
+                                <div class="icon-block icon-block--empty">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                                <span>Сохранить адрес</span>
+                            </div>
+                            <!--.input-cont.input-cont--four
+						.input-row.input-row--middle
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox").style-input
+									.style-input-element.js-switch(data-item="intercom" data-group="admission")
+										+icon("checked","icon")
+									.style-input-text.type--sm Есть домофон
+						.input-row.js-switch-cont.hidden(data-item="intercom" data-group="admission")
+							input(type="text" placeholder="Домофон" class="input")
+						-->
                             <!-- если нет адреса в лк === end-->
                             <!-- Выбор адреса из лк-->
                             <div class="form-block">
@@ -589,7 +601,7 @@
                                                 <use xlink:href="#plus"></use>
                                             </svg>
                                         </div>
-                                        <span>добавить адрес</span>
+                                        <span>Добавить адрес</span>
                                     </div>
                                 </div>
                             </div>
@@ -687,17 +699,36 @@
                             <div class="input-cont">
                                 <div class="input-row">
                                     <div class="size size--fluid size--column size--mark">
-                                        <div class="size__el size__el--active js-switch" data-group="typePay">Картой онлайн</div>
+                                        <div class="size__el size__el--active js-switch" data-group="typePay">Картой при получеии</div>
+                                        <div class="size__el js-switch" data-group="typePay">Картой онлайн</div>
                                         <div class="size__el js-switch" data-item="cash" data-group="typePay">Наличными при получении</div>
-                                        <div class="size__el js-switch" data-group="typePay">Картой при получеии</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="js-switch-cont hidden" data-item="cash" data-group="typePay">
-                                <div class="title">Нужна сдача?</div>
-                                <div class="input-cont input-cont--four">
+                                <div class="title title--md">Сдача</div>
+                                <div class="input-cont input-cont--two">
                                     <div class="input-row">
-                                        <input class="input" type="text" placeholder="Сдача с" />
+                                        <div class="size size--fluid size--column size--mark">
+                                            <div class="size__el size__el--active js-switch" data-item="changeVal" data-group="change">Нужна сдача с</div>
+                                            <div class="size__el js-switch" data-group="change">Без сдачи</div>
+                                        </div>
+                                    </div>
+                                    <div class="input-row"></div>
+                                </div>
+                                <div class="js-switch-cont" data-item="changeVal" data-group="change">
+                                    <div class="input-cont input-cont--two">
+                                        <div class="input-row">
+                                            <div class="change js-tick-cont">
+                                                <div class="change__el active js-tick">100</div>
+                                                <div class="change__el js-tick">200</div>
+                                                <div class="change__el js-tick">300</div>
+                                                <div class="change__el js-tick">500</div>
+                                            </div>
+                                        </div>
+                                        <div class="input-row">
+                                            <input class="input" type="text" placeholder="Вести сумму вручную" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -742,7 +773,13 @@
                             </a>
                         </div>
                         <div class="order-condition-wrap stick">
-                            <div class="title title--md">Мой заказ</div>
+                            <div class="title title--lg">Мой заказ</div>
+                            <div class="input-row">
+                                <div class="input-get">
+                                    <input class="input" type="text" size="10" placeholder="Промокод" />
+                                    <div class="input-get__btn disable">Применить</div>
+                                </div>
+                            </div>
                             <div class="goods-list">
                                 <div class="goods-list__el">
                                     <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
@@ -758,6 +795,15 @@
                                     <div class="goods-list__el-name goods-list__el-name--gray">Доставка</div>
                                     <div class="goods-list__el-val"></div>
                                     <div class="goods-list__el-cost">200 р.</div>
+                                </div>
+                            </div>
+                            <div class="order-sale modal-get" data-modal="enter">
+                                <div class="type--mark type--bold">Получить кэшбэк 3%</div>
+                                <div class="tooltip tooltip--mark tooltip--icon">?
+                                    <div class="tooltip-cont tooltip-cont--bottom-center">
+                                        <div class="tooltip-conner"></div>
+                                        <div class="type--mark">Авторизуйся на сайте и получи 3% от суммы заказа на свой бонусный счет. Оплачивай бонусами до 30% от суммы следующей покупки</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="order-total">
@@ -907,12 +953,6 @@
                 </div>
             </div>
         </div>
-        <a class="cart-mobile" href="#">
-            <svg class="icon">
-                <use xlink:href="#cart--color"></use>
-            </svg>
-            <div class="cart-mobile-cost">2 850 ₽</div>
-        </a>
         <div class="modal-layer">
             <div class="modal-filter"></div>
             <div class="modal-wrap">
@@ -1043,14 +1083,83 @@
                         </div>
                         <div class="modal-title">Восстановление пароля</div>
                         <div class="modal-text">Введите номер телефона и мы отправим на него код для восстановления пароля</div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Телефон" />
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Телефон" />
+                            </div>
                         </div>
-                        <input class="modal-send" type="submit" value="Отправить" />
+                        <div class="modal-send mb-24">Отправить</div>
                         <a class="modal-link" href="#">Я вспомнил пароль</a>
                     </div>
                 </div>
                 <!-- forget === end-->
+                <!-- forgetCode-->
+                <div class="modal" data-modal="forgetCode">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Восстановление пароля</div>
+                        <div class="modal-text">Введите код, который мы выслали на ваш номер телефона по СМС</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Код" />
+                            </div>
+                        </div>
+                        <div class="modal-send mb-24">Отправить</div>
+                        <div class="flex flex--between js-modal-countdown-wrap">
+                            <div class="type--gray type--disable link--mark js-modal-countdown-type">Отправить код еще раз</div>
+                            <div class="icon-row">
+                                <svg class="icon icon--sm">
+                                    <use xlink:href="#clock"></use>
+                                </svg>
+                                <div class="type--sm">
+                                    <span class="js-modal-countdown-val"></span>&nbsp;сек</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- forgetCode === end-->
+                <!-- forgetPass-->
+                <div class="modal" data-modal="forgetPass">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Восстановление пароля</div>
+                        <div class="modal-text">Введите новый пароль для входа</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="password" name="name" placeholder="Новый пароль" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="password" name="name" placeholder="Повторите пароль" />
+                            </div>
+                        </div>
+                        <div class="modal-send">Сохранить</div>
+                    </div>
+                </div>
+                <!-- forgetPass === end-->
+                <!-- forgetPassTrue-->
+                <div class="modal" data-modal="forgetPassTrue">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Пароль изменен успешно!</div>
+                        <div class="modal-text">Теперь вы можете войти в личный кабинет, сохранить свои адреса, копить или списывать бонусы и следить за историей заказов.</div>
+                        <div class="modal-send">Войти</div>
+                    </div>
+                </div>
+                <!-- forgetPassTrue === end-->
                 <!-- registrationTrue-->
                 <div class="modal" data-modal="registrationTrue">
                     <div class="modal-content">

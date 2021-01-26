@@ -44,6 +44,10 @@ $(document).ready(function () {
 		$('.modal').each(function () {
 			if ($(this).data('modal') === el) {
 				$(this).addClass('modal__show')
+				if($(this).find('.js-modal-countdoun-wrap')){
+					var currentEl = $(this);
+					countDownInit(currentEl);
+				}
 			} else {
 				$(this).removeClass('modal__show')
 			}
@@ -65,8 +69,24 @@ $(document).ready(function () {
 	$('.modal-wrap').click(function(e){
 		e.target.className === 'modal-wrap' ? closeModal() : false
 	});
-
 	//modals===end
+
+	// countDown
+	var countDownInit = function(el){
+		var startTime = 10;
+		el.find('.js-modal-countdown-val').html(startTime)
+		var countTimer = setInterval(function(){
+			if(startTime>0){
+				startTime -= 1;
+				el.find('.js-modal-countdown-val').html(startTime)
+			}else{
+				el.find('.js-modal-countdown-type').removeClass('type--disable')
+				clearInterval(countTimer)
+			}
+		},1000)
+	}
+	// countDown === end
+
 
 	// fix top-menu
 	var shrinkHeader = 20;

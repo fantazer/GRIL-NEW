@@ -7,19 +7,21 @@ include block_html/_include.pug
 		.main-cont
 			.order
 				.order-form
-
 					.title-row
 						.arrow(onclick="window.history.go(-1); return false;")
 							+icon("arrow-conner-left","icon")
-						.title.title--lg Оформление заказа
+						.title.title--xl Оформление заказа
 					.form-block
 						.title.title--md Личные данные
 						.input-cont.input-cont--two
-							.input-row.input-row--error
+							.input-row
 								input(type="text" placeholder="Ваше имя" class="input")
 								.error-msg Ошибка в данных
 							.input-row
-								input(type="text" placeholder="Номер телефона" class="input")
+								input(type="text" placeholder="Номер телефона" data-mask="8(000)000-00-00" class="input")
+						.form-auth
+							+icon("user","icon")
+							span Заполнить автоматически
 					.form-block
 						//choose type deliver
 						.title.title--md Доставка
@@ -37,22 +39,28 @@ include block_html/_include.pug
 					//type deliver
 					.js-switch-cont(data-item="deliver" data-group="deliverType")
 						// если нет адреса в лк
-						.title Адрес доставки
-						.input-cont.input-cont--two
+						.title.title--md Ваш город доставки <span class="type--mark">Москва</span>
+						.input-cont
 							.input-row
-								input(type="text" placeholder="Название адреса (дом, работа)" class="input")
+								input(type="text" placeholder="Улица*" class="input")
+						.input-cont.input-cont--three-sm
 							.input-row
-								input(type="text" placeholder="Улица" class="input")
-						.input-cont.input-cont--four
+								input(type="text" placeholder="Дом*" class="input")
 							.input-row
-								input(type="text" placeholder="Дом" class="input")
-							.input-row
-								input(type="text" placeholder="№ кв, офис" class="input")
+								input(type="text" placeholder="Корпус" class="input")
 							.input-row
 								input(type="text" placeholder="Подъезд" class="input")
 							.input-row
 								input(type="text" placeholder="Этаж" class="input")
-						.input-cont.input-cont--four
+							.input-row
+								input(type="text" placeholder="Квартира" class="input")
+							.input-row
+								input(type="text" placeholder="Домофон" class="input")
+						.direction-el-add
+							.icon-block.icon-block--empty
+								+icon("plus","icon")
+							span Сохранить адрес
+						//.input-cont.input-cont--four
 							.input-row.input-row--middle
 								.check-el
 									label.style-label.style-label--checkbox
@@ -76,10 +84,7 @@ include block_html/_include.pug
 								.direction-el-add
 									.icon-block.icon-block--empty
 										+icon("plus","icon")
-									span добавить адрес
-
-
-
+									span Добавить адрес
 					.js-switch-cont.hidden(data-item="self" data-group="deliverType")
 						// Выбор адреса из лк
 						.form-block
@@ -131,14 +136,27 @@ include block_html/_include.pug
 						.input-cont
 							.input-row
 								.size.size--fluid.size--column.size--mark
-									.size__el.size__el--active.js-switch(data-group="typePay") Картой онлайн
+									.size__el.size__el--active.js-switch(data-group="typePay") Картой при получеии
+									.size__el.js-switch(data-group="typePay") Картой онлайн
 									.size__el.js-switch(data-item="cash" data-group="typePay") Наличными при получении
-									.size__el.js-switch(data-group="typePay") Картой при получеии
 						.js-switch-cont.hidden(data-item="cash" data-group="typePay")
-							.title Нужна сдача?
-							.input-cont.input-cont--four
+							.title.title--md Сдача
+							.input-cont.input-cont--two
 								.input-row
-									input(type="text" placeholder="Сдача с" class="input")
+									.size.size--fluid.size--column.size--mark
+										.size__el.size__el--active.js-switch(data-item="changeVal" data-group="change") Нужна сдача с
+										.size__el.js-switch( data-group="change") Без сдачи
+								.input-row
+							.js-switch-cont(data-item="changeVal" data-group="change")
+								.input-cont.input-cont--two
+									.input-row
+										.change.js-tick-cont
+											.change__el.active.js-tick 100
+											.change__el.js-tick 200
+											.change__el.js-tick 300
+											.change__el.js-tick 500
+									.input-row
+										input(type="text" placeholder="Вести сумму вручную" class="input")
 
 					// bonus
 					.range__wrap
@@ -169,7 +187,11 @@ include block_html/_include.pug
 							.step__el-val 3
 							.step__el-name Заказ принят
 					.order-condition-wrap.stick
-						.title.title--md Мой заказ
+						.title.title--lg Мой заказ
+						.input-row
+							.input-get
+								input(type="text" size="10" placeholder="Промокод" class="input")
+								.input-get__btn.disable Применить
 						.goods-list
 							- for (var i=0;i<4;i++)
 							.goods-list__el
@@ -184,6 +206,12 @@ include block_html/_include.pug
 								.goods-list__el-name.goods-list__el-name--gray Доставка
 								.goods-list__el-val
 								.goods-list__el-cost 200 р.
+						.order-sale.modal-get(data-modal="enter")
+							.type--mark.type--bold Получить кэшбэк 3%
+							.tooltip.tooltip--mark.tooltip--icon ?
+								.tooltip-cont.tooltip-cont--bottom-center
+									.tooltip-conner
+									.type--mark Авторизуйся на сайте и получи 3% от суммы заказа на свой бонусный счет. Оплачивай бонусами до 30% от суммы следующей покупки
 						.order-total
 							.order-total__text Итого:
 							.order-total__val 1 184р
@@ -196,6 +224,5 @@ include block_html/_include.pug
 									.style-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности], #[a(href="#") публичной офертой] и даю согласие на обработку моих персональных данных
 						.btn--md.btn--full.btn--mark.btn--disable Оформить заказ
 							//remove .btn--disable
-
-	+footer()
+	+footer(true)
 include ./block_html/_script.pug

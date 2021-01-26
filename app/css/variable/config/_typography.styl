@@ -73,8 +73,12 @@ font-size 50px
 .type--center
 	text-align center
 
+.type--disable
+	pointer-events none
+	opacity: .3
+
 .title
-	margin-bottom: 30px
+	margin-bottom: 20px
 	font-weight: 700
 	line-height: 1.4
 
@@ -108,7 +112,7 @@ font-size 50px
 	f()
 	align-items center
 	grid-gap 20px
-	margin-bottom: 20px
+	margin-bottom: 40px
 	.icon
 		+below(768px)
 			size 25px
@@ -271,7 +275,7 @@ p
 	f()
 	fw()
 	align-items center
-
+	grid-gap 12px
 .icon--sm
 	size 16px
 

@@ -745,14 +745,83 @@
                         </div>
                         <div class="modal-title">Восстановление пароля</div>
                         <div class="modal-text">Введите номер телефона и мы отправим на него код для восстановления пароля</div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Телефон" />
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Телефон" />
+                            </div>
                         </div>
-                        <input class="modal-send" type="submit" value="Отправить" />
+                        <div class="modal-send mb-24">Отправить</div>
                         <a class="modal-link" href="#">Я вспомнил пароль</a>
                     </div>
                 </div>
                 <!-- forget === end-->
+                <!-- forgetCode-->
+                <div class="modal" data-modal="forgetCode">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Восстановление пароля</div>
+                        <div class="modal-text">Введите код, который мы выслали на ваш номер телефона по СМС</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Код" />
+                            </div>
+                        </div>
+                        <div class="modal-send mb-24">Отправить</div>
+                        <div class="flex flex--between js-modal-countdown-wrap">
+                            <div class="type--gray type--disable link--mark js-modal-countdown-type">Отправить код еще раз</div>
+                            <div class="icon-row">
+                                <svg class="icon icon--sm">
+                                    <use xlink:href="#clock"></use>
+                                </svg>
+                                <div class="type--sm">
+                                    <span class="js-modal-countdown-val"></span>&nbsp;сек</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- forgetCode === end-->
+                <!-- forgetPass-->
+                <div class="modal" data-modal="forgetPass">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Восстановление пароля</div>
+                        <div class="modal-text">Введите новый пароль для входа</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="password" name="name" placeholder="Новый пароль" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="password" name="name" placeholder="Повторите пароль" />
+                            </div>
+                        </div>
+                        <div class="modal-send">Сохранить</div>
+                    </div>
+                </div>
+                <!-- forgetPass === end-->
+                <!-- forgetPassTrue-->
+                <div class="modal" data-modal="forgetPassTrue">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Пароль изменен успешно!</div>
+                        <div class="modal-text">Теперь вы можете войти в личный кабинет, сохранить свои адреса, копить или списывать бонусы и следить за историей заказов.</div>
+                        <div class="modal-send">Войти</div>
+                    </div>
+                </div>
+                <!-- forgetPassTrue === end-->
                 <!-- registrationTrue-->
                 <div class="modal" data-modal="registrationTrue">
                     <div class="modal-content">

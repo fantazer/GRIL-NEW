@@ -157,7 +157,7 @@ body
 	position: absolute
 	opacity 0
 	transition transform .6s, opacity .8s
-	width 400px
+	width 340px
 	left -9999px
 	top -9999px
 	.order__row
@@ -178,10 +178,8 @@ body
 	margin: 20px auto
 	background: white
 	position: relative
-	padding: 40px 45px
+	padding: 40px
 	br(25px)
-
-
 
 .modal__show
 	max-height 100%
@@ -196,7 +194,7 @@ body
 
 .modal-close
 	position absolute
-	size 60px
+	size 50px
 	top 0
 	right: 0
 	flex(mid)
@@ -208,7 +206,7 @@ body
 	&:hover
 		background: $gray
 	.icon
-		size 12px
+		size 10px
 		margin-top: -5px
 		margin-right: -10px
 
@@ -237,7 +235,7 @@ body
 .modal-title
 	+below(768px)
 		font-size: 20px
-	margin-bottom: 30px
+	margin-bottom: 20px
 	text-align: center
 	@extend .type--lg
 	font-weight: 700
@@ -253,9 +251,8 @@ body
 		width: 100%
 		font-size: 12px
 	text-align: center
-	margin: 20px auto
+	margin: 10px auto 20px auto
 	@extend .type--sm
-	//width: 80%
 	line-height: 1.6
 
 .modal-text--clear
@@ -542,10 +539,14 @@ body
 		margin-right: 10px
 		size 28px
 		fill $mark
+
 .header-top-nav
 	+below(1280px)
 		display none
 	flex(between)
+	margin-left auto
+	margin-right: 20px
+
 .header-top-nav__el
 	margin: 0 7px
 	color $gray
@@ -1334,6 +1335,7 @@ body
 	grid-template-columns: repeat(auto-fit, minmax(3rem,1fr))
 	br(30px)
 	border 1px solid $border-color
+	overflow hidden
 
 .size--mark
 	border 1px solid $mark
@@ -1341,7 +1343,6 @@ body
 		background: $mark
 		color white!important
 	.size__el
-		color black
 		+above(641px)
 			border-right 1px solid $mark
 		&:last-child
@@ -1354,7 +1355,6 @@ body
 		font-weight: 700
 		border-left 1px solid $border-color
 		border-right 1px solid $border-color
-		color black
 		&:first-child
 			border-radius 30px 0 0 30px
 			border 0
@@ -1367,7 +1367,6 @@ body
 		fw()
 		.size__el
 			width: 100%
-			border-radius 30px!important
 
 .size--sm
 	display: inline-flex
@@ -1386,6 +1385,7 @@ body
 .size__el
 	+below(480px)
 		font-weight:700
+		border-radius 0!important
 	cp()
 	tr()
 	font-size: 14px
@@ -1562,7 +1562,6 @@ body
 			opacity: 1
 .footer-nav-list--extend
 	column-count 2
-
 
 .footer-phone
 	+below(1100px)
@@ -2100,8 +2099,25 @@ body
 			display none
 
 .form-block
-	margin-bottom: 10px
+	margin-bottom: 30px
 
+.form-auth
+	f()
+	cp()
+	align-items center
+	margin -5px 0 40px 0
+	.icon
+		size 24px
+		margin-right: 10px
+		tr()
+	span
+		font-weight:700
+		tr()
+	&:hover
+		.icon
+			fill $mark
+		span
+			color $mark
 .direction--sm
 	display: grid
 	grid-column-gap 20px
@@ -2216,7 +2232,7 @@ body
 
 .order-sale
 	+below(768px)
-		display none
+		margin-bottom: 20px
 	padding: 20px
 	flex(mid)
 	br(12px)
@@ -4097,3 +4113,19 @@ l
 		&:after
 			content ''
 			display: none
+
+.change
+	flex(between)
+	grid-gap 12px
+.change__el
+	cp()
+	padding: 16px 24px
+	br(12px)
+	flex-grow 1
+	border 1px solid $border-color
+	text-align center
+	&.active
+		border 1px solid $mark
+		color $mark
+
+	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))

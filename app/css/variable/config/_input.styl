@@ -4,12 +4,10 @@
 	resize: none
 	border 1px solid transparent
 	outline: 0 !important
-	border-radius 5px
-	font-family $v-font
+	border-radius 10px
 	display block
 	placeholder(#888888)
 	background: #f6f6f6
-	font-size: 14px
 	tr(all)
 	line-height: 1.6
 	&:focus
@@ -32,6 +30,7 @@
 	@extend .disabled
 
 .check-el
+	width: 100%
 	input
 		position absolute
 		top 0
@@ -39,8 +38,9 @@
 
 .style-input-text
 	color black
-	width: calc(100% - 80px)
+	width: calc(100% - 60px)
 	line-height: 1.6
+	margin-top: 3px
 	a
 		color $mark
 
@@ -144,6 +144,12 @@
 	+below(640px)
 		grid-template-columns: 1fr
 	grid-template-columns: 1fr 1fr 1fr
+
+.input-cont--three-sm
+	+below(640px)
+		grid-template-columns: 1fr 1fr
+	grid-template-columns: 1fr 1fr 1fr
+	grid-gap 0 20px
 
 .input-cont--four
 	+below(640px)
@@ -464,13 +470,13 @@
 	border 1px dashed $border-color
 .step__el-val
 	size 60px
-	border 1px solid $border-color
+	border 2px solid $gray
 	flex(mid)
 	round()
 	font-weight: 700
 	margin-bottom: 10px
 	color $gray
-	@extend .type--md
+	font-size: 22px
 
 .step__el-name
 	@extend .type--sm

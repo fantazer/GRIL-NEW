@@ -51,14 +51,14 @@
 	select:focus,
 	textarea:focus,
 	input:focus
-		font-size: 16px;
+		font-size: 14px;
 		background: #eee;
 
 @media screen and (-webkit-min-device-pixel-ratio:0)
 	select,
 	textarea,
 	input
-		font-size: 16px!important
+		font-size: 14px!important
 
 // block extend
 $st = {
@@ -163,4 +163,18 @@ for $type,$typeVal in $st
 	p($typeVal['size1'],$typeVal['size2'],$typeVal['size3'])
 
 // block extend === end
+
+.flex
+	f()
+
+.flex--mid
+	align-items center
+	justify-content center
+
+.flex--between
+	align-items center
+	justify-content space-between
+
+.flex--fl
+	flex-flow column
 

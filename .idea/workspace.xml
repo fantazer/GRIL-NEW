@@ -10,9 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add order + basket">
-      <change afterPath="$PROJECT_DIR$/app/img/app-apstore.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/app-google.svg" afterDir="false" />
+    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/basket.html" afterDir="false" />
@@ -23,27 +21,19 @@
       <change beforePath="$PROJECT_DIR$/app/css/variable/config/_input.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_input.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/deliver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/elements.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-500.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/basket.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/basket.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/block_html/_script.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_script.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/form.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/form.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/main.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/main.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/css/sprite.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/css/sprite.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/pack.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/pack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/phone.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/phone.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/user.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/user.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/modal.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/item.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/lk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/market.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/module/footer/_footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/footer/_footer.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/module/header/_header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/header/_header.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/module/modal/_modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/modal/_modal.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/news-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-full.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/news-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-list.html" afterDir="false" />
@@ -301,14 +291,13 @@
       <workItem from="1611052117374" duration="475000" />
       <workItem from="1611053063891" duration="1624000" />
       <workItem from="1611054909054" duration="7003000" />
-      <workItem from="1611137906268" duration="6415000" />
-    </task>
-    <task id="LOCAL-00024" summary="fix hrefs">
-      <created>1561392840348</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1561392840349</updated>
+      <workItem from="1611137906268" duration="6474000" />
+      <workItem from="1611155195254" duration="637000" />
+      <workItem from="1611159460647" duration="96000" />
+      <workItem from="1611485249544" duration="4679000" />
+      <workItem from="1611494275078" duration="1100000" />
+      <workItem from="1611568335975" duration="5631000" />
+      <workItem from="1611651044090" duration="3713000" />
     </task>
     <task id="LOCAL-00025" summary="fix transition">
       <created>1561394589226</created>
@@ -646,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610451849938</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="add fixes">
+      <created>1611150004327</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1611150004327</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -705,13 +701,13 @@
     <MESSAGE value="add reset method for item ingr" />
     <MESSAGE value="fix css bugs" />
     <MESSAGE value="add dist folder" />
-    <MESSAGE value="add fixes" />
     <MESSAGE value="fix title row extend" />
     <MESSAGE value="deploy version" />
     <MESSAGE value="add main page" />
     <MESSAGE value="add mobile main page" />
     <MESSAGE value="fix bugs" />
     <MESSAGE value="add order + basket" />
-    <option name="LAST_COMMIT_MESSAGE" value="add order + basket" />
+    <MESSAGE value="add fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add fixes" />
   </component>
 </project>

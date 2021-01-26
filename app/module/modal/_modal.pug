@@ -84,11 +84,59 @@ mixin modal()
 						+icon("close","icon")
 					.modal-title Восстановление	пароля
 					.modal-text Введите номер телефона и мы отправим на него код для восстановления пароля
-					.input-row
-						input(type="text" name="name" placeholder="Телефон").input
-					input(type="submit" value="Отправить").modal-send
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Телефон").input
+					.modal-send.mb-24 Отправить
 					a(href="#").modal-link Я вспомнил пароль
 			// forget === end
+
+			// forgetCode
+			.modal(data-modal="forgetCode")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Восстановление	пароля
+					.modal-text Введите код, который мы выслали на ваш номер телефона по СМС
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Код").input
+					.modal-send.mb-24 Отправить
+					.flex.flex--between.js-modal-countdown-wrap
+						.type--gray.type--disable.link--mark.js-modal-countdown-type Отправить код еще раз
+						.icon-row
+							+icon("clock","icon icon--sm")
+							.type--sm
+								span.js-modal-countdown-val
+								| &nbsp;сек
+			// forgetCode === end
+
+			// forgetPass
+			.modal(data-modal="forgetPass")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Восстановление	пароля
+					.modal-text Введите новый пароль для входа
+					.input-cont
+						.input-row
+							input(type="password" name="name" placeholder="Новый пароль").input
+					.input-cont
+						.input-row
+							input(type="password" name="name" placeholder="Повторите пароль").input
+					.modal-send Сохранить
+			// forgetPass === end
+
+			// forgetPassTrue
+			.modal(data-modal="forgetPassTrue")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Пароль изменен успешно!
+					.modal-text Теперь вы можете войти в личный кабинет, сохранить свои адреса, копить или списывать бонусы и следить за историей заказов.
+					.modal-send Войти
+			// forgetPassTrue === end
+
 
 			// registrationTrue
 			.modal(data-modal="registrationTrue")
