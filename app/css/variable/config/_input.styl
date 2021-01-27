@@ -47,10 +47,10 @@
 // checkbox
 .style-label--checkbox
 	.style-input-element
-		br(5px)
+		br(8px)
 		cp()
 		tr(all)
-		size 26px
+		size 30px
 		position relative
 		display inline-block
 		margin-right 10px
@@ -64,12 +64,11 @@
 		&:checked ~ .style-input-element
 			flex(mid)
 			color white
-			background: $mark
 			border 1px solid $mark
 			.icon
 				display block
-				fill white
-				size 14px
+				fill $mark
+				size 12px
 // checkbox === end
 
 // radio
@@ -164,7 +163,7 @@
 	.style-input-text
 		font-size: 12px
 		color black
-		width: calc(100% - 80px)
+		width: calc(100% - 40px)
 		line-height: 1.6
 		margin-top: 3px
 		a

@@ -15,12 +15,12 @@ include block_html/_include.pug
 						.title.title--md Личные данные
 						.input-cont.input-cont--two
 							.input-row
-								input(type="text" placeholder="Ваше имя" class="input")
+								input(type="text" placeholder="Имя*" class="input")
 								.error-msg Ошибка в данных
 							.input-row
-								input(type="text" placeholder="Номер телефона" data-mask="8(000)000-00-00" class="input")
+								input(type="text" placeholder="Номер телефона*" data-mask="8(000)000-00-00" class="input")
 						.form-auth
-							+icon("user","icon")
+							+icon("user","icon icon--sm")
 							span Заполнить автоматически
 					.form-block
 						//choose type deliver
@@ -57,8 +57,7 @@ include block_html/_include.pug
 							.input-row
 								input(type="text" placeholder="Домофон" class="input")
 						.direction-el-add
-							.icon-block.icon-block--empty
-								+icon("plus","icon")
+							+icon("diskette","icon")
 							span Сохранить адрес
 						//.input-cont.input-cont--four
 							.input-row.input-row--middle
@@ -82,8 +81,7 @@ include block_html/_include.pug
 									.direction-el__title Работа
 									.direction-el__text ул. Московская, д. 35, офис 469
 								.direction-el-add
-									.icon-block.icon-block--empty
-										+icon("plus","icon")
+									+icon("plus-round","icon")
 									span Добавить адрес
 					.js-switch-cont.hidden(data-item="self" data-group="deliverType")
 						// Выбор адреса из лк
@@ -106,7 +104,7 @@ include block_html/_include.pug
 						.input-cont.input-cont--two
 							.input-row
 								.size.size--fluid.size--column.size--mark
-									.size__el.size__el--active.js-switch(data-group="deliverTime") Как можно раньше
+									.size__el.size__el--active.js-switch(data-group="deliverTime") Как можно быстрее
 									.size__el.js-switch(data-item="toTime" data-group="deliverTime") Ко времени
 							.input-row.js-switch-cont.hidden(data-item="toTime" data-group="deliverTime")
 								.col-2
@@ -221,7 +219,7 @@ include block_html/_include.pug
 									input(type="checkbox").style-input
 									.style-input-element
 										+icon("checked","icon")
-									.style-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности], #[a(href="#") публичной офертой] и даю согласие на обработку моих персональных данных
+									.style-input-text Я ознакомлен с #[a(href="#") пользовательским соглашением] &nbsp; и даю согласие на обработку моих #[a(href="#") персональных данных]
 						.btn--md.btn--full.btn--mark.btn--disable Оформить заказ
 							//remove .btn--disable
 	+footer(true)

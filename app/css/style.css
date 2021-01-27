@@ -1576,10 +1576,10 @@ a:visiter {
   color: #00ae42;
 }
 .style-label--checkbox .style-input-element {
-  border-radius: 5px;
+  border-radius: 8px;
   transition: all 0.4s;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   position: relative;
   display: inline-block;
   margin-right: 10px;
@@ -1600,14 +1600,13 @@ a:visiter {
   justify-content: center;
   align-items: center;
   color: #fff;
-  background: #00ae42;
   border: 1px solid #00ae42;
 }
 .style-label--checkbox .style-input:checked ~ .style-input-element .icon {
   display: block;
-  fill: #fff;
-  width: 14px;
-  height: 14px;
+  fill: #00ae42;
+  width: 12px;
+  height: 12px;
 }
 .style-label--radio .style-input-element {
   width: 26px;
@@ -1725,7 +1724,7 @@ a:visiter {
 .login-remember .style-input-text {
   font-size: 12px;
   color: #111;
-  width: calc(100% - 80px);
+  width: calc(100% - 40px);
   line-height: 1.6;
   margin-top: 3px;
 }
@@ -2800,8 +2799,8 @@ body {
 }
 .header-auth .icon {
   margin-right: 10px;
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   fill: #00ae42;
 }
 @media only screen and (max-width: 760px) {
@@ -2845,7 +2844,6 @@ body {
 }
 .header-auth-state {
   transition: all 0.4s;
-  color: #b4b4b4;
 }
 @media only screen and (max-width: 1280px) {
   .header-auth-state {
@@ -2856,7 +2854,7 @@ body {
   cursor: pointer;
 }
 .header-auth-state:hover {
-  color: #111;
+  color: #00ae42;
 }
 .slide-header-auth {
   color: #fff;
@@ -4930,7 +4928,7 @@ body {
   }
 }
 .order-condition {
-  width: calc(30% - 20px);
+  width: calc(30% - 10px);
   margin-left: auto;
 }
 @media only screen and (max-width: 1024px) {
@@ -5017,8 +5015,8 @@ body {
   cursor: pointer;
 }
 .form-auth .icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
   transition: all 0.4s;
 }
@@ -5079,11 +5077,21 @@ body {
 .direction-el-add:hover {
   cursor: pointer;
 }
-.direction-el-add span {
-  color: $brown;
+.direction-el-add:hover {
+  color: #00ae42;
 }
-.direction-el-add .icon-block {
-  margin-right: 20px;
+.direction-el-add:hover .icon {
+  fill: #00ae42;
+}
+.direction-el-add .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  transition: all 0.4s;
+}
+.direction-el-add span {
+  font-weight: 700;
+  transition: all 0.4s;
 }
 .icon-block {
   width: 40px;

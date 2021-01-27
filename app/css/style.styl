@@ -526,7 +526,7 @@ body
 		+below(760px)
 			margin-right: 0
 		margin-right: 10px
-		size 28px
+		size 20px
 		fill $mark
 
 .header-callback
@@ -556,9 +556,8 @@ body
 		display none
 	cp()
 	tr(all)
-	color $gray
 	&:hover
-		color black
+		color $mark
 .slide-header-auth
 	color white
 	f()
@@ -2051,7 +2050,7 @@ body
 		max-width 480px
 		margin: 0 auto
 		width: 100%
-	width: calc(30% - 20px)
+	width: calc(30% - 10px)
 	margin-left auto
 
 
@@ -2107,7 +2106,7 @@ body
 	align-items center
 	margin -5px 0 40px 0
 	.icon
-		size 24px
+		size 20px
 		margin-right: 10px
 		tr()
 	span
@@ -2156,12 +2155,17 @@ body
 	cp()
 	align-items center
 	margin-bottom: 30px
+	&:hover
+		color $mark
+		.icon
+			fill $mark
+	.icon
+		size 24px
+		margin-right: 10px
+		tr()
 	span
-		color $brown
-	.icon-block
-		margin-right: 20px
-
-
+		font-weight: 700
+		tr()
 .icon-block
 	size 40px
 	flex(mid)
@@ -4127,5 +4131,4 @@ l
 	&.active
 		border 1px solid $mark
 		color $mark
-
 	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
