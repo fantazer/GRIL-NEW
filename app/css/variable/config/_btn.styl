@@ -46,7 +46,29 @@
 		border 0
 	.nav-icon
 		fill white
+	&.btn--disable
+		background: $gray
+		opacity: 1
+		color white
 
+.btn--pulse
+	position relative
+	&:before
+		content ''
+		position absolute
+		top 0
+		left 0
+		opacity: .4
+		width 100%
+		height 100%
+		z-index -1
+		br(40px)
+		//border 15px solid $mark
+		animation pulse 2s infinite cubic-bezier(0.2, 0,1, 1)
+		box-shadow: 0 0 0 0 rgb(0 174 66)
+@keyframes pulse
+	to
+		box-shadow 0 0 0 20px
 
 
 .btn--disable

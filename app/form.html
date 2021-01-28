@@ -511,7 +511,7 @@
                         <div class="form-block">
                             <!--choose type deliver-->
                             <div class="title title--md">Доставка</div>
-                            <div class="input-cont input-cont--extend input-cont--two">
+                            <div class="input-cont input-cont--extend input-cont--two mb-24">
                                 <div class="input-row">
                                     <div class="size size--lg size--mark">
                                         <div class="size__el size__el--active js-switch" data-item="deliver" data-group="deliverType">Привезите</div>
@@ -532,95 +532,82 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
-                        <!--type deliver-->
-                        <div class="js-switch-cont" data-item="deliver" data-group="deliverType">
-                            <!-- если нет адреса в лк-->
-                            <div class="title title--md">Ваш город доставки
-                                <span class="type--mark">Москва</span>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Улица*" />
-                                </div>
-                            </div>
-                            <div class="input-cont input-cont--three-sm">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Дом*" />
-                                </div>
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Корпус" />
-                                </div>
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Подъезд" />
-                                </div>
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Этаж" />
-                                </div>
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Квартира" />
-                                </div>
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Домофон" />
-                                </div>
-                            </div>
-                            <div class="direction-el-add">
-                                <svg class="icon">
-                                    <use xlink:href="#diskette"></use>
-                                </svg>
-                                <span>Сохранить адрес</span>
-                            </div>
-                            <!--.input-cont.input-cont--four
-						.input-row.input-row--middle
-							.check-el
-								label.style-label.style-label--checkbox
-									input(type="checkbox").style-input
-									.style-input-element.js-switch(data-item="intercom" data-group="admission")
-										+icon("checked","icon")
-									.style-input-text.type--sm Есть домофон
-						.input-row.js-switch-cont.hidden(data-item="intercom" data-group="admission")
-							input(type="text" placeholder="Домофон" class="input")
-						-->
-                            <!-- если нет адреса в лк === end-->
-                            <!-- Выбор адреса из лк-->
-                            <div class="form-block">
-                                <div class="direction">
-                                    <div class="direction-el js-switch active" data-item="direction">
-                                        <div class="direction-el__title">Дом</div>
-                                        <div class="direction-el__text">г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56</div>
-                                    </div>
-                                    <div class="direction-el js-switch" data-item="direction">
-                                        <div class="direction-el__title">Работа</div>
-                                        <div class="direction-el__text">ул. Московская, д. 35, офис 469</div>
-                                    </div>
-                                    <div class="direction-el-add">
-                                        <svg class="icon">
-                                            <use xlink:href="#plus-round"></use>
-                                        </svg>
-                                        <span>Добавить адрес</span>
+                            <!--type deliver-->
+                            <div class="js-switch-cont" data-item="deliver" data-group="deliverType">
+                                <!-- Выбор адреса из лк-->
+                                <div class="form-block">
+                                    <div class="direction">
+                                        <div class="direction-el js-switch active" data-item="direction">
+                                            <div class="direction-el__title">Дом</div>
+                                            <div class="direction-el__text">г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56</div>
+                                        </div>
+                                        <div class="direction-el js-switch" data-item="direction">
+                                            <div class="direction-el__title">Работа</div>
+                                            <div class="direction-el__text">ул. Московская, д. 35, офис 469</div>
+                                        </div>
+                                        <div class="direction-el-add mb-24">
+                                            <svg class="icon">
+                                                <use xlink:href="#plus-round"></use>
+                                            </svg>
+                                            <span>Добавить адрес</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="js-switch-cont hidden" data-item="self" data-group="deliverType">
-                            <!-- Выбор адреса из лк-->
-                            <div class="form-block">
-                                <div class="direction direction--sm">
-                                    <div class="direction-el js-switch active" data-item="directionDeliver">
-                                        <div class="direction-el__title">ул. Ленина, д. 64</div>
-                                        <div class="direction-el__text">ежедневно с 10 до 22</div>
-                                    </div>
-                                    <div class="direction-el js-switch" data-item="directionDeliver">
-                                        <div class="direction-el__title">ул. Тимирязева, д. 81</div>
-                                        <div class="direction-el__text">ежедневно с 10 до 22</div>
-                                    </div>
-                                    <div class="direction-el js-switch" data-item="directionDeliver">
-                                        <div class="direction-el__title">ул. Новочерскасская, корп. 2</div>
-                                        <div class="direction-el__text">ежедневно с 9 до 21</div>
+                                <!-- если нет адреса в лк-->
+                                <div class="title title--md">Ваш город доставки
+                                    <span class="type--mark">Москва</span>
+                                </div>
+                                <div class="input-cont">
+                                    <div class="input-row">
+                                        <input class="input" type="text" placeholder="Улица*" />
                                     </div>
                                 </div>
+                                <div class="input-cont input-cont--three-sm">
+                                    <div class="input-row">
+                                        <input class="input" type="text" placeholder="Дом*" />
+                                    </div>
+                                    <div class="input-row">
+                                        <input class="input" type="text" placeholder="Корпус" />
+                                    </div>
+                                    <div class="input-row">
+                                        <input class="input" type="text" placeholder="Подъезд" />
+                                    </div>
+                                    <div class="input-row">
+                                        <input class="input" type="text" placeholder="Этаж" />
+                                    </div>
+                                    <div class="input-row">
+                                        <input class="input" type="text" placeholder="Квартира" />
+                                    </div>
+                                    <div class="input-row">
+                                        <input class="input" type="text" placeholder="Домофон" />
+                                    </div>
+                                </div>
+                                <div class="direction-el-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#diskette"></use>
+                                    </svg>
+                                    <span>Сохранить адрес</span>
+                                </div>
                             </div>
-                            <!-- Выбор адреса из лк === end-->
+                            <div class="js-switch-cont hidden" data-item="self" data-group="deliverType">
+                                <div class="form-block">
+                                    <div class="direction direction--sm">
+                                        <div class="direction-el js-switch active" data-item="directionDeliver">
+                                            <div class="direction-el__title">ул. Ленина, д. 64</div>
+                                            <div class="direction-el__text">ежедневно с 10 до 22</div>
+                                        </div>
+                                        <div class="direction-el js-switch" data-item="directionDeliver">
+                                            <div class="direction-el__title">ул. Тимирязева, д. 81</div>
+                                            <div class="direction-el__text">ежедневно с 10 до 22</div>
+                                        </div>
+                                        <div class="direction-el js-switch" data-item="directionDeliver">
+                                            <div class="direction-el__title">ул. Новочерскасская, корп. 2</div>
+                                            <div class="direction-el__text">ежедневно с 9 до 21</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Выбор адреса из лк === end-->
+                            </div>
                         </div>
                         <!-- Выбор адреса из лк === end-->
                         <div class="form-block">
@@ -692,7 +679,7 @@
                         <!-- choose payment type-->
                         <div class="form-block">
                             <div class="title title--md">Оплата</div>
-                            <div class="input-cont">
+                            <div class="input-cont mb-16">
                                 <div class="input-row">
                                     <div class="size size--fluid size--column size--mark">
                                         <div class="size__el size__el--active js-switch" data-group="typePay">Картой при получеии</div>
@@ -703,14 +690,29 @@
                             </div>
                             <div class="js-switch-cont hidden" data-item="cash" data-group="typePay">
                                 <div class="title title--md">Сдача</div>
-                                <div class="input-cont input-cont--two">
-                                    <div class="input-row">
-                                        <div class="size size--fluid size--column size--mark">
-                                            <div class="size__el size__el--active js-switch" data-item="changeVal" data-group="change">Нужна сдача с</div>
-                                            <div class="size__el js-switch" data-group="change">Без сдачи</div>
+                                <div class="input-cont input-cont--four">
+                                    <div class="input-row js-switch" data-item="changeVal" data-group="change">
+                                        <div class="check-el">
+                                            <label class="style-label style-label--radio">
+                                                <input class="style-input" type="radio" name="payment" checked="checked" />
+                                                <div class="style-input-element">
+                                                    <div class="icon-radio"></div>
+                                                </div>
+                                                <div class="style-input-text">Нужна сдача</div>
+                                            </label>
                                         </div>
                                     </div>
-                                    <div class="input-row"></div>
+                                    <div class="input-row js-switch" data-group="change">
+                                        <div class="check-el">
+                                            <label class="style-label style-label--radio">
+                                                <input class="style-input" type="radio" name="payment" />
+                                                <div class="style-input-element">
+                                                    <div class="icon-radio"></div>
+                                                </div>
+                                                <div class="style-input-text">Без сдачи</div>
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="js-switch-cont" data-item="changeVal" data-group="change">
                                     <div class="input-cont input-cont--two">
@@ -823,7 +825,7 @@
                                 </div>
                             </div>
                             <div class="btn--md btn--full btn--mark btn--disable">Оформить заказ
-                                <!--remove .btn--disable-->
+                                <!--on validate remove .btn--disable => add .btn--pulse-->
                             </div>
                         </div>
                     </div>

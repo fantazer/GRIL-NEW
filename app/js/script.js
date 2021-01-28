@@ -160,31 +160,33 @@ $(document).ready(function () {
 	//toggle class + parent === end
 
 	// switch
-	$('.js-switch').click(function () {
-		var typeItem = $(this).data("item");
-		var groupItem = $(this).data("group");
-		var size = 0;
-		$('.js-switch').each(function () {
-			if ($(this).data("item") === typeItem) {
-				$(this).removeClass("active");
-				 size = $(this).size();
-			}
-			return size;
-		});
-		$('.js-switch-cont').each(function () {
-			if ($(this).data("group") === groupItem) {
+	$('.js-switch').click(function (e) {
+		if (e.target.className != 'style-input') {
+			var typeItem = $(this).data("item");
+			var groupItem = $(this).data("group");
+			var size = 0;
+			$('.js-switch').each(function () {
 				if ($(this).data("item") === typeItem) {
-					if(size===1){
-						$(this).toggleClass("hidden")
-					}else{
-						$(this).removeClass("hidden")
-					}
-				} else {
-					$(this).addClass("hidden");
+					$(this).removeClass("active");
+					size = $(this).size();
 				}
-			}
-		});
-		$(this).addClass("active");
+				return size;
+			});
+			$('.js-switch-cont').each(function () {
+				if ($(this).data("group") === groupItem) {
+					if ($(this).data("item") === typeItem) {
+						if (size === 1) {
+							$(this).toggleClass("hidden")
+						} else {
+							$(this).removeClass("hidden")
+						}
+					} else {
+						$(this).addClass("hidden");
+					}
+				}
+			});
+			$(this).addClass("active");
+		}
 	});
 	// switch === end
 

@@ -29,7 +29,7 @@ body
 		background: $mark
 
 .main-cont
-	center(1250px,10px)
+	center(1250px,20px)
 
 .page
 	f()
@@ -95,7 +95,13 @@ body
 			transform translateX(0)
 	.header-top-wrap
 			display none
-
+	.header-nav__el
+		+below(1024px)
+			&:first-child
+				margin-left: 0
+	.header-menu
+		+below(768px)
+			margin-left: 0
 // error
 .page-error
 	flex(mid)
@@ -525,6 +531,7 @@ body
 	.icon
 		+below(760px)
 			margin-right: 0
+			size 28px
 		margin-right: 10px
 		size 20px
 		fill $mark
@@ -619,10 +626,13 @@ body
 		.logo
 			display none
 		height: 60px
+	+below(768px)
+		margin-right: -20px
+		margin-left: -20px
 	height: 80px
 	flex(between)
 .header-menu__call
-	padding: 0 15px 0 10px
+	padding: 0 15px 0 0
 	position absolute
 	left -9999px
 	transform translateX(-100%)
@@ -638,6 +648,7 @@ body
 	+below(768px)
 		justify-content initial
 		overflow auto
+
 	f()
 	height: 100%
 	width: 65%
@@ -661,6 +672,17 @@ body
 		color $mark
 	&.active
 		color $mark
+	&:first-child
+		+below(768px)
+			margin-left: 20px
+	&:last-child
+		margin-right: 0
+		+below(768px)
+			&:after
+				content ''
+				width: 20px
+				height: 1px
+				display block
 .header-nav__el--more
 	+above(769px)
 		display none
@@ -718,7 +740,7 @@ body
 		font-weight: 700
 .cart-wrap
 	+below(1280px)
-		margin: 0 10px
+		margin-left 10px
 	+below(760px)
 		display none
 	f()
@@ -1419,7 +1441,7 @@ body
 	f()
 	justify-content space-between
 	align-items: stretch
-	margin: 0 -10px
+	margin: 0 -20px
 
 .footer-info__coll
 	+below(768px)
@@ -2038,7 +2060,7 @@ body
 	+below(1024px)
 		width: 100%
 		margin-bottom: 40px
-	+below(640px)
+	+below(768px)
 		margin-right: 0
 	width: 60%
 	margin-right: 20px
@@ -2154,7 +2176,7 @@ body
 	f()
 	cp()
 	align-items center
-	margin-bottom: 30px
+	margin-bottom: 44px
 	&:hover
 		color $mark
 		.icon

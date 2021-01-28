@@ -25,7 +25,7 @@ include block_html/_include.pug
 					.form-block
 						//choose type deliver
 						.title.title--md Доставка
-						.input-cont.input-cont--extend.input-cont--two
+						.input-cont.input-cont--extend.input-cont--two.mb-24
 							.input-row
 								.size.size--lg.size--mark
 									.size__el.size__el--active.js-switch(data-item="deliver" data-group="deliverType") Привезите
@@ -36,67 +36,56 @@ include block_html/_include.pug
 								span.type--sm.js-switch-cont.hidden(data-item="self" data-group="deliverType") <span class="type--gray">Приготовим за</span> <span class="type--mark">20 мин</span>
 
 
-					//type deliver
-					.js-switch-cont(data-item="deliver" data-group="deliverType")
-						// если нет адреса в лк
-						.title.title--md Ваш город доставки <span class="type--mark">Москва</span>
-						.input-cont
-							.input-row
-								input(type="text" placeholder="Улица*" class="input")
-						.input-cont.input-cont--three-sm
-							.input-row
-								input(type="text" placeholder="Дом*" class="input")
-							.input-row
-								input(type="text" placeholder="Корпус" class="input")
-							.input-row
-								input(type="text" placeholder="Подъезд" class="input")
-							.input-row
-								input(type="text" placeholder="Этаж" class="input")
-							.input-row
-								input(type="text" placeholder="Квартира" class="input")
-							.input-row
-								input(type="text" placeholder="Домофон" class="input")
-						.direction-el-add
-							+icon("diskette","icon")
-							span Сохранить адрес
-						//.input-cont.input-cont--four
-							.input-row.input-row--middle
-								.check-el
-									label.style-label.style-label--checkbox
-										input(type="checkbox").style-input
-										.style-input-element.js-switch(data-item="intercom" data-group="admission")
-											+icon("checked","icon")
-										.style-input-text.type--sm Есть домофон
-							.input-row.js-switch-cont.hidden(data-item="intercom" data-group="admission")
-								input(type="text" placeholder="Домофон" class="input")
-						// если нет адреса в лк === end
+						//type deliver
+						.js-switch-cont(data-item="deliver" data-group="deliverType")
+							// Выбор адреса из лк
+							.form-block
+								.direction
+									.direction-el.js-switch.active(data-item="direction")
+										.direction-el__title Дом
+										.direction-el__text г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56
+									.direction-el.js-switch(data-item="direction" )
+										.direction-el__title Работа
+										.direction-el__text ул. Московская, д. 35, офис 469
+									.direction-el-add.mb-24
+										+icon("plus-round","icon")
+										span Добавить адрес
 
-						// Выбор адреса из лк
-						.form-block
-							.direction
-								.direction-el.js-switch.active(data-item="direction")
-									.direction-el__title Дом
-									.direction-el__text г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56
-								.direction-el.js-switch(data-item="direction" )
-									.direction-el__title Работа
-									.direction-el__text ул. Московская, д. 35, офис 469
-								.direction-el-add
-									+icon("plus-round","icon")
-									span Добавить адрес
-					.js-switch-cont.hidden(data-item="self" data-group="deliverType")
-						// Выбор адреса из лк
-						.form-block
-							.direction.direction--sm
-								.direction-el.js-switch.active(data-item="directionDeliver")
-									.direction-el__title ул. Ленина, д. 64
-									.direction-el__text ежедневно с 10 до 22
-								.direction-el.js-switch(data-item="directionDeliver" )
-									.direction-el__title ул. Тимирязева, д. 81
-									.direction-el__text ежедневно с 10 до 22
-								.direction-el.js-switch(data-item="directionDeliver" )
-									.direction-el__title ул. Новочерскасская, корп. 2
-									.direction-el__text ежедневно с 9 до 21
-						// Выбор адреса из лк === end
+							// если нет адреса в лк
+							.title.title--md Ваш город доставки <span class="type--mark">Москва</span>
+							.input-cont
+								.input-row
+									input(type="text" placeholder="Улица*" class="input")
+							.input-cont.input-cont--three-sm
+								.input-row
+									input(type="text" placeholder="Дом*" class="input")
+								.input-row
+									input(type="text" placeholder="Корпус" class="input")
+								.input-row
+									input(type="text" placeholder="Подъезд" class="input")
+								.input-row
+									input(type="text" placeholder="Этаж" class="input")
+								.input-row
+									input(type="text" placeholder="Квартира" class="input")
+								.input-row
+									input(type="text" placeholder="Домофон" class="input")
+							.direction-el-add
+								+icon("diskette","icon")
+								span Сохранить адрес
+
+						.js-switch-cont.hidden(data-item="self" data-group="deliverType")
+							.form-block
+								.direction.direction--sm
+									.direction-el.js-switch.active(data-item="directionDeliver")
+										.direction-el__title ул. Ленина, д. 64
+										.direction-el__text ежедневно с 10 до 22
+									.direction-el.js-switch(data-item="directionDeliver" )
+										.direction-el__title ул. Тимирязева, д. 81
+										.direction-el__text ежедневно с 10 до 22
+									.direction-el.js-switch(data-item="directionDeliver" )
+										.direction-el__title ул. Новочерскасская, корп. 2
+										.direction-el__text ежедневно с 9 до 21
+							// Выбор адреса из лк === end
 
 					// Выбор адреса из лк === end
 					.form-block
@@ -131,7 +120,7 @@ include block_html/_include.pug
 					// choose payment type
 					.form-block
 						.title.title--md Оплата
-						.input-cont
+						.input-cont.mb-16
 							.input-row
 								.size.size--fluid.size--column.size--mark
 									.size__el.size__el--active.js-switch(data-group="typePay") Картой при получеии
@@ -139,12 +128,12 @@ include block_html/_include.pug
 									.size__el.js-switch(data-item="cash" data-group="typePay") Наличными при получении
 						.js-switch-cont.hidden(data-item="cash" data-group="typePay")
 							.title.title--md Сдача
-							.input-cont.input-cont--two
-								.input-row
-									.size.size--fluid.size--column.size--mark
-										.size__el.size__el--active.js-switch(data-item="changeVal" data-group="change") Нужна сдача с
-										.size__el.js-switch( data-group="change") Без сдачи
-								.input-row
+
+							.input-cont.input-cont--four
+								.input-row.js-switch(data-item="changeVal" data-group="change")
+									+radio('Нужна сдача','payment',true)
+								.input-row.js-switch( data-group="change")
+									+radio('Без сдачи','payment')
 							.js-switch-cont(data-item="changeVal" data-group="change")
 								.input-cont.input-cont--two
 									.input-row
@@ -221,6 +210,6 @@ include block_html/_include.pug
 										+icon("checked","icon")
 									.style-input-text Я ознакомлен с #[a(href="#") пользовательским соглашением] &nbsp; и даю согласие на обработку моих #[a(href="#") персональных данных]
 						.btn--md.btn--full.btn--mark.btn--disable Оформить заказ
-							//remove .btn--disable
+							//on validate remove .btn--disable => add .btn--pulse
 	+footer(true)
 include ./block_html/_script.pug
