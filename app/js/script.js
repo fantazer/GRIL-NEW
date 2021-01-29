@@ -64,6 +64,7 @@ $(document).ready(function () {
 
 	$('.modal-close, .modal-hide').click(function () {
 		closeModal();
+		countTimer ? clearInterval(countTimer) : ''
 	});
 
 	$('.modal-wrap').click(function(e){
@@ -72,12 +73,25 @@ $(document).ready(function () {
 	//modals===end
 
 	// countDown
+	var countTimer;
+
+	$('.js-modal-countdown-type').click(function(){
+		var el = $(this).closest('.modal-content')
+		countDownInit(el);
+	});
+
 	var countDownInit = function(el){
-		var startTime = 10;
+		var startTime = $('.js-modal-countdown-wrap').data("time");
+		startTime = startTime || 60
+		console.log('start timer');
+		el.find('.js-modal-countdown-type').addClass('type--disable')
 		el.find('.js-modal-countdown-val').html(startTime)
-		var countTimer = setInterval(function(){
+		
+		countTimer ? clearInterval(countTimer) : ''
+
+		countTimer = setInterval(function(){
 			if(startTime>0){
-				startTime -= 1;
+				--startTime;
 				el.find('.js-modal-countdown-val').html(startTime)
 			}else{
 				el.find('.js-modal-countdown-type').removeClass('type--disable')
@@ -86,6 +100,8 @@ $(document).ready(function () {
 		},1000)
 	}
 	// countDown === end
+
+
 
 
 	// fix top-menu

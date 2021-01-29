@@ -705,6 +705,22 @@
 .flex--fl {
   flex-flow: column;
 }
+.fade-scroll {
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1024px) {
+  .fade-scroll:before {
+    z-index: 10;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 100%);
+    width: 100%;
+    height: 90px;
+  }
+}
 html {
   box-sizing: border-box;
 }
@@ -1087,6 +1103,10 @@ h1,
 .type--bold {
   font-weight: 700;
 }
+.type--head {
+  font-weight: 700;
+  color: #111;
+}
 .type--center {
   text-align: center;
 }
@@ -1282,6 +1302,9 @@ a:visiter {
 }
 .link--mark {
   color: #00ae42;
+}
+.link--mark:hover {
+  cursor: pointer;
 }
 .link--mark:hover {
   color: #00481b;
@@ -2387,7 +2410,7 @@ body {
   position: absolute;
   opacity: 0;
   transition: transform 0.6s, opacity 0.8s;
-  width: 340px;
+  width: 350px;
   left: -9999px;
   top: -9999px;
 }
@@ -2402,7 +2425,7 @@ body {
   border-bottom: 0;
 }
 .modal--xl {
-  width: 860px;
+  width: 740px;
 }
 @media only screen and (max-width: 960px) {
   .modal--xl {
@@ -2554,6 +2577,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 80px;
 }
 .get-rating {
   display: flex;
@@ -6366,7 +6390,7 @@ l,
     z-index: 10;
     content: "";
     position: absolute;
-    bottom: -15px;
+    bottom: -25px;
     left: 0;
     background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 100%);
     width: 100%;
@@ -6374,12 +6398,12 @@ l,
   }
 }
 .location-list {
-  max-height: 300px;
+  max-height: 250px;
   position: relative;
   padding-right: 40px;
   width: calc(100% + 40px);
   margin-right: -40px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   overflow-y: auto;
 }
 @media only screen and (max-width: 768px) {
@@ -6613,9 +6637,9 @@ l,
   margin-bottom: 35px;
 }
 .city-search {
+  border-bottom: 2px solid #00ae42;
   display: flex;
   margin-bottom: 20px;
-  width: 50%;
   align-items: center;
   position: relative;
 }
@@ -6625,14 +6649,18 @@ l,
   }
 }
 .city-search .input {
+  flex-grow: 1;
   transition: initial;
   width: 100%;
   margin-right: 20px;
   border-radius: 0;
   border: 0;
-  border-bottom: 1px solid #ececec;
   padding: 10px 40px 10px 0;
   background: #fff;
+}
+.city-search__person {
+  width: 40px;
+  margin-right: 20px;
 }
 .city-search--active .input {
   padding-left: 30px;
@@ -6683,7 +6711,8 @@ l,
 }
 .city-list {
   column-count: 3;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
+  position: relative;
 }
 @media only screen and (max-width: 1024px) {
   .city-list {
@@ -6702,10 +6731,11 @@ l,
   }
 }
 .city-wrap {
-  height: 400px;
+  height: 300px;
   position: relative;
   overflow: scroll;
   margin-top: 40px;
+  margin-bottom: -40px;
 }
 @media only screen and (max-width: 768px) {
   .city-wrap {
@@ -6748,7 +6778,7 @@ l,
 .search__icon {
   position: absolute;
   top: calc(50% - 12px);
-  right: 36px;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6757,12 +6787,10 @@ l,
   cursor: pointer;
 }
 .search__icon .icon {
+  fill: #00ae42;
   transition: all 0.4s;
   width: 24px;
   height: 24px;
-}
-.search__icon .icon:hover {
-  fill: #00ae42;
 }
 .search--active .icon--true {
   position: initial;
@@ -7776,6 +7804,9 @@ l,
 .change__el.active {
   border: 1px solid #00ae42;
   color: #00ae42;
+}
+.countdown-cont {
+  min-width: 70px;
 }
 @-moz-keyframes slideInDown {
   from {

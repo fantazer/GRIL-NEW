@@ -163,7 +163,7 @@ body
 	position: absolute
 	opacity 0
 	transition transform .6s, opacity .8s
-	width 340px
+	width 350px
 	left -9999px
 	top -9999px
 	.order__row
@@ -173,7 +173,7 @@ body
 .modal--xl
 	+below(960px)
 		width: 100%
-	width 860px
+	width 740px
 
 .modal-content
 	+below(640px)
@@ -293,6 +293,7 @@ body
 .modal-img
 	margin: 0 auto 20px auto
 	flex(mid)
+	max-width 80px
 
 // review modal
 .get-rating
@@ -3087,7 +3088,7 @@ l
 			z-index 10
 			content ""
 			position absolute
-			bottom -15px
+			bottom -25px
 			left 0
 			background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
 			width: 100%
@@ -3096,12 +3097,12 @@ l
 .location-list
 	+below(768px)
 		padding-bottom: 40px
-	max-height 300px
+	max-height 250px
 	position relative
 	padding-right: 40px
 	width calc(100% + 40px)
 	margin-right: -40px
-	padding-bottom: 60px
+	padding-bottom: 30px
 	overflow-y auto
 .location-list__el
 	@extend .btn--md
@@ -3275,20 +3276,23 @@ l
 .city-search
 	+below(768px)
 		width: 100%
+	border-bottom 2px solid $mark
 	f()
 	margin-bottom: 20px
-	width: 50%
 	align-items center
 	position relative
 	.input
+		flex-grow 1
 		transition initial
 		width: 100%
 		margin-right: 20px
 		br(0)
 		border 0
-		border-bottom 1px solid $border-color
 		padding 10px 40px 10px 0
 		background: white
+.city-search__person
+	width: 40px
+	margin-right: 20px
 .city-search--active
 	.input
 		padding-left: 30px
@@ -3334,14 +3338,18 @@ l
 		padding-bottom: 20px
 		overflow-y auto
 	column-count 3
-	padding-bottom: 40px
+	padding-bottom: 80px
+	position relative
+
 .city-wrap
 	+below(768px)
 		height: 100%
-	height: 400px
+	height: 300px
 	position relative
 	overflow scroll
 	margin-top: 40px
+	margin-bottom: -40px
+
 .city-list-col
 	f()
 	margin-bottom: 10px
@@ -3371,12 +3379,11 @@ l
 .search__icon
 	position absolute
 	top calc(50% - 12px)
-	right: 36px
+	right: 0
 	cp()
 	flex(mid)
 	.icon
-		&:hover
-			fill $mark
+		fill $mark
 		tr()
 		size 24px
 
@@ -4154,3 +4161,7 @@ l
 		border 1px solid $mark
 		color $mark
 	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+
+
+.countdown-cont
+	min-width: 70px
