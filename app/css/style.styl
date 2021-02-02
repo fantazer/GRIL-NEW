@@ -170,11 +170,29 @@ body
 		margin-bottom: 20px
 		border-bottom 0
 
+.modal--lg
+	+below(960px)
+		width: 100%
+	width 440px
+
 .modal--xl
 	+below(960px)
 		width: 100%
 	width 740px
 
+.modal--xxl
+	+below(960px)
+		width: 100%
+	width 940px
+
+.modal-item
+	+below(768px)
+		.modal-content
+			margin: 0
+			br(0)
+			width: 100%!important
+		.modal-close
+			border-radius 0 0px 0 60px
 .modal-content
 	+below(640px)
 		height: 100%
@@ -310,7 +328,7 @@ body
 
 .star-el--active
 	.icon
-		fill red!important
+		fill $yellow!important
 
 .star
 	f()
@@ -1632,7 +1650,6 @@ body
 		margin: 0 auto
 	f()
 	align-items: flex-start
-	margin-bottom: 50px
 
 .item-config-wrap
 	padding: 20px 0
@@ -1713,6 +1730,8 @@ body
 	max-height 435px
 	overflow auto
 	padding-right: 5px
+.item-config-row--full
+	max-height initial
 .item-prop
 	+below(640px)
 		padding-right: 10px
@@ -1889,15 +1908,17 @@ body
 
 // msg
 .msg
-	br(20px)
-	padding: 8px 20px
+	br(8px)
+	padding: 10px
 	@extend .type--xs
 	color white
-	margin: 10px 0
+	line-height:1.6
+
 .msg--info
 	color $mark
 	border 1px solid $mark
-	margin: 30px 0
+	background: lighten($mark,60)
+
 .msg--alert
 	background: red
 // msg === end
@@ -4165,3 +4186,41 @@ l
 
 .countdown-cont
 	min-width: 70px
+
+.item-modal-total
+	+below(768px)
+		flex(mid)
+		margin: 0 -20px -30px -20px
+	+below(640px)
+		padding: 10px
+	padding: 20px
+	border-top 1px solid $border-color
+	margin: 0 -40px -40px -40px
+.item-modal-total-wrap
+	+below(768px)
+		width: 100%
+		margin:0
+		justify-content center
+	f()
+	align-items center
+	max-width 485px
+	width calc(55% - 60px)
+	margin-left auto
+	grid-gap 20px
+.item-modal-container
+	+above(769px)
+		f()
+		fl()
+		.item-info
+			max-height 60vh
+			overflow:auto
+			margin-right: -40px
+			padding-right: 20px
+	.item-wrap
+		+above(769px)
+			margin-right: -30px
+		+below(768px)
+			max-height calc(100vh - 135px)
+			overflow: auto
+		+below(640px)
+			max-height calc(100vh - 105px)

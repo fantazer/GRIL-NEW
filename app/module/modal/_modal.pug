@@ -9,10 +9,9 @@ mixin modal()
 						+icon("close","icon")
 					.modal-title Вход на сайт
 					.input-row
-						input(type="text" name="name" placeholder="Телефон" data-mask="8(000)000-00-00").input
+						input(type="text" name="name" placeholder="Телефон").input.input-mask--phone
 					.input-row
 						input(type="password" name="name" placeholder="Пароль").input
-
 					input(type="submit" value="Войти").btn--md.btn--mark.btn--full
 					.modal-link-wrap
 						a(href="#").modal-link Забыли пароль
@@ -28,7 +27,7 @@ mixin modal()
 					.modal-text Введите номер телефона и мы отправим на него код для восстановления пароля
 					.input-cont
 						.input-row
-							input(type="text" name="name" placeholder="Телефон").input
+							input(type="text" name="name" placeholder="Телефон").input.input-mask--phone
 					.modal-send.mb-24 Отправить
 					.flex.flex--mid
 						a(href="#").modal-link Я вспомнил пароль
@@ -88,7 +87,7 @@ mixin modal()
 					.modal-title Регистрация
 					.input-cont
 						.input-row
-							input(type="text" name="name" placeholder="Телефон" data-mask="8(000)000-00-00").input
+							input(type="text" name="name" placeholder="Телефон").input.input-mask--phone
 					.login-remember
 						.check-el
 							label.style-label.style-label--checkbox
@@ -132,7 +131,7 @@ mixin modal()
 							input(type="text" name="name" placeholder="Ваше имя").input
 					.input-cont
 						.input-row
-							input(type="password" name="name" placeholder="Новый пароль").input
+							input(type="password" name="name" placeholder="Придумайте пароль").input
 					.input-cont
 						.input-row
 							input(type="password" name="name" placeholder="Повторите пароль").input
@@ -252,82 +251,14 @@ mixin modal()
 											a(href="#").city-list-el Волгодонск
 			// city === end
 
-
-			//=====================================
-
-
-			// phone enter
-			.modal(data-modal="phoneEnter")
-				.modal-content
-					.modal-close
-						+icon("close","icon")
-					.modal-title Вход на сайт
-					.modal-text Введите свой номер и код подтверждения будет отправлен по СМС в течение #[span.type--red 60 секунд]
-					.input-row
-						input(type="text" name="name" placeholder="+7 (XXX) XXX-XX-XX").input
-					.login-remember
-						.check-el
-							label.style-label.style-label--checkbox
-								input(type="checkbox").style-input
-								.style-input-element
-									+icon("checked","icon")
-								.style-input-text Cогласен с #[a(href="#") условиями обработки]&nbsp;персональных данных
-					input(type="submit" value="Получить код").modal-send
-			// phone enter === end
-
-
-			// phone sms
-			.modal(data-modal="sms")
-				.modal-content
-					.modal-close
-						+icon("close","icon")
-					.modal-title Вход на сайт
-					.modal-text Введите код подтверждения, чтобы войти в личный кабинет
-					.input-row
-						input(type="text" name="name" placeholder="Код из СМС").input
-					input(type="submit" value="Войти").modal-send
-					a(href="#").modal-link Отправить код еще раз
-			// phone sms === end
-
-
-
-
-
-
-
-			// registrationTrue
-			.modal(data-modal="registrationTrue")
-				.modal-content
-					.modal-close
-						+icon("close","icon")
-					.modal-title Регистрация <br> успешна
-					.modal-text Теперь вы можете войти в личный кабинет, сохранить свои адреса, накапливать бонусные баллы и следить за историей заказов
-					a(href="#").btn--md.btn--mark.btn--extend.btn--full Личный кабинет
-					a(href="#").btn--md.btn--light.btn--full На главную
-			// registrationTrue === end
-
-
-
-
-
-
-			// true action
-			.modal(data-modal="true-action")
-				.modal-content
-					.modal-img
-						img(src="img/chef-hat.svg", alt="")
-					.modal-title Благодарим вас за заказ!
-					.modal-text Ваш заказ #[span.type--bold №9854]&nbsp;будет приготовлен и доставлен к вам в течение #[span.type--bold 40 минут]
-					input(type="submit" value="С нетерпением жду!").btn--md.btn--mark.btn--full.modal-hide
-			// true action === end
-
 			// review
-			.modal.modal--xl(data-modal="review")
+			.modal.modal--lg(data-modal="review")
 				.modal-content
 					.modal-close
 						+icon("close","icon")
 					.modal-head
 						.modal-title Оставить отзыв
+						.modal-text Ваше мнение очень важно для нас, оно поможет нам стать лучше!
 					.get-rating
 						.get-rating-text Ваша оценка
 						.star.star--edit
@@ -341,91 +272,28 @@ mixin modal()
 								+icon("star","icon")
 							.star-el
 								+icon("star","icon")
-					form(action="#")
-						.input-cont.input-cont--two
-							.input-row
-								input(type="text" placeholder="Ваше имя" class="input")
-							.input-row
-								input(type="text" placeholder="Ваш телефон или e-mail" class="input")
+					.input-cont
 						.input-row
-							textarea(name="info", cols="30", rows="6" placeholder="Сообщение").input
-						.login-remember
-							.check-el
-								label.style-label.style-label--checkbox
-									input(type="checkbox").style-input
-									.style-input-element
-										+icon("checked","icon")
-									.style-input-text Cогласен с #[a(href="#") условиями обработки]&nbsp;персональных данных
-						.btn-row-mid.btn-row-mid--clear
-							input(type="submit" value="Отправить" class="btn--md btn--mark")
+							input(type="text" placeholder="Ваше имя" class="input")
+					.input-cont
+						.input-row
+							input(type="text" placeholder="Телефон" class="input").input-mask--phone
+					.input-row
+						textarea(name="info", cols="30", rows="6" placeholder="Сообщение").input
+					+deal()
+					.btn--md.btn--mark.btn--full Отправить
 			// review === end
 
-			// review-true action
-			.modal(data-modal="review-true")
+			// reviewTrue action
+			.modal(data-modal="reviewTrue")
 				.modal-content
 					.modal-close
 						+icon("close","icon")
 					.modal-img
-						img(src="img/mail.svg", alt="")
-					.title.title--lg.type--center.title--clear Ваш отзыв отправлен
+						img(src="img/person/person-happy.svg", alt="")
+					.type--bold.type--center.type--lg.mb-6 Отзыв отправлен
 					.modal-text.modal-text--clear и появится на сайте сразу после прохождения нашей модерации
-			// review-true action === end
-
-			// profile
-			.modal(data-modal="profile")
-				.modal-content.modal-content--md
-					.modal-close
-						+icon("close","icon")
-					.modal-title Личные данные
-					.modal-text Личные данные позволяют быстрее совершать оформление заказа, а также получать новости о наших спецпредложениях
-					.input-row
-						input(type="text" name="name" placeholder="Телефон" value="+7(926)182-38-34").input.input--disable
-					.modal-link.modal-link--auth войти под другим номером
-					.input-row
-						input(type="text" name="name" placeholder="Имя").input
-					.input-row
-						input(type="text" name="name" placeholder="E-mail").input
-					.login-remember
-						.check-el
-							label.style-label.style-label--checkbox
-								input(type="checkbox").style-input
-								.style-input-element
-									+icon("checked","icon")
-								.style-input-text информировать о скидках и акциях
-					.input-cont.input-cont--two
-						.input-row
-							.dropdown.dropdown--lg
-								input(type="hidden" name="name" value="0")
-								.dropdown-current
-									.dropdown-current__val Дата
-									+icon("arrow-down-fat","icon")
-								.dropdown-menu
-									- for (var i=0;i<20;i++)
-										.dropdown-menu__el(data-value="#") 25
-						.input-row
-							.dropdown.dropdown--lg
-								input(type="hidden" name="name" value="0")
-								.dropdown-current
-									.dropdown-current__val Месяц
-									+icon("arrow-down-fat","icon")
-								.dropdown-menu
-									- for (var i=0;i<20;i++)
-										.dropdown-menu__el(data-value="#") Январь
-					.input-cont.input-cont--two
-						.input-row
-							.dropdown.dropdown--lg
-								input(type="hidden" name="name" value="0")
-								.dropdown-current
-									.dropdown-current__val Год
-									+icon("arrow-down-fat","icon")
-								.dropdown-menu
-									- for (var i=0;i<20;i++)
-										.dropdown-menu__el(data-value="#") 1980
-						.input-row.input-row--middle
-							.type--xs.type--red будьте внимательны, день рождения нельзя изменить
-					input(type="submit" value="Сохранить").modal-send
-					.modal-link Отмена
-			// profile === end
+			// reviewTrue action === end
 
 			// bonus
 			.modal.modal--xl(data-modal="bonus")
@@ -452,125 +320,277 @@ mixin modal()
 						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
 			// bonus === end
 
+			// staffDescription
+			.modal.modal--xl(data-modal="staffDescription")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Пиццайолло
+					.type--center.type--md.type--bold Зарплата от 10 000 грн на руки
+					.text
+						h3 Обязанности
+						ul
+							li обучать сотрудников зала как правильно обслуживать гостей;
+							li следить за тем, чтобы правила и стандарты обслуживания ежедневно выполнялись;
+							li добиваться от сотрудников гостеприимного обслуживания.
+						h3 Требования
+						ul
+							li Организовывать эффективную работу смены (руководство коллективом официантов‚ барменов‚ кассиров);
+							li Заниматься подбором, обучением и адаптацией персонала;
+							li Составлять график работы сотрудников, вести табеля учета рабочего времени;
+							li Вести необходимую документацию;
+							li Соблюдать все стандарты компании и контролировать соблюдение всех стандартов персоналом;
+							li А главное, обеспечивать высокое качество обслуживания гостей;
+					.btn-row-mid.btn-row-mid--clear
+						.btn--mark.btn--md Отсавить заявку
+			// staffDescription === end
+
+			// staffForm
+			.modal.modal--lg(data-modal="staffForm")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Пиццайолло
+					.type--center.type--md.type--bold.mb-24 Зарплата от 10 000 грн на руки
+					.input-cont
+						.input-row
+							input(type="text" placeholder="Ваше имя" class="input")
+					.input-cont
+						.input-row
+							input(type="text" placeholder="Ваш телефон или e-mail" class="input")
+					.input-row
+						textarea(name="info", cols="30", rows="6" placeholder="Расскажите о себе.").input
+					.upload-wrap
+						label.upload
+							.upload-img.upload-img--doc
+							.upload-get
+								.upload__icon
+									+icon("plus-round","icon")
+								.upload__text Прикрепить резюме
+							input(type="file").upload-btn
+						.upload-descr Формат файлов <span class="type--mark">docx</span> <span class="type--mark">doc</span> <span class="type--mark">rtf&nbsp;</span> максимальный размер вложения <span class="type--mark">5 мб</span>
+					+deal()
+					.btn--md.btn--mark.btn--full Отправить
+			// staffForm === end
+
+			// staffTrue action
+			.modal(data-modal="staffTrue")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-img
+						img(src="img/person/person-happy.svg", alt="")
+					.type--bold.type--center.type--lg.mb-6 Резюме отправлено
+					.modal-text.modal-text--clear Наш HR-отдел рассмотрит вашу заявку и, как только мы будем готовы, пригласит вас на собеседование
+			// staffTrue action === end
+
+			// profile
+			.modal.modal--lg(data-modal="profile")
+				.modal-content.modal-content--md
+					.modal-close
+						+icon("close","icon")
+					.modal-title Личные данные
+					.modal-text Личные данные позволяют быстрее совершать оформление заказа, а также получать новости о наших спецпредложениях
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Имя").input
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Телефон" ).input.input-mask--phone
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="E-mail").input
+					.g.g-3.g-gap-10
+						.input-row
+							.dropdown.dropdown--lg
+								input(type="hidden" name="name" value="0")
+								.dropdown-current
+									.dropdown-current__val Дата
+									+icon("arrow-down-fat","icon")
+								.dropdown-menu
+									- for (var i=0;i<20;i++)
+										.dropdown-menu__el(data-value="#") 25
+						.input-row
+							.dropdown.dropdown--lg
+								input(type="hidden" name="name" value="0")
+								.dropdown-current
+									.dropdown-current__val Месяц
+									+icon("arrow-down-fat","icon")
+								.dropdown-menu
+									- for (var i=0;i<20;i++)
+										.dropdown-menu__el(data-value="#") Январь
+						.input-row
+							.dropdown.dropdown--lg
+								input(type="hidden" name="name" value="0")
+								.dropdown-current
+									.dropdown-current__val Год
+									+icon("arrow-down-fat","icon")
+								.dropdown-menu
+									- for (var i=0;i<20;i++)
+										.dropdown-menu__el(data-value="#") 1980
+					.msg.msg--info.mb-24
+						.type--xs Будьте внимательны, после внесения данных, день рождения нельзя будет изменить
+					.login-remember
+						.check-el
+							label.style-label.style-label--checkbox
+								input(type="checkbox").style-input
+								.style-input-element
+									+icon("checked","icon")
+								.style-input-text информировать о скидках и акциях
+					.btn--md.btn--mark.btn--full.mb-12 Сохранить
+					.btn--md.btn--light.btn--full.modal-hide Отмена
+			// profile === end
+
 			// address
-			.modal(data-modal="address")
+			.modal.modal--lg(data-modal="address")
 				.modal-content.modal-content--md
 					.modal-close
 						+icon("close","icon")
 					.modal-title Адрес доставки
 					.modal-text Добавленный адрес помогает заполнять форму оформления заказа быстрее
-					.city-current.icon-row
-						span.type--lg.type--bold Москва
-						+icon("delete","icon icon--sm icon--left")
-					.input-cont
+					//.input-cont
 						.input-row
 							.size.size--lg.size--mark
 								.size__el.size__el--active.js-switch(data-item="deliver" data-group="deliverType") Доставка
 								.size__el.js-switch(data-item="self" data-group="deliverType") Самовывоз
 					.input-row
-						input(type="text" name="name" placeholder="Название адреса (дом, работа)" ).input
+						input(type="text" name="name" placeholder="Название адреса (дом, работа)*" ).input
 					.input-row
-						input(type="text" name="name" placeholder="Имя").input
-					.input-row
-						input(type="text" name="name" placeholder="E-mail").input
+						input(type="text" name="name" placeholder="Улица").input
 					.input-cont.input-cont--two
 						.input-row
 							input(type="text" name="name" placeholder="Дом").input
 						.input-row
-							input(type="text" name="name" placeholder="№ кв, офис").input
+							input(type="text" name="name" placeholder="Корпус").input
 					.input-cont.input-cont--two
 						.input-row
 							input(type="text" name="name" placeholder="Подъезд").input
 						.input-row
 							input(type="text" name="name" placeholder="Этаж").input
 					.input-cont.input-cont--two
-						.input-row.input-row--middle
-							.check-el
-								label.style-label.style-label--checkbox
-									input(type="checkbox").style-input
-									.style-input-element.style-label--checkbox.js-switch(data-item="intercomMob" data-group="admissionMob")
-										+icon("checked","icon")
-									.style-input-text.type--xs Есть домофон
-						.input-row.js-switch-cont.hidden(data-item="intercomMob" data-group="admissionMob")
-							input(type="text" placeholder="Домофон" class="input")
-					input(type="submit" value="Сохранить адрес").modal-send
-					.modal-link Отмена
+						.input-row
+							input(type="text" name="name" placeholder="Квартира").input
+						.input-row
+							input(type="text" name="name" placeholder="Домофон").input
+
+					.btn--md.btn--mark.btn--full.mb-12 Сохранить
+					.btn--md.btn--light.btn--full.modal-hide Отмена
 			// address === end
 
-
-
-			// staff
-			.modal(data-modal="staff")
+			// addressFalse
+			.modal(data-modal="addressFalse")
 				.modal-content
 					.modal-close
 						+icon("close","icon")
-					.modal-head
-						.modal-title Оставить отзыв
-					form(action="#")
-						.input-cont
-							.input-row
-								input(type="text" placeholder="Ваше имя" class="input")
-						.input-cont
-							.input-row
-								input(type="text" placeholder="Ваш телефон или e-mail" class="input")
-						.input-row
-							textarea(name="info", cols="30", rows="6" placeholder="Расскажите о себе.").input
-						.upload-wrap
-							.upload-img.upload-img--doc
-							label.upload
-								.upload__icon
-									+icon("upload","icon")
-								.upload__text Прикрепить резюме
-								input(type="file").upload-btn
-						.login-remember
-							.check-el
-								label.style-label.style-label--checkbox
-									input(type="checkbox").style-input
-									.style-input-element
-										+icon("checked","icon")
-									.style-input-text Cогласен с #[a(href="#") условиями обработки]&nbsp;персональных данных
-						.btn-row-mid.btn-row-mid--clear
-							input(type="submit" value="Отправить" class="btn--md btn--mark")
-			// staff === end
+					.modal-title Ваш адрес доставки:
+					p.type--md.type--bold.type--center г. Москва, ул. Тимирязева, д. 30
+					.modal-text к сожалению мы не доставляем по данному адресу, вы можете выбрать один из вариантов доставки
+					.deliver-other
+						a(href="#")
+							img(src="img/deliver-yandex.png", alt="")
+						a(href="#")
+							img(src="img/deliver-club.png", alt="")
+			// addressFalse === end
 
-			// staff-true action
-			.modal(data-modal="staff-true")
-				.modal-content
+			// item
+			.modal.modal-item.modal--xxl(data-modal="item")
+				.modal-content.item-modal-container
 					.modal-close
 						+icon("close","icon")
-					.modal-img
-						img(src="img/hat.svg", alt="")
-					.modal-title.modal-title--clear Ваше резюме отправлено
-					.modal-text Наш HR-отдел рассмотрит вашу заявку и когда мы будем готовы - пригласит вас на собеседование
-			// staff-true action === end
+					.item-wrap
+						.item-col
+							.item-img(style="background-image:url('img/item-card-1.jpg')")
+						.item-info.mt-16.scroll-template
+							.type--xl.type--head.mb-6 Четыре сыра
+								.tooltip.tooltip--icon ?
+									.tooltip-cont.tooltip-cont--bottom-center
+										.tooltip-conner
+										.consist
+											.type--sm.type--bold.mb-12 Пищевая ценность:
+											.consist__el
+												.consist__el-name Жиры, г
+												.consist__el-val 9.90
+											.consist__el
+												.consist__el-name Белки, г
+												.consist__el-val 10.50
+											.consist__el
+												.consist__el-name Углеводы, г
+												.consist__el-val 24.90
+											.consist__el
+												.consist__el-name Пищевая ценность, Ккал
+												.consist__el-val 230.70
+							a(href="#").icon-row.mb-16
+								.type--main Перейти в карточку
+								.arrow.arrow--sm.arrow--mark
+									+icon("arrow-conner-right","icon")
 
-			// staff-descr
-			.modal.modal--xl(data-modal="bonus-descr")
-				.modal-content
-					.modal-close
-						+icon("close","icon")
-					.modal-title.modal-title--clear Пиццайолло
-					.modal-text.type--mark.type--bold Зарплата от 10 000 грн на руки
-					.modal-bonus.text.scroll
-						p Бонусными баллами можно оплатить до 50% от стоимости вашего заказа. Для этого нужно при оформлении заказа выбрать количество баллов, которые вы готовы потратить.
+							.item-descr
+								-
+									var items = [
+										'Сыр',
+										'Пицца-соус',
+										'Перец болгарский',
+										'Куриное филе',
+										'Моцарела',
+									];
+								each item in items
+									.mix.js-toggle
+										.mix__name #{item}
+										.mix__icon
+											+icon("close","icon icon--true")
+											+icon("repeat","icon icon--false")
+								each itemEl in items
+									<span> #{itemEl}, </span>
 
-						p Бонусные баллы не начисляются на акционные товары.
-						h3 Что это значит?
+							// size
+							.size.size--mark.size--sm.size--fluid.mb-24
+								.size__el.size__el--active 15 см
+								.size__el 30 см
+								.size__el 45 см
+							// size === end
 
-						p Еда, приготовленная с душой, всегда только свежие продукты, увлечённые своим делом повара, интересное и разнообразное меню для гурманов и ценителей классики — мы предлагаем попробовать блюда разных кухонь мира и оценить преимущества.
+							// size
+							.size.size--mark.size--sm.size--fluid.mb-24
+								.size__el.size__el--active Супертесто
+								.size__el Тонкое
+							// size === end
 
-						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
-
-						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
-						h3 На что можно потратить баллы?
-
-						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
-
-						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
-			// staff-descr === end
-
-
-
+							//item-config
+							.title Дополнительные ингредиенты
+							.item-config-row.item-config-row--full.js-ingr-wrap.mb-24(data-min="0" data-max="3")
+								- for (var i=0;i<2;i++)
+									.item-prop.js-ingr-row
+										.item-prop__img(style="background-image:url('img/prop-3.jpg')")
+										.item-prop__title Томатний соус <span class="type--gray">/ 50г</span>
+										.item-prop__incr
+											+incr(false,"incr--single incr--mark-light incr--mdx")
+										.item-prop__cost 29 р
+									.item-prop.js-ingr-row
+										.item-prop__img(style="background-image:url('img/prop-4.jpg')")
+										.item-prop__title Сметана <span class="type--gray">/ 50г</span>
+										.item-prop__incr
+											+incr(false,"incr--single incr--mark-light incr--mdx")
+										.item-prop__cost 34 р
+									.item-prop.js-ingr-row
+										.item-prop__img(style="background-image:url('img/prop-5.jpg')")
+										.item-prop__title Чесночный соус <span class="type--gray">/ 50г</span>
+										.item-prop__incr
+											+incr(false,"incr--single incr--mark-light incr--mdx")
+										.item-prop__cost 16 р
+								.msg.msg--info.m-32.hidden
+									// .msg--info || .msg--alert
+									.msg-text Вы можете добавить до 6-ти доп. ингрединтов
+							//  item-config === end
+					.item-modal-total
+						.item-modal-total-wrap
+							.type--main Итого:
+							.type--xl.type--head 250 р
+							.incr-btn.incr-btn--fix
+								.incr-btn__el.btn--md.btn--mark Заказать
+								.incr-btn-wrap
+									+incr(1,"incr--mark")
+			// item === end
+			//=====================================
 
 			// area
 			.modal.modal--xl(data-modal="area")
@@ -621,18 +641,3 @@ mixin modal()
 									.btn--sm.btn--mark.btn--mobile Подтверждаю
 									.btn--sm.btn--light.btn--mobile Продолжить выбор
 			// area === end
-
-			// bad address
-			.modal(data-modal="address-bad")
-				.modal-content
-					.modal-close
-						+icon("close","icon")
-					.modal-title Ваш адрес доставки:
-					p.type--md.type--bold.type--center г. Москва, ул. Тимирязева, д. 30
-					.modal-text к сожалению мы не доставляем по данному адресу, вы можете выбрать один из вариантов доставки
-					.deliver-other
-						a(href="#")
-							img(src="img/deliver-yandex.png", alt="")
-						a(href="#")
-							img(src="img/deliver-club.png", alt="")
-			// bad address === end

@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add fixes for forms part3">
+    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add modals">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/basket.html" afterDir="false" />
@@ -18,12 +18,19 @@
       <change beforePath="$PROJECT_DIR$/app/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/_helper.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/_helper.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/variable/config/_color.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_color.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/variable/config/_input.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_input.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/deliver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-500.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/block_html/_const.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_const.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/block_html/_mixin.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_mixin.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/form.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/form.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/item.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/item.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/modal.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/item.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/lk.html" afterDir="false" />
@@ -39,7 +46,6 @@
       <change beforePath="$PROJECT_DIR$/app/sale-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/sale-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/vacancy.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/vacancy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +86,7 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/ftp.json&#10;true&#10;E:/PROJECT/WORK/GIGANT/app/bower/slick-carousel/slick/slick-theme.css&#10;E:/PROJECT/WORK/DIMASH-NEW/app/bower/jquery/src/css/var/rmargin.js" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/img/svg" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -299,14 +305,15 @@
       <workItem from="1611667539225" duration="1767000" />
       <workItem from="1611737644270" duration="4364000" />
       <workItem from="1611823291978" duration="6102000" />
-      <workItem from="1611917368344" duration="7284000" />
-    </task>
-    <task id="LOCAL-00028" summary="add full page template">
-      <created>1563526589141</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1563526589141</updated>
+      <workItem from="1611917368344" duration="7519000" />
+      <workItem from="1611928181248" duration="625000" />
+      <workItem from="1612085332971" duration="661000" />
+      <workItem from="1612091462348" duration="5772000" />
+      <workItem from="1612171457526" duration="624000" />
+      <workItem from="1612172154441" duration="5384000" />
+      <workItem from="1612192279923" duration="552000" />
+      <workItem from="1612192857467" duration="3418000" />
+      <workItem from="1612254759359" duration="15800000" />
     </task>
     <task id="LOCAL-00029" summary="add mixin link">
       <created>1564580702388</created>
@@ -644,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611838493492</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="add modals">
+      <created>1611924685733</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1611924685738</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -685,7 +699,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="add soc-fl icon" />
     <MESSAGE value="replace search icon + fix card size + add seoText" />
     <MESSAGE value="add head line + drop menu" />
     <MESSAGE value="fix logo + add menu item" />
@@ -710,6 +723,7 @@
     <MESSAGE value="add fixes for forms" />
     <MESSAGE value="add fixes for forms part2" />
     <MESSAGE value="add fixes for forms part3" />
-    <option name="LAST_COMMIT_MESSAGE" value="add fixes for forms part3" />
+    <MESSAGE value="add modals" />
+    <option name="LAST_COMMIT_MESSAGE" value="add modals" />
   </component>
 </project>

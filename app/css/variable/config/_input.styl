@@ -38,7 +38,7 @@
 
 .style-input-text
 	color black
-	width: calc(100% - 60px)
+	width: calc(100% - 40px)
 	line-height: 1.6
 	margin-top: 3px
 	a
@@ -210,53 +210,43 @@
 
 //upload
 .upload-wrap
-	flex(mid)
-	fw()
 	margin-bottom: 20px
+	width: 100%
+	padding: 20px
+	border 1px solid $border-color
+	br(10px)
 .upload
 	f()
+	fw()
+	align-items center
 	cp()
-	br(10px)
-	align-items: flex-start
-	justify-content: center
-	border 1px solid $border-color
-	box-shadow 0px 3px 14px white
 	tr(all)
-	margin-bottom: 10px
-	&:hover
-		bsh()
+	grid-row-gap 12px
+	margin-bottom: 5px
 .upload__icon
-	padding: 10px
-	border-right 1px solid $border-color
-	height: 50px
-	flex(mid)
 	.icon
-		size 25px
-		fill red
+		size 32px
+		fill $mark
 .upload__text
-	height: 50px
-	margin-left: -1px
-	padding: 15px
-	width: auto
-	flex(mid)
+	font-weight: 700
+	white-space nowrap
 .upload-img
 	flex(mid)
 .upload-img__el
-	size 50px
-	br(10px)
+	size 42px
+	br(4px)
 	border 1px solid $border-color
 	margin-right: 10px
-	margin-bottom: 10px
 	background-size: cover
 	background-repeat: no-repeat
 	position: relative
 	overflow: hidden
 	cp()
+	bsh()
 	&:hover
 		&:before
 			content 'X'
 			opacity:1
-
 	&:before
 		content 'X'
 		position: absolute
@@ -272,6 +262,18 @@
 .upload-btn
 	position: absolute
 	left -9999px
+
+.upload-descr
+	font-size: 12px
+	color $gray
+	//background $snow
+	//padding: 10px
+	//border 1px solid $border-color
+	line-height: 1.6
+.upload-get
+	f()
+	align-items center
+	grid-gap 12px
 // form === end
 
 // incr

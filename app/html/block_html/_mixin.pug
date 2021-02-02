@@ -93,3 +93,12 @@ mixin bread()
     a(href="#").bread__el Главная
     a(href="#").bread__el Каталог
     .bread__el Название пункта
+
+mixin deal()
+  .login-remember
+    .check-el
+      label.style-label.style-label--checkbox
+        input(type="checkbox").style-input
+        .style-input-element
+          +icon("checked","icon")
+        .style-input-text Я ознакомлен с #[a(href="#") пользовательским соглашением] &nbsp; и даю согласие на обработку моих #[a(href="#") персональных данных]

@@ -37,13 +37,18 @@ $(document).ready(function () {
 		},500);
 		modalState.isModalShow = false;
 	};
-
 	var initModal = function (el) {
 		openModal();
 
 		$('.modal').each(function () {
 			if ($(this).data('modal') === el) {
 				$(this).addClass('modal__show')
+				var currentModal = $(this)
+				setTimeout(function(){
+					currentModal.find('.input:first').focus();
+					console.log(currentModal.find('.input:first').val());
+				},100)
+
 				if($(this).find('.js-modal-countdoun-wrap')){
 					var currentEl = $(this);
 					countDownInit(currentEl);
@@ -83,7 +88,7 @@ $(document).ready(function () {
 	var countDownInit = function(el){
 		var startTime = $('.js-modal-countdown-wrap').data("time");
 		startTime = startTime || 60
-		console.log('start timer');
+		//console.log('start timer');
 		el.find('.js-modal-countdown-type').addClass('type--disable')
 		el.find('.js-modal-countdown-val').html(startTime)
 		
@@ -765,6 +770,25 @@ $(document).ready(function () {
 		
 	}
 	// basket total === end
-	
-	
+
+	// phone mask
+	var isFieldStart= true;
+	$('.input-mask--phone').mask('+7(000)000-00-00', {
+			onKeyPress: function (cep, event, currentField, options) {
+				//console.log(currentField.val().length);
+				if(cep == '+7(8' && isFieldStart){
+					$('.input-mask--phone').val("+7(")
+					return isFieldStart = false;
+				}
+				if(currentField.val().length<4){
+					isFieldStart = true
+				}
+			},
+		}
+	);
+	$('input').on('input',function(e){
+		console.log(e.originalEvent.data);
+	})
+	// phone mask === end
+
 });
