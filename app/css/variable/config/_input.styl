@@ -40,7 +40,6 @@
 	color black
 	width: calc(100% - 40px)
 	line-height: 1.6
-	margin-top: 3px
 	a
 		color $mark
 
@@ -139,6 +138,10 @@
 		grid-template-columns: 1fr
 	grid-template-columns: 1fr 1fr
 
+.input-cont--two-sm
+	grid-template-columns: 1fr 1fr
+	grid-gap 0 20px
+
 .input-cont--three
 	+below(640px)
 		grid-template-columns: 1fr
@@ -210,6 +213,8 @@
 
 //upload
 .upload-wrap
+	+below(640px)
+		padding: 12px
 	margin-bottom: 20px
 	width: 100%
 	padding: 20px
@@ -225,40 +230,39 @@
 	margin-bottom: 5px
 .upload__icon
 	.icon
+		+below(640px)
+			size 24px
 		size 32px
 		fill $mark
 .upload__text
 	font-weight: 700
 	white-space nowrap
-.upload-img
-	flex(mid)
-.upload-img__el
-	size 42px
-	br(4px)
-	border 1px solid $border-color
-	margin-right: 10px
+.upload-list
+	width: 100%
+.upload-list__el
 	background-size: cover
 	background-repeat: no-repeat
 	position: relative
 	overflow: hidden
+	margin: 6px 0
 	cp()
-	bsh()
+	f()
+	align-items center
+	grid-gap 6px
+	padding: 6px 12px
+	background: $snow
+	width: 100%
+	whtie-space nowrap
+	text-overflow ellipsis
+	br(10px)
+	tr()
+	font-size: 12px
+	font-weight: 700
 	&:hover
-		&:before
-			content 'X'
-			opacity:1
-	&:before
-		content 'X'
-		position: absolute
-		background: #000000b3
-		width: 100%
-		height: 100%
-		left 0
-		top 0
-		flex(mid)
-		color white
-		opacity:0
-		tr(all)
+		background: darken($snow,10)
+	.icon
+		size 10px
+
 .upload-btn
 	position: absolute
 	left -9999px
@@ -274,6 +278,7 @@
 	f()
 	align-items center
 	grid-gap 12px
+	cp()
 // form === end
 
 // incr

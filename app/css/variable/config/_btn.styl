@@ -93,6 +93,14 @@
 	.nav-icon
 		fill rgba(255, 255, 255, 0.9)
 
+.btn--simple
+	@extend .btn
+	border 1px solid $mark
+	color $mark
+	&:hover
+		background: $mark
+		color white
+
 .btn--icon
 	flex(mid)
 	.nav-icon

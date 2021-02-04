@@ -43,12 +43,13 @@ $(document).ready(function () {
 		$('.modal').each(function () {
 			if ($(this).data('modal') === el) {
 				$(this).addClass('modal__show')
-				var currentModal = $(this)
-				setTimeout(function(){
-					currentModal.find('.input:first').focus();
-					console.log(currentModal.find('.input:first').val());
-				},100)
-
+				if($(window).width() > 1280) {
+					var currentModal = $(this)
+					setTimeout(function () {
+						currentModal.find('.input:first').focus();
+						console.log(currentModal.find('.input:first').val());
+					}, 200)
+				}
 				if($(this).find('.js-modal-countdoun-wrap')){
 					var currentEl = $(this);
 					countDownInit(currentEl);
@@ -575,14 +576,16 @@ $(document).ready(function () {
 	$(".upload-btn").change(function () { //Если выбрал файл
 		//console.log('img');
 		if (this.files && this.files[0]) {
-			$('.upload-img').append('<div class="upload-img__el" onclick="this.parentNode.removeChild(this);"></div>');
-			var currentUpload = $('.upload-img .upload-img__el:last'); //выбираем куда
-			var reader = new FileReader();
+			$(this).closest('.upload-wrap').find('.upload-list').append('<div class="upload-list__el" onclick="this.parentNode.removeChild(this);"><svg class="icon"><use xlink:href="#close"></use></svg><span></span></div>');
+			var currentUpload = $('.upload-list .upload-list__el:last').find('span'); //выбираем куда
+			currentUpload.text(this.files[0].name);
+			/*var reader = new FileReader();
 			reader.onload = function(){
 				currentUpload.attr('style', " background-image:url( "+reader.result+ ") ");
 			}
-			reader.readAsDataURL(this.files[0]);
+			reader.readAsDataURL(this.files[0]);*/
 		}
+		console.log(this.files[0].name);
 	});
 	$('.upload-img__el').click(function(){
 		//console.log('remove');
@@ -791,4 +794,8 @@ $(document).ready(function () {
 	})
 	// phone mask === end
 
+	// set height modal
+	var vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	// set height modal === end
 });

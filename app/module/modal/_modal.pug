@@ -326,7 +326,7 @@ mixin modal()
 					.modal-close
 						+icon("close","icon")
 					.modal-title Пиццайолло
-					.type--center.type--md.type--bold Зарплата от 10 000 грн на руки
+					.type--center.type--md.type--bold.mb-32 Зарплата от 10 000 грн на руки
 					.text
 						h3 Обязанности
 						ul
@@ -342,7 +342,7 @@ mixin modal()
 							li Соблюдать все стандарты компании и контролировать соблюдение всех стандартов персоналом;
 							li А главное, обеспечивать высокое качество обслуживания гостей;
 					.btn-row-mid.btn-row-mid--clear
-						.btn--mark.btn--md Отсавить заявку
+						.btn--mark.btn--md.btn--mobile Отсавить заявку
 			// staffDescription === end
 
 			// staffForm
@@ -357,18 +357,18 @@ mixin modal()
 							input(type="text" placeholder="Ваше имя" class="input")
 					.input-cont
 						.input-row
-							input(type="text" placeholder="Ваш телефон или e-mail" class="input")
+							input(type="text" placeholder="Ваш телефон" class="input").input-mask--phone
 					.input-row
 						textarea(name="info", cols="30", rows="6" placeholder="Расскажите о себе.").input
 					.upload-wrap
-						label.upload
-							.upload-img.upload-img--doc
-							.upload-get
+						.upload
+							label.upload-get
 								.upload__icon
 									+icon("plus-round","icon")
 								.upload__text Прикрепить резюме
-							input(type="file").upload-btn
-						.upload-descr Формат файлов <span class="type--mark">docx</span> <span class="type--mark">doc</span> <span class="type--mark">rtf&nbsp;</span> максимальный размер вложения <span class="type--mark">5 мб</span>
+								input(type="file").upload-btn
+						.upload-descr Формат файлов <span class="type--mark">docx</span> <span class="type--mark">doc</span> <span class="type--mark">rtf&#8194;</span> максимальный размер вложения <span class="type--mark">5&nbsp; мб</span>
+						.upload-list
 					+deal()
 					.btn--md.btn--mark.btn--full Отправить
 			// staffForm === end
@@ -400,7 +400,7 @@ mixin modal()
 					.input-cont
 						.input-row
 							input(type="text" name="name" placeholder="E-mail").input
-					.g.g-3.g-gap-10
+					.g.g-3.g-gap-10.xs-g-gap-0
 						.input-row
 							.dropdown.dropdown--lg
 								input(type="hidden" name="name" value="0")
@@ -430,13 +430,11 @@ mixin modal()
 										.dropdown-menu__el(data-value="#") 1980
 					.msg.msg--info.mb-24
 						.type--xs Будьте внимательны, после внесения данных, день рождения нельзя будет изменить
-					.login-remember
-						.check-el
-							label.style-label.style-label--checkbox
-								input(type="checkbox").style-input
-								.style-input-element
-									+icon("checked","icon")
-								.style-input-text информировать о скидках и акциях
+					.mb-12
+						+checkbox("Разрешаю информировать меня о скидках и акциях по email",'checked')
+					.mb-24
+						+checkbox("Разрешаю информировать меня о скидках и акциях по смс",'checked')
+
 					.btn--md.btn--mark.btn--full.mb-12 Сохранить
 					.btn--md.btn--light.btn--full.modal-hide Отмена
 			// profile === end
@@ -457,17 +455,17 @@ mixin modal()
 						input(type="text" name="name" placeholder="Название адреса (дом, работа)*" ).input
 					.input-row
 						input(type="text" name="name" placeholder="Улица").input
-					.input-cont.input-cont--two
+					.input-cont.input-cont--two-sm
 						.input-row
 							input(type="text" name="name" placeholder="Дом").input
 						.input-row
 							input(type="text" name="name" placeholder="Корпус").input
-					.input-cont.input-cont--two
+					.input-cont.input-cont--two-sm
 						.input-row
 							input(type="text" name="name" placeholder="Подъезд").input
 						.input-row
 							input(type="text" name="name" placeholder="Этаж").input
-					.input-cont.input-cont--two
+					.input-cont.input-cont--two-sm
 						.input-row
 							input(type="text" name="name" placeholder="Квартира").input
 						.input-row
@@ -550,7 +548,7 @@ mixin modal()
 							// size === end
 
 							// size
-							.size.size--mark.size--sm.size--fluid.mb-24
+							.size.size--mark.size--sm.size--fluid.mb-32
 								.size__el.size__el--active Супертесто
 								.size__el Тонкое
 							// size === end
@@ -558,7 +556,7 @@ mixin modal()
 							//item-config
 							.title Дополнительные ингредиенты
 							.item-config-row.item-config-row--full.js-ingr-wrap.mb-24(data-min="0" data-max="3")
-								- for (var i=0;i<2;i++)
+								- for (var i=0;i<1;i++)
 									.item-prop.js-ingr-row
 										.item-prop__img(style="background-image:url('img/prop-3.jpg')")
 										.item-prop__title Томатний соус <span class="type--gray">/ 50г</span>
@@ -584,7 +582,7 @@ mixin modal()
 					.item-modal-total
 						.item-modal-total-wrap
 							.type--main Итого:
-							.type--xl.type--head 250 р
+							.type--xl.type--head.type--nowrap 250 р
 							.incr-btn.incr-btn--fix
 								.incr-btn__el.btn--md.btn--mark Заказать
 								.incr-btn-wrap

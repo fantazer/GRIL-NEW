@@ -2108,91 +2108,8 @@
                     </div>
                 </div>
                 <!-- city === end-->
-                <!--=====================================-->
-                <!-- phone enter-->
-                <div class="modal" data-modal="phoneEnter">
-                    <div class="modal-content">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </div>
-                        <div class="modal-title">Вход на сайт</div>
-                        <div class="modal-text">Введите свой номер и код подтверждения будет отправлен по СМС в течение
-                            <span class="type--red">60 секунд</span>
-                        </div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="+7 (XXX) XXX-XX-XX" />
-                        </div>
-                        <div class="login-remember">
-                            <div class="check-el">
-                                <label class="style-label style-label--checkbox">
-                                    <input class="style-input" type="checkbox" />
-                                    <div class="style-input-element">
-                                        <svg class="icon">
-                                            <use xlink:href="#checked"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="style-input-text">Cогласен с
-                                        <a href="#">условиями обработки</a>&nbsp;персональных данных</div>
-                                </label>
-                            </div>
-                        </div>
-                        <input class="modal-send" type="submit" value="Получить код" />
-                    </div>
-                </div>
-                <!-- phone enter === end-->
-                <!-- phone sms-->
-                <div class="modal" data-modal="sms">
-                    <div class="modal-content">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </div>
-                        <div class="modal-title">Вход на сайт</div>
-                        <div class="modal-text">Введите код подтверждения, чтобы войти в личный кабинет</div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Код из СМС" />
-                        </div>
-                        <input class="modal-send" type="submit" value="Войти" />
-                        <a class="modal-link" href="#">Отправить код еще раз</a>
-                    </div>
-                </div>
-                <!-- phone sms === end-->
-                <!-- registrationTrue-->
-                <div class="modal" data-modal="registrationTrue">
-                    <div class="modal-content">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </div>
-                        <div class="modal-title">Регистрация
-                            <br>успешна</div>
-                        <div class="modal-text">Теперь вы можете войти в личный кабинет, сохранить свои адреса, накапливать бонусные баллы и следить за историей заказов</div>
-                        <a class="btn--md btn--mark btn--extend btn--full" href="#">Личный кабинет</a>
-                        <a class="btn--md btn--light btn--full" href="#">На главную</a>
-                    </div>
-                </div>
-                <!-- registrationTrue === end-->
-                <!-- true action-->
-                <div class="modal" data-modal="true-action">
-                    <div class="modal-content">
-                        <div class="modal-img">
-                            <img src="img/chef-hat.svg" alt="" />
-                        </div>
-                        <div class="modal-title">Благодарим вас за заказ!</div>
-                        <div class="modal-text">Ваш заказ
-                            <span class="type--bold">№9854</span>&nbsp;будет приготовлен и доставлен к вам в течение
-                            <span class="type--bold">40 минут</span>
-                        </div>
-                        <input class="btn--md btn--mark btn--full modal-hide" type="submit" value="С нетерпением жду!" />
-                    </div>
-                </div>
-                <!-- true action === end-->
                 <!-- review-->
-                <div class="modal modal--xl" data-modal="review">
+                <div class="modal modal--lg" data-modal="review">
                     <div class="modal-content">
                         <div class="modal-close">
                             <svg class="icon">
@@ -2201,6 +2118,7 @@
                         </div>
                         <div class="modal-head">
                             <div class="modal-title">Оставить отзыв</div>
+                            <div class="modal-text">Ваше мнение очень важно для нас, оно поможет нам стать лучше!</div>
                         </div>
                         <div class="get-rating">
                             <div class="get-rating-text">Ваша оценка</div>
@@ -2232,74 +2150,18 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="#">
-                            <div class="input-cont input-cont--two">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Ваше имя" />
-                                </div>
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Ваш телефон или e-mail" />
-                                </div>
-                            </div>
+                        <div class="input-cont">
                             <div class="input-row">
-                                <textarea class="input" name="info" cols="30" rows="6" placeholder="Сообщение"></textarea>
+                                <input class="input" type="text" placeholder="Ваше имя" />
                             </div>
-                            <div class="login-remember">
-                                <div class="check-el">
-                                    <label class="style-label style-label--checkbox">
-                                        <input class="style-input" type="checkbox" />
-                                        <div class="style-input-element">
-                                            <svg class="icon">
-                                                <use xlink:href="#checked"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="style-input-text">Cогласен с
-                                            <a href="#">условиями обработки</a>&nbsp;персональных данных</div>
-                                    </label>
-                                </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input input-mask--phone" type="text" placeholder="Телефон" />
                             </div>
-                            <div class="btn-row-mid btn-row-mid--clear">
-                                <input class="btn--md btn--mark" type="submit" value="Отправить" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- review === end-->
-                <!-- review-true action-->
-                <div class="modal" data-modal="review-true">
-                    <div class="modal-content">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </div>
-                        <div class="modal-img">
-                            <img src="img/mail.svg" alt="" />
-                        </div>
-                        <div class="title title--lg type--center title--clear">Ваш отзыв отправлен</div>
-                        <div class="modal-text modal-text--clear">и появится на сайте сразу после прохождения нашей модерации</div>
-                    </div>
-                </div>
-                <!-- review-true action === end-->
-                <!-- profile-->
-                <div class="modal" data-modal="profile">
-                    <div class="modal-content modal-content--md">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </div>
-                        <div class="modal-title">Личные данные</div>
-                        <div class="modal-text">Личные данные позволяют быстрее совершать оформление заказа, а также получать новости о наших спецпредложениях</div>
-                        <div class="input-row">
-                            <input class="input input--disable" type="text" name="name" placeholder="Телефон" value="+7(926)182-38-34" />
-                        </div>
-                        <div class="modal-link modal-link--auth">войти под другим номером</div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Имя" />
                         </div>
                         <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="E-mail" />
+                            <textarea class="input" name="info" cols="30" rows="6" placeholder="Сообщение"></textarea>
                         </div>
                         <div class="login-remember">
                             <div class="check-el">
@@ -2310,11 +2172,197 @@
                                             <use xlink:href="#checked"></use>
                                         </svg>
                                     </div>
-                                    <div class="style-input-text">информировать о скидках и акциях</div>
+                                    <div class="style-input-text">Я ознакомлен с
+                                        <a href="#">пользовательским соглашением</a>&nbsp; и даю согласие на обработку моих
+                                        <a href="#">персональных данных</a>
+                                    </div>
                                 </label>
                             </div>
                         </div>
-                        <div class="input-cont input-cont--two">
+                        <div class="btn--md btn--mark btn--full">Отправить</div>
+                    </div>
+                </div>
+                <!-- review === end-->
+                <!-- reviewTrue action-->
+                <div class="modal" data-modal="reviewTrue">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-img">
+                            <img src="img/person/person-happy.svg" alt="" />
+                        </div>
+                        <div class="type--bold type--center type--lg mb-6">Отзыв отправлен</div>
+                        <div class="modal-text modal-text--clear">и появится на сайте сразу после прохождения нашей модерации</div>
+                    </div>
+                </div>
+                <!-- reviewTrue action === end-->
+                <!-- bonus-->
+                <div class="modal modal--xl" data-modal="bonus">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Бонусные баллы</div>
+                        <div class="modal-text type--mark type--bold">1 бонусный балл = 1 рубль</div>
+                        <div class="modal-bonus text scroll">
+                            <p>Бонусными баллами можно оплатить до 50% от стоимости вашего заказа. Для этого нужно при оформлении заказа выбрать количество баллов, которые вы готовы потратить.</p>
+                            <p>Бонусные баллы не начисляются на акционные товары.</p>
+                            <h3>Что это значит?</h3>
+                            <p>Еда, приготовленная с душой, всегда только свежие продукты, увлечённые своим делом повара, интересное и разнообразное меню для гурманов и ценителей классики — мы предлагаем попробовать блюда разных кухонь мира и оценить преимущества.</p>
+                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
+                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
+                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
+                            <h3>На что можно потратить баллы?</h3>
+                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
+                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
+                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- bonus === end-->
+                <!-- staffDescription-->
+                <div class="modal modal--xl" data-modal="staffDescription">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Пиццайолло</div>
+                        <div class="type--center type--md type--bold mb-32">Зарплата от 10 000 грн на руки</div>
+                        <div class="text">
+                            <h3>Обязанности</h3>
+                            <ul>
+                                <li>обучать сотрудников зала как правильно обслуживать гостей;</li>
+                                <li>следить за тем, чтобы правила и стандарты обслуживания ежедневно выполнялись;</li>
+                                <li>добиваться от сотрудников гостеприимного обслуживания.</li>
+                            </ul>
+                            <h3>Требования</h3>
+                            <ul>
+                                <li>Организовывать эффективную работу смены (руководство коллективом официантов‚ барменов‚ кассиров);</li>
+                                <li>Заниматься подбором, обучением и адаптацией персонала;</li>
+                                <li>Составлять график работы сотрудников, вести табеля учета рабочего времени;</li>
+                                <li>Вести необходимую документацию;</li>
+                                <li>Соблюдать все стандарты компании и контролировать соблюдение всех стандартов персоналом;</li>
+                                <li>А главное, обеспечивать высокое качество обслуживания гостей;</li>
+                            </ul>
+                        </div>
+                        <div class="btn-row-mid btn-row-mid--clear">
+                            <div class="btn--mark btn--md btn--mobile">Отсавить заявку</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- staffDescription === end-->
+                <!-- staffForm-->
+                <div class="modal modal--lg" data-modal="staffForm">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Пиццайолло</div>
+                        <div class="type--center type--md type--bold mb-24">Зарплата от 10 000 грн на руки</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" placeholder="Ваше имя" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input input-mask--phone" type="text" placeholder="Ваш телефон" />
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <textarea class="input" name="info" cols="30" rows="6" placeholder="Расскажите о себе."></textarea>
+                        </div>
+                        <div class="upload-wrap">
+                            <div class="upload">
+                                <label class="upload-get">
+                                    <div class="upload__icon">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus-round"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="upload__text">Прикрепить резюме</div>
+                                    <input class="upload-btn" type="file" />
+                                </label>
+                            </div>
+                            <div class="upload-descr">Формат файлов
+                                <span class="type--mark">docx</span>
+                                <span class="type--mark">doc</span>
+                                <span class="type--mark">rtf&#8194;</span>максимальный размер вложения
+                                <span class="type--mark">5&nbsp; мб</span>
+                            </div>
+                            <div class="upload-list"></div>
+                        </div>
+                        <div class="login-remember">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="style-input" type="checkbox" />
+                                    <div class="style-input-element">
+                                        <svg class="icon">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="style-input-text">Я ознакомлен с
+                                        <a href="#">пользовательским соглашением</a>&nbsp; и даю согласие на обработку моих
+                                        <a href="#">персональных данных</a>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="btn--md btn--mark btn--full">Отправить</div>
+                    </div>
+                </div>
+                <!-- staffForm === end-->
+                <!-- staffTrue action-->
+                <div class="modal" data-modal="staffTrue">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-img">
+                            <img src="img/person/person-happy.svg" alt="" />
+                        </div>
+                        <div class="type--bold type--center type--lg mb-6">Резюме отправлено</div>
+                        <div class="modal-text modal-text--clear">Наш HR-отдел рассмотрит вашу заявку и, как только мы будем готовы, пригласит вас на собеседование</div>
+                    </div>
+                </div>
+                <!-- staffTrue action === end-->
+                <!-- profile-->
+                <div class="modal modal--lg" data-modal="profile">
+                    <div class="modal-content modal-content--md">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Личные данные</div>
+                        <div class="modal-text">Личные данные позволяют быстрее совершать оформление заказа, а также получать новости о наших спецпредложениях</div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Имя" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input input-mask--phone" type="text" name="name" placeholder="Телефон" />
+                            </div>
+                        </div>
+                        <div class="input-cont">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="E-mail" />
+                            </div>
+                        </div>
+                        <div class="g g-3 g-gap-10 xs-g-gap-0">
                             <div class="input-row">
                                 <div class="dropdown dropdown--lg">
                                     <input type="hidden" name="name" value="0" />
@@ -2381,8 +2429,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="input-cont input-cont--two">
                             <div class="input-row">
                                 <div class="dropdown dropdown--lg">
                                     <input type="hidden" name="name" value="0" />
@@ -2416,43 +2462,43 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-row input-row--middle">
-                                <div class="type--xs type--red">будьте внимательны, день рождения нельзя изменить</div>
+                        </div>
+                        <div class="msg msg--info mb-24">
+                            <div class="type--xs">Будьте внимательны, после внесения данных, день рождения нельзя будет изменить</div>
+                        </div>
+                        <div class="mb-12">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="style-input" type="checkbox" checked="checked" />
+                                    <div class="style-input-element">
+                                        <svg class="icon">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="style-input-text">Разрешаю информировать меня о скидках и акциях по email</div>
+                                </label>
                             </div>
                         </div>
-                        <input class="modal-send" type="submit" value="Сохранить" />
-                        <div class="modal-link">Отмена</div>
+                        <div class="mb-24">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="style-input" type="checkbox" checked="checked" />
+                                    <div class="style-input-element">
+                                        <svg class="icon">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="style-input-text">Разрешаю информировать меня о скидках и акциях по смс</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="btn--md btn--mark btn--full mb-12">Сохранить</div>
+                        <div class="btn--md btn--light btn--full modal-hide">Отмена</div>
                     </div>
                 </div>
                 <!-- profile === end-->
-                <!-- bonus-->
-                <div class="modal modal--xl" data-modal="bonus">
-                    <div class="modal-content">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </div>
-                        <div class="modal-title">Бонусные баллы</div>
-                        <div class="modal-text type--mark type--bold">1 бонусный балл = 1 рубль</div>
-                        <div class="modal-bonus text scroll">
-                            <p>Бонусными баллами можно оплатить до 50% от стоимости вашего заказа. Для этого нужно при оформлении заказа выбрать количество баллов, которые вы готовы потратить.</p>
-                            <p>Бонусные баллы не начисляются на акционные товары.</p>
-                            <h3>Что это значит?</h3>
-                            <p>Еда, приготовленная с душой, всегда только свежие продукты, увлечённые своим делом повара, интересное и разнообразное меню для гурманов и ценителей классики — мы предлагаем попробовать блюда разных кухонь мира и оценить преимущества.</p>
-                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
-                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
-                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
-                            <h3>На что можно потратить баллы?</h3>
-                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
-                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
-                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- bonus === end-->
                 <!-- address-->
-                <div class="modal" data-modal="address">
+                <div class="modal modal--lg" data-modal="address">
                     <div class="modal-content modal-content--md">
                         <div class="modal-close">
                             <svg class="icon">
@@ -2461,38 +2507,27 @@
                         </div>
                         <div class="modal-title">Адрес доставки</div>
                         <div class="modal-text">Добавленный адрес помогает заполнять форму оформления заказа быстрее</div>
-                        <div class="city-current icon-row">
-                            <span class="type--lg type--bold">Москва</span>
-                            <svg class="icon icon--sm icon--left">
-                                <use xlink:href="#delete"></use>
-                            </svg>
-                        </div>
-                        <div class="input-cont">
-                            <div class="input-row">
-                                <div class="size size--lg size--mark">
-                                    <div class="size__el size__el--active js-switch" data-item="deliver" data-group="deliverType">Доставка</div>
-                                    <div class="size__el js-switch" data-item="self" data-group="deliverType">Самовывоз</div>
-                                </div>
-                            </div>
+                        <!--.input-cont
+					.input-row
+						.size.size--lg.size--mark
+							.size__el.size__el--active.js-switch(data-item="deliver" data-group="deliverType") Доставка
+							.size__el.js-switch(data-item="self" data-group="deliverType") Самовывоз
+					-->
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" placeholder="Название адреса (дом, работа)*" />
                         </div>
                         <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Название адреса (дом, работа)" />
+                            <input class="input" type="text" name="name" placeholder="Улица" />
                         </div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Имя" />
-                        </div>
-                        <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="E-mail" />
-                        </div>
-                        <div class="input-cont input-cont--two">
+                        <div class="input-cont input-cont--two-sm">
                             <div class="input-row">
                                 <input class="input" type="text" name="name" placeholder="Дом" />
                             </div>
                             <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="№ кв, офис" />
+                                <input class="input" type="text" name="name" placeholder="Корпус" />
                             </div>
                         </div>
-                        <div class="input-cont input-cont--two">
+                        <div class="input-cont input-cont--two-sm">
                             <div class="input-row">
                                 <input class="input" type="text" name="name" placeholder="Подъезд" />
                             </div>
@@ -2500,129 +2535,280 @@
                                 <input class="input" type="text" name="name" placeholder="Этаж" />
                             </div>
                         </div>
-                        <div class="input-cont input-cont--two">
-                            <div class="input-row input-row--middle">
-                                <div class="check-el">
-                                    <label class="style-label style-label--checkbox">
-                                        <input class="style-input" type="checkbox" />
-                                        <div class="style-input-element style-label--checkbox js-switch" data-item="intercomMob" data-group="admissionMob">
-                                            <svg class="icon">
-                                                <use xlink:href="#checked"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="style-input-text type--xs">Есть домофон</div>
-                                    </label>
-                                </div>
+                        <div class="input-cont input-cont--two-sm">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Квартира" />
                             </div>
-                            <div class="input-row js-switch-cont hidden" data-item="intercomMob" data-group="admissionMob">
-                                <input class="input" type="text" placeholder="Домофон" />
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Домофон" />
                             </div>
                         </div>
-                        <input class="modal-send" type="submit" value="Сохранить адрес" />
-                        <div class="modal-link">Отмена</div>
+                        <div class="btn--md btn--mark btn--full mb-12">Сохранить</div>
+                        <div class="btn--md btn--light btn--full modal-hide">Отмена</div>
                     </div>
                 </div>
                 <!-- address === end-->
-                <!-- staff-->
-                <div class="modal" data-modal="staff">
+                <!-- addressFalse-->
+                <div class="modal" data-modal="addressFalse">
                     <div class="modal-content">
                         <div class="modal-close">
                             <svg class="icon">
                                 <use xlink:href="#close"></use>
                             </svg>
                         </div>
-                        <div class="modal-head">
-                            <div class="modal-title">Оставить отзыв</div>
+                        <div class="modal-title">Ваш адрес доставки:</div>
+                        <p class="type--md type--bold type--center">г. Москва, ул. Тимирязева, д. 30</p>
+                        <div class="modal-text">к сожалению мы не доставляем по данному адресу, вы можете выбрать один из вариантов доставки</div>
+                        <div class="deliver-other">
+                            <a href="#">
+                                <img src="img/deliver-yandex.png" alt="" />
+                            </a>
+                            <a href="#">
+                                <img src="img/deliver-club.png" alt="" />
+                            </a>
                         </div>
-                        <form action="#">
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Ваше имя" />
+                    </div>
+                </div>
+                <!-- addressFalse === end-->
+                <!-- item-->
+                <div class="modal modal-item modal--xxl" data-modal="item">
+                    <div class="modal-content item-modal-container">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="item-wrap">
+                            <div class="item-col">
+                                <div class="item-img" style="background-image:url('img/item-card-1.jpg')"></div>
+                            </div>
+                            <div class="item-info mt-16 scroll-template">
+                                <div class="type--xl type--head mb-6">Четыре сыра
+                                    <div class="tooltip tooltip--icon">?
+                                        <div class="tooltip-cont tooltip-cont--bottom-center">
+                                            <div class="tooltip-conner"></div>
+                                            <div class="consist">
+                                                <div class="type--sm type--bold mb-12">Пищевая ценность:</div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Жиры, г</div>
+                                                    <div class="consist__el-val">9.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Белки, г</div>
+                                                    <div class="consist__el-val">10.50</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Углеводы, г</div>
+                                                    <div class="consist__el-val">24.90</div>
+                                                </div>
+                                                <div class="consist__el">
+                                                    <div class="consist__el-name">Пищевая ценность, Ккал</div>
+                                                    <div class="consist__el-val">230.70</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Ваш телефон или e-mail" />
-                                </div>
-                            </div>
-                            <div class="input-row">
-                                <textarea class="input" name="info" cols="30" rows="6" placeholder="Расскажите о себе."></textarea>
-                            </div>
-                            <div class="upload-wrap">
-                                <div class="upload-img upload-img--doc"></div>
-                                <label class="upload">
-                                    <div class="upload__icon">
+                                <a class="icon-row mb-16" href="#">
+                                    <div class="type--main">Перейти в карточку</div>
+                                    <div class="arrow arrow--sm arrow--mark">
                                         <svg class="icon">
-                                            <use xlink:href="#upload"></use>
+                                            <use xlink:href="#arrow-conner-right"></use>
                                         </svg>
                                     </div>
-                                    <div class="upload__text">Прикрепить резюме</div>
-                                    <input class="upload-btn" type="file" />
-                                </label>
-                            </div>
-                            <div class="login-remember">
-                                <div class="check-el">
-                                    <label class="style-label style-label--checkbox">
-                                        <input class="style-input" type="checkbox" />
-                                        <div class="style-input-element">
-                                            <svg class="icon">
-                                                <use xlink:href="#checked"></use>
+                                </a>
+                                <div class="item-descr">
+                                    <div class="mix js-toggle">
+                                        <div class="mix__name">Сыр</div>
+                                        <div class="mix__icon">
+                                            <svg class="icon icon--true">
+                                                <use xlink:href="#close"></use>
+                                            </svg>
+                                            <svg class="icon icon--false">
+                                                <use xlink:href="#repeat"></use>
                                             </svg>
                                         </div>
-                                        <div class="style-input-text">Cогласен с
-                                            <a href="#">условиями обработки</a>&nbsp;персональных данных</div>
-                                    </label>
+                                    </div>
+                                    <div class="mix js-toggle">
+                                        <div class="mix__name">Пицца-соус</div>
+                                        <div class="mix__icon">
+                                            <svg class="icon icon--true">
+                                                <use xlink:href="#close"></use>
+                                            </svg>
+                                            <svg class="icon icon--false">
+                                                <use xlink:href="#repeat"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="mix js-toggle">
+                                        <div class="mix__name">Перец болгарский</div>
+                                        <div class="mix__icon">
+                                            <svg class="icon icon--true">
+                                                <use xlink:href="#close"></use>
+                                            </svg>
+                                            <svg class="icon icon--false">
+                                                <use xlink:href="#repeat"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="mix js-toggle">
+                                        <div class="mix__name">Куриное филе</div>
+                                        <div class="mix__icon">
+                                            <svg class="icon icon--true">
+                                                <use xlink:href="#close"></use>
+                                            </svg>
+                                            <svg class="icon icon--false">
+                                                <use xlink:href="#repeat"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="mix js-toggle">
+                                        <div class="mix__name">Моцарела</div>
+                                        <div class="mix__icon">
+                                            <svg class="icon icon--true">
+                                                <use xlink:href="#close"></use>
+                                            </svg>
+                                            <svg class="icon icon--false">
+                                                <use xlink:href="#repeat"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <span>Сыр,</span>
+                                    <span>Пицца-соус,</span>
+                                    <span>Перец болгарский,</span>
+                                    <span>Куриное филе,</span>
+                                    <span>Моцарела,</span>
+                                </div>
+                                <!-- size-->
+                                <div class="size size--mark size--sm size--fluid mb-24">
+                                    <div class="size__el size__el--active">15 см</div>
+                                    <div class="size__el">30 см</div>
+                                    <div class="size__el">45 см</div>
+                                </div>
+                                <!-- size === end-->
+                                <!-- size-->
+                                <div class="size size--mark size--sm size--fluid mb-32">
+                                    <div class="size__el size__el--active">Супертесто</div>
+                                    <div class="size__el">Тонкое</div>
+                                </div>
+                                <!-- size === end-->
+                                <!--item-config-->
+                                <div class="title">Дополнительные ингредиенты</div>
+                                <div class="item-config-row item-config-row--full js-ingr-wrap mb-24" data-min="0" data-max="3">
+                                    <div class="item-prop js-ingr-row">
+                                        <div class="item-prop__img" style="background-image:url('img/prop-3.jpg')"></div>
+                                        <div class="item-prop__title">Томатний соус
+                                            <span class="type--gray">/ 50г</span>
+                                        </div>
+                                        <div class="item-prop__incr">
+                                            <div class="incr incr--single incr--mark-light incr--mdx">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>0</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-prop__cost">29 р</div>
+                                    </div>
+                                    <div class="item-prop js-ingr-row">
+                                        <div class="item-prop__img" style="background-image:url('img/prop-4.jpg')"></div>
+                                        <div class="item-prop__title">Сметана
+                                            <span class="type--gray">/ 50г</span>
+                                        </div>
+                                        <div class="item-prop__incr">
+                                            <div class="incr incr--single incr--mark-light incr--mdx">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>0</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-prop__cost">34 р</div>
+                                    </div>
+                                    <div class="item-prop js-ingr-row">
+                                        <div class="item-prop__img" style="background-image:url('img/prop-5.jpg')"></div>
+                                        <div class="item-prop__title">Чесночный соус
+                                            <span class="type--gray">/ 50г</span>
+                                        </div>
+                                        <div class="item-prop__incr">
+                                            <div class="incr incr--single incr--mark-light incr--mdx">
+                                                <div class="incr__minus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="incr__val">
+                                                    <span>0</span>
+                                                    <div class="incr__val-coner"></div>
+                                                </div>
+                                                <div class="incr__plus incr__nav">
+                                                    <svg class="icon">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-prop__cost">16 р</div>
+                                    </div>
+                                    <div class="msg msg--info m-32 hidden">
+                                        <!-- .msg--info || .msg--alert-->
+                                        <div class="msg-text">Вы можете добавить до 6-ти доп. ингрединтов</div>
+                                    </div>
+                                </div>
+                                <!--  item-config === end-->
+                            </div>
+                        </div>
+                        <div class="item-modal-total">
+                            <div class="item-modal-total-wrap">
+                                <div class="type--main">Итого:</div>
+                                <div class="type--xl type--head type--nowrap">250 р</div>
+                                <div class="incr-btn incr-btn--fix">
+                                    <div class="incr-btn__el btn--md btn--mark">Заказать</div>
+                                    <div class="incr-btn-wrap">
+                                        <div class="incr incr--mark incr--one">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>1</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="btn-row-mid btn-row-mid--clear">
-                                <input class="btn--md btn--mark" type="submit" value="Отправить" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- staff === end-->
-                <!-- staff-true action-->
-                <div class="modal" data-modal="staff-true">
-                    <div class="modal-content">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </div>
-                        <div class="modal-img">
-                            <img src="img/hat.svg" alt="" />
-                        </div>
-                        <div class="modal-title modal-title--clear">Ваше резюме отправлено</div>
-                        <div class="modal-text">Наш HR-отдел рассмотрит вашу заявку и когда мы будем готовы - пригласит вас на собеседование</div>
-                    </div>
-                </div>
-                <!-- staff-true action === end-->
-                <!-- staff-descr-->
-                <div class="modal modal--xl" data-modal="bonus-descr">
-                    <div class="modal-content">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </div>
-                        <div class="modal-title modal-title--clear">Пиццайолло</div>
-                        <div class="modal-text type--mark type--bold">Зарплата от 10 000 грн на руки</div>
-                        <div class="modal-bonus text scroll">
-                            <p>Бонусными баллами можно оплатить до 50% от стоимости вашего заказа. Для этого нужно при оформлении заказа выбрать количество баллов, которые вы готовы потратить.</p>
-                            <p>Бонусные баллы не начисляются на акционные товары.</p>
-                            <h3>Что это значит?</h3>
-                            <p>Еда, приготовленная с душой, всегда только свежие продукты, увлечённые своим делом повара, интересное и разнообразное меню для гурманов и ценителей классики — мы предлагаем попробовать блюда разных кухонь мира и оценить преимущества.</p>
-                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
-                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
-                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
-                            <h3>На что можно потратить баллы?</h3>
-                            <p>Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.</p>
-                            <p>Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то
-                                доставка готовой еды на дом клиенту или в офис для корпоративного праздника.</p>
                         </div>
                     </div>
                 </div>
-                <!-- staff-descr === end-->
+                <!-- item === end-->
+                <!--=====================================-->
                 <!-- area-->
                 <div class="modal modal--xl" data-modal="area">
                     <div class="modal-content">
@@ -2711,28 +2897,6 @@
                     </div>
                 </div>
                 <!-- area === end-->
-                <!-- bad address-->
-                <div class="modal" data-modal="address-bad">
-                    <div class="modal-content">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </div>
-                        <div class="modal-title">Ваш адрес доставки:</div>
-                        <p class="type--md type--bold type--center">г. Москва, ул. Тимирязева, д. 30</p>
-                        <div class="modal-text">к сожалению мы не доставляем по данному адресу, вы можете выбрать один из вариантов доставки</div>
-                        <div class="deliver-other">
-                            <a href="#">
-                                <img src="img/deliver-yandex.png" alt="" />
-                            </a>
-                            <a href="#">
-                                <img src="img/deliver-club.png" alt="" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- bad address === end-->
             </div>
         </div>
         <!--block footer end-->

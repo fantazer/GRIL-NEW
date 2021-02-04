@@ -1,0 +1,36 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--gray
+		.main-cont-md
+			.form-content
+				.title-row
+					.arrow(onclick="window.history.go(-1); return false;")
+						+icon("arrow-conner-left","icon")
+					.title.title--xl Обратная связь
+				.input-cont
+					.input-row
+						input(type="text" placeholder="Ваше имя" class="input")
+				.input-cont
+					.input-row
+						input(type="text" placeholder="Email" class="input")
+				.input-cont
+					.input-row
+						input(type="text" placeholder="Телефон" class="input").input-mask--phone
+				.input-row
+					textarea(name="info", cols="30", rows="6" placeholder="Комментарий").input
+				.upload-wrap
+					.upload
+						label.upload-get
+							.upload__icon
+								+icon("plus-round","icon")
+							.upload__text Добавить фото чека
+							input(type="file").upload-btn
+					.upload-descr Формат файлов <span class="type--mark">Jpg</span> <span class="type--mark">Png&#8194;</span> максимальный размер вложения <span class="type--mark">5&nbsp; мб</span>
+					.upload-list
+				+deal()
+				.btn--md.btn--mark.btn--full Отправить
+	+footer()
+include ./block_html/_script.pug

@@ -27,24 +27,6 @@
 </head>
 
 <body>
-    <style type="text/css">
-        .btn-wrap {
-        		display: flex;
-        		flex-wrap: wrap;
-        		flex-flow: column;
-        		align-items: baseline;
-        	}
-        	.btn-wrap .btn--md {
-        		display: inline-block;
-        		margin-bottom: 20px;
-        	}
-        	
-        	@media only screen and (max-width: 640px) {
-        		.btn-wrap .btn--md{
-        			width: 100%;
-        		}
-        	}
-    </style>
     <div class="page">
         <!--block header-->
         <div class="header">
@@ -176,7 +158,7 @@
                             <div class="header-nav__el header-nav__el--more">Замороженная продукция</div>
                             <!-- Это список категорий, который хранится под еще === end-->
                             <div class="header-nav__more">
-                                <div class="dropdown">
+                                <div class="dropdown dropdown--light">
                                     <input type="hidden" name="name" value="0" />
                                     <div class="dropdown-current">
                                         <div class="dropdown-current__val">Еще</div>
@@ -496,45 +478,71 @@
             </div>
         </div>
         <!--block header end-->
-        <div class="content">
-            <div class="main-cont">
-                <p>Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"</p>
-                <p>Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send</p>
-                <div class="btn-wrap">
-                    <hr/>
-                    <div class="btn--md btn--mark modal-get" data-modal="enter">Вход | data-modal="enter"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="enterPhone">Пароль - Восстановление пароля | data-modal="enterPhone"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="enterCode">Пароль - Код Восстановление | data-modal="enterCode"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="enterPass">Пароль - Восстановление пароля | data-modal="enterPass"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="enterPassTrue">Пароль - Восстановление пароля Успешно | data-modal="enterPassTrue"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="reg">Регистрация | data-modal="reg"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="regCode">Регистрация - код смс | data-modal="regCode"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="regData">Регистрация - данные | data-modal="regData"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="regMail">Регистрация - почта | data-modal="regMail"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="regTrue">Регистрация - успех | data-modal="regTrue"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="badAction">Ресторан закрыт | data-modal="badAction"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="location">Выбор города | data-modal="location"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="city">Список городов | data-modal="city"</div>
-                    <hr/>
-                    <div class="btn--md btn--mark modal-get" data-modal="review">Отзывы | data-modal="review"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="reviewTrue">Отзывы Успех| data-modal="reviewTrue"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="bonus">Бонусные баллы | data-modal="bonus"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="staffDescription">Карьера - Описание | data-modal="staffDescription"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="staffForm">Карьера - Заявка | data-modal="staffForm"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="staffTrue">Карьера - Успешное действие | data-modal="staffTrue"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="profile">Редактирование профиля | data-modal="profile"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="address">Редактирование адреса | data-modal="address"</div>
-                    <div class="btn--md btn--mark modal-get" data-modal="item">Карточка товара | data-modal="item"</div>
-                    <!--=========================================-->
-                    <!--
-				.btn--md.btn--mark.modal-get(data-modal="true-action") Успешное действие | data-modal="true-action"
-				.btn--md.btn--mark.modal-get(data-modal="profile") Личные данные | data-modal="profile"
-				.btn--md.btn--mark.modal-get(data-modal="address") Адрес доставки | data-modal="address"
-				.btn--md.btn--mark.modal-get(data-modal="staff-true") Карьера сообщение | data-modal="staff-true"
-				.btn--md.btn--mark.modal-get(data-modal="area") Выбор доставки по карте | data-modal="area"
-				.btn--md.btn--mark.modal-get(data-modal="address-bad") Нет доставки | data-modal="address-bad"
-				-->
-                    <!--.btn--md.btn--mark.modal-get(data-modal="order") Заявка | data-modal="code "-->
+        <div class="content content--gray">
+            <div class="main-cont-md">
+                <div class="form-content">
+                    <div class="title-row">
+                        <div class="arrow" onclick="window.history.go(-1); return false;">
+                            <svg class="icon">
+                                <use xlink:href="#arrow-conner-left"></use>
+                            </svg>
+                        </div>
+                        <div class="title title--xl">Обратная связь</div>
+                    </div>
+                    <div class="input-cont">
+                        <div class="input-row">
+                            <input class="input" type="text" placeholder="Ваше имя" />
+                        </div>
+                    </div>
+                    <div class="input-cont">
+                        <div class="input-row">
+                            <input class="input" type="text" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="input-cont">
+                        <div class="input-row">
+                            <input class="input input-mask--phone" type="text" placeholder="Телефон" />
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <textarea class="input" name="info" cols="30" rows="6" placeholder="Комментарий"></textarea>
+                    </div>
+                    <div class="upload-wrap">
+                        <div class="upload">
+                            <label class="upload-get">
+                                <div class="upload__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus-round"></use>
+                                    </svg>
+                                </div>
+                                <div class="upload__text">Добавить фото чека</div>
+                                <input class="upload-btn" type="file" />
+                            </label>
+                        </div>
+                        <div class="upload-descr">Формат файлов
+                            <span class="type--mark">Jpg</span>
+                            <span class="type--mark">Png&#8194;</span>максимальный размер вложения
+                            <span class="type--mark">5&nbsp; мб</span>
+                        </div>
+                        <div class="upload-list"></div>
+                    </div>
+                    <div class="login-remember">
+                        <div class="check-el">
+                            <label class="style-label style-label--checkbox">
+                                <input class="style-input" type="checkbox" />
+                                <div class="style-input-element">
+                                    <svg class="icon">
+                                        <use xlink:href="#checked"></use>
+                                    </svg>
+                                </div>
+                                <div class="style-input-text">Я ознакомлен с
+                                    <a href="#">пользовательским соглашением</a>&nbsp; и даю согласие на обработку моих
+                                    <a href="#">персональных данных</a>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btn--md btn--mark btn--full">Отправить</div>
                 </div>
             </div>
         </div>

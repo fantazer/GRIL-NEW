@@ -82,6 +82,9 @@ font-size 50px
 	pointer-events none
 	opacity: .3
 
+.type--nowrap
+	white-space nowrap
+
 .title
 	margin-bottom: 20px
 	font-weight: 700
@@ -271,14 +274,45 @@ p
 
 
 .text
+	color black
+	h1,h2,h3,h4,h5
+		margin 2.5rem 0 1rem
+	h1:first-of-type,
+	h2:first-of-type,
+	h3:first-of-type,
+	h4:first-of-type,
+	h5:first-of-type,
+	h6:first-of-type,
+	p
+		margin-top: 0!important
+	a:not(.btn--md):not(.btn--sm)
+		@extend .link--mark
+	img
+		@extend .m-64
 	p
 		line-height: 1.6
 		margin-bottom: 20px
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
 	ul
-		margin-bottom: 30px
+		margin-bottom: 20px
+		padding-left 24px
+		list-style none
 		li
 			line-height: 1.6
-			margin-bottom: 10px
+			margin-bottom: 16px
+			position relative
+			//font-weight: 700
+			&:before
+				content ''
+				position absolute
+				size 8px
+				round()
+				background: $mark
+				left -24px
+				top 7px
 			&:last-child
 				margin-bottom: 0
 

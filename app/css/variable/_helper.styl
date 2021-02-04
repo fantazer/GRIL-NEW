@@ -207,4 +207,6 @@ for $type,$typeVal in $st
 .g-gap-10
 	grid-gap 10px
 
-	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+.xs-g-gap-0
+	+below(640px)
+		grid-gap 0px
