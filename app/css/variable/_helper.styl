@@ -41,6 +41,8 @@
 	position absolute
 	left -9999px
 	top -9999px
+
+
 .drop.active
 	opacity: 1
 	position: static
@@ -176,6 +178,9 @@ for $type,$typeVal in $st
 	align-items center
 	justify-content center
 
+.flex-aic
+	align-items center
+
 .flex--between
 	align-items center
 	justify-content space-between
@@ -204,8 +209,19 @@ for $type,$typeVal in $st
 	+below(640px)
 		grid-template-columns: 1fr
 	grid-template-columns: repeat(3, 1fr)
+
+.g-gap-4
+	grid-gap 4px
+
+.g-gap-8
+	grid-gap 8px
+
 .g-gap-10
 	grid-gap 10px
+
+.g-gap-12
+	grid-gap 12px
+
 
 .xs-g-gap-0
 	+below(640px)

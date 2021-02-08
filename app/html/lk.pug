@@ -9,9 +9,11 @@ include block_html/_include.pug
 			.lk
 				.lk-toolbar
 					.profile
-
 						.profile-wrap
-							.profile__name Константин
+							.flex.flex--between.g-gap-10.mb-12
+								.profile__name Константин
+								a(href="#").icon-block.icon-block--mark
+									+icon("exit","icon")
 							.profile-row
 								.profile-row__name телефон
 								.profile-row__val +7 (865) 543 45 45
@@ -32,10 +34,13 @@ include block_html/_include.pug
 									.profile-footer__val 2500
 								.profile-footer__icon
 									+icon("info","icon")
-					a(href="#").exit
-						.icon-block.icon-block--mark
-							+icon("exit","icon")
-						span Выйти
+					.person-notice
+						img(src="img/person/person-glass.svg", alt="")
+						.person-notice-info Укажите e-mail и получите купон  со скидкой 5% на любой заказ
+					.person-notice.mb-24
+						img(src="img/person/person-glass.svg", alt="")
+						.person-notice-info Верифицируй e-mail и получите купон  со скидкой 5% на любой заказ
+
 				.lk-info
 					.lk-info__el.box
 						.title.title--lg Мои адреса
@@ -48,7 +53,7 @@ include block_html/_include.pug
 										+icon("edit","icon")
 										span Редактировать
 									.address-footer__el.address-remove
-										+icon("trash","icon")
+										+icon("delete","icon")
 										span Удалить
 							.address__el
 								.address__type Работа
@@ -58,53 +63,69 @@ include block_html/_include.pug
 										+icon("edit","icon")
 										span Редактировать
 									.address-footer__el.address-remove
-										+icon("trash","icon")
+										+icon("delete","icon")
+										span Удалить
+							.address__el
+								.address__type Загородный дом
+								.address__val Москва, ул. Петропавловская, д. 101, корп. 1, кв. 25, подъезд 8
+								.address-footer
+									.address-footer__el.address-edit
+										+icon("edit","icon")
+										span Редактировать
+									.address-footer__el.address-remove
+										+icon("delete","icon")
 										span Удалить
 							.address__add
-								.icon-block.icon-block--empty
-									+icon("plus","icon")
-								span добавить адрес
+								.flex.flex-aic.g-gap-10
+									+icon("plus-round","icon icon--lg icon--mark")
+									.type--black.type--bold Добавить адрес
 					.lk-info__el.box
 						.title.title--lg История заказов
 						.history
 							- for (var j=0;j<5;j++)
-								.history-card
+								.history-card(class=j===0?'active':'')
 									.history-card__wrap
+										+icon("arrow-up-fat","icon icon--sm history-card-cond")
 										.history-card__info
 											.history-card__numb № 43576
-											.history-card__date 28 Сентября, 2017
-										.history-card__state.history-card__state--true В обработке
+											.history-card__date 20.02.2021
+										if(j!=2)
+											.history-card__state
+												.type--main Статус заказа
+												+icon("clock","icon icon--sm history-card__state-icon")
+												.type--main.type--bold Ждет вас
+										else
+											.history-card__state
+												.type--main Статус заказа
+												+icon("clock","icon icon--mark icon--sm history-card__state-icon")
+												.type--main.type--bold.type--mark Выполнен
 											// add class .history-card__state--true for delivered
-										.history-card__condition
-											.history-card__size 3 товара
-											.history-card__price_val 5430 р
-									.history-info
-										.history-info-wrap
-											.history-info-col
-												.history-info__el
-													.history-info__el-title Доставка курьером
-													.history-info__el-val г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56
-												.history-info__el
-													.history-info__el-title Время доставки
-													.history-info__el-val Как можно быстрее
-												.history-info__el
-													.history-info__el-title Способ оплаты
-													.history-info__el-val Наличными курьеру
-											.history-info-col
-												.history-info__el
-													.history-info__el-title Состав заказа
-													.goods-list
-														- for (var i=0;i<4;i++)
-															.goods-list__el
-																.goods-list__el-name San Benedetto Aquavitamin an Benedetto
-																.goods-list__el-val x 2
-																.goods-list__el-cost 1003 р.
 
-												.history-info-total
-													.history-info-total__text Сумма:
-													.history-info-total__val 1 184р
-												.goods-get-row
-													.goods-get Повторить заказ
+									//.history-info.history-info--active
+									.history-info(class=j===0?'active':'')
+										.history-info-wrap
+											- for (var i=0;i<3;i++)
+												.history__el
+													.history__el-info
+														a(href="#" style="background-image:url('img/item-2.jpg')" ).history__img
+														.history__name
+															a(href="#").history__name-text Фреш вок
+															.history__adds + оливки, 30 г + фрикадельки + оливки, 30 г + фрикадельки
+													.history__size 1 шт
+													.history__price 1200 р
+											.history-descr
+												.history-descr__el
+													.type--md.type--bold.mb-12 Способ оплаты
+													.type--main Наличкой при получении
+												.history-descr__el
+													.type--md.type--bold.mb-12 Доставка
+													.type--main Самовывоз по адресу: ул. Московская, 46/2
+												.history-descr__el
+													.history-total
+														.history-total__text Итого:
+														.history-total__val 1 184р
+											.goods-get-row
+												.goods-get Повторить заказ
 							.history-more
 								+icon("refresh","icon")
 								span показать еще

@@ -11,7 +11,7 @@ include block_html/_include.pug
 		each item,j in items
 			.product-wrap(id=item.id)
 				.main-cont
-					.bread.mb-48
+					.bread.mb-32
 						a(href="#").bread__el Главная
 						.bread__el
 							.dropdown.dropdown--empty
@@ -36,7 +36,7 @@ include block_html/_include.pug
 									each el,i in els
 										a(href="#" class=i===0?'active':'').dropdown-menu__el #{el}
 
-					.title-row
+					.title-row.mb-24
 						.title.title--xl #{item.name}
 							.title-val 15
 						a(href="#").title__more-mobile

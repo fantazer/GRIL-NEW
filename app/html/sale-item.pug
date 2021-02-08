@@ -3,36 +3,29 @@ include block_html/_include.pug
 
 .page
 	+header()
-	.content
+	.content.content--clear
 		.main-cont
-			.info-banner(style="background-image:url('img/banner-1.jpg')")
-			.title-row
+			.info-banner.mb-48(style="background-image:url('img/sale-banner.jpg')")
+			.title-row.mb-32
 				.arrow(onclick="window.history.go(-1); return false;")
 					+icon("arrow-conner-left","icon")
 				.title.title--xl Скидка в день рождения!
-			.info-descr.text
-				.sale-date
-					+icon("clock","icon")
-					span Действует до 21 августа 2020 г
+			.text.mb-64
 				p Возможность получить скидку действует в течение 7-ми дней (в День рождения и 6 дней после Дня рождения)*
 				p Скидка распространяется на все меню представленное на этом сайте **
 				p * При себе необходимо иметь документ, в котором указана дата вашего Дня рождения.
 				p ** Скидка НЕ суммируется с другими скидками («Счастливые часы», «Красная цена») и НЕ действует на блюда из разделов: Бизнес-Ланчи, Завтраки, Детское меню, Саке Шок, Коктейль Шок.
+				.type--sm.type--gray.mt-32 Действует до 21 августа 2020 г
 
-			.title.title--lg  Другие акции
+			.type--lg.type--head.mb-32 Другие акции
 			.sale-list
-				- for (var i=0;i<2;i++)
+				- for (var i=0;i<3;i++)
 					a(href="#").sale-list__el
-						.sale-list__el-img(style="background-image:url('img/sale-list-1.jpg')")
+						.sale-list__el-img(style="background-image:url('img/sale-list-" + (i + 1) + ".jpg')")
 						.sale-list__el-descr
-							.sale-list__el-info
-								.title.sale-list__el-title Скидка в день рождения!
-								.sale-list__el-date
-									+icon("clock","icon")
-									span Действует до 21 августа 2020 г
-							.sale-list__el-more
-								.arrow
-									+icon("arrow-conner-right","icon")
+							.type--sm.type--gray.mb-6 до 30.11.2021
+							.sale-list__el-title.type--bold.type--md.mb-6 Сладкая ПИЦЦА 30 см на день рождения
+							.type--gray Заказываете пиццу или шаурму с доставкой? Не забудьте прекрасное дополнение к вашему  заказу - любимые напитки! Широкий ассортимент.  Доставляем...
 
 	+footer()
 include ./block_html/_script.pug

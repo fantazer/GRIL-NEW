@@ -32,7 +32,12 @@ var cheerio = require('gulp-cheerio');
 var pug = require('gulp-pug');
 var emitty = require('emitty').setup('app/html', 'pug');
 var prettify = require('gulp-html-prettify');
-var cache = require('gulp-cached');
+
+
+var cache   = require('gulp-cache');
+var cached = require('gulp-cached');
+const changed = require('gulp-changed');
+var pugInheritance = require('gulp-pug-inheritance');
 // ########## make img ###############
 
 
@@ -134,7 +139,7 @@ gulp.task('screenshot', function() {
 //Prefix my css
 gulp.task('prefix', function () {
 		return gulp.src('app/css/style.css')
-				.pipe(cache('prefix'))
+				.pipe(cached('prefix'))
 				.pipe(autoprefixer({
 						browsers: ['last 15 versions']
 				}))
@@ -144,7 +149,7 @@ gulp.task('prefix', function () {
 //Stylus
 gulp.task('stylus', function () {
 		return gulp.src(['app/css/**/*.styl','app/module/**/*.styl'])
-				.pipe(cache('stylus'))
+				.pipe(cached('stylus'))
 				.pipe(progeny({
 						regexp: /^\s*@import\s*(?:\(\w+\)\s*)?['"]([^'"]+)['"]/
 				}))
@@ -193,20 +198,21 @@ gulp.task('watch', () => {
 		});
 });
 
+
 gulp.task('pug', function() {
-		gulp.src(['app/html/*.pug','app/module/**/*.pug',])
+		gulp.src(['app/html/**/*.pug','app/module/**/*.pug',])
 		//gulp.src(['app/html/modal.pug','app/module/**/*.pug',])
-				//.pipe(changed('app/', {extension: '.html'}))
-				.pipe(cache('pug'))
-				//.pipe(pugInheritance({basedir: 'app/html/',skip:'node_modules/'}))
-				.pipe(gulpif(global.watch, emitty.stream(global.emittyChangedFile)))
-				.pipe(progeny({
-						regexp: /^\s*@import\s*(?:\(\w+\)\s*)?['"]([^'"]+)['"]/
-				}))
-				.pipe(filter(['**/*.pug', '!**/_*.pug']))
+				.pipe(changed('dist', {extension: '.html'}))
+				.pipe(cached('pug'))
+				.pipe(pugInheritance({basedir: 'app/html', extension: '.pug', skip:'node_modules', saveInTempFile: true}))
+
+				.pipe(filter(function (file) {
+            return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+        }))
 				.pipe(pug({
 						pretty: '\t',
-						cache:'true'
+						cache:'true',
+						basedir: __dirname
 				})
 				.on('error', errorhandler))
 				.pipe(prettify({
@@ -274,7 +280,7 @@ function errorhandler(a) {
 gulp.task('make', function () {
 		var assets = useref.assets();
 		return gulp.src('app/*.html')
-				.pipe(cache('make'))
+				.pipe(cached('make'))
 				.pipe(assets)
 				.pipe(remember('make'))
 				.pipe(gulpif('*.js', uglify()))

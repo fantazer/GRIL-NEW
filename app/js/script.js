@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+	var body = $('body')
 	//modals
 	var modalState = {
 		"isModalShow": false, //state show modal
@@ -492,8 +492,16 @@ $(document).ready(function () {
 	//history accord
 	$('.history-card__wrap').click(function () {
 		var current = $(this).closest('.history-card');
-		current.closest('.history-card').toggleClass('history-card--active');
-		current.find('.history-info').slideToggle(600);
+		var currentInner = current.find('.history-info')
+		current.toggleClass('active');
+		if(currentInner.hasClass('active')){
+			currentInner.slideUp()
+			setTimeout(function(){
+				currentInner.removeClass('active')
+			},400)
+		}else{
+			currentInner.slideToggle(600)
+		}
 	});
 	//history accord===end
 
@@ -796,6 +804,21 @@ $(document).ready(function () {
 
 	// set height modal
 	var vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	document.documentElement.style.setProperty('--vh', vh+'px');
 	// set height modal === end
+
+	// accordion row toggle
+	body.on('click','.js-accordion-head', function(e){
+		var current = $(this).closest('.js-accordion-el').index()
+		$(this).closest('.js-accordion').find('.js-accordion-el').each(function(){
+			if($(this).index()!=current){
+				 $(this).find('.js-accordion-head').removeClass('active')
+				 $(this).find('.js-accordion-content').slideUp('active')
+			}else{
+				 $(this).find('.js-accordion-content').slideToggle('active')
+				 $(this).find('.js-accordion-head').toggleClass('active')
+			}
+		})
+	});
+	// accordion row toggle === end
 });

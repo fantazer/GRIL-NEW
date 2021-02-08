@@ -5,15 +5,32 @@ include block_html/_include.pug
 	+header()
 	.content
 		.main-cont
-			.title-row
+			.title-row.mb-32
 				.arrow(onclick="window.history.go(-1); return false;")
 					+icon("arrow-conner-left","icon")
 				.title.title--xl Карьера
+			.flex.flex-aic.g-gap-10.mb-32
+				.type--main.type--nowrap Выберите город
+				.dropdown.dropdown--fix-md
+					input(type="hidden" name="name" value="0")
+					.dropdown-current
+						.dropdown-current__val Все
+						+icon("arrow-down-fat","icon")
+					.dropdown-menu
+						.dropdown-menu__el(data-value="#") Все
+						.dropdown-menu__el(data-value="#") Москва
+						.dropdown-menu__el(data-value="#") Санкт-Петербург
+						.dropdown-menu__el(data-value="#") Саратов
+						.dropdown-menu__el(data-value="#") Новгород
+
 			.vacancy-list
-				- for (var i=0;i<8;i++)
+				- for (var i=1;i<7;i++)
 					.vacancy-list__el
-						.vacancy-list__img(style="background-image:url('img/vacancy-2.jpg')")
-							.vacancy-list__el-cont
+						.vacancy-list__img(style="background-image:url('img/carier-"+i+".jpg')")
+							.vacancy-list__el-loc
+								.flex.flex-aic.g-gap-8
+									+icon("location","icon icon--sm icon--mark")
+									span.type--sm Москва
 						.vacancy-list__info
 							.vacancy-list__title Менеджер Кухни
 							.vacancy-list__decr
@@ -23,7 +40,7 @@ include block_html/_include.pug
 								.vacancy-list__decr-type Зарплата:
 								.vacancy-list__decr-val от 27 000 р.
 							.vacancy-footer
-								.vacancy-footer__el.vacancy-set Откликнуться
-								.vacancy-footer__el.vacancy-more Подробнее
+								.vacancy-footer__el.active Откликнуться
+								.vacancy-footer__el Подробнее
 	+footer()
 include ./block_html/_script.pug

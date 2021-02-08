@@ -5,12 +5,13 @@ include block_html/_include.pug
 	+header()
 	.content.content--mid
 		//product-cont
-		.page-error
-			.type--xl.type--head.type--center.mb-24 Ошибка 500
-			.page-error__img
-				img(src="img/500.svg", alt="")
-			.page-error__text Сервер не может обработать запрос к сайту
+		.main-cont
+			.page-error
+				.type--xl.type--head.type--center.mb-24 Ошибка 500
+				.page-error__img
+					img(src="img/500.svg", alt="")
+				.type--md.type--center.mb-32 Сервер не может обработать запрос к сайту
 			.flex.flex--mid
-				a(href="#").btn--md.btn--simple На главную
+				a(href="#").btn--md.btn--simple.btn--mobile На главную
 	+footer()
 include ./block_html/_script.pug

@@ -10,28 +10,75 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add item modal">
-      <change afterPath="$PROJECT_DIR$/app/html/callback.pug" afterDir="false" />
+    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add 404 + 500 page + form callback">
+      <change afterPath="$PROJECT_DIR$/app/html/faq.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/carier-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/carier-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/carier-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/carier-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/carier-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/carier-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/sale-banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/sale-list-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/sale-list-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/sale-list-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/sale-list-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/sale-list-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/sale-list-9.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/basket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/callback.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/callback.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/catalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/_helper.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/_helper.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/variable/config/_btn.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_btn.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/variable/config/_input.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_input.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/deliver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-500.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/basket.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/basket.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/block_html/_const.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_const.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/block_html/_mixin.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_mixin.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/block_html/_style.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_style.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/callback.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/callback.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/catalog.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/catalog.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/error-404.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/error-404.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/error-500.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/error-500.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/form.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/form.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/item.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/item.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/lk.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/lk.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/main.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/main.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/modal.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/review-list.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/review-list.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/sale-item.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/sale-item.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/sale-list.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/sale-list.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/success.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/success.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/person/person-pizzf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/vacancy.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/vacancy.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/pack.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/pack.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/about.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/about.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/basket.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/basket.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/catalog.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/catalog.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/deliver.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/deliver.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/elements.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/elements.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/error-404.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/error-404.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/error-500.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/error-500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/form.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/form.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/index.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/index.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/item.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/item.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/lk.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/lk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/main.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/main.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/market.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/market.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/modal.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/modal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/news-full.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/news-full.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/news-list.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/news-list.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/offer.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/offer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/review-list.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/review-list.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/sale-item.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/sale-item.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/sale-list.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/sale-list.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/success.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/success.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/screen/app/vacancy.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/vacancy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/img/svg/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/sprite.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/item.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
@@ -39,7 +86,7 @@
       <change beforePath="$PROJECT_DIR$/app/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/market.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/module/header/_header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/header/_header.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/module/footer/_footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/footer/_footer.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/module/modal/_modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/modal/_modal.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/news-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-full.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/news-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-list.html" afterDir="false" />
@@ -50,6 +97,8 @@
       <change beforePath="$PROJECT_DIR$/app/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/vacancy.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/vacancy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +137,8 @@
     <property name="SearchEverywhereHistoryKey" value="clone&#9;ACTION&#9;Git.Clone" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/ftp.json&#10;true&#10;E:/PROJECT/WORK/GIGANT/app/bower/slick-carousel/slick/slick-theme.css&#10;E:/PROJECT/WORK/DIMASH-NEW/app/bower/jquery/src/css/var/rmargin.js" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/img/svg" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -96,12 +146,26 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\img\svg" />
-      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\bower" />
       <recent name="E:\PROJECT\WORK\GRIL-NEW\app\img" />
-      <recent name="E:\PROJECT\WORK\GRIL-NEW" />
+      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\html\block_html" />
+      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\html" />
       <recent name="E:\PROJECT\WORK\GRIL-NEW\app" />
+      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\img\svg" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\html" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -319,14 +383,10 @@
       <workItem from="1612192857467" duration="3418000" />
       <workItem from="1612254759359" duration="16480000" />
       <workItem from="1612340888900" duration="11531000" />
-      <workItem from="1612443284606" duration="4173000" />
-    </task>
-    <task id="LOCAL-00030" summary="fix slide menu">
-      <created>1566731873740</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1566731873740</updated>
+      <workItem from="1612443284606" duration="23038000" />
+      <workItem from="1612514863770" duration="8642000" />
+      <workItem from="1612706987469" duration="1437000" />
+      <workItem from="1612776740181" duration="16056000" />
     </task>
     <task id="LOCAL-00031" summary="fix btn + animateShow function">
       <created>1572863739175</created>
@@ -664,7 +724,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612275886387</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="add 404 + 500 page + form callback">
+      <created>1612447606247</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1612447606247</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -705,7 +772,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="add head line + drop menu" />
     <MESSAGE value="fix logo + add menu item" />
     <MESSAGE value="fix search + title items + catalog list extends" />
     <MESSAGE value="fix cost size" />
@@ -730,6 +796,7 @@
     <MESSAGE value="add fixes for forms part3" />
     <MESSAGE value="add modals" />
     <MESSAGE value="add item modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="add item modal" />
+    <MESSAGE value="add 404 + 500 page + form callback" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 404 + 500 page + form callback" />
   </component>
 </project>

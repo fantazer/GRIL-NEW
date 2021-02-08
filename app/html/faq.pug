@@ -1,0 +1,35 @@
+include ./block_html/_style.pug
+include ./block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.title-row.mb-48
+				.arrow(onclick="window.history.go(-1); return false;")
+					+icon("arrow-conner-left","icon")
+				.title.title--xl Часто задаваемые вопросы.
+			- for (var i=0;i<4;i++)
+				.type--lg.type--head.mb-32 Список вопросов #{i+1}
+				.accordion.js-accordion.js-tab-cont.mb-48
+					-
+						var items =
+										[
+											'1. Как понять что и когда есть?',
+											'2. Как часто употреблять рационы?',
+											'3. Кто занимается составлением меню?',
+											'4. Как часто обновляется меню?',
+											'5. Могу ли я заменить или исключить блюдо?'
+										]
+					each item in items
+						.accordion__el.js-accordion-el
+							.accordion__el-head.js-accordion-head
+								.accordion__el-head-text #{item}
+								.accordion__el-head-icon
+							.accordion__el-content.text.js-accordion-content
+								p Платежный план «переезд в готовый дом» - дает возможность будущему покупателю переехать из квартиры в загородный дом без полной оплаты за домовладение! Для быстрого переезда в готовый загородный дом достаточно внести 10% от стоимости коттеджа и Вы можете заселяться!
+								p На продажу имеющейся в собственности у покупателя квартиры предоставляется рассрочка четыре месяца. По факту реализации квартиры оплачивается остаточная стоимость за домовладение.
+
+			// faq === end
+	+footer()
+include ./block_html/_script.pug

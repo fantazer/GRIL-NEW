@@ -410,6 +410,10 @@ body
 .dropdown--light
 	background: white
 
+
+.dropdown--fix-md
+	max-width 240px
+
 .dropdown--lg
 	.dropdown-current
 		padding 20px 50px 20px 20px
@@ -467,6 +471,7 @@ body
 
 .dropdown--empty
 	border 0
+	background: none
 	.dropdown-current
 		border 0
 		padding: 0
@@ -2228,15 +2233,15 @@ body
 .icon-block
 	size 40px
 	flex(mid)
-	br(10px)
+	round()
+	tr()
 	.icon
 		size 16px
 
 .icon-block--mark
 	background: $mark
-	&:active
-		.icon
-			fill red
+	&:hover
+		background: darken($mark,10)
 	.icon
 		fill white
 
@@ -2408,12 +2413,13 @@ body
 // sale-list
 .sale-list
 	+below(640px)
-		grid-gap 20px
-		grid-template-columns: 1fr
+		grid-row-gap 20px
 	display: grid
 	grid-gap 30px
-	grid-template-columns: 1fr 1fr
-
+	//grid-template-columns: repeat(3, 1fr)
+	grid-row-gap 40px
+	grid-column-gap 20px
+	grid-template-columns: repeat(auto-fill, minmax(18rem,1fr))
 .sale-list--sm
 	+below(640px)
 		grid-gap 20px
@@ -2425,55 +2431,30 @@ body
 
 .sale-list__el
 	display block
+	&:hover
+		.sale-list__el-title
+			color $mark
+
+.sale-list__el-title
+	tr()
+
 .sale-list__el-img
 	bg-full()
 	padding: 25% 10%
 	br(20px)
 	width: 100%
 .sale-list__el-descr
-	+below(480px)
-		padding: 15px 0
-	padding: 15px
-	f()
-	justify-content space-between
-.sale-list__el-info
-	width calc(100% - 70px)
-.sale-list__el-title
-	color $dark
-	display inline-block
-	@extend .type--md
-	font-weight 700
-	line-height: 1.4
-	margin-bottom: 10px
-	tr()
-	&:hover
-		color $brown
-.sale-list__el-date
-	f()
-	@extend .type--sm
-	align-items center
-	color $gray
-	.icon
-		size 20px
-		fill $gray
-		margin-right: 10px
-	span
-		+below(640px)
-			font-size: 10px
-.sale-list__el-more
-	margin-top: 15px
+	padding: 15px 15px 0 15px
+	line-height: 1.6
 
 .info-banner
 	+below(768px)
-		margin: -30px 0 30px 0
-		padding: 20% 10%
 		br(0)
-		margin-left: -10px
-		width calc(100% + 20px)
+		margin-left -20px
+		margin-right -20px
+		width calc(100% + 40px)
 	bg-full()
-	br(20px)
-	padding: 15% 10%
-	margin 0 0 50px 0
+	padding: 11.5% 10%
 
 .sale-date
 	f()
@@ -2577,7 +2558,6 @@ body
 	@extend .type--lg
 	font-weight 700
 	line-height: 1.4
-	margin-bottom: 20px
 .profile-row
 	width: 100%
 	margin-bottom: 15px
@@ -2594,13 +2574,12 @@ body
 		margin-right: 10px
 		fill $mark
 	span
-		color $brown
+		color $mark
 .profile-footer
-	f()
+	flex(between)
 	padding-top:30px
 	border-top 1px solid $border-color
 	margin-top: 30px
-	justify-content space-between
 	width: 100%
 .profile-footer-info
 	margin-right auto
@@ -2618,23 +2597,10 @@ body
 		fill $mark
 		size 20px
 		cp()
-.exit
-	+below(640px)
-		margin-bottom: 30px
-	f()
-	cp()
-	align-items center
-	.icon-block
-		margin-right: 10px
-	span
-		color $brown
-		@extend .type--md
+
 
 .lk-info__el
 	margin-bottom: 20px
-
-
-
 
 .order-empty
 	flex(mid)
@@ -2663,7 +2629,7 @@ body
 		margin-right: 10px
 		fill $mark
 	span
-		color $brown
+		color $mark
 
 .address-wrap
 	+below(640px)
@@ -2757,22 +2723,28 @@ body
 			display: none
 	perspective 600px
 	margin-bottom: 15px
-.history-card--active
-	.history-card__wrap
-		border-radius 20px 20px 0 0
+	&.active
+		.history-card__wrap
+			border-radius 20px 20px 0 0
+		.history-card-cond
+			transform rotate(180deg)
+
+.history-card-cond
+	tr()
+	fill $mark
 
 .history-card__wrap
 	+below(640px)
 		fw()
 		padding: 20px
+		justify-content space-between
 	cp()
 	f()
 	cp()
 	br(20px)
-	justify-content space-between
 	width: 100%
 	background: white
-	padding: 30px
+	padding: 20px 30px
 	align-items: center
 	transform-style: preserve-3d;
 	//transition all .6s
@@ -2780,28 +2752,29 @@ body
 .history-card__wrap--active
 	transform rotateX(90deg)
 	backface-visibility hidden
-.history-card__info
-	+below(640px)
-		width: 100%
-	margin-right: 5%
-.history-card__date
-	margin-bottom: 5px
-	+below(640px)
-		display none
-		margin-bottom: 10px
+
+
 .history-card__numb
-	color $brown
-	border-bottom 1px dashed $brown
-	@extend .type--md
+	color $mark
+	border-bottom 1px dashed $mark
+	font-weight: 700
+	margin-right: 20px
 
 .history-card__state
-	padding: 6px 12px
-	border 2px solid $gray
-	br(10px)
+	+below(640px)
+		width: 100%
+		margin-top: 10px
 	white-space nowrap
 	@extend .type--xs
-.history-card__state--true
-	border 1px solid $mark
+	f()
+	align-items center
+	grid-gap 10px
+	min-width 220px
+
+
+.history-card__state-icon
+	+below(640px)
+		margin-left auto
 .history-card__price
 	+below(640px)
 		margin-left:initial
@@ -2815,20 +2788,34 @@ body
 	@extend .type--md
 	font-weight 700
 
+.history-descr
+	+below(640px)
+		grid-gap 20px
+		border 0
+		margin-top: 0
+		padding-top: 24px
+	f()
+	fw()
+	justify-content space-between
+	padding-top: 32px
+	margin-top: 12px
+	border-top 1px solid $border-color
+.history-descr__el
+	+below(640px)
+		width: 100%
+	display: inline-table
+	width: 30%
+	line-height: 1.6
 //.history-card--open
 
 .history-card__info
-	flex(between)
-	width: 40%
-.history-card__condition
 	+below(640px)
-		width: 100%
-		margin-top: 10px
+		width: calc(100% - 30px)
+		margin:0
 	flex(between)
-	width: 30%
+	margin-left: 16px
+	margin-right auto
 
-.history-info--active
-	display: block
 
 .history-info
 	+below(640px)
@@ -2838,11 +2825,12 @@ body
 	display: none
 	border-radius 0 0 20px 20px
 	border-top 1px solid $border-color
+	&.active
+		display: block
+
 .history-info-wrap
 	+below(768px)
 		fw()
-	f()
-	justify-content space-between
 .history-info-col
 	+below(768px)
 		width: 100%
@@ -2865,30 +2853,24 @@ body
 	line-height: 1.4
 	color $gray
 
-.history-info-total
+.history-total
 	+below(640px)
 		width: 100%
-		justify-content: space-between
-		text-align center
-		padding-top: 20px
-		border-top 1px solid $border-color
-	flex(between)
+	flex(mid)
 	margin-bottom: 20px
-.history-info-total__text
-	+below(640px)
-		text-align center
-		width: 100%
+	background: $snow
+	border 1px solid $border-color
+	br(20px)
+	padding: 24px 10px
+.history-total__text
 	margin-right: 10px
-	@extend .type--md
-	font-weight 700
+	@extend .type--sm
+	align-self: flex-end
 
-.history-info-total__val
-	+below(640px)
-		width: 100%
-		text-align center
-		font-size: 32px
-	@extend .type--lg
+.history-total__val
+	@extend .type--xl
 	font-weight: 700
+	line-height: 1
 .goods-get
 	+below(640px)
 		margin 0 auto
@@ -2899,7 +2881,93 @@ body
 	display inline-block
 .goods-get-row
 	f()
-l
+//--------
+.history__el-info
+	+below(640px)
+		justify-content center
+		width: 100%
+		align-items: flex-start
+	f()
+	align-items center
+	width: 60%
+.history__el
+	+below(640px)
+		fw()
+		flex(mid)
+		fl()
+		position: relative
+		padding: 15px 10px
+		border-top 1px solid $border-color
+		border-bottom 1px solid $border-color
+		margin-top: -1px
+		margin-left: -20px
+		margin-right: -20px
+	display flex!important
+	flex(between)
+	padding: 10px 0
+	outline none!important
+	&:first-child
+		+below(640px)
+			border 0
+		padding-top: 0
+.history__img
+	+below(640px)
+		size 60px
+		min-width 60px
+	size 90px
+	br(5px)
+	bg-full()
+	background-size: contain
+	margin-right: 20px
+
+.history__name
+	+below(640px)
+		width: 100%
+	width calc(100% - 120px)
+.history__name-text
+	+below(640px)
+		font-size: 20px
+		margin-bottom: 10px
+	tr()
+	margin-bottom: 5px
+	font-weight 700
+	color $dark
+	display block
+	@extend .type--md
+	&:hover
+			color $mark
+.history__adds
+	+below(640px)
+		width: 100%
+		margin-bottom: 10px
+	@extend .type--sm
+	color $gray
+	line-height: 1.6
+
+
+.history__price
+	+below(768px)
+		font-size: 20px
+		margin-right:initial
+	+below(640px)
+		width: 100%
+		padding-left: 80px
+		font-size: 14px
+	font-weight 700
+	white-space nowrap
+	@extend .type--lg
+
+.history__size
+	+below(640px)
+		position absolute
+		left 0
+		top 70px
+		width: 80px
+		text-align center
+	@extend .type--md
+	color $gray
+	font-weight: 700
+//--------
 
 // history === end
 // LK history === end
@@ -3048,7 +3116,8 @@ l
 	+below(520px)
 		grid-template-columns 1fr
 	display: grid
-	grid-gap 30px
+	grid-row-gap 50px
+	grid-column-gap 30px
 	grid-template-columns repeat(3, 1fr)
 	margin-bottom: 100px
 
@@ -3060,7 +3129,7 @@ l
 	padding: 33% 10%
 	bg-full()
 	position: relative
-	margin-bottom: 15px
+	margin-bottom: 20px
 	br(10px)
 .vacancy-list__title
 	@extend .type--md
@@ -3083,37 +3152,38 @@ l
 .vacancy-list__decr-val
 	color black
 
-.vacancy-list__el-cont
+.vacancy-list__el-loc
 	position: absolute
-	width: 100%
-	height: 100%
-	left 0
-	top 0
+	left 16px
+	top 16px
 	f()
+	padding: 6px 12px
+	br(20px)
+	background: white
+	font-size:14px
 
 .vacancy-footer
 	f()
 	margin-top: 20px
+	br(20px)
+	overflow: hidden
+	border 1px solid $border-color
 
-.vacancy-set
-	background: $mark
-	color white
-	border-radius 25px 0 0 25px
-	tr()
-	&:hover
-		background-color lighten($mark,10)
 
-.vacancy-more
-	border-radius 0 25px 25px 0
-	border 1px solid $snow
-	tr()
-	&:hover
-		background-color lighten($snow,5)
 .vacancy-footer__el
 	@extend .type--sm
 	padding: 13px 20px
 	width: 50%
 	text-align center
+	color $mark
+	tr()
+	&:hover
+		background: $snow
+	&.active
+		background: $mark
+		color white
+		&:hover
+			background: darken($mark,10)
 // vacancy === end
 
 // location list
@@ -3190,6 +3260,7 @@ l
 	fl()
 	max-width 350px
 	margin: 30px auto
+	line-height: 1.4
 .success-img
 	margin-bottom: 20px
 	img
@@ -3222,69 +3293,74 @@ l
 .product-sale__el--sm
 	+above(640px)
 		display none
+
 // review
 .review
-	+below(1024px)
-		margin-top: 20px
 	+below(768px)
-		column-count 1
-	column-count 2
-	column-gap 20px
-.review--sm
-	+below(768px)
-		grid-template-columns: 1fr
-	display: grid
-	grid-gap 20px
-	grid-template-columns: repeat(3, 1fr)
-	.review__el
+		fw()
 		margin-bottom: 0
-.review__el
-	+below(640px)
-		padding: 20px
-		margin-bottom: 20px
-	padding: 30px
-	margin-bottom: 20px
-	display: inline-block
-	width: 100%
-	br(10px)
-	border 1px solid $border-color
-.review__el-head
 	f()
-	margin-bottom: 10px
-.review__el-icon
+	justify-content space-between
+	align-items: stretch
+	margin-bottom: 50px
+.review-wrap
+	+below(768px)
+		width: 100%
+	width calc(100% - 390px)
+.review-msg
+	+below(768px)
+		width: 100%
+		max-width 480px
+		margin: 0 auto 40px auto
+	width: 350px
+
+.review-msg__wrap
+	padding: 60px 40px
+	br(32px)
+	flex(mid)
+	fl()
+	background: $snow
+	line-height: 1.6
+	img
+		max-width 80px
+
+.review__el
+	background-color #ffffff
+	margin-bottom: 20px
+	padding-bottom: 20px
+	border-bottom 1px solid #F5F5F5
+.review__el-info
 	+below(640px)
-		margin-right: 15px
-	margin-right: 30px
-	.icon
-		+below(640px)
-			size 30px
-		size 50px
-		fill #f98888
-.review__el-icon--true
-	.icon
-		fill green
-//.review__el-info
+		fw()
+	f()
+	align-items center
+	grid-gap 20px
 .review__el-name
-	color $dark
-	@extend .type--md
-	font-weight 700
-	margin-bottom: 10px
-.review__el-date
-	color $gray
-	font-weight 300
-	@extend .type--sm
-	margin:10px 0 20px 0
-.review__el-text
 	+below(640px)
-		padding-left: 0
-	line-height: 1.8
-	p
-		font-size: 14px
+		margin-bottom: 10px
+	font-weight 700
+	margin-right: 20px
+
+.review__el-text
+	line-height: 1.6
+
+.answer
+	padding-left: 40px
+
+.answer-head__icon
+	width: 140px
+.answer-head__name
+	@extend .type--lg
+	font-weight 700
 
 .loader
 	flex(mid)
-	margin: 20px 0
+	margin: 30px 0
+
+
+
 // review === end
+
 
 // advant
 .advant
@@ -3855,7 +3931,7 @@ l
 	line-height: 1.4
 	tr()
 	&:hover
-		color $brown
+		color $mark
 .news-list__el-date
 	f()
 	@extend .type--sm
@@ -4246,3 +4322,108 @@ l
 	background: white
 	padding: 40px
 	br(25px)
+
+// accordion
+.accordion
+	+below(640px)
+		width 100%
+	background: white
+
+.accordion__el
+	border 1px solid #e5e5e5
+	margin-top: -1px
+	cp()
+	&:hover
+		.accordion__el-head-icon
+			&:before
+				content ''
+				background: $mark
+			&:after
+				content ''
+				background: $mark
+
+.accordion__el-head
+	+below(640px)
+		padding: 20px
+	padding: 30px 40px
+	flex(between)
+	color black
+	&.active
+		.accordion__el-head-text
+			color $mark
+		.accordion__el-head-icon
+			&:after
+				content ''
+				transform rotate(45deg)
+			&:before
+				content ''
+				transform rotate(45deg)
+.accordion__el-head-text
+	+below(640px)
+		line-height: 1.6
+	@extend .type--md
+	width: 80%
+	font-weight: 700
+
+.accordion__el-head-icon
+	+below(640px)
+		size 16px
+	position: relative
+	size 24px
+	&:before
+		content ''
+		tr(all)
+		height: 2px
+		width: 100%
+		background: black
+		position: absolute
+		top calc(50% - 1px)
+	&:after
+		content ''
+		tr(all)
+		height: 100%
+		width: 2px
+		background: black
+		position: absolute
+		left calc(50% - 1px)
+
+.accordion__el-content
+	+below(640px)
+		padding:0 20px 20px 20px
+	padding: 0 40px 40px 40px
+	display: none
+	p
+		color $typePrimary
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+
+
+// accordion === end
+
+.person-notice
+	f()
+	align-items: flex-end
+	img
+		width 40px
+.person-notice-info
+	padding: 10px 15px
+	background: $mark
+	margin-left: 10px
+	br(10px)
+	color white
+	width: calc(100% - 45px)
+	margin-bottom: 20px
+	line-height: 1.4
+	position relative
+	&:before
+		content ''
+		left -6px
+		bottom 20px
+		position:absolute
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 5px 6px 5px 0;
+		border-color: transparent  $mark transparent transparent;
