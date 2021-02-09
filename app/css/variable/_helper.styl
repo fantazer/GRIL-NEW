@@ -202,9 +202,20 @@ for $type,$typeVal in $st
 			width: 100%
 			height: 90px
 
+//xs 640
+//md 768
+//lg 1024
+//xl 1280
 
 .g
 	display: grid
+
+.g-1
+	grid-template-columns: 1fr
+
+.g-2
+	grid-template-columns: repeat(2, 1fr)
+
 .g-3
 	+below(640px)
 		grid-template-columns: 1fr
@@ -222,7 +233,27 @@ for $type,$typeVal in $st
 .g-gap-12
 	grid-gap 12px
 
+.g-gap-24
+	grid-gap 24px
+
+.g-gap-48
+	+below(768px)
+		grid-gap 24px
+	grid-gap 48px
+
+
+.md__g-1
+	+below(768px)
+		grid-template-columns: 1fr
 
 .xs-g-gap-0
 	+below(640px)
 		grid-gap 0px
+
+.box
+	br(12px)
+	padding: 28px
+
+.box--border
+	border 1px solid $border-color
+

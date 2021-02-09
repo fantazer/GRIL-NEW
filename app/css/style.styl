@@ -1,9 +1,9 @@
 @import 'rupture'
 @import "variable/_function.styl"
 @import "variable/_ie.styl"
-@import "variable/_helper.styl"
 @import "variable/_default.styl"
 @import "variable/config/_color.styl"
+@import "variable/_helper.styl"
 @import "variable/config/_typography.styl"
 @import "variable/config/_btn.styl"
 @import "variable/config/_input.styl"
@@ -13,7 +13,7 @@ body
 	@extend .type--main
 	font-family $v-font
 	color $main-text-color
-	line-height 1.2
+	line-height 1.4
 	letter-spacing 0.01em
 
 
@@ -48,6 +48,10 @@ body
 	overflow: hidden
 .content--clear
 	padding-top: 0
+
+.content--empty
+	padding: 0
+
 .content--gray
 	background: #f7f7f7
 
@@ -495,7 +499,7 @@ body
 .header
 	position: relative
 	box-shadow: 0px 3px 8px #00000014;
-
+	z-index 100
 .header-top-wrap
 	+below(1280px)
 		background: white
@@ -2634,6 +2638,7 @@ body
 .address-wrap
 	+below(640px)
 		grid-template-columns: 1fr
+		margin-bottom: 30px
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(2, 1fr)
@@ -2981,8 +2986,7 @@ body
 		fw()
 		p
 			margin: 10px 0
-		.map
-			margin-bottom: 0
+
 	f()
 	justify-content space-between
 	margin: 30px 0
@@ -2997,9 +3001,6 @@ body
 	width: 35%
 	margin-left: 30px
 
-.about-cont
-	max-width 900px
-
 .subscr-conf
 	+below(768px)
 		display block
@@ -3013,92 +3014,27 @@ body
 
 .subscr-wrap
 	+below(768px)
-		margin-bottom: -30px
-	padding: 40px 0
-	background: #f8f8f8
-	margin-bottom: -50px
+		padding: 32px 0
+	padding: 64px 0
+	border-top 1px solid $border-color
+
+.subscr-cont
+	max-width 900px
 
 .text-box-sm
 	max-width 600px
 
-.map
-	position relative
-	padding: 20% 10%
-	background: $snow
-	min-height 400px
-	br(20px)
-	overflow hidden
-	margin-bottom: 30px
-.map__el
-	position absolute
-	top 0
-	left 0
-	width: 100%
-	height: 100%
+.about-banner
+	+below(768px)
+		margin-left -20px
+		margin-right -20px
+		width calc(100% + 40px)
 	bg-full()
-
+	padding: 14% 10%
 // about === end
 
 // ==== DELIVER ====
-.deliver-map-wrap
-	padding: 15% 10%
-	position: relative
-	max-height 600px
-	min-height 300px
-.deliver-map
-	position: absolute
-	width: 100%
-	height: 100%
-	background-color $snow
-	top 0
-	left 0
 
-.deliver-info
-	+below(768px)
-		transform translateY(0)
-		border-radius 0
-		margin-left: -10px
-		width calc(100% + 20px)
-		padding: 30px
-		flex(mid)
-		align-items: flex-start
-		fw()
-		margin-bottom: 0
-	padding: 30px 50px
-	br(60px)
-	background: #ececec
-	flex(between)
-	transform translateY(-50%)
-	margin-bottom: -20px
-.deliver-info-title
-	+below(1024px)
-		font-size: 24px
-	+below(768px)
-		width: 100%
-		margin-bottom: 20px
-	@extend .type--lg
-	font-weight: 700
-.deliver-info-el
-	+below(1024px)
-		width: 30%
-	+below(768px)
-		width: 100%
-		justify-content: flex-start
-		margin-bottom: 20px
-		&:last-child
-			margin-bottom: 0
-	+below(640px)
-		width: 100%
-		br
-			display: none
-	width: 30%
-.deliver-info-icon
-	margin-right: 20px
-	.icon
-		size 42px
-.deliver-info-text
-	line-height: 1.6
-	@extend .type--sm
 
 // ==== DELIVER ==== === end
 
@@ -4427,3 +4363,97 @@ body
 		border-style: solid;
 		border-width: 5px 6px 5px 0;
 		border-color: transparent  $mark transparent transparent;
+
+
+
+.point
+	f()
+	margin-bottom: 24px
+	&:last-child
+		margin-bottom: 0
+
+.point-val
+	round()
+	border 1px solid $mark
+	font-weight: 700
+	size 32px
+	flex(mid)
+	min-width 32px
+	margin-right: 16px
+	color $mark
+
+.year-line
+
+	f()
+	grid-gap 12px
+.year-line-wrap
+	+below(640px)
+		overflow scroll
+		max-width calc(100vw - 40px)
+.year-el
+	round()
+	flex(mid)
+	cp()
+	tr()
+	border 1px solid $gray
+	size 52px
+	min-width 52px
+	font-weight: 700
+	color $dark
+	position relative
+	background: white
+	&.active
+		background: $mark
+		color white
+		border-color $mark
+	&:hover
+		background: $mark
+		color white
+		border-color $mark
+	&:before
+		content: ''
+		position absolute
+		height: 1px
+		width: 14px
+		right: -14px
+		top 50%
+		background: $gray
+	&:last-child
+		&:before
+			content: ''
+			display none
+
+.year-descr
+	display none
+	&.active
+		display block
+
+.invite
+	f()
+.invite__img
+	+below(640px)
+		display none
+	min-width: 100px
+	width: 100px
+	margin-right: 40px
+
+.map
+	br(12px)
+	background: $snow
+	position relative
+	padding: 20% 10%
+
+.connect
+	border 1px solid $border-color
+	br(12px)
+	padding: 24px
+.connect__name
+	font-size: 22px
+	font-weight: 700
+	margin-bottom: 6px
+	color $mark
+.connect__phone
+	font-weight: 700
+	margin-bottom: 12px
+.connect__type
+	margin-bottom: 4px

@@ -10,52 +10,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add 404 + 500 page + form callback">
-      <change afterPath="$PROJECT_DIR$/app/html/faq.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/carier-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/carier-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/carier-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/carier-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/carier-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/carier-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/sale-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/sale-list-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/sale-list-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/sale-list-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/sale-list-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/sale-list-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/img/sale-list-9.jpg" afterDir="false" />
+    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="add lk">
+      <change afterPath="$PROJECT_DIR$/app/html/contacts.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/about.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/basket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/callback.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/callback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/catalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/_helper.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/_helper.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/variable/config/_color.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_color.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/deliver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/basket.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/basket.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/about.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/about.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/block_html/_const.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_const.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/block_html/_style.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_style.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/callback.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/callback.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/catalog.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/catalog.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/error-404.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/error-404.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/error-500.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/error-500.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/form.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/form.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/item.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/item.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/lk.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/lk.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/main.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/main.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/modal.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/review-list.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/review-list.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/sale-item.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/sale-item.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/sale-list.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/sale-list.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/success.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/success.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/vacancy.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/vacancy.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/pack.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/pack.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/deliver.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/deliver.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/screen/app/about.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/about.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/screen/app/basket.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/basket.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/screen/app/catalog.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/catalog.png" afterDir="false" />
@@ -78,27 +46,8 @@
       <change beforePath="$PROJECT_DIR$/app/img/screen/app/sale-list.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/sale-list.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/screen/app/success.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/success.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/img/screen/app/vacancy.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/screen/app/vacancy.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/sprite.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/item.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/lk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/market.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/module/footer/_footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/footer/_footer.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/module/modal/_modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/modal/_modal.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/news-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-full.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/news-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/offer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/offer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/review-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/review-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sale-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/sale-item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sale-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/sale-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/vacancy.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/vacancy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,17 +87,17 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/ftp.json&#10;true&#10;E:/PROJECT/WORK/GIGANT/app/bower/slick-carousel/slick/slick-theme.css&#10;E:/PROJECT/WORK/DIMASH-NEW/app/bower/jquery/src/css/var/rmargin.js" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/html" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\html" />
       <recent name="E:\PROJECT\WORK\GRIL-NEW\app\img" />
       <recent name="E:\PROJECT\WORK\GRIL-NEW\app\html\block_html" />
-      <recent name="E:\PROJECT\WORK\GRIL-NEW\app\html" />
       <recent name="E:\PROJECT\WORK\GRIL-NEW\app" />
       <recent name="E:\PROJECT\WORK\GRIL-NEW\app\img\svg" />
     </key>
@@ -386,14 +335,19 @@
       <workItem from="1612443284606" duration="23038000" />
       <workItem from="1612514863770" duration="8642000" />
       <workItem from="1612706987469" duration="1437000" />
-      <workItem from="1612776740181" duration="16056000" />
-    </task>
-    <task id="LOCAL-00031" summary="fix btn + animateShow function">
-      <created>1572863739175</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1572863739175</updated>
+      <workItem from="1612776740181" duration="16855000" />
+      <workItem from="1612861498041" duration="638000" />
+      <workItem from="1612862161833" duration="158000" />
+      <workItem from="1612862393291" duration="9000" />
+      <workItem from="1612862437399" duration="21000" />
+      <workItem from="1612862639991" duration="31000" />
+      <workItem from="1612862691196" duration="122000" />
+      <workItem from="1612862839854" duration="121000" />
+      <workItem from="1612862986580" duration="624000" />
+      <workItem from="1612863943461" duration="111000" />
+      <workItem from="1612864075656" duration="54000" />
+      <workItem from="1612864164293" duration="703000" />
+      <workItem from="1612864967839" duration="13423000" />
     </task>
     <task id="LOCAL-00032" summary="add input style">
       <created>1574802836782</created>
@@ -731,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612447606247</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="add lk">
+      <created>1612803351272</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1612803351273</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -772,7 +733,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="fix logo + add menu item" />
     <MESSAGE value="fix search + title items + catalog list extends" />
     <MESSAGE value="fix cost size" />
     <MESSAGE value="add sale banner" />
@@ -797,6 +757,7 @@
     <MESSAGE value="add modals" />
     <MESSAGE value="add item modal" />
     <MESSAGE value="add 404 + 500 page + form callback" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 404 + 500 page + form callback" />
+    <MESSAGE value="add lk" />
+    <option name="LAST_COMMIT_MESSAGE" value="add lk" />
   </component>
 </project>

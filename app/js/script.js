@@ -821,4 +821,16 @@ $(document).ready(function () {
 		})
 	});
 	// accordion row toggle === end
+
+
+	// tabs
+	$('body').on('click','.js-tab',function(){
+		var current = $(this).index();
+		var parent = $(this).closest('.js-tab-wrap')
+		parent.find('.js-tab-cont').removeClass('active')
+		parent.find('.js-tab-cont').eq(current).addClass('active')
+	});
+	// tabs === end
+
+
 });
