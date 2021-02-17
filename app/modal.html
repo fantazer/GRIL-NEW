@@ -132,11 +132,19 @@
                                 <use xlink:href="#phone"></use>
                             </svg>
                         </a>
-                        <div class="header-auth">
-                            <svg class="icon">
-                                <use xlink:href="#user"></use>
-                            </svg>
-                            <div class="header-auth-state">Александр</div>
+                        <!--toggle class "active" если пользователь авторизован-->
+                        <!-- Если не авторизован .header-auth-name Войти бонусы не выводить-->
+                        <div class="header-auth-wrap active">
+                            <div class="header-auth--simple">А</div>
+                            <div class="header-auth">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <div class="header-auth-state">
+                                    <div class="header-auth-name">Александр</div>
+                                    <div class="header-auth-bonus">2300 Б</div>
+                                </div>
+                            </div>
                         </div>
                         <a class="cart-wrap cart-wrap--mobile" href="#">
                             <div class="cart-cost">2 850 ₽</div>
@@ -427,22 +435,6 @@
             <!--slide menu-->
             <div class="slide-menu">
                 <div class="slide-row">
-                    <div class="slide-header-auth">
-                        <svg class="icon">
-                            <use xlink:href="#user"></use>
-                        </svg>
-                        <div class="slide-header-auth-state">Александр</div>
-                    </div>
-                </div>
-                <div class="slide-row">
-                    <div class="slide-menu__list">
-                        <a class="slide-menu__list-el" href="#">Акции</a>
-                        <a class="slide-menu__list-el" href="#">Доставка и оплата</a>
-                        <a class="slide-menu__list-el" href="#">Вакансии</a>
-                        <a class="slide-menu__list-el" href="#">О нас</a>
-                    </div>
-                </div>
-                <div class="slide-row">
                     <div class="slide-header-contact">
                         <div class="slide-header-info">
                             <div class="slide-header-info__icon">
@@ -475,6 +467,15 @@
                     </div>
                 </div>
                 <div class="slide-row">
+                    <div class="slide-menu__list">
+                        <a class="slide-menu__list-el" href="#">О нас</a>
+                        <a class="slide-menu__list-el" href="#">Доставка и оплата</a>
+                        <a class="slide-menu__list-el" href="#">Отзывы</a>
+                        <a class="slide-menu__list-el" href="#">Акции</a>
+                        <a class="slide-menu__list-el" href="#">Франчайзинг</a>
+                    </div>
+                </div>
+                <div class="slide-row">
                     <div class="soc-row">
                         <a class="soc-row__el" href="#">
                             <svg class="icon">
@@ -493,6 +494,12 @@
                         </a>
                     </div>
                 </div>
+                <a href="#">
+                    <img class="mb-24" src="img/app-google.svg" alt="" />
+                </a>
+                <a href="#">
+                    <img class="mb-24" src="img/app-apstore.svg" alt="" />
+                </a>
             </div>
         </div>
         <!--block header end-->

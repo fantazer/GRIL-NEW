@@ -114,11 +114,19 @@
                                 <use xlink:href="#phone"></use>
                             </svg>
                         </a>
-                        <div class="header-auth">
-                            <svg class="icon">
-                                <use xlink:href="#user"></use>
-                            </svg>
-                            <div class="header-auth-state">Александр</div>
+                        <!--toggle class "active" если пользователь авторизован-->
+                        <!-- Если не авторизован .header-auth-name Войти бонусы не выводить-->
+                        <div class="header-auth-wrap active">
+                            <div class="header-auth--simple">А</div>
+                            <div class="header-auth">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <div class="header-auth-state">
+                                    <div class="header-auth-name">Александр</div>
+                                    <div class="header-auth-bonus">2300 Б</div>
+                                </div>
+                            </div>
                         </div>
                         <a class="cart-wrap cart-wrap--mobile" href="#">
                             <div class="cart-cost">2 850 ₽</div>
@@ -409,22 +417,6 @@
             <!--slide menu-->
             <div class="slide-menu">
                 <div class="slide-row">
-                    <div class="slide-header-auth">
-                        <svg class="icon">
-                            <use xlink:href="#user"></use>
-                        </svg>
-                        <div class="slide-header-auth-state">Александр</div>
-                    </div>
-                </div>
-                <div class="slide-row">
-                    <div class="slide-menu__list">
-                        <a class="slide-menu__list-el" href="#">Акции</a>
-                        <a class="slide-menu__list-el" href="#">Доставка и оплата</a>
-                        <a class="slide-menu__list-el" href="#">Вакансии</a>
-                        <a class="slide-menu__list-el" href="#">О нас</a>
-                    </div>
-                </div>
-                <div class="slide-row">
                     <div class="slide-header-contact">
                         <div class="slide-header-info">
                             <div class="slide-header-info__icon">
@@ -457,6 +449,15 @@
                     </div>
                 </div>
                 <div class="slide-row">
+                    <div class="slide-menu__list">
+                        <a class="slide-menu__list-el" href="#">О нас</a>
+                        <a class="slide-menu__list-el" href="#">Доставка и оплата</a>
+                        <a class="slide-menu__list-el" href="#">Отзывы</a>
+                        <a class="slide-menu__list-el" href="#">Акции</a>
+                        <a class="slide-menu__list-el" href="#">Франчайзинг</a>
+                    </div>
+                </div>
+                <div class="slide-row">
                     <div class="soc-row">
                         <a class="soc-row__el" href="#">
                             <svg class="icon">
@@ -475,6 +476,12 @@
                         </a>
                     </div>
                 </div>
+                <a href="#">
+                    <img class="mb-24" src="img/app-google.svg" alt="" />
+                </a>
+                <a href="#">
+                    <img class="mb-24" src="img/app-apstore.svg" alt="" />
+                </a>
             </div>
         </div>
         <!--block header end-->
@@ -537,7 +544,7 @@
                         </div>
                     </div>
                     <div class="lk-info">
-                        <div class="lk-info__el box">
+                        <div class="lk-info__el mb-32">
                             <div class="title title--lg">Мои адреса</div>
                             <div class="address-wrap">
                                 <div class="address__el">
@@ -604,13 +611,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="lk-info__el box">
+                        <div class="lk-info__el">
                             <div class="title title--lg">История заказов</div>
                             <div class="history">
                                 <div class="history-card active">
                                     <div class="history-card__wrap">
                                         <svg class="icon icon--sm history-card-cond">
-                                            <use xlink:href="#arrow-up-fat"></use>
+                                            <use xlink:href="#arrow-down-fat"></use>
                                         </svg>
                                         <div class="history-card__info">
                                             <div class="history-card__numb">№ 43576</div>
@@ -618,10 +625,13 @@
                                         </div>
                                         <div class="history-card__state">
                                             <div class="type--main">Статус заказа</div>
-                                            <svg class="icon icon--sm history-card__state-icon">
-                                                <use xlink:href="#clock"></use>
-                                            </svg>
-                                            <div class="type--main type--bold">Ждет вас</div>
+                                            <div class="progress">
+                                                <div class="progress__el active"></div>
+                                                <div class="progress__el"></div>
+                                                <div class="progress__el"></div>
+                                                <div class="progress__el"></div>
+                                            </div>
+                                            <div class="type--main type--bold">Принят</div>
                                         </div>
                                     </div>
                                     <!--.history-info.history-info--active-->
@@ -676,8 +686,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="goods-get-row">
-                                                <div class="goods-get">Повторить заказ</div>
+                                            <div class="goods-get-row mt-16">
+                                                <div class="btn--md btn--mark btn--mobile">Повторить заказ</div>
+                                                <div class="btn--md btn--simple btn--mobile">Оставить отзыв</div>
                                             </div>
                                         </div>
                                     </div>
@@ -685,7 +696,7 @@
                                 <div class="history-card">
                                     <div class="history-card__wrap">
                                         <svg class="icon icon--sm history-card-cond">
-                                            <use xlink:href="#arrow-up-fat"></use>
+                                            <use xlink:href="#arrow-down-fat"></use>
                                         </svg>
                                         <div class="history-card__info">
                                             <div class="history-card__numb">№ 43576</div>
@@ -693,10 +704,13 @@
                                         </div>
                                         <div class="history-card__state">
                                             <div class="type--main">Статус заказа</div>
-                                            <svg class="icon icon--sm history-card__state-icon">
-                                                <use xlink:href="#clock"></use>
-                                            </svg>
-                                            <div class="type--main type--bold">Ждет вас</div>
+                                            <div class="progress">
+                                                <div class="progress__el active"></div>
+                                                <div class="progress__el active"></div>
+                                                <div class="progress__el"></div>
+                                                <div class="progress__el"></div>
+                                            </div>
+                                            <div class="type--main type--bold">Готовится</div>
                                         </div>
                                     </div>
                                     <!--.history-info.history-info--active-->
@@ -751,8 +765,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="goods-get-row">
-                                                <div class="goods-get">Повторить заказ</div>
+                                            <div class="goods-get-row mt-16">
+                                                <div class="btn--md btn--mark btn--mobile">Повторить заказ</div>
+                                                <div class="btn--md btn--simple btn--mobile">Оставить отзыв</div>
                                             </div>
                                         </div>
                                     </div>
@@ -760,7 +775,7 @@
                                 <div class="history-card">
                                     <div class="history-card__wrap">
                                         <svg class="icon icon--sm history-card-cond">
-                                            <use xlink:href="#arrow-up-fat"></use>
+                                            <use xlink:href="#arrow-down-fat"></use>
                                         </svg>
                                         <div class="history-card__info">
                                             <div class="history-card__numb">№ 43576</div>
@@ -768,86 +783,13 @@
                                         </div>
                                         <div class="history-card__state">
                                             <div class="type--main">Статус заказа</div>
-                                            <svg class="icon icon--mark icon--sm history-card__state-icon">
-                                                <use xlink:href="#clock"></use>
-                                            </svg>
-                                            <div class="type--main type--bold type--mark">Выполнен</div>
-                                        </div>
-                                        <!-- add class .history-card__state--true for delivered-->
-                                    </div>
-                                    <!--.history-info.history-info--active-->
-                                    <div class="history-info">
-                                        <div class="history-info-wrap">
-                                            <div class="history__el">
-                                                <div class="history__el-info">
-                                                    <a class="history__img" href="#" style="background-image:url('img/item-2.jpg')"></a>
-                                                    <div class="history__name">
-                                                        <a class="history__name-text" href="#">Фреш вок</a>
-                                                        <div class="history__adds">+ оливки, 30 г + фрикадельки + оливки, 30 г + фрикадельки</div>
-                                                    </div>
-                                                </div>
-                                                <div class="history__size">1 шт</div>
-                                                <div class="history__price">1200 р</div>
+                                            <div class="progress">
+                                                <div class="progress__el active"></div>
+                                                <div class="progress__el active"></div>
+                                                <div class="progress__el active"></div>
+                                                <div class="progress__el"></div>
                                             </div>
-                                            <div class="history__el">
-                                                <div class="history__el-info">
-                                                    <a class="history__img" href="#" style="background-image:url('img/item-2.jpg')"></a>
-                                                    <div class="history__name">
-                                                        <a class="history__name-text" href="#">Фреш вок</a>
-                                                        <div class="history__adds">+ оливки, 30 г + фрикадельки + оливки, 30 г + фрикадельки</div>
-                                                    </div>
-                                                </div>
-                                                <div class="history__size">1 шт</div>
-                                                <div class="history__price">1200 р</div>
-                                            </div>
-                                            <div class="history__el">
-                                                <div class="history__el-info">
-                                                    <a class="history__img" href="#" style="background-image:url('img/item-2.jpg')"></a>
-                                                    <div class="history__name">
-                                                        <a class="history__name-text" href="#">Фреш вок</a>
-                                                        <div class="history__adds">+ оливки, 30 г + фрикадельки + оливки, 30 г + фрикадельки</div>
-                                                    </div>
-                                                </div>
-                                                <div class="history__size">1 шт</div>
-                                                <div class="history__price">1200 р</div>
-                                            </div>
-                                            <div class="history-descr">
-                                                <div class="history-descr__el">
-                                                    <div class="type--md type--bold mb-12">Способ оплаты</div>
-                                                    <div class="type--main">Наличкой при получении</div>
-                                                </div>
-                                                <div class="history-descr__el">
-                                                    <div class="type--md type--bold mb-12">Доставка</div>
-                                                    <div class="type--main">Самовывоз по адресу: ул. Московская, 46/2</div>
-                                                </div>
-                                                <div class="history-descr__el">
-                                                    <div class="history-total">
-                                                        <div class="history-total__text">Итого:</div>
-                                                        <div class="history-total__val">1 184р</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="goods-get-row">
-                                                <div class="goods-get">Повторить заказ</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="history-card">
-                                    <div class="history-card__wrap">
-                                        <svg class="icon icon--sm history-card-cond">
-                                            <use xlink:href="#arrow-up-fat"></use>
-                                        </svg>
-                                        <div class="history-card__info">
-                                            <div class="history-card__numb">№ 43576</div>
-                                            <div class="history-card__date">20.02.2021</div>
-                                        </div>
-                                        <div class="history-card__state">
-                                            <div class="type--main">Статус заказа</div>
-                                            <svg class="icon icon--sm history-card__state-icon">
-                                                <use xlink:href="#clock"></use>
-                                            </svg>
-                                            <div class="type--main type--bold">Ждет вас</div>
+                                            <div class="type--main type--bold">В пути</div>
                                         </div>
                                     </div>
                                     <!--.history-info.history-info--active-->
@@ -902,8 +844,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="goods-get-row">
-                                                <div class="goods-get">Повторить заказ</div>
+                                            <div class="goods-get-row mt-16">
+                                                <div class="btn--md btn--mark btn--mobile">Повторить заказ</div>
+                                                <div class="btn--md btn--simple btn--mobile">Оставить отзыв</div>
                                             </div>
                                         </div>
                                     </div>
@@ -911,7 +854,7 @@
                                 <div class="history-card">
                                     <div class="history-card__wrap">
                                         <svg class="icon icon--sm history-card-cond">
-                                            <use xlink:href="#arrow-up-fat"></use>
+                                            <use xlink:href="#arrow-down-fat"></use>
                                         </svg>
                                         <div class="history-card__info">
                                             <div class="history-card__numb">№ 43576</div>
@@ -919,10 +862,13 @@
                                         </div>
                                         <div class="history-card__state">
                                             <div class="type--main">Статус заказа</div>
-                                            <svg class="icon icon--sm history-card__state-icon">
-                                                <use xlink:href="#clock"></use>
-                                            </svg>
-                                            <div class="type--main type--bold">Ждет вас</div>
+                                            <div class="progress">
+                                                <div class="progress__el active"></div>
+                                                <div class="progress__el active"></div>
+                                                <div class="progress__el active"></div>
+                                                <div class="progress__el active"></div>
+                                            </div>
+                                            <div class="type--main type--bold">Выполнен</div>
                                         </div>
                                     </div>
                                     <!--.history-info.history-info--active-->
@@ -977,8 +923,88 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="goods-get-row">
-                                                <div class="goods-get">Повторить заказ</div>
+                                            <div class="goods-get-row mt-16">
+                                                <div class="btn--md btn--mark btn--mobile">Повторить заказ</div>
+                                                <div class="btn--md btn--simple btn--mobile">Оставить отзыв</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <svg class="icon icon--sm history-card-cond">
+                                            <use xlink:href="#arrow-down-fat"></use>
+                                        </svg>
+                                        <div class="history-card__info">
+                                            <div class="history-card__numb">№ 43576</div>
+                                            <div class="history-card__date">20.02.2021</div>
+                                        </div>
+                                        <div class="history-card__state">
+                                            <div class="type--main">Статус заказа</div>
+                                            <div class="progress">
+                                                <div class="progress__el disactive"></div>
+                                                <div class="progress__el disactive"></div>
+                                                <div class="progress__el disactive"></div>
+                                                <div class="progress__el disactive"></div>
+                                            </div>
+                                            <div class="type--main type--bold type--red">Отменен</div>
+                                        </div>
+                                    </div>
+                                    <!--.history-info.history-info--active-->
+                                    <div class="history-info">
+                                        <div class="history-info-wrap">
+                                            <div class="history__el">
+                                                <div class="history__el-info">
+                                                    <a class="history__img" href="#" style="background-image:url('img/item-2.jpg')"></a>
+                                                    <div class="history__name">
+                                                        <a class="history__name-text" href="#">Фреш вок</a>
+                                                        <div class="history__adds">+ оливки, 30 г + фрикадельки + оливки, 30 г + фрикадельки</div>
+                                                    </div>
+                                                </div>
+                                                <div class="history__size">1 шт</div>
+                                                <div class="history__price">1200 р</div>
+                                            </div>
+                                            <div class="history__el">
+                                                <div class="history__el-info">
+                                                    <a class="history__img" href="#" style="background-image:url('img/item-2.jpg')"></a>
+                                                    <div class="history__name">
+                                                        <a class="history__name-text" href="#">Фреш вок</a>
+                                                        <div class="history__adds">+ оливки, 30 г + фрикадельки + оливки, 30 г + фрикадельки</div>
+                                                    </div>
+                                                </div>
+                                                <div class="history__size">1 шт</div>
+                                                <div class="history__price">1200 р</div>
+                                            </div>
+                                            <div class="history__el">
+                                                <div class="history__el-info">
+                                                    <a class="history__img" href="#" style="background-image:url('img/item-2.jpg')"></a>
+                                                    <div class="history__name">
+                                                        <a class="history__name-text" href="#">Фреш вок</a>
+                                                        <div class="history__adds">+ оливки, 30 г + фрикадельки + оливки, 30 г + фрикадельки</div>
+                                                    </div>
+                                                </div>
+                                                <div class="history__size">1 шт</div>
+                                                <div class="history__price">1200 р</div>
+                                            </div>
+                                            <div class="history-descr">
+                                                <div class="history-descr__el">
+                                                    <div class="type--md type--bold mb-12">Способ оплаты</div>
+                                                    <div class="type--main">Наличкой при получении</div>
+                                                </div>
+                                                <div class="history-descr__el">
+                                                    <div class="type--md type--bold mb-12">Доставка</div>
+                                                    <div class="type--main">Самовывоз по адресу: ул. Московская, 46/2</div>
+                                                </div>
+                                                <div class="history-descr__el">
+                                                    <div class="history-total">
+                                                        <div class="history-total__text">Итого:</div>
+                                                        <div class="history-total__val">1 184р</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-get-row mt-16">
+                                                <div class="btn--md btn--mark btn--mobile">Повторить заказ</div>
+                                                <div class="btn--md btn--simple btn--mobile">Оставить отзыв</div>
                                             </div>
                                         </div>
                                     </div>

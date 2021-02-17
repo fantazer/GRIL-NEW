@@ -114,11 +114,19 @@
                                 <use xlink:href="#phone"></use>
                             </svg>
                         </a>
-                        <div class="header-auth">
-                            <svg class="icon">
-                                <use xlink:href="#user"></use>
-                            </svg>
-                            <div class="header-auth-state">Александр</div>
+                        <!--toggle class "active" если пользователь авторизован-->
+                        <!-- Если не авторизован .header-auth-name Войти бонусы не выводить-->
+                        <div class="header-auth-wrap active">
+                            <div class="header-auth--simple">А</div>
+                            <div class="header-auth">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <div class="header-auth-state">
+                                    <div class="header-auth-name">Александр</div>
+                                    <div class="header-auth-bonus">2300 Б</div>
+                                </div>
+                            </div>
                         </div>
                         <a class="cart-wrap cart-wrap--mobile" href="#">
                             <div class="cart-cost">2 850 ₽</div>
@@ -409,22 +417,6 @@
             <!--slide menu-->
             <div class="slide-menu">
                 <div class="slide-row">
-                    <div class="slide-header-auth">
-                        <svg class="icon">
-                            <use xlink:href="#user"></use>
-                        </svg>
-                        <div class="slide-header-auth-state">Александр</div>
-                    </div>
-                </div>
-                <div class="slide-row">
-                    <div class="slide-menu__list">
-                        <a class="slide-menu__list-el" href="#">Акции</a>
-                        <a class="slide-menu__list-el" href="#">Доставка и оплата</a>
-                        <a class="slide-menu__list-el" href="#">Вакансии</a>
-                        <a class="slide-menu__list-el" href="#">О нас</a>
-                    </div>
-                </div>
-                <div class="slide-row">
                     <div class="slide-header-contact">
                         <div class="slide-header-info">
                             <div class="slide-header-info__icon">
@@ -457,6 +449,15 @@
                     </div>
                 </div>
                 <div class="slide-row">
+                    <div class="slide-menu__list">
+                        <a class="slide-menu__list-el" href="#">О нас</a>
+                        <a class="slide-menu__list-el" href="#">Доставка и оплата</a>
+                        <a class="slide-menu__list-el" href="#">Отзывы</a>
+                        <a class="slide-menu__list-el" href="#">Акции</a>
+                        <a class="slide-menu__list-el" href="#">Франчайзинг</a>
+                    </div>
+                </div>
+                <div class="slide-row">
                     <div class="soc-row">
                         <a class="soc-row__el" href="#">
                             <svg class="icon">
@@ -475,6 +476,12 @@
                         </a>
                     </div>
                 </div>
+                <a href="#">
+                    <img class="mb-24" src="img/app-google.svg" alt="" />
+                </a>
+                <a href="#">
+                    <img class="mb-24" src="img/app-apstore.svg" alt="" />
+                </a>
             </div>
         </div>
         <!--block header end-->
@@ -488,56 +495,52 @@
                     </div>
                     <div class="title title--xl">Контакты Барнаул</div>
                 </div>
-                <div class="map mb-48">
-                    <div class="map__el"></div>
+                <div class="contact-info mb-80">
+                    <div class="contact-info__list scroll-template">
+                        <div class="connect">
+                            <div class="connect__name">Георгиева, 44</div>
+                            <div class="connect__phone">8 (3852) 57-17-76</div>
+                            <div class="connect__type mb-6">Доставка: 10:00 - 22:30</div>
+                            <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
+                        </div>
+                        <div class="connect">
+                            <div class="connect__name">Георгиева, 44</div>
+                            <div class="connect__phone">8 (3852) 57-17-76</div>
+                            <div class="connect__type mb-6">Доставка: 10:00 - 22:30</div>
+                            <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
+                        </div>
+                        <div class="connect">
+                            <div class="connect__name">Георгиева, 44</div>
+                            <div class="connect__phone">8 (3852) 57-17-76</div>
+                            <div class="connect__type mb-6">Доставка: 10:00 - 22:30</div>
+                            <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
+                        </div>
+                        <div class="connect">
+                            <div class="connect__name">Георгиева, 44</div>
+                            <div class="connect__phone">8 (3852) 57-17-76</div>
+                            <div class="connect__type mb-6">Доставка: 10:00 - 22:30</div>
+                            <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
+                        </div>
+                        <div class="connect">
+                            <div class="connect__name">Георгиева, 44</div>
+                            <div class="connect__phone">8 (3852) 57-17-76</div>
+                            <div class="connect__type mb-6">Доставка: 10:00 - 22:30</div>
+                            <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
+                        </div>
+                        <div class="connect">
+                            <div class="connect__name">Георгиева, 44</div>
+                            <div class="connect__phone">8 (3852) 57-17-76</div>
+                            <div class="connect__type mb-6">Доставка: 10:00 - 22:30</div>
+                            <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
+                        </div>
+                    </div>
+                    <div class="contact-info__map">
+                        <div class="map">
+                            <div class="map__el"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="g g-gap-24 md__g-1 g-3 mb-48">
-                    <div class="connect">
-                        <div class="connect__name">Георгиева, 44</div>
-                        <div class="connect__phone">8 (3852) 57-17-76</div>
-                        <div class="connect__type">Доставка: 10:00 - 22:30</div>
-                        <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
-                    </div>
-                    <div class="connect">
-                        <div class="connect__name">Энтузиастов, 30б</div>
-                        <div class="connect__phone">8 (3852) 17-12-71</div>
-                        <div class="connect__type">Доставка: 10:00 - 22:30</div>
-                        <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
-                    </div>
-                    <div class="connect">
-                        <div class="connect__name">Белинского,15б</div>
-                        <div class="connect__phone">8 (3852) 17-12-71</div>
-                        <div class="connect__type">Доставка: 10:00 - 22:30</div>
-                        <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
-                    </div>
-                    <div class="connect">
-                        <div class="connect__name">Георгиева, 44</div>
-                        <div class="connect__phone">8 (3852) 57-17-76</div>
-                        <div class="connect__type">Доставка: 10:00 - 22:30</div>
-                        <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
-                    </div>
-                    <div class="connect">
-                        <div class="connect__name">Энтузиастов, 30б</div>
-                        <div class="connect__phone">8 (3852) 17-12-71</div>
-                        <div class="connect__type">Доставка: 10:00 - 22:30</div>
-                        <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
-                    </div>
-                    <div class="connect">
-                        <div class="connect__name">Белинского,15б</div>
-                        <div class="connect__phone">8 (3852) 17-12-71</div>
-                        <div class="connect__type">Доставка: 10:00 - 22:30</div>
-                        <div class="connect__type">Самовывоз: 9:00 - 23:59</div>
-                    </div>
-                </div>
-                <div class="g g-gap-24 md__g-1 g-2">
-                    <div class="g-el text">
-                        <div class="type--lg type--bold mb-24">Реквизиты</div>
-                        <p>ИП Сергеев Станислав Викторович</p>
-                        <p>ИНН 226815177305,</p>
-                        <p>ОГРНИП 312222304500038</p>
-                        <p>Адрес г.Барнаул, ул Э. Алексеевой 65, 23</p>
-                        <p>Уведомление о регистрации в налоговом органе № 3091530 от 14.02.2012</p>
-                    </div>
+                <div class="g g-gap-48 md__g-1 g-2">
                     <div class="g-el">
                         <div class="type--lg type--bold mb-24">Есть вопросы? Напишите нам</div>
                         <div class="input-cont input-cont--two">
@@ -545,7 +548,7 @@
                                 <input class="input" type="text" placeholder="Ваше имя" />
                             </div>
                             <div class="input-row">
-                                <input class="input input-mask--phone" type="text" placeholder="Ваше имя" />
+                                <input class="input input-mask--phone" type="text" placeholder="Ваш телефон" />
                             </div>
                         </div>
                         <div class="input-row">
@@ -567,7 +570,15 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="btn--mark btn--md">Отправить</div>
+                        <div class="btn--mark btn--md btn--mobile">Отправить</div>
+                    </div>
+                    <div class="g-el text">
+                        <div class="type--lg type--bold mb-24">Реквизиты</div>
+                        <p>ИП Сергеев Станислав Викторович</p>
+                        <p>ИНН 226815177305,</p>
+                        <p>ОГРНИП 312222304500038</p>
+                        <p>Адрес г.Барнаул, ул Э. Алексеевой 65, 23</p>
+                        <p>Уведомление о регистрации в налоговом органе № 3091530 от 14.02.2012</p>
                     </div>
                 </div>
             </div>

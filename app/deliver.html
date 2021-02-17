@@ -114,11 +114,19 @@
                                 <use xlink:href="#phone"></use>
                             </svg>
                         </a>
-                        <div class="header-auth">
-                            <svg class="icon">
-                                <use xlink:href="#user"></use>
-                            </svg>
-                            <div class="header-auth-state">Александр</div>
+                        <!--toggle class "active" если пользователь авторизован-->
+                        <!-- Если не авторизован .header-auth-name Войти бонусы не выводить-->
+                        <div class="header-auth-wrap active">
+                            <div class="header-auth--simple">А</div>
+                            <div class="header-auth">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <div class="header-auth-state">
+                                    <div class="header-auth-name">Александр</div>
+                                    <div class="header-auth-bonus">2300 Б</div>
+                                </div>
+                            </div>
                         </div>
                         <a class="cart-wrap cart-wrap--mobile" href="#">
                             <div class="cart-cost">2 850 ₽</div>
@@ -409,22 +417,6 @@
             <!--slide menu-->
             <div class="slide-menu">
                 <div class="slide-row">
-                    <div class="slide-header-auth">
-                        <svg class="icon">
-                            <use xlink:href="#user"></use>
-                        </svg>
-                        <div class="slide-header-auth-state">Александр</div>
-                    </div>
-                </div>
-                <div class="slide-row">
-                    <div class="slide-menu__list">
-                        <a class="slide-menu__list-el" href="#">Акции</a>
-                        <a class="slide-menu__list-el" href="#">Доставка и оплата</a>
-                        <a class="slide-menu__list-el" href="#">Вакансии</a>
-                        <a class="slide-menu__list-el" href="#">О нас</a>
-                    </div>
-                </div>
-                <div class="slide-row">
                     <div class="slide-header-contact">
                         <div class="slide-header-info">
                             <div class="slide-header-info__icon">
@@ -457,6 +449,15 @@
                     </div>
                 </div>
                 <div class="slide-row">
+                    <div class="slide-menu__list">
+                        <a class="slide-menu__list-el" href="#">О нас</a>
+                        <a class="slide-menu__list-el" href="#">Доставка и оплата</a>
+                        <a class="slide-menu__list-el" href="#">Отзывы</a>
+                        <a class="slide-menu__list-el" href="#">Акции</a>
+                        <a class="slide-menu__list-el" href="#">Франчайзинг</a>
+                    </div>
+                </div>
+                <div class="slide-row">
                     <div class="soc-row">
                         <a class="soc-row__el" href="#">
                             <svg class="icon">
@@ -475,6 +476,12 @@
                         </a>
                     </div>
                 </div>
+                <a href="#">
+                    <img class="mb-24" src="img/app-google.svg" alt="" />
+                </a>
+                <a href="#">
+                    <img class="mb-24" src="img/app-apstore.svg" alt="" />
+                </a>
             </div>
         </div>
         <!--block header end-->
@@ -488,22 +495,35 @@
                     </div>
                     <div class="title title--xl">Доставка и оплата</div>
                 </div>
-                <div class="map mb-48">
+                <div class="map">
                     <div class="map__el"></div>
                 </div>
-                <div class="g g-gap-12 g-3 mb-48">
+                <div class="deliver-info">
+                    <div class="deliver-info-el">
+                        <div class="type--lg type--bold">Цена доставки</div>
+                    </div>
+                    <div class="deliver-info-el">
+                        <div class="type--md type--bold type--mark mb-6">от 600 руб</div>
+                        <div class="deliver-info-text">Доставка бесплатно</div>
+                    </div>
+                    <div class="deliver-info-el">
+                        <div class="type--md type--bold type--mark mb-6">до 600 руб</div>
+                        <div class="deliver-info-text">Доставка 100 руб</div>
+                    </div>
+                </div>
+                <div class="g g-gap-12 md__g-1 g-3 mb-48">
                     <div class="box box--border">
                         <div class="type--md type--mark type--bold mb-16">Режим работы</div>
                         <div class="g g-gap-12 g-2">
                             <div class="g-el">
                                 <div class="type--main type--bold mb-12">Доставка</div>
-                                <div class="type--xs mb-12">11.00 - 24.00 (Вс - Чт)</div>
-                                <div class="type--xs">11.00 - 01.00 (Пт - Сб)</div>
+                                <div class="type--xs mb-12 type--nowrap">11.00 - 24.00 (Вс - Чт)</div>
+                                <div class="type--xs type--nowrap">11.00 - 01.00 (Пт - Сб)</div>
                             </div>
                             <div class="g-el">
                                 <div class="type--main type--bold mb-12">Самовывоз</div>
-                                <div class="type--xs mb-12">11.00 - 24.00 (Вс - Чт)</div>
-                                <div class="type--xs">11.00 - 01.00 (Пт - Сб)</div>
+                                <div class="type--xs mb-12 type--nowrap">11.00 - 24.00 (Вс - Чт)</div>
+                                <div class="type--xs type--nowrap">11.00 - 01.00 (Пт - Сб)</div>
                             </div>
                         </div>
                     </div>

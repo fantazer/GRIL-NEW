@@ -44,12 +44,18 @@ include block_html/_include.pug
 					.type--lg.type--bold.mb-24 Немного истории
 					.year-wrap.js-tab-wrap
 						.year-line-wrap.mb-24
-							.year-line.js-tick-cont
-								- for (var i=0;i<8;i++)
-									.year-el.js-tick.js-tab(class=i===0?'active':'') 201#{i}
-						- for (var i=0;i<8;i++)
+							.slider-wrap.slider-wrap--outarrow
+								.slider-control.slider-control--left
+									+icon("arrow-left","icon")
+								.slider-control.slider-control--right
+									+icon("arrow-right","icon")
+								.slider-item.year-line.js-tick-cont
+									- for (var i=0;i<10;i++)
+										.year-el-wrap.js-tab.js-tick(class=i===0?'active':'')
+											.year-el 201#{i}
+						- for (var i=0;i<10;i++)
 							.year-descr.text.js-tab-cont(class=i===0?'active':'')
-								p Как все начиналось? #{i+1}
+								p Как все начиналось? #{i}
 								p Конечно же, с шаурмы. В 2010 году самым популярным фастфудовым направлением была именно она. Признаемся, многие вынашивали идею о создании места c самой вкусной шаурмой в городе, однако смельчаков оказалось крайне мало. Но, как вы уже догадались, 2 студентов политеха все же решились. Ими были мы.
 								p Конечно же, с шаурмы. В 2010 году самым популярным фастфудовым направлением была именно она. Признаемся, многие вынашивали идею о создании места c самой вкусной шаурмой в городе, однако смельчаков оказалось крайне мало. Но, как вы уже догадались, 2 студентов политеха все же решились. Ими были мы.
 								if(i%2)
@@ -57,7 +63,6 @@ include block_html/_include.pug
 								if(i%3)
 									p На протяжении двух лет мы консультировались с лучшими представителями фастфуда нашего города, перепробовали все виды шаурмы, которые только попадались на пути, переделали массу рецептов, пока не нашли лучший.
 									p На протяжении двух лет мы консультировались с лучшими представителями фастфуда нашего города, перепробовали все виды шаурмы, которые только попадались на пути, переделали массу рецептов, пока не нашли лучший.
-
 		.main-cont
 			.invite.mb-48
 				.invite__img
@@ -72,20 +77,14 @@ include block_html/_include.pug
 			.main-cont
 				.subscr-cont
 					.title.title--lg Оформите подписку
-					p Подпишитесь на рассылку и получайте секретные предложения от гигант-суши
+					p.mb-24 Подпишитесь на рассылку и получайте персональные секретные предложения от Гриль №1
 					.input-cont.input-cont--two
 						.input-row
 							input(type="text" placeholder="Ваше имя" class="input")
 						.input-row
 							input(type="text" placeholder="Телефон" class="input").input-mask--phone
 					.subscr-conf
-						.login-remember
-							.check-el
-								label.style-label.style-label--checkbox
-									input(type="checkbox").style-input
-									.style-input-element
-										+icon("checked","icon")
-									.style-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности], #[a(href="#") публичной офертой] и даю согласие на обработку моих персональных данных
+						+deal()
 						.btn--mark.btn--sm.btn--mobile Подписаться
 	+footer()
 include ./block_html/_script.pug

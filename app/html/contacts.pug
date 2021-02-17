@@ -10,26 +10,30 @@ include block_html/_include.pug
 					+icon("arrow-conner-left","icon")
 				.title.title--xl Контакты Барнаул
 
-			.map.mb-48
-				.map__el
-			.g.g-gap-24.md__g-1.g-3.mb-48
-				- for (var i=0;i<2;i++)
-					.connect
-						.connect__name Георгиева, 44
-						.connect__phone 8 (3852) 57-17-76
-						.connect__type Доставка: 10:00 - 22:30
-						.connect__type Самовывоз: 9:00 - 23:59
-					.connect
-						.connect__name Энтузиастов, 30б
-						.connect__phone 8 (3852) 17-12-71
-						.connect__type Доставка: 10:00 - 22:30
-						.connect__type Самовывоз: 9:00 - 23:59
-					.connect
-						.connect__name Белинского,15б
-						.connect__phone 8 (3852) 17-12-71
-						.connect__type Доставка: 10:00 - 22:30
-						.connect__type Самовывоз: 9:00 - 23:59
-			.g.g-gap-24.md__g-1.g-2
+			.contact-info.mb-80
+				.contact-info__list.scroll-template
+					- for (var i=0;i<6;i++)
+						.connect
+							.connect__name Георгиева, 44
+							.connect__phone 8 (3852) 57-17-76
+							.connect__type.mb-6 Доставка: 10:00 - 22:30
+							.connect__type Самовывоз: 9:00 - 23:59
+				.contact-info__map
+					.map
+						.map__el
+					
+			.g.g-gap-48.md__g-1.g-2
+				.g-el
+					.type--lg.type--bold.mb-24 Есть вопросы? Напишите нам
+					.input-cont.input-cont--two
+						.input-row
+							input(type="text" placeholder="Ваше имя" class="input")
+						.input-row
+							input(type="text" placeholder="Ваш телефон" class="input").input-mask--phone
+					.input-row
+						textarea(name="info", cols="30", rows="6" placeholder="Расскажите о себе.").input
+					+deal()
+					.btn--mark.btn--md.btn--mobile Отправить
 				.g-el.text
 					.type--lg.type--bold.mb-24 Реквизиты
 					p ИП Сергеев Станислав Викторович
@@ -37,16 +41,5 @@ include block_html/_include.pug
 					p ОГРНИП 312222304500038
 					p Адрес г.Барнаул, ул Э. Алексеевой 65, 23
 					p Уведомление о регистрации в налоговом органе № 3091530 от 14.02.2012
-				.g-el
-					.type--lg.type--bold.mb-24 Есть вопросы? Напишите нам
-					.input-cont.input-cont--two
-						.input-row
-							input(type="text" placeholder="Ваше имя" class="input")
-						.input-row
-							input(type="text" placeholder="Ваше имя" class="input").input-mask--phone
-					.input-row
-						textarea(name="info", cols="30", rows="6" placeholder="Расскажите о себе.").input
-					+deal()
-					.btn--mark.btn--md Отправить
 	+footer()
 include ./block_html/_script.pug

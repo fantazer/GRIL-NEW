@@ -9,20 +9,29 @@ include block_html/_include.pug
 				.arrow(onclick="window.history.go(-1); return false;")
 					+icon("arrow-conner-left","icon")
 				.title.title--xl Доставка и оплата
-			.map.mb-48
+			.map
 				.map__el
-			.g.g-gap-12.g-3.mb-48
+			.deliver-info
+				.deliver-info-el
+					.type--lg.type--bold Цена доставки
+				.deliver-info-el
+					.type--md.type--bold.type--mark.mb-6 от 600 руб
+					.deliver-info-text Доставка бесплатно
+				.deliver-info-el
+					.type--md.type--bold.type--mark.mb-6 до 600 руб
+					.deliver-info-text Доставка 100 руб
+			.g.g-gap-12.md__g-1.g-3.mb-48
 				.box.box--border
 					.type--md.type--mark.type--bold.mb-16 Режим работы
 					.g.g-gap-12.g-2
 						.g-el
 							.type--main.type--bold.mb-12 Доставка
-							.type--xs.mb-12 11.00 - 24.00 (Вс - Чт)
-							.type--xs 11.00 - 01.00 (Пт - Сб)
+							.type--xs.mb-12.type--nowrap 11.00 - 24.00 (Вс - Чт)
+							.type--xs.type--nowrap 11.00 - 01.00 (Пт - Сб)
 						.g-el
 							.type--main.type--bold.mb-12 Самовывоз
-							.type--xs.mb-12 11.00 - 24.00 (Вс - Чт)
-							.type--xs 11.00 - 01.00 (Пт - Сб)
+							.type--xs.mb-12.type--nowrap 11.00 - 24.00 (Вс - Чт)
+							.type--xs.type--nowrap 11.00 - 01.00 (Пт - Сб)
 				.box.box--border
 					.type--md.type--mark.type--bold.mb-16 Доставка за 59 минут
 					.type--md.type--bold.mb-12 или пицца в подарок

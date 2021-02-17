@@ -42,7 +42,7 @@ include block_html/_include.pug
 						.person-notice-info Верифицируй e-mail и получите купон  со скидкой 5% на любой заказ
 
 				.lk-info
-					.lk-info__el.box
+					.lk-info__el.mb-32
 						.title.title--lg Мои адреса
 						.address-wrap
 							.address__el
@@ -79,27 +79,53 @@ include block_html/_include.pug
 								.flex.flex-aic.g-gap-10
 									+icon("plus-round","icon icon--lg icon--mark")
 									.type--black.type--bold Добавить адрес
-					.lk-info__el.box
+					.lk-info__el
 						.title.title--lg История заказов
 						.history
 							- for (var j=0;j<5;j++)
 								.history-card(class=j===0?'active':'')
 									.history-card__wrap
-										+icon("arrow-up-fat","icon icon--sm history-card-cond")
+										+icon("arrow-down-fat","icon icon--sm history-card-cond")
 										.history-card__info
 											.history-card__numb № 43576
 											.history-card__date 20.02.2021
-										if(j!=2)
-											.history-card__state
-												.type--main Статус заказа
-												+icon("clock","icon icon--sm history-card__state-icon")
-												.type--main.type--bold Ждет вас
-										else
-											.history-card__state
-												.type--main Статус заказа
-												+icon("clock","icon icon--mark icon--sm history-card__state-icon")
-												.type--main.type--bold.type--mark Выполнен
-											// add class .history-card__state--true for delivered
+										.history-card__state
+											.type--main Статус заказа
+											if(j === 0)
+												.progress
+													.progress__el.active
+													.progress__el
+													.progress__el
+													.progress__el
+												.type--main.type--bold Принят
+											if(j === 1)
+												.progress
+													.progress__el.active
+													.progress__el.active
+													.progress__el
+													.progress__el
+												.type--main.type--bold Готовится
+											if(j === 2)
+												.progress
+													.progress__el.active
+													.progress__el.active
+													.progress__el.active
+													.progress__el
+												.type--main.type--bold В пути
+											if(j === 3)
+												.progress
+													.progress__el.active
+													.progress__el.active
+													.progress__el.active
+													.progress__el.active
+												.type--main.type--bold Выполнен
+											if(j === 4)
+												.progress
+													.progress__el.disactive
+													.progress__el.disactive
+													.progress__el.disactive
+													.progress__el.disactive
+												.type--main.type--bold.type--red Отменен
 
 									//.history-info.history-info--active
 									.history-info(class=j===0?'active':'')
@@ -124,8 +150,9 @@ include block_html/_include.pug
 													.history-total
 														.history-total__text Итого:
 														.history-total__val 1 184р
-											.goods-get-row
-												.goods-get Повторить заказ
+											.goods-get-row.mt-16
+												.btn--md.btn--mark.btn--mobile Повторить заказ
+												.btn--md.btn--simple.btn--mobile Оставить отзыв
 							.history-more
 								+icon("refresh","icon")
 								span показать еще

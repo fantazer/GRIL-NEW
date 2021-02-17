@@ -564,20 +564,39 @@ body
 		margin-right: 30px
 	+below(760px)
 		display: none
-.header-auth
+.header-auth-wrap
 	+below(760px)
 		margin-left: 10px
+	margin-left auto
+	&.active
+		+below(640px)
+			.header-auth
+				display none
+			.header-auth--simple
+				flex(mid)
+.header-auth
 	f()
 	cp()
 	align-items: center
-	margin-left auto
+	position relative
+	grid-gap 10px
 	.icon
 		+below(760px)
 			margin-right: 0
-			size 28px
-		margin-right: 10px
-		size 20px
+		size 24px
 		fill $mark
+.header-auth-name
+	+below(640px)
+		display none
+.header-auth--simple
+	display none
+	size 38px
+	background: $mark
+	color white
+	font-weight: 700
+	round()
+
+	font-size: 16px
 
 .header-callback
 	+above(760px)
@@ -586,7 +605,6 @@ body
 	cp()
 	margin-left auto
 	.icon
-		margin-right: 10px
 		size 28px
 		fill $mark
 
@@ -602,12 +620,18 @@ body
 	color $gray
 
 .header-auth-state
-	+below(1280px)
-		display none
 	cp()
 	tr(all)
 	&:hover
 		color $mark
+.header-auth-bonus
+	padding: 2px 8px
+	background: $gray
+	color white
+	font-size: 12px
+	font-weight: 700
+	display inline-block
+	br(8px)
 .slide-header-auth
 	color white
 	f()
@@ -615,7 +639,7 @@ body
 	margin-bottom: 30px
 	.icon
 		margin-right: 10px
-		size 20px
+		size 28px
 		fill $mark
 
 .slide-header-auth-state
@@ -623,7 +647,15 @@ body
 	color white
 	font-weight: 500
 	display: block
-//
+
+.slide-header-auth-bonus
+	padding: 2px 8px
+	background: $mark
+	color white
+	font-size: 12px
+	font-weight: 700
+	display inline-block
+	br(8px)
 .slide-header-location
 	flex(mid)
 	fl()
@@ -647,19 +679,16 @@ body
 		fill $mark
 .slide-header-info__val
 	white-space nowrap
-	color white
-	@extend .type--lg
+	font-size: 18px
 	font-weight 700
 	a
-		color white
 		display: block
 		margin-bottom: 5px
 .slide-header-info__text
 	color $gray
 	@extend .type--sm
 	font-weight 500
-.slide-header-contact
-	margin-top: 30px
+
 .header-menu-wrap
 	//+below(768px)
 	//	overflow-x scroll
@@ -783,7 +812,7 @@ body
 		font-weight: 700
 .cart-wrap
 	+below(1280px)
-		margin-left 10px
+		margin-left 20px
 	+below(760px)
 		display none
 	f()
@@ -800,6 +829,7 @@ body
 	color $dark
 	@extend .type--md
 	font-weight 700
+	white-space nowrap
 .cart
 	+below(768px)
 		size 40px
@@ -875,25 +905,25 @@ body
 	+above(1281px)
 		display: none !important
 	+below(768px)
-		height: calc(100% - 50px)
-		top 50px
+		height: calc(100% - 110px)
+		top 110px
 	+below(480px)
 		width: 100%
-	background: $dark
 	position: fixed
-	height: calc(100% - 60px)
+	height: calc(100% - 120px)
 	z-index 1250
-	top 60px
+	top 120px
 	left 0
 	width: 320px
 	transform translateX(-110%)
 	tr(all)
 	bsh()
-	padding: 40px 20px
+	padding: 20px
+	background:$snow
 	.header-location
 		display block
-	.header-info__val
-		color white
+
+
 .slide-menu--open
 	transform translateX(0%)
 	overflow-y: auto
@@ -902,7 +932,6 @@ body
 .slide-menu__list-el
 	display: block
 	margin-bottom: 20px
-	color white
 	font-size: 16px
 	tr(all)
 	&:hover
@@ -1097,6 +1126,31 @@ body
 	.slider-control--right
 		transform translateX(60px)
 //Навигация внутри
+
+//Навигация внутри
+.slider-wrap--outarrow
+	padding: 0 20px
+	.slider-control
+		top 50%
+		margin-top: -15px
+	.slider-control
+		top 50%
+		position absolute
+		background: none
+		.icon
+			fill black
+			size 18px
+		&:hover
+			box-shadow 0 0 0
+			.icon
+				fill $mark
+	.slider-control--left
+		left -10px
+	.slider-control--right
+		right -10px
+//Навигация внутри
+
+
 
 // main slider === end
 
@@ -2501,7 +2555,7 @@ body
 .lk-info
 	+below(1024px)
 		width: 100%
-	width calc(100% - 360px)
+	width calc(100% - 400px)
 
 .profile
 	f()
@@ -2597,14 +2651,18 @@ body
 	@extend .type--lg
 	color $mark
 .profile-footer__icon
+	flex(mid)
+
 	.icon
 		fill $mark
 		size 20px
 		cp()
+		tr()
+		&:hover
+			fill darken($mark,10)
 
 
-.lk-info__el
-	margin-bottom: 20px
+
 
 .order-empty
 	flex(mid)
@@ -2636,9 +2694,10 @@ body
 		color $mark
 
 .address-wrap
+	+below(1024px)
+		margin-bottom: 0
 	+below(640px)
 		grid-template-columns: 1fr
-		margin-bottom: 30px
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(2, 1fr)
@@ -2730,7 +2789,7 @@ body
 	margin-bottom: 15px
 	&.active
 		.history-card__wrap
-			border-radius 20px 20px 0 0
+			border-radius 10px 10px 0 0
 		.history-card-cond
 			transform rotate(180deg)
 
@@ -2746,7 +2805,7 @@ body
 	cp()
 	f()
 	cp()
-	br(20px)
+	br(10px)
 	width: 100%
 	background: white
 	padding: 20px 30px
@@ -2774,12 +2833,21 @@ body
 	f()
 	align-items center
 	grid-gap 10px
-	min-width 220px
+	min-width 260px
 
 
-.history-card__state-icon
-	+below(640px)
-		margin-left auto
+.progress
+	f()
+	grid-gap 4px
+.progress__el
+	size 6px
+	round()
+	border 1px solid $mark
+	&.active
+		background: $mark
+	&.disactive
+		border 1px solid red
+		background: red
 .history-card__price
 	+below(640px)
 		margin-left:initial
@@ -2867,10 +2935,11 @@ body
 	border 1px solid $border-color
 	br(20px)
 	padding: 24px 10px
+	white-space nowrap
 .history-total__text
 	margin-right: 10px
-	@extend .type--sm
-	align-self: flex-end
+	@extend .type--md
+	font-weight: 700
 
 .history-total__val
 	@extend .type--xl
@@ -2886,6 +2955,10 @@ body
 	display inline-block
 .goods-get-row
 	f()
+	fw()
+	width: 100%
+	grid-gap 20px
+	justify-content: flex-end
 //--------
 .history__el-info
 	+below(640px)
@@ -2984,23 +3057,31 @@ body
 .contact-info
 	+below(768px)
 		fw()
+		height initial
 		p
 			margin: 10px 0
-
 	f()
-	justify-content space-between
-	margin: 30px 0
+	grid-gap 12px
+	height 600px
+
 .contact-info__map
 	+below(768px)
 		width: 100%
+		order 1
 	width: 65%
-.contact-info__text
+	max-height 600px
+	.map
+		height: 100%
+
+.contact-info__list
 	+below(768px)
 		width: 100%
-		margin-left: 0
+		order 2
+		padding-right: 0
 	width: 35%
-	margin-left: 30px
-
+	overflow: auto
+	padding-right: 12px
+	height: 100%
 .subscr-conf
 	+below(768px)
 		display block
@@ -3034,8 +3115,32 @@ body
 // about === end
 
 // ==== DELIVER ====
-
-
+.deliver-info
+	+below(768px)
+		transform translateY(0)
+		padding: 30px
+		flex(mid)
+		align-items: flex-start
+		fw()
+		margin: 20px 0
+		grid-gap 12px
+		box-shadow 0 0 0
+		border 1px solid $border-color
+	padding: 30px 50px
+	br(12px)
+	flex(between)
+	transform translateY(-50%)
+	max-width 800px
+	margin-left auto
+	margin-right auto
+	margin-bottom: -20px
+	bsh()
+	background: white
+	grid-gap 20px
+.deliver-info-el
+	+below(640px)
+		width: 100%
+	flex-grow 1
 // ==== DELIVER ==== === end
 
 // vacancy
@@ -3571,218 +3676,7 @@ body
 
 // tags filter === end
 
-// market
-.location-toggle
-	f()
-	margin-left auto
-.location-toggle__el
-	+below(640px)
-		padding: 10px
-	padding: 15px 30px
-	cp()
-	tr()
-	font-weight: 500
-	border-bottom 2px solid transparent
-	white-space nowrap
-	&:hover
-		color $mark
-.location-toggle__el--active
-	border-bottom 2px solid $mark
-.location-wrap
-	position relative
-	left initial
-	top initial
-	opacity: 1
-	transition opacity .6s
-.location-el
-	margin-bottom: 30px
-	overflow hidden
-	border-radius 10px
-	background-color #F8F8F8
-.location-el__head
-	+below(1024px)
-		fw()
-	+below(640px)
-		padding: 20px
-		f()
-		fl()
-	padding: 20px 40px
-	f()
-	align-items center
-.location-el__info
-	+below(1024px)
-		width: 48%
-		margin-bottom: 20px
-	+below(640px)
-		width: 100%
-		text-align center
-	margin-right auto
-	width: 35%
-.location-el__position
-	@extend .type--md
-	font-weight 700
-.location-el__metro
-	+below(640px)
-		justify-content center
-	f()
-	align-items center
-	margin-top: 5px
-.location-el__metro-icon
-	.icon
-		size 24px
-		margin-right: 10px
-		fill $mark
-//.location-el__metro-val
-.location-el__time
-	+below(1024px)
-		width: 48%
-		margin-right: 0
-		max-width 200px
-	+below(640px)
-		margin-bottom: 20px
-	width: 12%
-	margin-right: 10%
-.location-el__time-el
-	flex(between)
-	margin-bottom: 5px
-	&:last-child
-		margin-bottom: 0
-.location-el__time-el-day
-	color $dark-light
-//.location-el__time-el-val
-.location-el__contact
-	+below(1024px)
-		width: 48%
-		margin-right: 0
-	+below(640px)
-		width: 100%
-		margin-bottom: 20px
-	margin-right: 5%
-.location-el__contact-el
-	+below(640px)
-		text-align center
-	display block
-	margin-bottom: 5px
-	font-weight: 700
-	&:last-child
-		margin-bottom: 0
-.location-el__toggle
-	+below(1024px)
-		width: 48%
-		text-align: right
-		margin-left auto
-	+below(640px)
-		margin-left:initial
-		width: 100%
-		justify-content center
-	cp()
-	f()
-	tr()
-	align-items center
-	width: 180px
-	justify-content:flex-end
 
-.location-toggle--show
-	@extend .animate-hidden
-
-
-.location-el__toggle--active
-	.location-toggle--hidden
-		@extend .animate-hidden
-	.location-toggle--show
-		@extend .animate-show
-	.location-el__toggle-icon
-		transform rotate(180deg)
-
-.location-el__toggle-text
-	tr()
-	color $dark-light
-	margin-right: 10px
-	&:hover
-		color $mark
-.location-el__toggle-icon
-	tr(all)
-	.icon
-		size 16px
-		fill $mark
-.location-el__cont
-	+below(640px)
-		padding: 0 20px 20px 20px
-	padding: 0 40px 40px 40px
-	overflow hidden
-	position relative
-.location-el__cont
-	position absolute
-	left -9999px
-	top 0
-	opacity: 0
-	width: 100%
-	height: 100%
-	transition opacity .8s, transform .8s
-	transform translateY(-40px)
-.location-el__cont--show
-	transition opacity .8s, transform .8s
-	opacity: 1
-	left initial
-	position initial
-	transform translateY(0)
-
-.location-map
-	+below(640px)
-		min-height 400px
-	position relative
-	padding: 25% 10%
-.location-map__el
-	background: $snow
-	position absolute
-	width: 100%
-	height: 100%
-	left 0
-	top 0
-
-.location-wrap--hidden
-	position absolute
-	left -9999px
-	top 0
-	opacity: 0
-
-.gallery-main-slider
-	margin-bottom 20px
-
-.gallery-main-slider__el
-	padding: 25% 10%
-	bg-full()
-
-.gallery-nav-slider__el
-	padding: 40% 10%
-	bg-full()
-	cp()
-.gallery-nav-slider
-	.slick-current
-		tr()
-		background-color: black
-		position relative
-		&:before
-			content ''
-			width: 100%
-			height: 2px
-			position absolute
-			left 0
-			bottom 0px
-			background: $mark
-	.slick-track
-		margin-left: 0px
-	.slick-list
-		margin: 0 -10px
-
-.gallery-main-slider
-	margin-bottom 20px
-
-.gallery-img
-	+below(640px)
-		width: 100%
-		.slider-wrap
-			margin-bottom: 0
 
 // slider
 .slider-wrap
@@ -4382,14 +4276,11 @@ body
 	margin-right: 16px
 	color $mark
 
-.year-line
-
-	f()
-	grid-gap 12px
+/*.year-line
 .year-line-wrap
 	+below(640px)
 		overflow scroll
-		max-width calc(100vw - 40px)
+		max-width calc(100vw - 40px)*/
 .year-el
 	round()
 	flex(mid)
@@ -4402,26 +4293,32 @@ body
 	color $dark
 	position relative
 	background: white
-	&.active
-		background: $mark
-		color white
-		border-color $mark
+	margin: 0 auto
+
 	&:hover
 		background: $mark
 		color white
 		border-color $mark
-	&:before
+	&:after
 		content: ''
 		position absolute
 		height: 1px
-		width: 14px
-		right: -14px
+		width: 34px
+		right: -34px
 		top 50%
 		background: $gray
+		z-index -1
+.year-el-wrap
+	&.active
+		.year-el
+			background: $mark
+			color white
+			border-color $mark
 	&:last-child
-		&:before
-			content: ''
-			display none
+		.year-el
+			&:after
+				content: ''
+				display none
 
 .year-descr
 	display none
@@ -4438,15 +4335,21 @@ body
 	margin-right: 40px
 
 .map
+	min-height 400px
 	br(12px)
-	background: $snow
+	background: darken($snow,5)
 	position relative
 	padding: 20% 10%
 
 .connect
+	+below(640px)
+		padding: 12px 18px
 	border 1px solid $border-color
 	br(12px)
 	padding: 24px
+	margin-bottom: 12px
+	&:last-child
+		margin-bottom: 0
 .connect__name
 	font-size: 22px
 	font-weight: 700
@@ -4455,5 +4358,3 @@ body
 .connect__phone
 	font-weight: 700
 	margin-bottom: 12px
-.connect__type
-	margin-bottom: 4px

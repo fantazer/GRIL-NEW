@@ -48,9 +48,15 @@ mixin header()
 							+icon("soc-fl","icon")
 					a(href="tel:+7 (917) 58-55-05").header-callback
 						+icon("phone","icon")
-					.header-auth
-						+icon("user","icon")
-						.header-auth-state Александр
+					//toggle class "active" если пользователь авторизован
+					// Если не авторизован .header-auth-name Войти бонусы не выводить
+					.header-auth-wrap.active
+						.header-auth--simple А
+						.header-auth
+							+icon("user","icon")
+							.header-auth-state
+								.header-auth-name Александр
+								.header-auth-bonus 2300 Б
 					a(href="#").cart-wrap.cart-wrap--mobile
 						.cart-cost 2 850 ₽
 						.cart
@@ -147,16 +153,6 @@ mixin header()
 		//slide menu
 		.slide-menu
 			.slide-row
-				.slide-header-auth
-					+icon("user","icon")
-					.slide-header-auth-state Александр
-			.slide-row
-				.slide-menu__list
-					a(href="#").slide-menu__list-el Акции
-					a(href="#").slide-menu__list-el Доставка и оплата
-					a(href="#").slide-menu__list-el Вакансии
-					a(href="#").slide-menu__list-el О нас
-			.slide-row
 				.slide-header-contact
 					.slide-header-info
 						.slide-header-info__icon
@@ -174,6 +170,13 @@ mixin header()
 								a(href="tel:+7 (707) 988 78 87")  +7 (707) 988 78 87
 							.slide-header-info__text Сегодня 10 - 24
 			.slide-row
+				.slide-menu__list
+					a(href="#").slide-menu__list-el О нас
+					a(href="#").slide-menu__list-el Доставка и оплата
+					a(href="#").slide-menu__list-el Отзывы
+					a(href="#").slide-menu__list-el Акции
+					a(href="#").slide-menu__list-el Франчайзинг
+			.slide-row
 				.soc-row
 					a(href="#").soc-row__el
 						+icon("soc-youtube","icon")
@@ -181,4 +184,8 @@ mixin header()
 						+icon("soc-instagram","icon")
 					a(href="#").soc-row__el
 						+icon("soc-vk","icon")
+			a(href="#")
+				img(src="img/app-google.svg", alt="").mb-24
+			a(href="#")
+				img(src="img/app-apstore.svg", alt="").mb-24
 	//block header end

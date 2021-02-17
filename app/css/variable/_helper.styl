@@ -211,15 +211,21 @@ for $type,$typeVal in $st
 	display: grid
 
 .g-1
-	grid-template-columns: 1fr
+	grid-template-columns: minmax(0, 1fr)
 
 .g-2
-	grid-template-columns: repeat(2, 1fr)
+	grid-template-columns: repeat(2, minmax(0, 1fr))
 
 .g-3
 	+below(640px)
 		grid-template-columns: 1fr
-	grid-template-columns: repeat(3, 1fr)
+	grid-template-columns: repeat(3, minmax(0, 1fr))
+
+.g-4
+	+below(640px)
+		grid-template-columns: 1fr
+	grid-template-columns: repeat(4, minmax(0, 1fr))
+
 
 .g-gap-4
 	grid-gap 4px
@@ -244,7 +250,7 @@ for $type,$typeVal in $st
 
 .md__g-1
 	+below(768px)
-		grid-template-columns: 1fr
+		grid-template-columns: minmax(0, 1fr)
 
 .xs-g-gap-0
 	+below(640px)
