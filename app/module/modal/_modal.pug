@@ -495,7 +495,7 @@ mixin modal()
 				.modal-content.item-modal-container
 					.modal-close
 						+icon("close","icon")
-					.item-wrap
+					.item-wrap.item-wrap--modal
 						.item-col
 							.item-img(style="background-image:url('img/item-card-1.jpg')")
 						.item-info.mt-16.scroll-template
@@ -581,12 +581,12 @@ mixin modal()
 							//  item-config === end
 					.item-modal-total
 						.item-modal-total-wrap
-							.type--main Итого:
-							.type--xl.type--head.type--nowrap 250 р
-							.incr-btn.incr-btn--fix
-								.incr-btn__el.btn--md.btn--mark Заказать
-								.incr-btn-wrap
-									+incr(1,"incr--mark")
+							// item total
+							.item-total-descr.mb-6
+								.type--main Старая цена: 1540р (экономия 200 р)
+							.item-total
+								+incr(1,"incr--single incr--mark-light incr--lg")
+								.item-total-get Заказать <br> за 1112 руб
 			// item === end
 			//=====================================
 

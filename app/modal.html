@@ -160,6 +160,8 @@
             </div>
             <div class="header-menu-wrap">
                 <div class="main-cont">
+                    <div class="cart-msgList"></div>
+                    <!-- js click - > showMsgAdd("Пицца 30см с сыром")-->
                     <div class="header-menu">
                         <a class="logo" href="/">
                             <img src="img/logo.svg" alt="" />
@@ -1921,7 +1923,7 @@
                                 <use xlink:href="#close"></use>
                             </svg>
                         </div>
-                        <div class="item-wrap">
+                        <div class="item-wrap item-wrap--modal">
                             <div class="item-col">
                                 <div class="item-img" style="background-image:url('img/item-card-1.jpg')"></div>
                             </div>
@@ -2273,28 +2275,29 @@
                         </div>
                         <div class="item-modal-total">
                             <div class="item-modal-total-wrap">
-                                <div class="type--main">Итого:</div>
-                                <div class="type--xl type--head type--nowrap">250 р</div>
-                                <div class="incr-btn incr-btn--fix">
-                                    <div class="incr-btn__el btn--md btn--mark">Заказать</div>
-                                    <div class="incr-btn-wrap">
-                                        <div class="incr incr--mark incr--one">
-                                            <div class="incr__minus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#minus"></use>
-                                                </svg>
-                                            </div>
-                                            <div class="incr__val">
-                                                <span>1</span>
-                                                <div class="incr__val-coner"></div>
-                                            </div>
-                                            <div class="incr__plus incr__nav">
-                                                <svg class="icon">
-                                                    <use xlink:href="#plus"></use>
-                                                </svg>
-                                            </div>
+                                <!-- item total-->
+                                <div class="item-total-descr mb-6">
+                                    <div class="type--main">Старая цена: 1540р (экономия 200 р)</div>
+                                </div>
+                                <div class="item-total">
+                                    <div class="incr incr--single incr--mark-light incr--lg incr--one">
+                                        <div class="incr__minus incr__nav">
+                                            <svg class="icon">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="incr__val">
+                                            <span>1</span>
+                                            <div class="incr__val-coner"></div>
+                                        </div>
+                                        <div class="incr__plus incr__nav">
+                                            <svg class="icon">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
                                         </div>
                                     </div>
+                                    <div class="item-total-get">Заказать
+                                        <br>за 1112 руб</div>
                                 </div>
                             </div>
                         </div>

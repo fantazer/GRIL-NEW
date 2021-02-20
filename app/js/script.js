@@ -19,6 +19,8 @@ $(document).ready(function () {
 
 		}
 		modalState.isModalShow = true;
+		var vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', vh+'px');
 	};
 
 	var closeModal = function () {
@@ -259,7 +261,6 @@ $(document).ready(function () {
 			}
 		}
 	});
-
 	// incr === end
 
 	// dropdown
@@ -286,8 +287,6 @@ $(document).ready(function () {
 	});
 	// dropdown === end
 
-
-
 	//main slider
 	$('.main-slider').slick({
 		slidesToShow: 3,
@@ -297,6 +296,8 @@ $(document).ready(function () {
 		centerMode: true,
     centerPadding: 0,
     variableWidth: true,
+    focusOnSelect: true,
+    accessibility: false,
 		//autoplay: true,
 		//fade: true
 		//autoplaySpeed: 8000, time between
@@ -330,7 +331,12 @@ $(document).ready(function () {
 		}
 	});
 	//main slider === end
-	
+
+	// remove event click uncenter slide
+
+	// remove event click uncenter slide === end
+
+
 	// year slider
 	$('.year-line').slick({
 		slidesToShow: 8,
@@ -656,7 +662,6 @@ $(document).ready(function () {
 	});
 	// location toggle === end
 
-
 	// location tab
 	$('.location-toggle__el').click(function(){
 		var current = $(this).index();
@@ -735,9 +740,7 @@ $(document).ready(function () {
 			},
 		}
 	);
-	$('input').on('input',function(e){
-		console.log(e.originalEvent.data);
-	})
+
 	// phone mask === end
 
 	// set height modal
@@ -771,5 +774,26 @@ $(document).ready(function () {
 	});
 	// tabs === end
 
+	// show add item msg
+	var showMsgAdd = function(msg){
+		var cart = $('.cart-msgList');
+		var msg = "<div class='cart-msgList__el'><div class='cart-msgList__title'>Добавлено:</div><div class='cart-msgList__val'>"+ msg + "</div></div>"
+		cart.append(msg)
+		setTimeout(function(){
+			$('.cart-msgList .cart-msgList__el').addClass('active')
+			$('.cart-msgList .cart-msgList__el').each(function(){
+				var current = $(this)
+				setTimeout(function(){
+					current.slideUp(400,function(){
+						current.remove()
+					})
+				},1400)
+			})
+		},100)
+	}
+	// show add item msg === end
+	/*$('.product-get').click(function(){
+		showMsgAdd('Вкусная пицца четыре сыра 30 см тонкое тесто')
+	});*/
 
 });

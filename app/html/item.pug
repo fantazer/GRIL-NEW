@@ -73,7 +73,7 @@ include block_html/_include.pug
 						//item-config
 						.title Дополнительные ингредиенты
 						.item-config-row.js-ingr-wrap.scroll-template(data-min="0" data-max="3")
-							- for (var i=0;i<4;i++)
+							- for (var i=0;i<1;i++)
 								.item-prop.js-ingr-row
 									.item-prop__img(style="background-image:url('img/prop-3.jpg')")
 									.item-prop__title Томатний соус <span class="type--gray">/ 50г</span>
@@ -99,18 +99,11 @@ include block_html/_include.pug
 
 					.item-condition-wrap
 						// item total
-						.item-total.item-total--disable
-							.item-total-wrap
-								.item-total__info старая цена 299 р
-								.item-total__cond
-									.item-total__cost 250 р
-									.item-total__weight 350 г
-							.item-get
-								.incr-btn.incr-btn--fix
-									.incr-btn__el.btn--md.btn--mark Заказать
-									.incr-btn-wrap
-										+incr(1,"incr--mark")
-						// item total === end
+						.item-total-descr
+							.type--main Старая цена: 1540р (экономия 200 р)
+						.item-total.m-16
+							+incr(1,"incr--single incr--mark-light incr--lg")
+							.item-total-get Заказать <br> за 1112 руб
 
 						// structure
 						//.structure-wrap

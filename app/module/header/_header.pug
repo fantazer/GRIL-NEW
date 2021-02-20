@@ -2,6 +2,7 @@ mixin header()
 	//block header
 	.header
 		//header-top
+
 		.header-top-wrap
 			.main-cont
 				.header-top
@@ -62,9 +63,10 @@ mixin header()
 						.cart
 							+icon("cart--color","icon")
 							.cart-val 33
-
 		.header-menu-wrap
 			.main-cont
+				.cart-msgList
+				// js click - > showMsgAdd("Пицца 30см с сыром")
 				.header-menu
 					a(href="/").logo
 						img(src="img/logo.svg", alt="")
@@ -115,6 +117,7 @@ mixin header()
 						.cart.js-cart
 							+icon("cart--color","icon")
 							.cart-val 33
+
 						.basket-wrap
 							.basket
 								.basket-wrap-coner

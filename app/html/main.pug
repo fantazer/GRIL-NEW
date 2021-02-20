@@ -62,7 +62,7 @@ include block_html/_include.pug
 									.tooltip-conner
 									span Продукты без  мяса
 						.product-cont-row
-							.product-cont
+							.product-cont(class=j===0?'product-cont--row':'')
 								- for (var i=0;i<2;i++)
 									+product('item-'+(j+1)+'.jpg','1 2 3 4')
 									+product('item-'+(j+1)+'.jpg','1 4 3')

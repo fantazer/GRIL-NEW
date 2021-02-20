@@ -988,6 +988,48 @@ body
 		background: darken($snow,5)
 // loc buble === end
 
+
+.cart-msgList
+	+below(640px)
+		position: fixed
+		right 85px
+		bottom 5px
+		top initial
+		width: calc(100vw - 100px)
+		max-width 240px
+	position absolute
+	top calc(100% + 10px)
+	right: 0
+	width: 260px
+	z-index 1000
+.cart-msgList__el
+	+below(640px)
+		padding: 8px 12px
+		border 1px solid $mark
+		transform translateY(10px)
+	padding: 16px 24px
+	background:white
+	br(12px)
+	bsh()
+	transform translateY(-10px)
+	opacity:0
+	margin-bottom: 10px
+	transition transform .3s, opacity .3s
+	&.active
+		transform translateY(0)
+		opacity: 1
+.cart-msgList__val
+	+below(640px)
+		font-size: 10px
+	font-size: 12px
+	line-height: 1.6
+.cart-msgList__title
+	+below(640px)
+		font-size: 12px
+		color $mark
+	font-size: 14px
+	margin-bottom: 4px
+	font-weight: 700
 // header === end
 
 // soc-row
@@ -1017,6 +1059,21 @@ body
 // soc-row === end
 
 // main slider
+.main-slider-wrap
+	.slider-control
+		opacity: 0
+		tr()
+	&:hover
+		.slider-control
+			opacity: 1
+	.slick-slide
+		cp()
+	.slick-current
+		.main-slider__el-wrap
+			pointer-events initial
+	.main-slider__el-wrap
+		pointer-events none
+
 .main-slider
 	margin-bottom: 0!important
 	.slick-slide
@@ -1117,14 +1174,14 @@ body
 //Навигация внутри
 .slider-wrap--inarrow
 	.slider-control
-		+below(1580px)
+		+below(1280px)
 			display none
 		top 50%
 		margin-top: -15px
 	.slider-control--left
-		transform translateX(-60px)
+		transform translateX(-70px)
 	.slider-control--right
-		transform translateX(60px)
+		transform translateX(70px)
 //Навигация внутри
 
 //Навигация внутри
@@ -1173,6 +1230,7 @@ body
 		grid-template-columns: repeat(2, 1fr)
 		width: 100%
 		grid-gap 10px
+		flex-flow column
 	+below(480px)
 		f()
 		margin: 0!important
@@ -1191,6 +1249,9 @@ body
 		.slick-active
 			.dot
 				background: black
+.product-cont--row
+	+below(640px)
+		flex-flow row
 .product-cont-row
 	+below(640px)
 		overflow: auto
@@ -1258,7 +1319,10 @@ body
 
 .product__img
 	+below(480px)
-		size 100px
+		width 100px
+		height: 120px
+		margin-right: 10px
+		align-items: flex-start
 	flex(mid)
 	position relative
 	img
@@ -1269,7 +1333,7 @@ body
 .product__img-el
 	+below(640px)
 		padding: 45% 10%
-		margin-bottom: 0
+		height: auto
 	tr(all)
 	width: 100%
 	height: 100%
@@ -1351,12 +1415,12 @@ body
 	+below(640px)
 		font-size: 24px
 	+below(480px)
-		width: 110px
+		width: 120px
 		text-align center
 		font-size: 16px
 		position absolute
 		left 0
-		top  130px
+		top  110px
 		margin-right: 0
 	@extend .type--lg
 	font-weight 600
@@ -1725,7 +1789,7 @@ body
 	+below(768px)
 		fw()
 		max-width 640px
-		margin: 0 auto
+		margin 0 auto 10px auto
 	f()
 	align-items: flex-start
 
@@ -1898,49 +1962,32 @@ body
 	width: 50px
 	text-align: right
 	white-space nowrap
+
+// item total
 .item-total
-	+below(1024px)
-		fw()
-	+below(768px)
-		fl()
-		margin-top: 0
 	f()
+	grid-gap 20px
 	align-items center
-	margin-bottom: 40px
-	margin-top: 30px
-.item-total--disable
-	.btn--mark
-		background: $snow
-		pointer-events none
-.item-total-wrap
+.item-total-get
 	+below(768px)
-		margin-right: 0
-	margin-right: 30px
-.item-total__info
+		width: 160px
+	padding: 8px 32px
+	background: $mark
+	color white
+	font-weight: 700
+	br(24px)
+	cp()
+	tr()
+	width: 200px
+	text-align center
+	&:hover
+		background: darken($mark,10)
+.item-condition-wrap
 	+below(768px)
-		text-align center
-		font-size: 18px
-	@extend .type--xs
-	margin-bottom: 5px
-	color red
-.item-total__cond
-	+below(768px)
-		margin: 20px 0
 		flex(mid)
 		fl()
-	f()
-	align-items: flex-end
-.item-total__cost
-	+below(768px)
-		font-size: 38px
-		margin 0 0 20px 0
-	font-size: 48px
-	white-space nowrap
-	font-weight 700
-	line-height: 1
-	margin-right: 10px
-.item-total__weight
-	white-space nowrap
+// item total === end
+
 .item-get
 	+below(768px)
 		margin: 0
@@ -4114,20 +4161,20 @@ body
 	+below(640px)
 		margin: 0 -20px -30px -20px
 		padding: 10px
+		border 0
 	padding: 20px
 	border-top 1px solid $border-color
 	margin: 0 -40px -40px -40px
+	background: white
+	border-radius 0 0 25px 25px
 .item-modal-total-wrap
 	+below(768px)
 		width: 100%
-		margin:0
-		justify-content center
-	f()
-	align-items center
+		flex(mid)
+		fl()
 	max-width 485px
 	width calc(55% - 60px)
 	margin-left auto
-	grid-gap 20px
 .item-modal-container
 	+above(769px)
 		f()
@@ -4137,6 +4184,8 @@ body
 			overflow:auto
 			margin-right: -40px
 			padding-right: 20px
+	+below(640px)
+		height: 100%
 	.item-wrap
 		+above(769px)
 			margin-right: -30px
@@ -4144,8 +4193,9 @@ body
 			max-height calc(var(--vh) * 100 - 135px)
 			overflow: auto
 		+below(640px)
-			max-height calc(var(--vh) * 100 - 105px)
-
+			min-height calc(var(--vh) * 100 - 100px)
+			margin-top: -30px
+			padding-top: 30px
 .form-content
 	+below(640px)
 		padding: 30px 20px
