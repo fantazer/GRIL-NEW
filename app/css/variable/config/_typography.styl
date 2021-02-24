@@ -116,6 +116,7 @@ font-size 50px
 	+below(640px)
 		margin-bottom: 20px
 		flex-wrap nowrap
+		grid-gap 16px
 		//align-items: flex-start
 	fw()
 	position: relative
@@ -149,6 +150,9 @@ font-size 50px
 			margin-bottom: 0
 		margin-bottom: 20px
 .arrow
+	+below(640px)
+		size 40px
+		min-width 40px
 	flex(mid)
 	round()
 	flex(mid)

@@ -1282,6 +1282,7 @@ h1,
   .title-row {
     margin-bottom: 20px;
     flex-wrap: nowrap;
+    grid-gap: 16px;
   }
 }
 .title-row .icon {
@@ -1341,6 +1342,13 @@ h1,
   width: 50px;
   height: 50px;
   border: 2px solid #b4b4b4;
+}
+@media only screen and (max-width: 640px) {
+  .arrow {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
 }
 .arrow:hover {
   cursor: pointer;
@@ -2656,12 +2664,13 @@ body {
   top: 0;
   left: 0;
   visibility: hidden;
-  transition: all 1s;
+  transition: all 0.8s;
   opacity: 0;
 }
 .modal-layer-show {
   visibility: visible;
   opacity: 1;
+  transition: all 0.6s;
 }
 .modal-cont {
   width: 100%;
@@ -2699,6 +2708,11 @@ body {
 .modal .order__row {
   margin-bottom: 20px;
   border-bottom: 0;
+}
+.modal.modal-hide-animation {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.6s, opacity 0.8s;
 }
 .modal--lg {
   width: 440px;
@@ -2784,11 +2798,6 @@ body {
   height: 10px;
   margin-top: -5px;
   margin-right: -10px;
-}
-.modal-hide-animation {
-  transform: scale(0.9);
-  opacity: 0;
-  transition: transform 0.6s, opacity 0.8s;
 }
 .modal-open {
   overflow: hidden;
@@ -3027,7 +3036,7 @@ body {
   }
 }
 .dropdown-menu--lg {
-  max-height: 400px;
+  max-height: 450px;
 }
 .dropdown-menu__el {
   padding: 10px 20px;
@@ -4101,7 +4110,7 @@ body {
 @media only screen and (max-width: 768px) {
   .product-cont {
     grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (max-width: 640px) {
@@ -4164,7 +4173,7 @@ body {
     border-radius: 10px;
     border: 1px solid #ececec;
     flex-flow: row;
-    min-width: 300px;
+    min-width: 240px;
     padding: 10px;
   }
 }
@@ -4182,6 +4191,11 @@ body {
   .product-el--sm {
     flex-flow: row;
     align-items: center;
+  }
+  .product-el--sm .product__img {
+    height: initial !important;
+    width: 90px;
+    margin-right: 0;
   }
   .product-el--sm .product__img-el {
     width: 90px;
@@ -4297,7 +4311,7 @@ body {
   .product__title {
     font-size: 16px;
     margin-bottom: 10px;
-    padding-right: 20px;
+    padding-right: 24px;
   }
 }
 .product-head {
@@ -5958,6 +5972,7 @@ body {
 @media only screen and (max-width: 640px) {
   .lk-toolbar {
     width: 100%;
+    min-width: initial;
   }
 }
 .lk-info {
@@ -8071,6 +8086,12 @@ body {
     padding: 30px 20px;
   }
 }
+@media only screen and (max-width: 640px) {
+  .form-content--fluid {
+    border-radius: 0;
+    margin: -30px -20px;
+  }
+}
 .accordion {
   background: #fff;
 }
@@ -8255,8 +8276,8 @@ body {
   content: '';
   position: absolute;
   height: 1px;
-  width: 34px;
-  right: -34px;
+  width: 300px;
+  left: 0;
   top: 50%;
   background: #b4b4b4;
   z-index: -1;
@@ -8268,7 +8289,7 @@ body {
 }
 .year-el-wrap:last-child .year-el:after {
   content: '';
-  display: none;
+  background: #fff;
 }
 .year-descr {
   display: none;
