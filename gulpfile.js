@@ -398,7 +398,7 @@ gulp.task('build:ftp',function(){
 				'img',
 				'svg',
 				'make',
-				//'ftp'
+				'ftp'
 		)
 });
 

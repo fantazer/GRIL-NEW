@@ -13,10 +13,10 @@ mixin header()
 						img(src="img/logo.svg", alt="")
 					.header-location
 						.header-info
-							.header-info__icon
+							.header-info__icon.modal-get
 								+icon("location","icon")
 							.header-info__cont
-								.header-info__val Барнаул
+								.header-info__val.modal-get Барнаул
 								.header-info__text проспект Независимости, 90
 							.bubble-loc.hidden
 								// NOTE!!! REMOVE Class .hidden
@@ -26,7 +26,7 @@ mixin header()
 									.bubble-loc__footer--false Нет, выбрать другой
 					.header-contact
 						.header-info
-							.header-info__icon
+							a(href="tel:+7 (917) 58-55-05").header-info__icon
 								+icon("phone","icon")
 							.header-info__cont
 								.header-info__val
@@ -140,7 +140,7 @@ mixin header()
 														.basket__descr Классический, грибы, горчичный соус, помидоры
 														.basket__el-change
 															.basket__inc.incr--small
-																+incr(1,"incr--single incr--small")
+																+incr(1,"incr--single incr--small incr--mark-light")
 															.basket__price 270 р
 								//basket-footer
 								.basket-footer-wrap

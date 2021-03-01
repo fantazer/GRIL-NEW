@@ -360,6 +360,9 @@ body
 	margin-right: -20px
 	width calc(100% + 20px)
 
+.modal-get
+	cp()
+
 // modal === end
 
 
@@ -533,7 +536,6 @@ body
 	margin-right: 20px
 .header-info
 	f()
-	cp()
 	align-items: center
 	margin-right: 5%
 	position relative
@@ -1632,6 +1634,8 @@ body
 	+below(1200px)
 		font-size: 10px
 		line-height: 1.6
+	+below(640px)
+		font-size: 14px
 	color $gray
 	@extend .type--sm
 	font-weight 400
@@ -4015,9 +4019,9 @@ body
 		cp()
 		tr(all)
 		size 16px
-		fill black
+		fill $gray
 		&:hover
-			fill $mark
+			fill black
 
 .basket__descr
 	font-size: 12px
@@ -4108,7 +4112,7 @@ body
 	&::-webkit-scrollbar-thumb
 		border-radius: 4px
 		background-color: #ddd
-
+	overscroll-behavior: contain;
 // drop cart === end
 
 .consist__el
