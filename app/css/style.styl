@@ -42,7 +42,7 @@ body
 .content
 	+below(768px)
 		padding: 30px 0
-	padding: 80px 0 100px 0
+	padding: 40px 0 100px 0
 	flex-grow 1
 	position relative
 	overflow: hidden
@@ -819,7 +819,6 @@ body
 	+below(760px)
 		display none
 	f()
-	cp()
 	margin-left: 20px
 	align-items: center
 	.icon--close
@@ -838,6 +837,7 @@ body
 		size 40px
 	+below(760px)
 		display none
+	cp()
 	flex(mid)
 	round()
 	position: relative
@@ -1892,7 +1892,7 @@ body
 	margin-bottom: 10px
 	padding-right: 20px
 	f()
-	cp()
+	//cp()
 	align-items center
 	justify-content space-between
 	border 1px solid $border-color
@@ -1945,7 +1945,7 @@ body
 		z-index 10
 .ingr-row--unPlus
 	.incr__plus
-		opacity: .0
+		opacity: .3
 		pointer-events none
 
 
@@ -2408,9 +2408,7 @@ body
 	padding-top: 20px
 	margin: 20px 0
 
-.order-total-get
-	+below(768px)
-		display none
+
 
 .order-sale
 	+below(768px)
@@ -4077,7 +4075,7 @@ body
 		background: $mark-dark
 
 .basket-msg-cont
-	padding: 10px 20px 0 20px
+	padding: 20px
 	border-top 1px solid $border-color
 .basket-msg
 	f()
@@ -4087,7 +4085,7 @@ body
 .basket-msg-info
 	padding: 10px 15px
 	background: $mark
-	margin-left: 10px
+	margin-right: 10px
 	br(10px)
 	color white
 	width: calc(100% - 45px)
@@ -4096,14 +4094,14 @@ body
 	position relative
 	&:before
 		content ''
-		left -6px
+		right -5px
 		bottom 20px
 		position:absolute
 		width: 0;
 		height: 0;
 		border-style: solid;
-		border-width: 5px 6px 5px 0;
-		border-color: transparent  $mark transparent transparent;
+		border-width: 5px 0 6px 5px ;
+		border-color: transparent  transparent transparent $mark ;
 .scroll-template
 	&::-webkit-scrollbar
 		-webkit-appearance: none
@@ -4304,7 +4302,7 @@ body
 .person-notice-info
 	padding: 10px 15px
 	background: $mark
-	margin-left: 10px
+	margin-right: 10px
 	br(10px)
 	color white
 	width: calc(100% - 45px)
@@ -4313,15 +4311,14 @@ body
 	position relative
 	&:before
 		content ''
-		left -6px
+		right -5px
 		bottom 20px
 		position:absolute
 		width: 0;
 		height: 0;
 		border-style: solid;
-		border-width: 5px 6px 5px 0;
-		border-color: transparent  $mark transparent transparent;
-
+		border-width: 5px 0 6px 5px ;
+		border-color: transparent  transparent transparent $mark ;
 
 
 .point

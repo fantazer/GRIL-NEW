@@ -203,10 +203,10 @@
                                         <div class="basket-container scroll-template">
                                             <div class="basket__el">
                                                 <div class="basket__el-info">
-                                                    <div class="basket__img" style="background-image:url('img/item-2.jpg')"></div>
+                                                    <a class="basket__img" href="#" style="background-image:url('img/item-2.jpg')"></a>
                                                     <div class="basket__cont">
                                                         <div class="basket__name">
-                                                            <span>Креветка в соусе Терияки 1</span>
+                                                            <a href="#">Креветка в соусе Терияки 1</a>
                                                             <div class="basket__delete">
                                                                 <svg class="icon">
                                                                     <use xlink:href="#delete"></use>
@@ -240,10 +240,10 @@
                                             </div>
                                             <div class="basket__el">
                                                 <div class="basket__el-info">
-                                                    <div class="basket__img" style="background-image:url('img/item-2.jpg')"></div>
+                                                    <a class="basket__img" href="#" style="background-image:url('img/item-2.jpg')"></a>
                                                     <div class="basket__cont">
                                                         <div class="basket__name">
-                                                            <span>Креветка в соусе Терияки 2</span>
+                                                            <a href="#">Креветка в соусе Терияки 2</a>
                                                             <div class="basket__delete">
                                                                 <svg class="icon">
                                                                     <use xlink:href="#delete"></use>
@@ -277,10 +277,10 @@
                                             </div>
                                             <div class="basket__el">
                                                 <div class="basket__el-info">
-                                                    <div class="basket__img" style="background-image:url('img/item-2.jpg')"></div>
+                                                    <a class="basket__img" href="#" style="background-image:url('img/item-2.jpg')"></a>
                                                     <div class="basket__cont">
                                                         <div class="basket__name">
-                                                            <span>Креветка в соусе Терияки 3</span>
+                                                            <a href="#">Креветка в соусе Терияки 3</a>
                                                             <div class="basket__delete">
                                                                 <svg class="icon">
                                                                     <use xlink:href="#delete"></use>
@@ -314,10 +314,10 @@
                                             </div>
                                             <div class="basket__el">
                                                 <div class="basket__el-info">
-                                                    <div class="basket__img" style="background-image:url('img/item-2.jpg')"></div>
+                                                    <a class="basket__img" href="#" style="background-image:url('img/item-2.jpg')"></a>
                                                     <div class="basket__cont">
                                                         <div class="basket__name">
-                                                            <span>Креветка в соусе Терияки 4</span>
+                                                            <a href="#">Креветка в соусе Терияки 4</a>
                                                             <div class="basket__delete">
                                                                 <svg class="icon">
                                                                     <use xlink:href="#delete"></use>
@@ -351,10 +351,10 @@
                                             </div>
                                             <div class="basket__el">
                                                 <div class="basket__el-info">
-                                                    <div class="basket__img" style="background-image:url('img/item-2.jpg')"></div>
+                                                    <a class="basket__img" href="#" style="background-image:url('img/item-2.jpg')"></a>
                                                     <div class="basket__cont">
                                                         <div class="basket__name">
-                                                            <span>Креветка в соусе Терияки 5</span>
+                                                            <a href="#">Креветка в соусе Терияки 5</a>
                                                             <div class="basket__delete">
                                                                 <svg class="icon">
                                                                     <use xlink:href="#delete"></use>
@@ -392,8 +392,8 @@
                                     <div class="basket-footer-wrap">
                                         <div class="basket-msg-cont">
                                             <div class="basket-msg">
-                                                <img src="img/person/person-glass.svg" alt="" />
                                                 <div class="basket-msg-info">До бесплатной доставки осталось 256 р.</div>
+                                                <img src="img/person/person-glass.svg" alt="" />
                                             </div>
                                         </div>
                                         <div class="basket-footer">
@@ -493,8 +493,14 @@
                         <div class="title title--xl">Обратная связь</div>
                     </div>
                     <div class="input-cont">
-                        <div class="input-row">
-                            <input class="input" type="text" placeholder="Ваше имя" />
+                        <div class="input-row input-row--error">
+                            <input class="input" type="text" placeholder="Ваше имя" value="Антон Попов" />
+                            <div class="error-msg">
+                                <svg class="icon">
+                                    <use xlink:href="#attension"></use>
+                                </svg>
+                                <span>Введите правильное значение</span>
+                            </div>
                         </div>
                     </div>
                     <div class="input-cont">

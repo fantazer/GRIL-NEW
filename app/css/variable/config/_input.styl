@@ -101,6 +101,7 @@
 //form
 .input-row
 	margin-bottom: 20px
+	position relative
 	.input
 		width: 100%
 .input-row__title
@@ -111,8 +112,28 @@
 		border-color red
 		color red
 		background: white
+	margin-bottom: 0
 	.error-msg
-		display block
+		display: inline-flex
+		align-items flex-start
+		line-height: 1
+		font-size: 12px
+		background: white
+		padding: 4px 6px
+		br(8px)
+		border 1px solid red
+		margin-top:0
+		transform translateY(-8px)
+		margin-bottom: -16px
+		max-width calc(100% - 16px)
+		margin-left: 8px
+		z-index 10
+		position relative
+		.icon
+			min-width 12px
+			size 12px
+			fill red
+			margin-right: 6px
 	.error
 		color red
 	.style-input-element

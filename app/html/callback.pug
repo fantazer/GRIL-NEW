@@ -11,8 +11,11 @@ include block_html/_include.pug
 						+icon("arrow-conner-left","icon")
 					.title.title--xl Обратная связь
 				.input-cont
-					.input-row
-						input(type="text" placeholder="Ваше имя" class="input")
+					.input-row.input-row--error
+						input(type="text" placeholder="Ваше имя" class="input" value="Антон Попов" )
+						.error-msg
+							+icon("attension","icon")
+							span Введите правильное значение
 				.input-cont
 					.input-row
 						input(type="text" placeholder="Email" class="input")

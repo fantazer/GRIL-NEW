@@ -131,10 +131,10 @@ mixin header()
 										- for (var i=0;i<5;i++)
 											.basket__el
 												.basket__el-info
-													.basket__img(style="background-image:url('img/item-2.jpg')")
+													a(href="#" style="background-image:url('img/item-2.jpg')").basket__img
 													.basket__cont
 														.basket__name
-															span Креветка в соусе Терияки #{i + 1}
+															a(href="#") Креветка в соусе Терияки #{i + 1}
 															.basket__delete
 																+icon("delete","icon")
 														.basket__descr Классический, грибы, горчичный соус, помидоры
@@ -142,12 +142,13 @@ mixin header()
 															.basket__inc.incr--small
 																+incr(1,"incr--single incr--small incr--mark-light")
 															.basket__price 270 р
+
 								//basket-footer
 								.basket-footer-wrap
 									.basket-msg-cont
 										.basket-msg
-											img(src="img/person/person-glass.svg", alt="")
 											.basket-msg-info До бесплатной доставки осталось 256 р.
+											img(src="img/person/person-glass.svg", alt="")
 									.basket-footer
 										.basket-footer-total
 											.basket-footer-total__text сумма
