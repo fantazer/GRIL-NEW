@@ -226,6 +226,19 @@ for $type,$typeVal in $st
 		grid-template-columns: 1fr
 	grid-template-columns: repeat(4, minmax(0, 1fr))
 
+.md__g-1
+	+below(768px)
+		grid-template-columns: minmax(0, 1fr)
+
+// order
+.xs__order-1
+	+below(640px)
+		order 1
+.xs__order-2
+	+below(640px)
+		order 2
+// order === end
+
 
 .g-gap-4
 	grid-gap 4px
@@ -248,9 +261,6 @@ for $type,$typeVal in $st
 	grid-gap 48px
 
 
-.md__g-1
-	+below(768px)
-		grid-template-columns: minmax(0, 1fr)
 
 .xs-g-gap-0
 	+below(640px)

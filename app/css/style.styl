@@ -424,7 +424,7 @@ body
 
 .dropdown--lg
 	.dropdown-current
-		padding 20px 50px 20px 20px
+		padding 17px 50px 17px 20px
 .dropdown-current
 	cursor pointer
 	display block
@@ -452,7 +452,7 @@ body
 	width calc(100% + 2px)
 	left -1px
 	margin-top -1px
-	border-radius 0 0 20px 20px
+	border-radius 0 0 4px 4px
 	overflow hidden
 	display none
 	max-height 250px
@@ -923,6 +923,7 @@ body
 	bsh()
 	padding: 20px
 	background:$snow
+	overscroll-behavior: contain
 	.header-location
 		display block
 
@@ -1798,7 +1799,7 @@ body
 	+below(768px)
 		fw()
 		max-width 640px
-		margin 0 auto 10px auto
+		margin 0 auto
 	f()
 	align-items: flex-start
 
@@ -1943,6 +1944,8 @@ body
 		width: 100%
 		background: #ffffffcf
 		z-index 10
+	.incr__nav
+		opacity:1
 .ingr-row--unPlus
 	.incr__plus
 		opacity: .3
@@ -2561,11 +2564,13 @@ body
 
 .info-banner
 	+below(768px)
-		br(0)
-		margin-left -20px
-		margin-right -20px
-		width calc(100% + 40px)
+		display none
+		//br(0)
+		//margin-left -20px
+		//margin-right -20px
+		//width calc(100% + 40px)
 	bg-full()
+	margin-top: -40px
 	padding: 11.5% 10%
 
 .sale-date
@@ -2613,10 +2618,12 @@ body
 	width calc(100% - 400px)
 
 .profile
+	+below(640px)
+		margin-bottom: 20px
 	f()
 	fl()
 	br(10px)
-	margin-bottom: 20px
+	margin-bottom: 40px
 	background: white
 	padding: 30px 0
 .profile-wrap
@@ -4089,13 +4096,12 @@ body
 	br(10px)
 	color white
 	width: calc(100% - 45px)
-	margin-bottom: 20px
 	line-height: 1.4
 	position relative
 	&:before
 		content ''
 		right -5px
-		bottom 20px
+		bottom 35px
 		position:absolute
 		width: 0;
 		height: 0;
@@ -4148,6 +4154,9 @@ body
 	flex(between)
 	grid-gap 12px
 .change__el
+	+below(640px)
+		padding: 12px
+		flex-grow 1
 	cp()
 	padding: 16px 24px
 	br(12px)
@@ -4169,12 +4178,15 @@ body
 	+below(640px)
 		margin: 0 -20px -30px -20px
 		padding: 10px
-		border 0
+		box-shadow 10px 4px 20px #cccccc
+		border-radius 0
+		z-index 10
 	padding: 20px
 	border-top 1px solid $border-color
 	margin: 0 -40px -40px -40px
 	background: white
 	border-radius 0 0 25px 25px
+
 .item-modal-total-wrap
 	+below(768px)
 		width: 100%
@@ -4220,11 +4232,14 @@ body
 	+below(640px)
 		width 100%
 	background: white
-
 .accordion__el
 	border 1px solid #e5e5e5
 	margin-top: -1px
 	cp()
+	&:first-child
+		border-radius 10px 10px 0 0
+	&:last-child
+		border-radius 0 0 10px 10px
 	&:hover
 		.accordion__el-head-icon
 			&:before
@@ -4297,6 +4312,7 @@ body
 .person-notice
 	f()
 	align-items: flex-end
+	margin-bottom: 20px
 	img
 		width 40px
 .person-notice-info
@@ -4306,13 +4322,12 @@ body
 	br(10px)
 	color white
 	width: calc(100% - 45px)
-	margin-bottom: 20px
 	line-height: 1.4
 	position relative
 	&:before
 		content ''
 		right -5px
-		bottom 20px
+		bottom 40px
 		position:absolute
 		width: 0;
 		height: 0;
