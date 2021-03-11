@@ -9,10 +9,10 @@ mixin modal()
 						+icon("close","icon")
 					.modal-title Вход на сайт
 					.input-row
-						input(type="text" name="name" placeholder="Телефон").input.input-mask--phone
+						input(type="phone" name="name" placeholder="Телефон").input.input-mask--phone
 					.input-row
 						input(type="password" name="name" placeholder="Пароль").input
-					input(type="submit" value="Войти").btn--md.btn--mark.btn--full
+					.btn--md.btn--mark.btn--full Войти
 					.modal-link-wrap
 						a(href="#").modal-link Забыли пароль
 						a(href="#").modal-link Регистрация
@@ -27,7 +27,7 @@ mixin modal()
 					.modal-text Введите номер телефона и мы отправим на него код для восстановления пароля
 					.input-cont
 						.input-row
-							input(type="text" name="name" placeholder="Телефон").input.input-mask--phone
+							input(type="phone" name="name" placeholder="Телефон").input.input-mask--phone
 					.modal-send.mb-24 Отправить
 					.flex.flex--mid
 						a(href="#").modal-link Я вспомнил пароль
@@ -87,7 +87,7 @@ mixin modal()
 					.modal-title Регистрация
 					.input-cont
 						.input-row
-							input(type="text" name="name" placeholder="Телефон").input.input-mask--phone
+							input(type="phone" name="name" placeholder="Телефон").input.input-mask--phone
 					.login-remember
 						.check-el
 							label.style-label.style-label--checkbox
@@ -147,7 +147,7 @@ mixin modal()
 					.modal-text Получите купон на e-mail со <br> скидкой 5% на любой заказ
 					.input-cont
 						.input-row
-							input(type="text" name="name" placeholder="Укажите E-mail").input
+							input(type="email" name="name" placeholder="Укажите E-mail").input
 					.btn--md.btn--mark.btn--full.mb-24 Принять
 					.flex.flex--mid
 						.modal-link.modal-hide Пропустить
@@ -204,7 +204,7 @@ mixin modal()
 						.city-search
 							.city-search__person
 								img(src="img/person/person-moto.svg", alt="")
-							input(type="text" placeholder="Введите название  города" class="input input--empty")
+							input(type="text" placeholder="Введите название города" class="input input--empty")
 							.search__icon
 								+icon("search","icon")
 					.city-popular
@@ -277,7 +277,7 @@ mixin modal()
 							input(type="text" placeholder="Ваше имя" class="input")
 					.input-cont
 						.input-row
-							input(type="text" placeholder="Телефон" class="input").input-mask--phone
+							input(type="phone" placeholder="Телефон" class="input").input-mask--phone
 					.input-row
 						textarea(name="info", cols="30", rows="6" placeholder="Сообщение").input
 					+deal()
@@ -357,7 +357,7 @@ mixin modal()
 							input(type="text" placeholder="Ваше имя" class="input")
 					.input-cont
 						.input-row
-							input(type="text" placeholder="Ваш телефон" class="input").input-mask--phone
+							input(type="phone" placeholder="Ваш телефон" class="input").input-mask--phone
 					.input-row
 						textarea(name="info", cols="30", rows="6" placeholder="Расскажите о себе.").input
 					.upload-wrap
@@ -396,10 +396,10 @@ mixin modal()
 							input(type="text" name="name" placeholder="Имя").input
 					.input-cont
 						.input-row
-							input(type="text" name="name" placeholder="Телефон" ).input.input-mask--phone
+							input(type="phone" name="name" placeholder="Телефон" ).input.input-mask--phone
 					.input-cont
 						.input-row
-							input(type="text" name="name" placeholder="E-mail").input
+							input(type="email" name="name" placeholder="E-mail").input
 					.g.g-3.g-gap-10.xs-g-gap-0
 						.input-row
 							.dropdown.dropdown--lg
@@ -639,3 +639,72 @@ mixin modal()
 									.btn--sm.btn--mark.btn--mobile Подтверждаю
 									.btn--sm.btn--light.btn--mobile Продолжить выбор
 			// area === end
+
+			// editPhone
+			.modal(data-modal="editPhone")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Редактирование телефона
+					.input-row
+						input(type="phone" name="name" value="8(495)320-07-39" placeholder="Телефон").input.input-mask--phone
+					.btn--md.btn--mark.btn--full Изменить
+			// editPhone === end
+
+			// editMail
+			.modal(data-modal="editMail")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Редактирование почты
+					.input-row
+						input(type="email" name="name" value="mail@mail.com" placeholder="Ваш email").input
+					.btn--md.btn--mark.btn--full Изменить
+			// editMail === end
+
+			// editBorn
+			.modal.modal--lg(data-modal="editBorn")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Редактирование даты рождения
+					.g.g-3.g-gap-10.xs-g-gap-0
+						.input-row
+							.dropdown.dropdown--lg
+								input(type="hidden" name="name" value="0")
+								.dropdown-current
+									.dropdown-current__val 12
+									+icon("arrow-down-fat","icon")
+								.dropdown-menu
+									- for (var i=1;i<30;i++)
+										.dropdown-menu__el(data-value="#") #{i}
+						.input-row
+							.dropdown.dropdown--lg
+								input(type="hidden" name="name" value="0")
+								.dropdown-current
+									.dropdown-current__val Январь
+									+icon("arrow-down-fat","icon")
+								.dropdown-menu
+									- for (var i=0;i<20;i++)
+										.dropdown-menu__el(data-value="#") Январь
+						.input-row
+							.dropdown.dropdown--lg
+								input(type="hidden" name="name" value="0")
+								.dropdown-current
+									.dropdown-current__val 1992
+									+icon("arrow-down-fat","icon")
+								.dropdown-menu
+									- for (var i=0;i<20;i++)
+										.dropdown-menu__el(data-value="#") 1980
+					.msg.msg--info.mb-24
+						.type--xs Будьте внимательны, после внесения данных, день рождения нельзя будет изменить
+					.mb-12
+						.flex.f-gap-12
+							.tick.active.js-toggle
+							.type--xs Разрешаю информировать меня о скидках и акциях по email
+					.mb-24
+						.flex.f-gap-12
+							.tick.active.js-toggle
+							.type--xs Разрешаю информировать меня о скидках и акциях по смс
+					.btn--md.btn--mark.btn--full Изменить
+			// editBorn === end

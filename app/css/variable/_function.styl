@@ -507,3 +507,9 @@ animateShow()
 	top initial
 	transition opacity .6s
 	opacity: 1
+
+gap($gapVal)
+	margin-top: "calc(-1 * (%s))" % $gapVal
+	margin-left: "calc(-1 * (%s))" % $gapVal
+	&>*
+		margin: $gapVal 0 0 $gapVal;

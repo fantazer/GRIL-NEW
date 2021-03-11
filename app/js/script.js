@@ -506,7 +506,7 @@ $(document).ready(function () {
 		event.stopPropagation();
 		$(this).toggleClass('head-toggle--open');
 		$('.slide-menu').toggleClass('slide-menu--open');
-		//$('body').toggleClass('body-fix')
+		$('body').toggleClass('body-fix')
 	});
 
 	$('.slide-menu').on("click", function (event) {
@@ -622,9 +622,7 @@ $(document).ready(function () {
 		$('.item-total').addClass('item-total--disable');
 	}
 
-	window.resetItemMethods = resetItemIngr;
-	//window.condition = {};
-	//window.condition.info = info;
+
 
 	// toggle tags
 	$('.js-tag').click(function(){
@@ -816,5 +814,30 @@ $(document).ready(function () {
 	/*$('.product-get').click(function(){
 		showMsgAdd('Вкусная пицца четыре сыра 30 см тонкое тесто')
 	});*/
+
+	// animate increment basket
+
+	//Вызывай эту функцию после обновления цены в корзине
+	var animateValBasket = function(total){
+		$('.js-basket-animate').each(function () {
+			var currentVal = $(this).text()*1
+			$(this).text(total)
+			$(this).prop('Counter', currentVal).animate({
+					Counter: $(this).text()
+			}, {
+					duration: 800,
+					easing: 'swing',
+					step: function (now) {
+							$(this).text(Math.ceil(now));
+					}
+			});
+		});
+	}
+	// animate increment basket === end
+
+	window.resetItemMethods = resetItemIngr;
+	window.condition = {};
+	window.condition.animateValBasket = animateValBasket;
+	//window.condition.info = info;
 
 });

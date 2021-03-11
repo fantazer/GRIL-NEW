@@ -17,7 +17,7 @@ mixin header()
 								+icon("location","icon")
 							.header-info__cont
 								.header-info__val.modal-get Барнаул
-								.header-info__text проспект Независимости, 90
+								.header-info__text Доставляем за 59 минут
 							.bubble-loc.hidden
 								// NOTE!!! REMOVE Class .hidden
 								.bubble-loc__title Ваш город  <span class="type--mark type--bold">Москва ?</span>
@@ -59,7 +59,7 @@ mixin header()
 								.header-auth-name Александр
 								.header-auth-bonus 2300 Б
 					a(href="#").cart-wrap.cart-wrap--mobile
-						.cart-cost 2 850 ₽
+						.cart-cost <span class="cart-cost-val js-basket-animate">2850</span> ₽
 						.cart
 							+icon("cart--color","icon")
 							.cart-val 33
@@ -96,7 +96,7 @@ mixin header()
 							.dropdown.dropdown--light
 								input(type="hidden" name="name" value="0")
 								.dropdown-current
-									.dropdown-current__val Еще
+									.dropdown-current__val Ещё
 									+icon("arrow-down-fat","icon")
 								.dropdown-menu
 									-
@@ -113,7 +113,7 @@ mixin header()
 						a(href="#drink" rel='m_PageScroll2id').header-nav__el Напитки
 
 					.cart-wrap.js-cart-wrap.cart-wrap--desktop
-						.cart-cost 2 850 ₽
+						.cart-cost <span class="cart-cost-val js-basket-animate">2850</span> ₽
 						.cart.js-cart
 							+icon("cart--color","icon")
 							.cart-val 33

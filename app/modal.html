@@ -72,7 +72,7 @@
                                 </div>
                                 <div class="header-info__cont">
                                     <div class="header-info__val modal-get">Барнаул</div>
-                                    <div class="header-info__text">проспект Независимости, 90</div>
+                                    <div class="header-info__text">Доставляем за 59 минут</div>
                                 </div>
                                 <div class="bubble-loc hidden">
                                     <!-- NOTE!!! REMOVE Class .hidden-->
@@ -147,7 +147,8 @@
                             </div>
                         </div>
                         <a class="cart-wrap cart-wrap--mobile" href="#">
-                            <div class="cart-cost">2 850 ₽</div>
+                            <div class="cart-cost">
+                                <span class="cart-cost-val js-basket-animate">2850</span>₽</div>
                             <div class="cart">
                                 <svg class="icon">
                                     <use xlink:href="#cart--color"></use>
@@ -189,7 +190,7 @@
                                 <div class="dropdown dropdown--light">
                                     <input type="hidden" name="name" value="0" />
                                     <div class="dropdown-current">
-                                        <div class="dropdown-current__val">Еще</div>
+                                        <div class="dropdown-current__val">Ещё</div>
                                         <svg class="icon">
                                             <use xlink:href="#arrow-down-fat"></use>
                                         </svg>
@@ -207,7 +208,8 @@
                             <a class="header-nav__el" href="#drink" rel="m_PageScroll2id">Напитки</a>
                         </div>
                         <div class="cart-wrap js-cart-wrap cart-wrap--desktop">
-                            <div class="cart-cost">2 850 ₽</div>
+                            <div class="cart-cost">
+                                <span class="cart-cost-val js-basket-animate">2850</span>₽</div>
                             <div class="cart js-cart">
                                 <svg class="icon">
                                     <use xlink:href="#cart--color"></use>
@@ -535,15 +537,10 @@
                     <div class="btn--md btn--mark modal-get" data-modal="address">Редактирование адреса | data-modal="address"</div>
                     <div class="btn--md btn--mark modal-get" data-modal="item">Карточка товара | data-modal="item"</div>
                     <!--=========================================-->
-                    <!--
-				.btn--md.btn--mark.modal-get(data-modal="true-action") Успешное действие | data-modal="true-action"
-				.btn--md.btn--mark.modal-get(data-modal="profile") Личные данные | data-modal="profile"
-				.btn--md.btn--mark.modal-get(data-modal="address") Адрес доставки | data-modal="address"
-				.btn--md.btn--mark.modal-get(data-modal="staff-true") Карьера сообщение | data-modal="staff-true"
-				.btn--md.btn--mark.modal-get(data-modal="area") Выбор доставки по карте | data-modal="area"
-				.btn--md.btn--mark.modal-get(data-modal="address-bad") Нет доставки | data-modal="address-bad"
-				-->
-                    <!--.btn--md.btn--mark.modal-get(data-modal="order") Заявка | data-modal="code "-->
+                    <hr/>
+                    <div class="btn--md btn--mark modal-get" data-modal="editPhone">Редактирование телефона | data-modal="editPhone"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="editMail">Редактирование почты | data-modal="editMail"</div>
+                    <div class="btn--md btn--mark modal-get" data-modal="editBorn">Редактирование дня рождения | data-modal="editBorn"</div>
                 </div>
             </div>
         </div>
@@ -671,7 +668,8 @@
             <svg class="icon">
                 <use xlink:href="#cart--color"></use>
             </svg>
-            <div class="cart-mobile-cost">2 850 ₽</div>
+            <div class="cart-mobile-cost">
+                <span class="js-basket-animate">2850</span>₽</div>
         </a>
         <!--block footer end-->
         <div class="modal-layer">
@@ -687,12 +685,12 @@
                         </div>
                         <div class="modal-title">Вход на сайт</div>
                         <div class="input-row">
-                            <input class="input input-mask--phone" type="text" name="name" placeholder="Телефон" />
+                            <input class="input input-mask--phone" type="phone" name="name" placeholder="Телефон" />
                         </div>
                         <div class="input-row">
                             <input class="input" type="password" name="name" placeholder="Пароль" />
                         </div>
-                        <input class="btn--md btn--mark btn--full" type="submit" value="Войти" />
+                        <div class="btn--md btn--mark btn--full">Войти</div>
                         <div class="modal-link-wrap">
                             <a class="modal-link" href="#">Забыли пароль</a>
                             <a class="modal-link" href="#">Регистрация</a>
@@ -712,7 +710,7 @@
                         <div class="modal-text">Введите номер телефона и мы отправим на него код для восстановления пароля</div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input input-mask--phone" type="text" name="name" placeholder="Телефон" />
+                                <input class="input input-mask--phone" type="phone" name="name" placeholder="Телефон" />
                             </div>
                         </div>
                         <div class="modal-send mb-24">Отправить</div>
@@ -800,7 +798,7 @@
                         <div class="modal-title">Регистрация</div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input input-mask--phone" type="text" name="name" placeholder="Телефон" />
+                                <input class="input input-mask--phone" type="phone" name="name" placeholder="Телефон" />
                             </div>
                         </div>
                         <div class="login-remember">
@@ -896,7 +894,7 @@
                             <br>скидкой 5% на любой заказ</div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Укажите E-mail" />
+                                <input class="input" type="email" name="name" placeholder="Укажите E-mail" />
                             </div>
                         </div>
                         <div class="btn--md btn--mark btn--full mb-24">Принять</div>
@@ -988,7 +986,7 @@
                                 <div class="city-search__person">
                                     <img src="img/person/person-moto.svg" alt="" />
                                 </div>
-                                <input class="input input--empty" type="text" placeholder="Введите название  города" />
+                                <input class="input input--empty" type="text" placeholder="Введите название города" />
                                 <div class="search__icon">
                                     <svg class="icon">
                                         <use xlink:href="#search"></use>
@@ -1502,7 +1500,7 @@
                         </div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input input-mask--phone" type="text" placeholder="Телефон" />
+                                <input class="input input-mask--phone" type="phone" placeholder="Телефон" />
                             </div>
                         </div>
                         <div class="input-row">
@@ -1620,7 +1618,7 @@
                         </div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input input-mask--phone" type="text" placeholder="Ваш телефон" />
+                                <input class="input input-mask--phone" type="phone" placeholder="Ваш телефон" />
                             </div>
                         </div>
                         <div class="input-row">
@@ -1699,12 +1697,12 @@
                         </div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input input-mask--phone" type="text" name="name" placeholder="Телефон" />
+                                <input class="input input-mask--phone" type="phone" name="name" placeholder="Телефон" />
                             </div>
                         </div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="E-mail" />
+                                <input class="input" type="email" name="name" placeholder="E-mail" />
                             </div>
                         </div>
                         <div class="g g-3 g-gap-10 xs-g-gap-0">
@@ -2393,6 +2391,176 @@
                     </div>
                 </div>
                 <!-- area === end-->
+                <!-- editPhone-->
+                <div class="modal" data-modal="editPhone">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Редактирование телефона</div>
+                        <div class="input-row">
+                            <input class="input input-mask--phone" type="phone" name="name" value="8(495)320-07-39" placeholder="Телефон" />
+                        </div>
+                        <div class="btn--md btn--mark btn--full">Изменить</div>
+                    </div>
+                </div>
+                <!-- editPhone === end-->
+                <!-- editMail-->
+                <div class="modal" data-modal="editMail">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Редактирование почты</div>
+                        <div class="input-row">
+                            <input class="input" type="email" name="name" value="mail@mail.com" placeholder="Ваш email" />
+                        </div>
+                        <div class="btn--md btn--mark btn--full">Изменить</div>
+                    </div>
+                </div>
+                <!-- editMail === end-->
+                <!-- editBorn-->
+                <div class="modal modal--lg" data-modal="editBorn">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Редактирование даты рождения</div>
+                        <div class="g g-3 g-gap-10 xs-g-gap-0">
+                            <div class="input-row">
+                                <div class="dropdown dropdown--lg">
+                                    <input type="hidden" name="name" value="0" />
+                                    <div class="dropdown-current">
+                                        <div class="dropdown-current__val">12</div>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down-fat"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu__el" data-value="#">1</div>
+                                        <div class="dropdown-menu__el" data-value="#">2</div>
+                                        <div class="dropdown-menu__el" data-value="#">3</div>
+                                        <div class="dropdown-menu__el" data-value="#">4</div>
+                                        <div class="dropdown-menu__el" data-value="#">5</div>
+                                        <div class="dropdown-menu__el" data-value="#">6</div>
+                                        <div class="dropdown-menu__el" data-value="#">7</div>
+                                        <div class="dropdown-menu__el" data-value="#">8</div>
+                                        <div class="dropdown-menu__el" data-value="#">9</div>
+                                        <div class="dropdown-menu__el" data-value="#">10</div>
+                                        <div class="dropdown-menu__el" data-value="#">11</div>
+                                        <div class="dropdown-menu__el" data-value="#">12</div>
+                                        <div class="dropdown-menu__el" data-value="#">13</div>
+                                        <div class="dropdown-menu__el" data-value="#">14</div>
+                                        <div class="dropdown-menu__el" data-value="#">15</div>
+                                        <div class="dropdown-menu__el" data-value="#">16</div>
+                                        <div class="dropdown-menu__el" data-value="#">17</div>
+                                        <div class="dropdown-menu__el" data-value="#">18</div>
+                                        <div class="dropdown-menu__el" data-value="#">19</div>
+                                        <div class="dropdown-menu__el" data-value="#">20</div>
+                                        <div class="dropdown-menu__el" data-value="#">21</div>
+                                        <div class="dropdown-menu__el" data-value="#">22</div>
+                                        <div class="dropdown-menu__el" data-value="#">23</div>
+                                        <div class="dropdown-menu__el" data-value="#">24</div>
+                                        <div class="dropdown-menu__el" data-value="#">25</div>
+                                        <div class="dropdown-menu__el" data-value="#">26</div>
+                                        <div class="dropdown-menu__el" data-value="#">27</div>
+                                        <div class="dropdown-menu__el" data-value="#">28</div>
+                                        <div class="dropdown-menu__el" data-value="#">29</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="dropdown dropdown--lg">
+                                    <input type="hidden" name="name" value="0" />
+                                    <div class="dropdown-current">
+                                        <div class="dropdown-current__val">Январь</div>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down-fat"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                        <div class="dropdown-menu__el" data-value="#">Январь</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="dropdown dropdown--lg">
+                                    <input type="hidden" name="name" value="0" />
+                                    <div class="dropdown-current">
+                                        <div class="dropdown-current__val">1992</div>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down-fat"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                        <div class="dropdown-menu__el" data-value="#">1980</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="msg msg--info mb-24">
+                            <div class="type--xs">Будьте внимательны, после внесения данных, день рождения нельзя будет изменить</div>
+                        </div>
+                        <div class="mb-12">
+                            <div class="flex f-gap-12">
+                                <div class="tick active js-toggle"></div>
+                                <div class="type--xs">Разрешаю информировать меня о скидках и акциях по email</div>
+                            </div>
+                        </div>
+                        <div class="mb-24">
+                            <div class="flex f-gap-12">
+                                <div class="tick active js-toggle"></div>
+                                <div class="type--xs">Разрешаю информировать меня о скидках и акциях по смс</div>
+                            </div>
+                        </div>
+                        <div class="btn--md btn--mark btn--full">Изменить</div>
+                    </div>
+                </div>
+                <!-- editBorn === end-->
             </div>
         </div>
     </div>

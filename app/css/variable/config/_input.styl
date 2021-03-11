@@ -40,6 +40,7 @@
 	color black
 	width: calc(100% - 40px)
 	line-height: 1.6
+	margin-top: 2px
 	a
 		color $mark
 
@@ -298,7 +299,7 @@
 .upload-get
 	f()
 	align-items center
-	grid-gap 12px
+	gap(12px   )
 	cp()
 // form === end
 
@@ -546,3 +547,33 @@
 		color white
 		font-weight: 700
 // steps === end
+
+.tick
+	background: $snow
+	width: 60px
+	min-width 60px
+	height: 30px
+	br(20px)
+	position relative
+	cp()
+	tr()
+	border 1px solid $border-color
+	&:hover
+		&:before
+			content ''
+			background: darken($snow,20)
+	&:before
+		content ''
+		size 24px
+		background: darken($snow,10)
+		position absolute
+		top 2px
+		left 30px
+		round()
+		tr()
+	&.active
+		&:before
+			content ''
+			tr()
+			left 4px
+			background: $mark

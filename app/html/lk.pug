@@ -16,13 +16,19 @@ include block_html/_include.pug
 									+icon("exit","icon")
 							.profile-row
 								.profile-row__name телефон
-								.profile-row__val +7 (865) 543 45 45
+								.profile-row__val 
+									span +7 (865) 543 45 45
+									+icon("pencil","icon")
 							.profile-row
 								.profile-row__name e-mail
-								.profile-row__val prosto_vlad@gmail.com
+								.profile-row__val
+									span prosto_vlad@gmail.com
+									+icon("pencil","icon")
 							.profile-row
 								.profile-row__name день рождения
-								.profile-row__val 06.09.1991
+								.profile-row__val
+									span 06.09.1991
+									+icon("pencil","icon")
 							a(href="#").profile-change
 								+icon("edit","icon")
 								span изменить информацию
@@ -76,7 +82,7 @@ include block_html/_include.pug
 										+icon("delete","icon")
 										span Удалить
 							.address__add
-								.flex.flex-aic.g-gap-10
+								.flex.flex-aic.f-gap-10
 									+icon("plus-round","icon icon--lg icon--mark")
 									.type--black.type--bold Добавить адрес
 					.lk-info__el
