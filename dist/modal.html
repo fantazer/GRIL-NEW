@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/style-edit.css" />
 </head>
 
-<body>
+<body id='top'>
     <style type="text/css">
         .btn-wrap {
         		display: flex;
@@ -532,6 +532,7 @@
                     <div class="btn--md btn--mark modal-get" data-modal="item">Карточка товара | data-modal="item"</div>
                     <!--=========================================-->
                     <hr/>
+                    <div class="btn--md btn--mark modal-get" data-modal="editName">Редактирование имени | data-modal="editName"</div>
                     <div class="btn--md btn--mark modal-get" data-modal="editPhone">Редактирование телефона | data-modal="editPhone"</div>
                     <div class="btn--md btn--mark modal-get" data-modal="editMail">Редактирование почты | data-modal="editMail"</div>
                     <div class="btn--md btn--mark modal-get" data-modal="editBorn">Редактирование дня рождения | data-modal="editBorn"</div>
@@ -539,6 +540,11 @@
             </div>
         </div>
         <!--block footer-->
+        <a class="scroll-up" href="#top" rel="m_PageScroll2id">
+            <svg class="icon">
+                <use xlink:href="#arrow-coner-top"></use>
+            </svg>
+        </a>
         <div class="footer-info-wrap">
             <div class="main-cont">
                 <div class="footer-info">
@@ -679,10 +685,10 @@
                         </div>
                         <div class="modal-title">Вход на сайт</div>
                         <div class="input-row">
-                            <input class="input input-mask--phone" type="phone" name="name" placeholder="Телефон" />
+                            <input class="input input-mask--phone" type="phone" name="phone" placeholder="Телефон" />
                         </div>
                         <div class="input-row">
-                            <input class="input" type="password" name="name" placeholder="Пароль" />
+                            <input class="input" type="password" name="password" placeholder="Пароль" />
                         </div>
                         <div class="btn--md btn--mark btn--full">Войти</div>
                         <div class="modal-link-wrap">
@@ -704,7 +710,7 @@
                         <div class="modal-text">Введите номер телефона и мы отправим на него код для восстановления пароля</div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input input-mask--phone" type="phone" name="name" placeholder="Телефон" />
+                                <input class="input input-mask--phone" type="phone" name="phone" placeholder="Телефон" />
                             </div>
                         </div>
                         <div class="modal-send mb-24">Отправить</div>
@@ -726,13 +732,13 @@
                         <div class="modal-text">Введите код, который мы выслали на ваш номер телефона по СМС</div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Код" />
+                                <input class="input" type="text" name="text" placeholder="Код" />
                             </div>
                         </div>
                         <div class="btn--md btn--mark btn--full mb-24">Отправить</div>
-                        <div class="flex flex--between js-modal-countdown-wrap" data-time="5">
+                        <div class="flex flex--between js-modal-countdown-wrap" data-time="12">
                             <div class="link--mark type--dark type--disable js-modal-countdown-type">Отправить код еще раз</div>
-                            <div class="icon-row countdown-cont">
+                            <div class="countdown-cont">
                                 <svg class="icon icon--sm">
                                     <use xlink:href="#clock"></use>
                                 </svg>
@@ -755,12 +761,12 @@
                         <div class="modal-text">Введите новый пароль для входа</div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input" type="password" name="name" placeholder="Новый пароль" />
+                                <input class="input" type="password" name="password" placeholder="Новый пароль" />
                             </div>
                         </div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input" type="password" name="name" placeholder="Повторите пароль" />
+                                <input class="input" type="password" name="password" placeholder="Повторите пароль" />
                             </div>
                         </div>
                         <div class="modal-send">Сохранить</div>
@@ -792,7 +798,7 @@
                         <div class="modal-title">Регистрация</div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input input-mask--phone" type="phone" name="name" placeholder="Телефон" />
+                                <input class="input input-mask--phone" type="phone" name="phone" placeholder="Телефон" />
                             </div>
                         </div>
                         <div class="login-remember">
@@ -830,7 +836,7 @@
                         <div class="modal-text">Введите код, который мы выслали на ваш номер телефона по СМС</div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Код" />
+                                <input class="input" type="text" name="text" placeholder="Код" />
                             </div>
                         </div>
                         <div class="btn--md btn--mark btn--full mb-24">Отправить</div>
@@ -863,12 +869,12 @@
                         </div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input" type="password" name="name" placeholder="Придумайте пароль" />
+                                <input class="input" type="password" name="password" placeholder="Придумайте пароль" />
                             </div>
                         </div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input" type="password" name="name" placeholder="Повторите пароль" />
+                                <input class="input" type="password" name="password" placeholder="Повторите пароль" />
                             </div>
                         </div>
                         <div class="btn--md btn--mark btn--full modal-get" data-modal="">Далее</div>
@@ -888,7 +894,7 @@
                             <br>скидкой 5% на любой заказ</div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input" type="email" name="name" placeholder="Укажите E-mail" />
+                                <input class="input" type="email" name="email" placeholder="Укажите E-mail" />
                             </div>
                         </div>
                         <div class="btn--md btn--mark btn--full mb-24">Принять</div>
@@ -1494,7 +1500,7 @@
                         </div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input input-mask--phone" type="phone" placeholder="Телефон" />
+                                <input class="input input-mask--phone" type="phone" name="phone" placeholder="Телефон" />
                             </div>
                         </div>
                         <div class="input-row">
@@ -1612,7 +1618,7 @@
                         </div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input input-mask--phone" type="phone" placeholder="Ваш телефон" />
+                                <input class="input input-mask--phone" type="phone" name="phone" placeholder="Ваш телефон" />
                             </div>
                         </div>
                         <div class="input-row">
@@ -1691,12 +1697,12 @@
                         </div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input input-mask--phone" type="phone" name="name" placeholder="Телефон" />
+                                <input class="input input-mask--phone" type="phone" name="phone" placeholder="Телефон" />
                             </div>
                         </div>
                         <div class="input-cont">
                             <div class="input-row">
-                                <input class="input" type="email" name="name" placeholder="E-mail" />
+                                <input class="input" type="email" name="email" placeholder="E-mail" />
                             </div>
                         </div>
                         <div class="g g-3 g-gap-10 xs-g-gap-0">
@@ -1804,29 +1810,15 @@
                             <div class="type--xs">Будьте внимательны, после внесения данных, день рождения нельзя будет изменить</div>
                         </div>
                         <div class="mb-12">
-                            <div class="check-el">
-                                <label class="style-label style-label--checkbox">
-                                    <input class="style-input" type="checkbox" checked="checked" />
-                                    <div class="style-input-element">
-                                        <svg class="icon">
-                                            <use xlink:href="#checked"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="style-input-text">Разрешаю информировать меня о скидках и акциях по email</div>
-                                </label>
+                            <div class="flex f-gap-12">
+                                <div class="tick active js-toggle"></div>
+                                <div class="type--xs">Разрешаю информировать меня о скидках и акциях по email</div>
                             </div>
                         </div>
                         <div class="mb-24">
-                            <div class="check-el">
-                                <label class="style-label style-label--checkbox">
-                                    <input class="style-input" type="checkbox" checked="checked" />
-                                    <div class="style-input-element">
-                                        <svg class="icon">
-                                            <use xlink:href="#checked"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="style-input-text">Разрешаю информировать меня о скидках и акциях по смс</div>
-                                </label>
+                            <div class="flex f-gap-12">
+                                <div class="tick active js-toggle"></div>
+                                <div class="type--xs">Разрешаю информировать меня о скидках и акциях по смс</div>
                             </div>
                         </div>
                         <div class="btn--md btn--mark btn--full mb-12">Сохранить</div>
@@ -1851,33 +1843,33 @@
 							.size__el.js-switch(data-item="self" data-group="deliverType") Самовывоз
 					-->
                         <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Название адреса (дом, работа)*" />
+                            <input class="input" type="text" name="info" placeholder="Название адреса (дом, работа)*" />
                         </div>
                         <div class="input-row">
-                            <input class="input" type="text" name="name" placeholder="Улица" />
+                            <input class="input" type="text" name="info" placeholder="Улица" />
                         </div>
                         <div class="input-cont input-cont--two-sm">
                             <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Дом" />
+                                <input class="input" type="text" name="info" placeholder="Дом" />
                             </div>
                             <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Корпус" />
-                            </div>
-                        </div>
-                        <div class="input-cont input-cont--two-sm">
-                            <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Подъезд" />
-                            </div>
-                            <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Этаж" />
+                                <input class="input" type="text" name="info" placeholder="Корпус" />
                             </div>
                         </div>
                         <div class="input-cont input-cont--two-sm">
                             <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Квартира" />
+                                <input class="input" type="text" name="info" placeholder="Подъезд" />
                             </div>
                             <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Домофон" />
+                                <input class="input" type="text" name="info" placeholder="Этаж" />
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--two-sm">
+                            <div class="input-row">
+                                <input class="input" type="text" name="info" placeholder="Квартира" />
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" name="info" placeholder="Домофон" />
                             </div>
                         </div>
                         <div class="btn--md btn--mark btn--full mb-12">Сохранить</div>
@@ -2316,7 +2308,7 @@
                         </div>
                         <div class="city">
                             <div class="city-search">
-                                <input class="input input--empty" type="text" placeholder="Введите название  города" />
+                                <input class="input input--empty" type="text" placeholder="Введите название города" />
                                 <div class="search__icon">
                                     <svg class="icon">
                                         <use xlink:href="#search"></use>
@@ -2386,6 +2378,22 @@
                 </div>
                 <!-- area === end-->
                 <!-- editPhone-->
+                <div class="modal" data-modal="editName">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Редактирование Имени</div>
+                        <div class="input-row">
+                            <input class="input" type="text" name="name" value="Константин" placeholder="Имя" />
+                        </div>
+                        <div class="btn--md btn--mark btn--full">Изменить</div>
+                    </div>
+                </div>
+                <!-- editPhone === end-->
+                <!-- editPhone-->
                 <div class="modal" data-modal="editPhone">
                     <div class="modal-content">
                         <div class="modal-close">
@@ -2395,7 +2403,7 @@
                         </div>
                         <div class="modal-title">Редактирование телефона</div>
                         <div class="input-row">
-                            <input class="input input-mask--phone" type="phone" name="name" value="8(495)320-07-39" placeholder="Телефон" />
+                            <input class="input input-mask--phone" type="phone" name="phone" value="8(495)320-07-39" placeholder="Телефон" />
                         </div>
                         <div class="btn--md btn--mark btn--full">Изменить</div>
                     </div>
@@ -2411,7 +2419,7 @@
                         </div>
                         <div class="modal-title">Редактирование почты</div>
                         <div class="input-row">
-                            <input class="input" type="email" name="name" value="mail@mail.com" placeholder="Ваш email" />
+                            <input class="input" type="email" name="email" value="mail@mail.com" placeholder="Ваш email" />
                         </div>
                         <div class="btn--md btn--mark btn--full">Изменить</div>
                     </div>

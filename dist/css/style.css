@@ -874,6 +874,11 @@ body > svg {
   display: -ms-flexbox;
   display: flex;
 }
+.flex-wrap {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
 .flex--mid {
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -2860,7 +2865,7 @@ a:visiter {
   background: #dfdfdf;
   position: absolute;
   top: 2px;
-  left: 30px;
+  left: 4px;
   border-radius: 50%;
   -webkit-transition: all 0.4s;
           transition: all 0.4s;
@@ -2869,7 +2874,7 @@ a:visiter {
   content: '';
   -webkit-transition: all 0.4s;
           transition: all 0.4s;
-  left: 4px;
+  left: 30px;
   background: #00ae42;
 }
 /* block footer*/
@@ -3491,6 +3496,11 @@ body {
 }
 .dropdown--fix-md {
   max-width: 240px;
+}
+@media only screen and (max-width: 340px) {
+  .dropdown--fix-md {
+    max-width: initial;
+  }
 }
 .dropdown--lg .dropdown-current {
   padding: 17px 50px 17px 20px;
@@ -4207,6 +4217,7 @@ body {
   display: inline-block;
   margin-right: 6px;
   width: 45px;
+  text-align: right;
 }
 .cart {
   display: -webkit-box;
@@ -6775,6 +6786,7 @@ body {
           transition: all 0.4s;
 }
 .icon-block {
+  min-width: 40px;
   width: 40px;
   height: 40px;
   display: -webkit-box;
@@ -7205,12 +7217,7 @@ body {
   }
 }
 .profile-wrap {
-  padding: 0 40px 0 40px;
-}
-@media only screen and (max-width: 640px) {
-  .profile-wrap {
-    padding: 0 30px;
-  }
+  padding: 0 30px;
 }
 .profile__img {
   display: -webkit-box;
@@ -7302,8 +7309,43 @@ body {
 }
 .profile__name {
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1;
   margin-bottom: 4px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: -webkit-calc(100% - 50px);
+  max-width: calc(100% - 50px);
+}
+.profile__name:hover {
+  cursor: pointer;
+}
+@media only screen and (max-width: 640px) {
+  .profile__name {
+    font-size: 18px;
+  }
+}
+.profile__name:hover .icon {
+  fill: #00ae42;
+}
+.profile__name .icon {
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-left: 10px;
+  fill: #b4b4b4;
+}
+.profile__name span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
 }
 .profile-row {
   width: 100%;
@@ -7592,6 +7634,11 @@ body {
   display: inline-block;
   color: #b4b4b4;
 }
+@media only screen and (max-width: 640px) {
+  .address-footer__el span {
+    font-size: 12px;
+  }
+}
 .address-edit .icon {
   fill: #00ae42;
 }
@@ -7810,10 +7857,16 @@ body {
 }
 @media only screen and (max-width: 640px) {
   .history-descr {
-    grid-gap: 20px;
+    margin-top: -webkit-calc(-1 * (20px));
+    margin-top: calc(-1 * (20px));
+    margin-left: -webkit-calc(-1 * (20px));
+    margin-left: calc(-1 * (20px));
     border: 0;
     margin-top: 0;
     padding-top: 24px;
+  }
+  .history-descr>* {
+    margin: 20px 0 0 20px;
   }
 }
 .history-descr__el {
@@ -9912,7 +9965,23 @@ body {
   color: #00ae42;
 }
 .countdown-cont {
-  min-width: 70px;
+  width: 65px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
+}
+.countdown-cont .icon {
+  margin-right: 3px;
 }
 .item-modal-total {
   padding: 20px;
@@ -10333,6 +10402,41 @@ body {
 .connect__phone {
   font-weight: 700;
   margin-bottom: 12px;
+}
+.scroll-up {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ececec;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #fff;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+}
+.scroll-up:hover {
+  cursor: pointer;
+}
+.scroll-up:hover {
+  border-color: #00ae42;
+}
+.scroll-up .icon {
+  width: 14px;
+  height: 14px;
+  fill: #00ae42;
 }
 @-webkit-keyframes slideInDown {
   from {

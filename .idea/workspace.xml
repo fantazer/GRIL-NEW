@@ -10,8 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="fix part 3">
-      <change afterPath="$PROJECT_DIR$/app/img/svg/pencil.svg" afterDir="false" />
+    <list default="true" id="33fc4985-0812-4917-a972-022b8742b981" name="Default" comment="fix part 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/basket.html" afterDir="false" />
@@ -20,32 +19,22 @@
       <change beforePath="$PROJECT_DIR$/app/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/style.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/style.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/variable/_function.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/_function.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/_helper.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/_helper.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/variable/config/_input.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_input.styl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/variable/config/_typography.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/deliver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/elements.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/error-500.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/faq.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/block_html/_svg.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_svg.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/html/catalog.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/catalog.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/block_html/_style.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/block_html/_style.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/lk.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/lk.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/html/modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/modal.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/css/sprite.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/css/sprite.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/pack.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/pack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/sprite.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/sprite.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/img/svg/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/svg/sprite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/html/vacancy.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/html/vacancy.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/add-on.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/add-on.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/lk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/modal.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/module/footer/_footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/footer/_footer.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/module/header/_header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/header/_header.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/module/modal/_modal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/modal/_modal.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/news-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-full.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/news-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/news-list.html" afterDir="false" />
@@ -55,38 +44,6 @@
       <change beforePath="$PROJECT_DIR$/app/sale-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/sale-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/vacancy.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/vacancy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/basket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/callback.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/callback.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/catalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/style-min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style-min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/deliver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/error-404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/error-500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/css/sprite.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/css/sprite.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/pack.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/pack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/sprite.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/sprite.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/svg/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/svg/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/add-on.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/add-on.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/script-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script-min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/lk.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/lk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/news-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/news-full.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/news-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/news-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/offer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/offer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/review-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/review-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/sale-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/sale-item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/sale-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/sale-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/vacancy.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/vacancy.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -408,14 +365,8 @@
       <workItem from="1614846048637" duration="5633000" />
       <workItem from="1614931519876" duration="4366000" />
       <workItem from="1615366703175" duration="8408000" />
-      <workItem from="1615451221342" duration="8437000" />
-    </task>
-    <task id="LOCAL-00039" summary="fix">
-      <created>1590600229396</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1590600229396</updated>
+      <workItem from="1615451221342" duration="9402000" />
+      <workItem from="1615537916739" duration="4353000" />
     </task>
     <task id="LOCAL-00040" summary="migrate to node v11.6">
       <created>1593082968438</created>
@@ -753,7 +704,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614939842949</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="fix part 4">
+      <created>1615460739628</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1615460739628</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -794,7 +752,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="fix adds calc v2" />
     <MESSAGE value="add reset method for item ingr" />
     <MESSAGE value="fix css bugs" />
     <MESSAGE value="add dist folder" />
@@ -819,6 +776,7 @@
     <MESSAGE value="add fix v1" />
     <MESSAGE value="add fix v2" />
     <MESSAGE value="fix part 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix part 3" />
+    <MESSAGE value="fix part 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix part 4" />
   </component>
 </project>

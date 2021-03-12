@@ -9,9 +9,9 @@ mixin modal()
 						+icon("close","icon")
 					.modal-title Вход на сайт
 					.input-row
-						input(type="phone" name="name" placeholder="Телефон").input.input-mask--phone
+						input(type="phone" name="phone" placeholder="Телефон" ).input.input-mask--phone
 					.input-row
-						input(type="password" name="name" placeholder="Пароль").input
+						input(type="password" name="password" placeholder="Пароль").input
 					.btn--md.btn--mark.btn--full Войти
 					.modal-link-wrap
 						a(href="#").modal-link Забыли пароль
@@ -27,7 +27,7 @@ mixin modal()
 					.modal-text Введите номер телефона и мы отправим на него код для восстановления пароля
 					.input-cont
 						.input-row
-							input(type="phone" name="name" placeholder="Телефон").input.input-mask--phone
+							input(type="phone" name="phone" placeholder="Телефон").input.input-mask--phone
 					.modal-send.mb-24 Отправить
 					.flex.flex--mid
 						a(href="#").modal-link Я вспомнил пароль
@@ -42,11 +42,11 @@ mixin modal()
 					.modal-text Введите код, который мы выслали на ваш номер телефона по СМС
 					.input-cont
 						.input-row
-							input(type="text" name="name" placeholder="Код").input
+							input(type="text" name="text" placeholder="Код").input
 					.btn--md.btn--mark.btn--full.mb-24 Отправить
-					.flex.flex--between.js-modal-countdown-wrap(data-time="5")
+					.flex.flex--between.js-modal-countdown-wrap(data-time="12")
 						.link--mark.type--dark.type--disable.js-modal-countdown-type Отправить код еще раз
-						.icon-row.countdown-cont
+						.countdown-cont
 							+icon("clock","icon icon--sm")
 							.type--sm
 								span.js-modal-countdown-val 60
@@ -62,10 +62,10 @@ mixin modal()
 					.modal-text Введите новый пароль для входа
 					.input-cont
 						.input-row
-							input(type="password" name="name" placeholder="Новый пароль").input
+							input(type="password" name="password" placeholder="Новый пароль").input
 					.input-cont
 						.input-row
-							input(type="password" name="name" placeholder="Повторите пароль").input
+							input(type="password" name="password" placeholder="Повторите пароль").input
 					.modal-send Сохранить
 			// enterPass === end
 
@@ -87,7 +87,7 @@ mixin modal()
 					.modal-title Регистрация
 					.input-cont
 						.input-row
-							input(type="phone" name="name" placeholder="Телефон").input.input-mask--phone
+							input(type="phone" name="phone" placeholder="Телефон").input.input-mask--phone
 					.login-remember
 						.check-el
 							label.style-label.style-label--checkbox
@@ -109,7 +109,7 @@ mixin modal()
 					.modal-text Введите код, который мы выслали на ваш номер телефона по СМС
 					.input-cont
 						.input-row
-							input(type="text" name="name" placeholder="Код").input
+							input(type="text" name="text" placeholder="Код").input
 					.btn--md.btn--mark.btn--full.mb-24 Отправить
 					.flex.flex--between.js-modal-countdown-wrap(data-time="10")
 						.type--gray.type--disable.link--mark.js-modal-countdown-type Отправить код еще раз
@@ -131,10 +131,10 @@ mixin modal()
 							input(type="text" name="name" placeholder="Ваше имя").input
 					.input-cont
 						.input-row
-							input(type="password" name="name" placeholder="Придумайте пароль").input
+							input(type="password" name="password" placeholder="Придумайте пароль").input
 					.input-cont
 						.input-row
-							input(type="password" name="name" placeholder="Повторите пароль").input
+							input(type="password" name="password" placeholder="Повторите пароль").input
 					.btn--md.btn--mark.btn--full.modal-get(data-modal="") Далее
 			// regData === end
 
@@ -147,7 +147,7 @@ mixin modal()
 					.modal-text Получите купон на e-mail со <br> скидкой 5% на любой заказ
 					.input-cont
 						.input-row
-							input(type="email" name="name" placeholder="Укажите E-mail").input
+							input(type="email" name="email" placeholder="Укажите E-mail").input
 					.btn--md.btn--mark.btn--full.mb-24 Принять
 					.flex.flex--mid
 						.modal-link.modal-hide Пропустить
@@ -277,7 +277,7 @@ mixin modal()
 							input(type="text" placeholder="Ваше имя" class="input")
 					.input-cont
 						.input-row
-							input(type="phone" placeholder="Телефон" class="input").input-mask--phone
+							input(type="phone" name="phone" placeholder="Телефон" class="input").input-mask--phone
 					.input-row
 						textarea(name="info", cols="30", rows="6" placeholder="Сообщение").input
 					+deal()
@@ -357,7 +357,7 @@ mixin modal()
 							input(type="text" placeholder="Ваше имя" class="input")
 					.input-cont
 						.input-row
-							input(type="phone" placeholder="Ваш телефон" class="input").input-mask--phone
+							input(type="phone" name="phone" placeholder="Ваш телефон" class="input").input-mask--phone
 					.input-row
 						textarea(name="info", cols="30", rows="6" placeholder="Расскажите о себе.").input
 					.upload-wrap
@@ -396,10 +396,10 @@ mixin modal()
 							input(type="text" name="name" placeholder="Имя").input
 					.input-cont
 						.input-row
-							input(type="phone" name="name" placeholder="Телефон" ).input.input-mask--phone
+							input(type="phone" name="phone" placeholder="Телефон" ).input.input-mask--phone
 					.input-cont
 						.input-row
-							input(type="email" name="name" placeholder="E-mail").input
+							input(type="email" name="email" placeholder="E-mail").input
 					.g.g-3.g-gap-10.xs-g-gap-0
 						.input-row
 							.dropdown.dropdown--lg
@@ -431,10 +431,13 @@ mixin modal()
 					.msg.msg--info.mb-24
 						.type--xs Будьте внимательны, после внесения данных, день рождения нельзя будет изменить
 					.mb-12
-						+checkbox("Разрешаю информировать меня о скидках и акциях по email",'checked')
+						.flex.f-gap-12
+							.tick.active.js-toggle
+							.type--xs Разрешаю информировать меня о скидках и акциях по email
 					.mb-24
-						+checkbox("Разрешаю информировать меня о скидках и акциях по смс",'checked')
-
+						.flex.f-gap-12
+							.tick.active.js-toggle
+							.type--xs Разрешаю информировать меня о скидках и акциях по смс
 					.btn--md.btn--mark.btn--full.mb-12 Сохранить
 					.btn--md.btn--light.btn--full.modal-hide Отмена
 			// profile === end
@@ -452,24 +455,24 @@ mixin modal()
 								.size__el.size__el--active.js-switch(data-item="deliver" data-group="deliverType") Доставка
 								.size__el.js-switch(data-item="self" data-group="deliverType") Самовывоз
 					.input-row
-						input(type="text" name="name" placeholder="Название адреса (дом, работа)*" ).input
+						input(type="text" name="info" placeholder="Название адреса (дом, работа)*" ).input
 					.input-row
-						input(type="text" name="name" placeholder="Улица").input
+						input(type="text" name="info" placeholder="Улица").input
 					.input-cont.input-cont--two-sm
 						.input-row
-							input(type="text" name="name" placeholder="Дом").input
+							input(type="text" name="info" placeholder="Дом").input
 						.input-row
-							input(type="text" name="name" placeholder="Корпус").input
+							input(type="text" name="info" placeholder="Корпус").input
 					.input-cont.input-cont--two-sm
 						.input-row
-							input(type="text" name="name" placeholder="Подъезд").input
+							input(type="text" name="info" placeholder="Подъезд").input
 						.input-row
-							input(type="text" name="name" placeholder="Этаж").input
+							input(type="text" name="info" placeholder="Этаж").input
 					.input-cont.input-cont--two-sm
 						.input-row
-							input(type="text" name="name" placeholder="Квартира").input
+							input(type="text" name="info" placeholder="Квартира").input
 						.input-row
-							input(type="text" name="name" placeholder="Домофон").input
+							input(type="text" name="info" placeholder="Домофон").input
 
 					.btn--md.btn--mark.btn--full.mb-12 Сохранить
 					.btn--md.btn--light.btn--full.modal-hide Отмена
@@ -602,7 +605,7 @@ mixin modal()
 						+icon("delete","icon icon--sm icon--left")
 					.city
 						.city-search
-							input(type="text" placeholder="Введите название  города" class="input input--empty")
+							input(type="text" placeholder="Введите название города" class="input input--empty")
 							.search__icon
 								+icon("search","icon")
 					.input-cont.input-cont--extend.input-cont--two
@@ -641,13 +644,24 @@ mixin modal()
 			// area === end
 
 			// editPhone
+			.modal(data-modal="editName")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Редактирование Имени
+					.input-row
+						input(type="text" name="name" value="Константин" placeholder="Имя").input
+					.btn--md.btn--mark.btn--full Изменить
+			// editPhone === end
+
+			// editPhone
 			.modal(data-modal="editPhone")
 				.modal-content
 					.modal-close
 						+icon("close","icon")
 					.modal-title Редактирование телефона
 					.input-row
-						input(type="phone" name="name" value="8(495)320-07-39" placeholder="Телефон").input.input-mask--phone
+						input(type="phone" name="phone" value="8(495)320-07-39" placeholder="Телефон").input.input-mask--phone
 					.btn--md.btn--mark.btn--full Изменить
 			// editPhone === end
 
@@ -658,7 +672,7 @@ mixin modal()
 						+icon("close","icon")
 					.modal-title Редактирование почты
 					.input-row
-						input(type="email" name="name" value="mail@mail.com" placeholder="Ваш email").input
+						input(type="email" name="email" value="mail@mail.com" placeholder="Ваш email").input
 					.btn--md.btn--mark.btn--full Изменить
 			// editMail === end
 

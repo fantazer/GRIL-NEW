@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/style-edit.css" />
 </head>
 
-<body>
+<body id='top'>
     <div class="page">
         <!--block header-->
         <div class="header">
@@ -499,8 +499,8 @@
                     </div>
                     <div class="title title--xl">Карьера</div>
                 </div>
-                <div class="flex flex-aic g-gap-10 mb-32">
-                    <div class="type--main type--nowrap">Выберите город</div>
+                <div class="flex flex-wrap flex-aic f-gap-10 mb-32">
+                    <div class="type--main type--nowrap">Выберите город:</div>
                     <div class="dropdown dropdown--fix-md">
                         <input type="hidden" name="name" value="0" />
                         <div class="dropdown-current">
@@ -685,6 +685,11 @@
             </div>
         </div>
         <!--block footer-->
+        <a class="scroll-up" href="#top" rel="m_PageScroll2id">
+            <svg class="icon">
+                <use xlink:href="#arrow-coner-top"></use>
+            </svg>
+        </a>
         <div class="footer-info-wrap">
             <div class="main-cont">
                 <div class="footer-info">

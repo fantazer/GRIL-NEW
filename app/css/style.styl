@@ -420,6 +420,8 @@ body
 
 
 .dropdown--fix-md
+	+below(340px)
+		max-width initial
 	max-width 240px
 
 .dropdown--lg
@@ -2355,6 +2357,7 @@ body
 		font-weight: 700
 		tr()
 .icon-block
+	min-width 40px
 	size 40px
 	flex(mid)
 	round()
@@ -2634,9 +2637,7 @@ body
 	background: white
 	padding: 30px 0
 .profile-wrap
-	+below(640px)
-		padding: 0 30px
-	padding: 0 40px 0 40px
+	padding: 0 30px
 .profile__img
 	flex(mid)
 	round()
@@ -2684,8 +2685,27 @@ body
 .profile__name
 	@extend .type--lg
 	font-weight 700
-	line-height: 1.4
+	line-height: 1
 	margin-bottom: 4px
+	align-items center
+	f()
+	cp()
+	max-width calc(100% - 50px)
+	+below(640px)
+		font-size: 18px
+	&:hover
+		.icon
+			fill $mark
+	.icon
+		tr()
+		size 16px
+		min-width 16px
+		margin-left: 10px
+		fill $gray
+	span
+		overflow: hidden
+		text-overflow ellipsis
+		display inline-block
 .profile-row
 	width: 100%
 	margin-bottom: 15px
@@ -2826,6 +2846,8 @@ body
 		margin-right: 10px
 		size 16px
 	span
+		+below(640px)
+			font-size: 12px
 		tr(all)
 		display: inline-block
 		color $gray
@@ -2947,7 +2969,7 @@ body
 
 .history-descr
 	+below(640px)
-		grid-gap 20px
+		gap(20px)
 		border 0
 		margin-top: 0
 		padding-top: 24px
@@ -4191,8 +4213,11 @@ body
 
 
 .countdown-cont
-	min-width: 70px
-
+	width: 65px
+	flex(between)
+	line-height: 1
+	.icon
+		margin-right: 3px
 .item-modal-total
 	+below(768px)
 		flex(mid)
@@ -4454,3 +4479,20 @@ body
 .connect__phone
 	font-weight: 700
 	margin-bottom: 12px
+
+.scroll-up
+	size 60px
+	border 1px solid $border-color
+	flex(mid)
+	round()
+	position: fixed
+	bottom 40px
+	right: 40px
+	background: white
+	cp()
+	tr()
+	&:hover
+		border-color $mark
+	.icon
+		size 14px
+		fill $mark

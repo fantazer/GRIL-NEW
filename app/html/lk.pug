@@ -11,12 +11,14 @@ include block_html/_include.pug
 					.profile
 						.profile-wrap
 							.flex.flex--between.g-gap-10.mb-12
-								.profile__name Константин
+								.profile__name
+									span Константин
+									+icon("pencil","icon")
 								a(href="#").icon-block.icon-block--mark
 									+icon("exit","icon")
 							.profile-row
 								.profile-row__name телефон
-								.profile-row__val 
+								.profile-row__val
 									span +7 (865) 543 45 45
 									+icon("pencil","icon")
 							.profile-row

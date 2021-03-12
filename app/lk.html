@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/style-edit.css" />
 </head>
 
-<body>
+<body id='top'>
     <div class="page">
         <!--block header-->
         <div class="header">
@@ -497,7 +497,12 @@
                         <div class="profile">
                             <div class="profile-wrap">
                                 <div class="flex flex--between g-gap-10 mb-12">
-                                    <div class="profile__name">Константин</div>
+                                    <div class="profile__name">
+                                        <span>Константин</span>
+                                        <svg class="icon">
+                                            <use xlink:href="#pencil"></use>
+                                        </svg>
+                                    </div>
                                     <a class="icon-block icon-block--mark" href="#">
                                         <svg class="icon">
                                             <use xlink:href="#exit"></use>
@@ -1049,6 +1054,11 @@
             </div>
         </div>
         <!--block footer-->
+        <a class="scroll-up" href="#top" rel="m_PageScroll2id">
+            <svg class="icon">
+                <use xlink:href="#arrow-coner-top"></use>
+            </svg>
+        </a>
         <div class="footer-info-wrap">
             <div class="main-cont">
                 <div class="footer-info">
